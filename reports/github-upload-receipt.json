@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "uploaded_at": "2026-11-08T00:01:52+08:00",
+  "repository": "erliufashi/pnp-unprovability",
+  "web_url": "https://github.com/erliufashi/pnp-unprovability",
+  "remote_url": "git@github.com:erliufashi/pnp-unprovability.git",
+  "transport": "SSH with /home/desk/.ssh/id_ed25519_github_desk (no embedded token in .git/config)",
+  "branch": "main",
+  "initial_wrapup_commit": "7a8d864adb5e46761733d57db9a2a5383e96737e",
+  "initial_ls_remote_main": "7a8d864adb5e46761733d57db9a2a5383e96737e\trefs/heads/main",
+  "receipt_commit_note": "This receipt file is committed immediately on top of initial_wrapup_commit (so HEAD~1 == initial_wrapup_commit) and pushed to origin/main so the working tree is clean and local main == origin/main.",
+  "working_tree_clean": true,
+  "push_exit_code": 0
+}
