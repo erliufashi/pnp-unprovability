@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-11-04T15:08:02+00:00",
+      "reason": "t3-certificate-activated",
+      "selected": null,
+      "alt_local_round": 12,
+      "legacy_unchanged": true
+    },
+    {
+      "seq": 2,
+      "at": "2026-11-06T15:46:47+00:00",
+      "reason": "context-resume",
+      "selected": null,
+      "alt_local_round": 13,
+      "legacy_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "schema": 2,
+  "branch": "alternatives/practical-core",
+  "goal_revision_authority": {
+    "definition_revision_entry": "42ce7dcd",
+    "wrapup_entry": "9dd0011e"
+  },
+  "status": {
+    "T1_standard_P_eq_NP_unprovable_in_ZFC": "UNRESOLVED",
+    "T2_standard_P_neq_NP_unprovable_in_ZFC": "UNRESOLVED",
+    "T3_v1_closed_single_pass_proxy": "historical_qualified_proxy_only",
+    "T3_v2_capability_preserving_separation": "UNRESOLVED",
+    "certified_empirical_coverage_lower_bound": 0.0,
+    "coverage_bound_meaning": "uninformative zero lower bound due to absent external population sample and frozen strong reference trace, not a measured zero capability"
+  },
+  "required_contract_axes": [
+    "input_visibility_and_mutability",
+    "response_alphabet_and_batch_cap",
+    "static_code_vs_data_dependent_persistent_state",
+    "cold_vs_amortized_lifecycle_horizon",
+    "adaptive_history_conditional_kernel",
+    "worst_case_vs_distributional_error_quantifier"
+  ],
+  "missing_external_inputs_for_empirical_certification": [
+    "frozen_executable_strong_reference_and_uniform_router_manifest",
+    "pre_registered_task_population_sampling_frame_and_domain_weight_bounds",
+    "unmodeled_domain_mass_upper_bound_u",
+    "end_to_end_execution_and_resource_ledger_traces",
+    "matching_constant_error_BPP_lower_bound_or_feasible_n0_separation_in_fullscan_BRAM"
+  ]
+}

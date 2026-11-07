@@ -1,0 +1,53 @@
+{
+  "schema": 1,
+  "run_id": "20261104T145639796016",
+  "producer": "tests/run_gate.py; independent verifier must actually rerun",
+  "runs": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/home/desk/projects/pnp-unprovability",
+      "started": "2026-11-04T14:56:39.796030+00:00",
+      "ended": "2026-11-04T14:56:40.769335+00:00",
+      "returncode": 0,
+      "stdout_path": "/home/desk/projects/pnp-unprovability/reports/gate-20261104T145639796016-1.stdout.log",
+      "stderr_path": "/home/desk/projects/pnp-unprovability/reports/gate-20261104T145639796016-1.stderr.log"
+    },
+    {
+      "argv": [
+        "python3",
+        "tests/extension_acceptance.py"
+      ],
+      "cwd": "/home/desk/projects/pnp-unprovability",
+      "started": "2026-11-04T14:56:40.769348+00:00",
+      "ended": "2026-11-04T14:56:43.037602+00:00",
+      "returncode": 0,
+      "stdout_path": "/home/desk/projects/pnp-unprovability/reports/gate-20261104T145639796016-2.stdout.log",
+      "stderr_path": "/home/desk/projects/pnp-unprovability/reports/gate-20261104T145639796016-2.stderr.log"
+    }
+  ],
+  "passed": true,
+  "final_version": "0.2.0",
+  "stop": false,
+  "legacy_preserved": {
+    "files_unchanged": true,
+    "scores_unchanged": true,
+    "changed": [],
+    "passed": true
+  },
+  "extension_passed": true,
+  "source_sha256": {
+    "src/hub.py": "7fa8e572591f01f293fdb0dc2cddedbc9ec858778c62a25c56ddbc8b0df9e68d",
+    "src/research.py": "13298120fb40ef2101e3c7a90d98ac6d4f33df194a16daa0889b6ae9c35c0cb8",
+    "tests/test_extension.py": "096426cdaed21d1103d61b6930dd377000f8335d89926bc04bf2c7a51e4461e2",
+    "tests/extension_acceptance.py": "24fe5a790f89230e513e1b0072e8cd4df4b46c65501306cb3924044d72b2c041",
+    "tests/run_gate.py": "871dfff31b1d7c20f3442e36db4581c600cbdd0a3d4d0590af86972583e33aec"
+  }
+}

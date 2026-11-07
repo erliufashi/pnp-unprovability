@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour6",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 15,
+  "checks": [
+    {
+      "criterion": "1. proof/NEURAL-RETRIEVAL-v1.md完整给ReLU电路/描述规模、指定binary32 exp(0)=1与exp(-120)=0条件、唯一匹配归一化/检索证明，无外部答案oracle，不冒称stock dot-product或实际训练LLM。",
+      "verdict": "pass",
+      "evidence": "读取 proof/NEURAL-RETRIEVAL-v1.md:1-45：参数m=2^d及晚query输入族；第2节给逐坐标ReLU XNOR、ReLU AND、二叉合并、O(d)节点/边、O(log d)深度、O(d log d)描述和poly(d) dense展开；第3节明确exp_b(0)=1、exp_b(-120)=0并给binary32舍入条件与e^-120<2^-150证明；第4节证明唯一匹配、max后0/-120、分母1、one-hot及返回x_j；第1、2、5节明确无任务输入x oracle、非stock bilinear/实际200B。"
+    },
+    {
+      "criterion": "2. proof/MODEL-STATE-LOWER-v1.md给固定d/m=2^d的精确及随机状态计数/信息论下界，包含PC/控制/随机可变信息；分清模型族与单profile、固定horizon与渐近语言、数值模型系数与复杂性类任意常数，不从上界倒推普遍下界。",
+      "verdict": "pass",
+      "evidence": "读取 proof/MODEL-STATE-LOWER-v1.md:1-66：第1节固定d、m=2^d并将工作带、寄存器、控制/PC、输入相关地址/随机状态、长度等全部计入状态且禁止外部x通道；第2节用2^m prefix状态计数给s>=m=2^d；第3节给均匀X/I、错误gamma的熵界s>=(1-h2(gamma))m及公共随机条件化；第4节将O(d log d)模型描述与Omega(2^d)作无界族/固定常数的参数化比较，并明确不是从上界倒推；第5节区分固定horizon/profile、渐近族、200B巨大常数和标准P/NP，并保留model-specific可能性。"
+    },
+    {
+      "criterion": "3. reports/retrieval-tests-v1.json和实际执行记录保存退出0、有限电路/exp/检索对照及规模指标，有限测试非一般证明或200B测评。reports/preservation-hour6.json证明旧35/T3及前5小时已认证产物不变；本地三层图谱按结果和剩余model-specific可能性刷新。只读核对报告/源码即可，无需重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/retrieval-tests-v1.json:1-约130：passed=true，exp32_0=1.0、exp32_minus120=0.0/hex 00000000，d=1..6共5460 equality pairs，d=1..3全值双layout共4240，d=4/6/8随机双layout共384，并明确not_claimed不包括小空间编译器、有限测试下界、全硬件exp、实际200B、人类或P/NP；读取 reports/retrieval-execution-v1.json:1-14，returncode=0且source_sha256吻合；读取 retrieval-v1.stdout.log:1，实际exit摘要为0/5460/4240/384；读取 tools/neural_retrieval_probe.py:128-130，明确expected x_i仅为observer、reference保留完整KV。读取 reports/hour6-summary.json:1-24，记录actual_probe_exit=0、上述规模、exp点、old_35_and_prior_proofs_unchanged=true及非200B/非stock/非固定语言声明。读取 reports/preservation-hour6.json:2-47与930-962，baseline/readback均列旧35/T3、hour1-5认证产物及proof哈希；实际执行sha256sum核对 reviews/pnp-t3-submit-2.receipt.json、hour1-tests、hour1-5 review receipts、ENVELOPE/APPROX，输出分别与保全清单一致。读取 research/state.json:549-631，M17/E35/E36/E37均为done；读取 research/history.jsonl:52-58，记录对应证明/测试证据、D7/D6刷新及“特殊query/key结构仍可能降低常数”的model-specific剩余可能性。"
+    }
+  ],
+  "findings": [],
+  "note": "只按spec_revision v0核对；未重跑实验、未修改既有产物或历史回执。有限数值测试仅作声明语义核验，不被解释为一般下界、实际200B测评或标准P/NP结论。"
+}

@@ -1,0 +1,10 @@
+{
+  "task_id": "bec0515b8",
+  "task_name": "逐行attention精确性实验",
+  "status": "completed",
+  "exit_code": 0,
+  "source": "native background-task-notification received by main agent",
+  "output_file": ".pi/tasks/01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c-3711474/bec0515b8.output",
+  "observed_at": 1793810974.8693054,
+  "no_status_repoll": true
+}

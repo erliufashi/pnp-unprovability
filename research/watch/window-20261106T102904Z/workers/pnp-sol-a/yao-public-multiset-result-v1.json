@@ -1,0 +1,98 @@
+{
+  "status": "pass",
+  "permutations_checked": 152,
+  "single_replacements_checked": 2728,
+  "all_promised_inputs_classified_exactly": true,
+  "worst_case_ED_solved": false,
+  "real_coverage_claim": false,
+  "program_code_bytes": 217,
+  "program_sha256": "40b743da5b93c2af9376114d0f43ce3f1e8f484a37e011c44722433f67fd2d55",
+  "vm_sha256": "a6361e8f0f9299d80b8861b91b70fe236181d852541ab7ed6027a82b81282a41",
+  "fullscale": [
+    {
+      "n": 128,
+      "ledger": {
+        "word_bits": 15,
+        "register_bits": 240,
+        "array_bits": 165,
+        "source_bytes": 217,
+        "random_bits": 0,
+        "reserved_init_and_acquisition_steps": 156,
+        "total_word_steps": 1190,
+        "fuel_cap": 4608,
+        "total_bit_charge": 226684,
+        "bit_cap": 152585109,
+        "charged_input_reads": 258
+      },
+      "outside_promise_single_collision_is_missed": true
+    },
+    {
+      "n": 255,
+      "ledger": {
+        "word_bits": 16,
+        "register_bits": 256,
+        "array_bits": 240,
+        "source_bytes": 217,
+        "random_bits": 0,
+        "reserved_init_and_acquisition_steps": 287,
+        "total_word_steps": 2337,
+        "fuel_cap": 8672,
+        "total_bit_charge": 465808,
+        "bit_cap": 287494640,
+        "charged_input_reads": 512
+      },
+      "outside_promise_single_collision_is_missed": true
+    },
+    {
+      "n": 256,
+      "ledger": {
+        "word_bits": 17,
+        "register_bits": 272,
+        "array_bits": 272,
+        "source_bytes": 217,
+        "random_bits": 0,
+        "reserved_init_and_acquisition_steps": 289,
+        "total_word_steps": 2347,
+        "fuel_cap": 8704,
+        "total_bit_charge": 484393,
+        "bit_cap": 288912416,
+        "charged_input_reads": 514
+      },
+      "outside_promise_single_collision_is_missed": true
+    },
+    {
+      "n": 1024,
+      "ledger": {
+        "word_bits": 21,
+        "register_bits": 336,
+        "array_bits": 672,
+        "source_bytes": 217,
+        "random_bits": 0,
+        "reserved_init_and_acquisition_steps": 1073,
+        "total_word_steps": 9275,
+        "fuel_cap": 33280,
+        "total_bit_charge": 2196029,
+        "bit_cap": 1110787568,
+        "charged_input_reads": 2050
+      },
+      "outside_promise_single_collision_is_missed": true
+    },
+    {
+      "n": 4095,
+      "ledger": {
+        "word_bits": 24,
+        "register_bits": 384,
+        "array_bits": 1512,
+        "source_bytes": 217,
+        "random_bits": 0,
+        "reserved_init_and_acquisition_steps": 4175,
+        "total_word_steps": 36945,
+        "fuel_cap": 131552,
+        "total_bit_charge": 9570696,
+        "bit_cap": 4411729768,
+        "charged_input_reads": 8192
+      },
+      "outside_promise_single_collision_is_missed": true
+    }
+  ]
+}

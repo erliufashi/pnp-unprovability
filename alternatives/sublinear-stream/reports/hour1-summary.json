@@ -1,0 +1,43 @@
+{
+  "hour": 1,
+  "at": 1793811031.5507445,
+  "status": "local_review_pass",
+  "proofs": [
+    "proof/ENVELOPE-v1.md",
+    "proof/ATTENTION-v1.md",
+    "proof/QUALIFICATIONS-v1.md"
+  ],
+  "experiment_exit": 0,
+  "finite_bitwise_cases": 36,
+  "largest_aux_probe": {
+    "C": 128,
+    "d": 4,
+    "materialized": {
+      "aux_peak_bytes": 1090885,
+      "seconds": 0.24764021788723767,
+      "score_cells": 16384,
+      "probability_cells": 16384
+    },
+    "row_scheduled": {
+      "aux_peak_bytes": 37525,
+      "seconds": 0.24708855408243835,
+      "peak_score_cells": 128,
+      "peak_probability_cells": 128
+    },
+    "bitwise_equal": true,
+    "inputs_excluded_from_trace": true
+  },
+  "old_35_nodes_unchanged": true,
+  "not_claimed": [
+    "arbitrary GPU-kernel equivalence",
+    "complete API equivalence with OOM/timeout",
+    "actual 200B/human results",
+    "T3 certificate scope expansion"
+  ],
+  "next_unproved_candidate": "notes/ALL-QUERY-CANDIDATE-v0.md",
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour1-review.receipt.json",
+    "original": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour1.v0.submit-1.238bc663-5153-49ab-ac94-bbb3a09d7316.receipt.json",
+    "sha256": "294cda095daef14838de9e704581fb720c4e3ed438a30b27b3837df01f215803"
+  }
+}

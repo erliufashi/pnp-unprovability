@@ -1,0 +1,1819 @@
+{
+  "baseline": {
+    "files": {
+      "research/graph.json": "7081c2d9dd27614bd788669469e9c91b6aa2292199195a10fa6416dd5c69f047",
+      "research/state.json": "48fe0e241ab8f9b416c2c6b1312e2352ddd603d29e8c814c23aecac4e18762be",
+      "research/history.jsonl": "cf1ba71cdfc98f8204c928871b4e2d7e68bb36352551f4bd4315e87a6358252c",
+      "alternatives/closed-llm/research/graph.json": "cdbdaa739a1fa1883b684494d5d363116a09d4800da0ddba087e2d8c0ec7d280",
+      "alternatives/closed-llm/research/state.json": "ebe0d8d9e7fd09794aea4cd3ddff724fdd61e41bf294f6c1e2c4dc9a3e9b9d09",
+      "alternatives/closed-llm/research/history.jsonl": "ac0a6d3f9d284914d2e5020153da9a34a5554c18dd6eafd80c2cded74a014b9a",
+      "alternatives/closed-llm/proof/LLM-SIMULATION.md": "9d395833b4c8cf510fe6d83585dc9d85211bac185f3a2e48ffc93a8f9085a318",
+      "alternatives/closed-llm/proof/MAIN.md": "1f073b99e5dfd00447b1198051c87358d68a357197424a60562591abd115d305",
+      "alternatives/closed-llm/proof/RANDOMIZED.md": "0af1763840fb983bd73ae6c3e784a6b8898db7f54ee7dc05febe34e915e3bfda",
+      "alternatives/closed-llm/proof/SCOPE.md": "64dbee4953d6b5983f4c200cf07e0facc424bc5608b338efd4ac3e0acd8cfc8b",
+      "alternatives/closed-llm/TASK-SPACE.md": "05dc19648aa4e79f6a34c7e3dad56ca157987218c8e6ac10b3effe76a392b4fd",
+      "research/termination.json": "a8850600ec79e4d6e782f5a9e1790c0225b0ffeedaac150d06f4a0cf8ed9d814",
+      "reviews/pnp-t3-submit-2.receipt.json": "d575e0d4927a2991b7cf9506a5197d88b9c24cec56cfff4aaeb7f8e65d8d56ff",
+      "alternatives/sublinear-stream/proof/ENVELOPE-v1.md": "3a3e14d00545c73b0363d6c1e370176b7dcd388b6b15b4df780d0ba819649125",
+      "alternatives/sublinear-stream/proof/ATTENTION-v1.md": "5a80f369127862d24d6a6615560b830ddfb9411fbc8aa4fa2e4bd60ebac2db42",
+      "alternatives/sublinear-stream/proof/QUALIFICATIONS-v1.md": "b17303f30860fb54fb4ce2f14123a6382c283bfb2db519d8f1d72a256acb4445",
+      "alternatives/sublinear-stream/reports/hour1-tests.json": "a22a26c4e0f9b3dc5c7acd9461f3f8da2710da1fcddceb85dd0b5355ab913347",
+      "alternatives/sublinear-stream/reports/hour1-review.receipt.json": "294cda095daef14838de9e704581fb720c4e3ed438a30b27b3837df01f215803",
+      "alternatives/sublinear-stream/proof/KERNEL-SUMMARY-v1.md": "b2c9b489837ee723d9c37200a08ce10a038c76ae2f87bf7ba099aeba7195e5e9",
+      "alternatives/sublinear-stream/tools/tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+      "alternatives/sublinear-stream/reports/tiny-domain-tests-v1.json": "08a41252f27ca0c4493984e82ac31a836b7b1f19668d4c9cd62d90d9a7920507",
+      "alternatives/sublinear-stream/reports/tiny-domain-execution-v1.json": "781f98f20d28c355c0822e946f8ca2e673309641b812dcb1fae3c3dc6307cf23",
+      "alternatives/sublinear-stream/reports/hour2-review.receipt.json": "226ac4e0a7e7d0414bf21566285f16c6ee752ffdea4b924a4efba4edfb4b5d0c",
+      "alternatives/sublinear-stream/proof/PREFIX-FOREST-v1.md": "998a798c9f1a70dc725d7f1333c697f3d771aa4a962921727a42581a14342bbf",
+      "alternatives/sublinear-stream/tools/prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+      "alternatives/sublinear-stream/reports/prefix-forest-tests-v1.json": "97be33f0f27b27d8749d5f69bbd428117262819bd7ddf5ebeb051f4d1fdfb54b",
+      "alternatives/sublinear-stream/reports/prefix-forest-execution-v1.json": "01f683a5e85127850cfb4ba35a2da23a937d63a149271c3c1afee65e0e89da0a",
+      "alternatives/sublinear-stream/reports/hour3-review.receipt.json": "9371efc46a11604352472b1195af41d4aaabe06b6eb80c2b0d0e244aa5f4fdf6",
+      "alternatives/sublinear-stream/proof/CAUSAL-CONTRACT-v1.md": "7e66acb5322c4fbc80f05cc6f60a51195d6840801cebb8306e3c07d6bfc6f663",
+      "alternatives/sublinear-stream/proof/CAUSAL-COMPOSITION-v1.md": "47cfb457b8bad725b85e5cf7117e045ec2ae59e0391f28d3e6ed4c186251d943",
+      "alternatives/sublinear-stream/proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md": "28263b70a3aef702d697fcd445f86d1ef823e309a2287835f084b911057c4213",
+      "alternatives/sublinear-stream/tools/causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+      "alternatives/sublinear-stream/reports/causal-model-tests-v1.json": "7effb087f9f6552cb02b4f0bb420d3828faf9745ee7c681b8be75499a248d300",
+      "alternatives/sublinear-stream/reports/causal-model-execution-v1.json": "8f372d45152d18e7676fb5c356dfdd62cc0e55c96a8284988eb91edcd40ef3b0",
+      "alternatives/sublinear-stream/reports/hour4-review.receipt.json": "2e56457d8c3fb75fc161df786c3602a5366d3cb4cb85e04c83c1e6468e0e7aa8",
+      "alternatives/sublinear-stream/reports/hour4-review-attempt1.raw.txt": "1cf7d0c4f77e8c35621395be4f923351aae36b834ee027240df814c84465b7d1",
+      "alternatives/sublinear-stream/reports/hour4-review-blocker-1.json": "706246364762ea1c634de7042ec5fea7394c58c850ebf5ea8c5088030a478b25"
+    },
+    "scores": {
+      "main": [
+        {
+          "id": "D2",
+          "title": "算术见证与增长率",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.45689583,
+          "current": 0.9,
+          "remaining": 0.9,
+          "freshness": 0.685,
+          "effective_current": 0.81,
+          "effective_remaining": 0.805,
+          "confidence": 0.7,
+          "cost": 1.2,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M3",
+            "M7"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.810 余值=0.805 新鲜度=0.685 可信度=0.700 成本=1.20 邻接新信号=无"
+        },
+        {
+          "id": "M7",
+          "title": "不可证性→近多项式算法路线",
+          "layer": 2,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.34264028,
+          "current": 0.9,
+          "remaining": 0.85,
+          "freshness": 0.78916667,
+          "effective_current": 0.8075,
+          "effective_remaining": 0.77,
+          "confidence": 0.65,
+          "cost": 1.5,
+          "changed_neighbors": [
+            "D2"
+          ],
+          "neighbors": [
+            "D2",
+            "E11",
+            "E12",
+            "E6"
+          ],
+          "artifact": "notes/06-growth-v1.md",
+          "reason": "价值=0.808 余值=0.770 新鲜度=0.789 可信度=0.650 成本=1.50 邻接新信号=D2"
+        },
+        {
+          "id": "M6",
+          "title": "主目标桥接义务清单",
+          "layer": 2,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.30687778,
+          "current": 0.75,
+          "remaining": 0.85,
+          "freshness": 0.5772619,
+          "effective_current": 0.64142857,
+          "effective_remaining": 0.72428571,
+          "confidence": 0.7,
+          "cost": 1.5,
+          "changed_neighbors": [
+            "D4"
+          ],
+          "neighbors": [
+            "D1",
+            "D4",
+            "E12",
+            "E3",
+            "E4",
+            "E8",
+            "E9"
+          ],
+          "artifact": "proof/obligations.json",
+          "reason": "价值=0.641 余值=0.724 新鲜度=0.577 可信度=0.700 成本=1.50 邻接新信号=D4"
+        },
+        {
+          "id": "E12",
+          "title": "构造非循环主目标桥",
+          "layer": 3,
+          "status": "blocked",
+          "eligible": false,
+          "priority": 0.267525,
+          "current": 0.85,
+          "remaining": 0.9,
+          "freshness": 1.0,
+          "effective_current": 0.845,
+          "effective_remaining": 0.89,
+          "confidence": 0.6,
+          "cost": 2.0,
+          "changed_neighbors": [
+            "M6",
+            "M7"
+          ],
+          "neighbors": [
+            "M6",
+            "M7"
+          ],
+          "artifact": "notes/07-frontier-v1.md",
+          "reason": "价值=0.845 余值=0.890 新鲜度=1.000 可信度=0.600 成本=2.00 邻接新信号=M6,M7"
+        },
+        {
+          "id": "D4",
+          "title": "模型与反例审计",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.23255556,
+          "current": 0.4,
+          "remaining": 0.45,
+          "freshness": 0.32583333,
+          "effective_current": 0.395,
+          "effective_remaining": 0.445,
+          "confidence": 0.7,
+          "cost": 1.2,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M5",
+            "M6"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.395 余值=0.445 新鲜度=0.326 可信度=0.700 成本=1.20 邻接新信号=无"
+        },
+        {
+          "id": "D1",
+          "title": "自指与可证性工具",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.19186667,
+          "current": 0.2,
+          "remaining": 0.2,
+          "freshness": 0.3475,
+          "effective_current": 0.21,
+          "effective_remaining": 0.21666667,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "M6"
+          ],
+          "neighbors": [
+            "M1",
+            "M2",
+            "M6"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.210 余值=0.217 新鲜度=0.347 可信度=0.800 成本=1.00 邻接新信号=M6"
+        },
+        {
+          "id": "D3",
+          "title": "资源自指与精确相消",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.14157143,
+          "current": 0.35,
+          "remaining": 0.45,
+          "freshness": 0.39166667,
+          "effective_current": 0.28,
+          "effective_remaining": 0.36,
+          "confidence": 0.6,
+          "cost": 1.4,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M1",
+            "M4"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.280 余值=0.360 新鲜度=0.392 可信度=0.600 成本=1.40 邻接新信号=无"
+        },
+        {
+          "id": "E1",
+          "title": "核验证明门控语言",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 1,
+          "remaining": 0.0,
+          "freshness": 0.9675,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.7,
+          "changed_neighbors": [
+            "M1"
+          ],
+          "neighbors": [
+            "M1"
+          ],
+          "artifact": "notes/01-gate-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.967 可信度=0.950 成本=0.70 邻接新信号=M1"
+        },
+        {
+          "id": "E10",
+          "title": "forcing与同自然数模型审计",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.87,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M5"
+          ],
+          "neighbors": [
+            "M5"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.870 可信度=0.900 成本=1.00 邻接新信号=M5"
+        },
+        {
+          "id": "E11",
+          "title": "核对不可证性→算法文献",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.95,
+          "remaining": 0.0,
+          "freshness": 1.0,
+          "effective_current": 0.18,
+          "effective_remaining": 0.17,
+          "confidence": 0.85,
+          "cost": 1.1,
+          "changed_neighbors": [
+            "M7"
+          ],
+          "neighbors": [
+            "M7"
+          ],
+          "artifact": "notes/06-growth-v1.md",
+          "reason": "价值=0.180 余值=0.170 新鲜度=1.000 可信度=0.850 成本=1.10 邻接新信号=M7"
+        },
+        {
+          "id": "E13",
+          "title": "有界证明自指的逃逸",
+          "layer": 3,
+          "status": "exhausted",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.8925,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.7,
+          "cost": 1.5,
+          "changed_neighbors": [
+            "M4"
+          ],
+          "neighbors": [
+            "M2",
+            "M4"
+          ],
+          "artifact": "notes/07-frontier-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.892 可信度=0.700 成本=1.50 邻接新信号=M4"
+        },
+        {
+          "id": "E14",
+          "title": "不可证性与扩张理论一致性",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M3",
+            "M5"
+          ],
+          "neighbors": [
+            "M3",
+            "M5"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.90 邻接新信号=M3,M5"
+        },
+        {
+          "id": "E2",
+          "title": "严格化自身P成员固定点",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.95,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.8,
+          "changed_neighbors": [
+            "M1",
+            "M2"
+          ],
+          "neighbors": [
+            "M1",
+            "M2"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.80 邻接新信号=M1,M2"
+        },
+        {
+          "id": "E3",
+          "title": "直接把E放入证明触发器",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.9025,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.9,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M2",
+            "M6"
+          ],
+          "neighbors": [
+            "M2",
+            "M6"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.902 可信度=0.900 成本=0.90 邻接新信号=M2,M6"
+        },
+        {
+          "id": "E4",
+          "title": "检查所有纯门控变体的共同缺口",
+          "layer": 3,
+          "status": "exhausted",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.7,
+          "remaining": 0.0,
+          "freshness": 0.6975,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.85,
+          "cost": 1,
+          "changed_neighbors": [
+            "M6"
+          ],
+          "neighbors": [
+            "M1",
+            "M6"
+          ],
+          "artifact": "notes/01-gate-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.698 可信度=0.850 成本=1.00 邻接新信号=M6"
+        },
+        {
+          "id": "E5",
+          "title": "标准P/NP算术范式",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M3"
+          ],
+          "neighbors": [
+            "M3"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.90 邻接新信号=M3"
+        },
+        {
+          "id": "E6",
+          "title": "反例搜索与总性桥",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.9675,
+          "effective_current": 0.09,
+          "effective_remaining": 0.085,
+          "confidence": 0.85,
+          "cost": 1.1,
+          "changed_neighbors": [
+            "M3",
+            "M7"
+          ],
+          "neighbors": [
+            "M3",
+            "M7"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.090 余值=0.085 新鲜度=0.967 可信度=0.850 成本=1.10 邻接新信号=M3,M7"
+        },
+        {
+          "id": "E7",
+          "title": "Cook编码资源闭环",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.7,
+          "remaining": 0.0,
+          "freshness": 0.87,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.8,
+          "cost": 1.2,
+          "changed_neighbors": [
+            "M4"
+          ],
+          "neighbors": [
+            "M4"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.870 可信度=0.800 成本=1.20 邻接新信号=M4"
+        },
+        {
+          "id": "E8",
+          "title": "高阶项精确相消的可计算条件",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.7,
+          "remaining": 0.0,
+          "freshness": 0.9675,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.7,
+          "cost": 1.4,
+          "changed_neighbors": [
+            "M4",
+            "M6"
+          ],
+          "neighbors": [
+            "M4",
+            "M6"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.967 可信度=0.700 成本=1.40 邻接新信号=M4,M6"
+        },
+        {
+          "id": "E9",
+          "title": "oracle屏障反例审计",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.75,
+          "remaining": 0.0,
+          "freshness": 0.8375,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.95,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M5",
+            "M6"
+          ],
+          "neighbors": [
+            "M5",
+            "M6"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.838 可信度=0.950 成本=0.90 邻接新信号=M5,M6"
+        },
+        {
+          "id": "M1",
+          "title": "证明门控NP编译器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.875,
+          "effective_current": 0.022,
+          "effective_remaining": 0.026,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D1",
+            "D3",
+            "E4"
+          ],
+          "neighbors": [
+            "D1",
+            "D3",
+            "E1",
+            "E2",
+            "E4"
+          ],
+          "artifact": "notes/01-gate-v1.md",
+          "reason": "价值=0.022 余值=0.026 新鲜度=0.875 可信度=0.800 成本=1.00 邻接新信号=D1,D3,E4"
+        },
+        {
+          "id": "M2",
+          "title": "反思与固定点判别器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.86,
+          "effective_current": 0.01,
+          "effective_remaining": 0.01,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D1",
+            "E13"
+          ],
+          "neighbors": [
+            "D1",
+            "E13",
+            "E2",
+            "E3"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.010 余值=0.010 新鲜度=0.860 可信度=0.800 成本=1.00 邻接新信号=D1,E13"
+        },
+        {
+          "id": "M3",
+          "title": "反例搜索总性正规形",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.8225,
+          "effective_current": 0.045,
+          "effective_remaining": 0.045,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D2"
+          ],
+          "neighbors": [
+            "D2",
+            "E14",
+            "E5",
+            "E6"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.045 余值=0.045 新鲜度=0.823 可信度=0.800 成本=1.00 邻接新信号=D2"
+        },
+        {
+          "id": "M4",
+          "title": "资源预算/相消审计器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.65,
+          "remaining": 0.0,
+          "freshness": 0.7575,
+          "effective_current": 0.0175,
+          "effective_remaining": 0.0225,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D3"
+          ],
+          "neighbors": [
+            "D3",
+            "E13",
+            "E7",
+            "E8"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.017 余值=0.023 新鲜度=0.757 可信度=0.800 成本=1.00 邻接新信号=D3"
+        },
+        {
+          "id": "M5",
+          "title": "模型转移检查器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.65,
+          "remaining": 0.0,
+          "freshness": 0.7575,
+          "effective_current": 0.02,
+          "effective_remaining": 0.0225,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D4"
+          ],
+          "neighbors": [
+            "D4",
+            "E10",
+            "E14",
+            "E9"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.020 余值=0.023 新鲜度=0.757 可信度=0.800 成本=1.00 邻接新信号=D4"
+        }
+      ],
+      "closed-llm": [
+        {
+          "id": "D5",
+          "title": "LLM代理覆盖下的单遍受限分离",
+          "layer": 1,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.65166667,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M10",
+            "M8",
+            "M9"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.652 可信度=0.900 成本=1.00 邻接新信号=无"
+        },
+        {
+          "id": "E15",
+          "title": "INDEX确定性单遍下界",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 1,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.98,
+          "cost": 0.7,
+          "changed_neighbors": [
+            "M8"
+          ],
+          "neighbors": [
+            "M8"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.980 成本=0.70 邻接新信号=M8"
+        },
+        {
+          "id": "E16",
+          "title": "INDEX非确定性验证",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.95,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.8,
+          "changed_neighbors": [
+            "M8"
+          ],
+          "neighbors": [
+            "M8"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.80 邻接新信号=M8"
+        },
+        {
+          "id": "E17",
+          "title": "统一模拟封闭200B策略",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M9"
+          ],
+          "neighbors": [
+            "M9"
+          ],
+          "artifact": "proof/LLM-SIMULATION.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.900 成本=1.00 邻接新信号=M9"
+        },
+        {
+          "id": "E18",
+          "title": "任务空间及人类接近度",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M9"
+          ],
+          "neighbors": [
+            "M9"
+          ],
+          "artifact": "TASK-SPACE.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.900 成本=1.00 邻接新信号=M9"
+        },
+        {
+          "id": "E19",
+          "title": "随机INDEX空间下界",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M10"
+          ],
+          "neighbors": [
+            "M10"
+          ],
+          "artifact": "proof/RANDOMIZED.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.900 成本=1.00 邻接新信号=M10"
+        },
+        {
+          "id": "E20",
+          "title": "联合定理与反例审计",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.85,
+          "cost": 1.1,
+          "changed_neighbors": [
+            "M10",
+            "M8",
+            "M9"
+          ],
+          "neighbors": [
+            "M10",
+            "M8",
+            "M9"
+          ],
+          "artifact": "proof/SCOPE.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.850 成本=1.10 邻接新信号=M10,M8,M9"
+        },
+        {
+          "id": "M10",
+          "title": "随机性与适用边界",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.735,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "D5"
+          ],
+          "neighbors": [
+            "D5",
+            "E19",
+            "E20"
+          ],
+          "artifact": "proof/RANDOMIZED.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.735 可信度=0.900 成本=1.00 邻接新信号=D5"
+        },
+        {
+          "id": "M8",
+          "title": "INDEX资源分离",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.78916667,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "D5"
+          ],
+          "neighbors": [
+            "D5",
+            "E15",
+            "E16",
+            "E20"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.789 可信度=0.900 成本=1.00 邻接新信号=D5"
+        },
+        {
+          "id": "M9",
+          "title": "封闭LLM任务覆盖",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.75583333,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "D5"
+          ],
+          "neighbors": [
+            "D5",
+            "E17",
+            "E18",
+            "E20"
+          ],
+          "artifact": "proof/LLM-SIMULATION.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.756 可信度=0.900 成本=1.00 邻接新信号=D5"
+        }
+      ]
+    }
+  },
+  "passed": true,
+  "readback": {
+    "files": {
+      "research/graph.json": "7081c2d9dd27614bd788669469e9c91b6aa2292199195a10fa6416dd5c69f047",
+      "research/state.json": "48fe0e241ab8f9b416c2c6b1312e2352ddd603d29e8c814c23aecac4e18762be",
+      "research/history.jsonl": "cf1ba71cdfc98f8204c928871b4e2d7e68bb36352551f4bd4315e87a6358252c",
+      "alternatives/closed-llm/research/graph.json": "cdbdaa739a1fa1883b684494d5d363116a09d4800da0ddba087e2d8c0ec7d280",
+      "alternatives/closed-llm/research/state.json": "ebe0d8d9e7fd09794aea4cd3ddff724fdd61e41bf294f6c1e2c4dc9a3e9b9d09",
+      "alternatives/closed-llm/research/history.jsonl": "ac0a6d3f9d284914d2e5020153da9a34a5554c18dd6eafd80c2cded74a014b9a",
+      "alternatives/closed-llm/proof/LLM-SIMULATION.md": "9d395833b4c8cf510fe6d83585dc9d85211bac185f3a2e48ffc93a8f9085a318",
+      "alternatives/closed-llm/proof/MAIN.md": "1f073b99e5dfd00447b1198051c87358d68a357197424a60562591abd115d305",
+      "alternatives/closed-llm/proof/RANDOMIZED.md": "0af1763840fb983bd73ae6c3e784a6b8898db7f54ee7dc05febe34e915e3bfda",
+      "alternatives/closed-llm/proof/SCOPE.md": "64dbee4953d6b5983f4c200cf07e0facc424bc5608b338efd4ac3e0acd8cfc8b",
+      "alternatives/closed-llm/TASK-SPACE.md": "05dc19648aa4e79f6a34c7e3dad56ca157987218c8e6ac10b3effe76a392b4fd",
+      "research/termination.json": "a8850600ec79e4d6e782f5a9e1790c0225b0ffeedaac150d06f4a0cf8ed9d814",
+      "reviews/pnp-t3-submit-2.receipt.json": "d575e0d4927a2991b7cf9506a5197d88b9c24cec56cfff4aaeb7f8e65d8d56ff",
+      "alternatives/sublinear-stream/proof/ENVELOPE-v1.md": "3a3e14d00545c73b0363d6c1e370176b7dcd388b6b15b4df780d0ba819649125",
+      "alternatives/sublinear-stream/proof/ATTENTION-v1.md": "5a80f369127862d24d6a6615560b830ddfb9411fbc8aa4fa2e4bd60ebac2db42",
+      "alternatives/sublinear-stream/proof/QUALIFICATIONS-v1.md": "b17303f30860fb54fb4ce2f14123a6382c283bfb2db519d8f1d72a256acb4445",
+      "alternatives/sublinear-stream/reports/hour1-tests.json": "a22a26c4e0f9b3dc5c7acd9461f3f8da2710da1fcddceb85dd0b5355ab913347",
+      "alternatives/sublinear-stream/reports/hour1-review.receipt.json": "294cda095daef14838de9e704581fb720c4e3ed438a30b27b3837df01f215803",
+      "alternatives/sublinear-stream/proof/KERNEL-SUMMARY-v1.md": "b2c9b489837ee723d9c37200a08ce10a038c76ae2f87bf7ba099aeba7195e5e9",
+      "alternatives/sublinear-stream/tools/tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+      "alternatives/sublinear-stream/reports/tiny-domain-tests-v1.json": "08a41252f27ca0c4493984e82ac31a836b7b1f19668d4c9cd62d90d9a7920507",
+      "alternatives/sublinear-stream/reports/tiny-domain-execution-v1.json": "781f98f20d28c355c0822e946f8ca2e673309641b812dcb1fae3c3dc6307cf23",
+      "alternatives/sublinear-stream/reports/hour2-review.receipt.json": "226ac4e0a7e7d0414bf21566285f16c6ee752ffdea4b924a4efba4edfb4b5d0c",
+      "alternatives/sublinear-stream/proof/PREFIX-FOREST-v1.md": "998a798c9f1a70dc725d7f1333c697f3d771aa4a962921727a42581a14342bbf",
+      "alternatives/sublinear-stream/tools/prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+      "alternatives/sublinear-stream/reports/prefix-forest-tests-v1.json": "97be33f0f27b27d8749d5f69bbd428117262819bd7ddf5ebeb051f4d1fdfb54b",
+      "alternatives/sublinear-stream/reports/prefix-forest-execution-v1.json": "01f683a5e85127850cfb4ba35a2da23a937d63a149271c3c1afee65e0e89da0a",
+      "alternatives/sublinear-stream/reports/hour3-review.receipt.json": "9371efc46a11604352472b1195af41d4aaabe06b6eb80c2b0d0e244aa5f4fdf6",
+      "alternatives/sublinear-stream/proof/CAUSAL-CONTRACT-v1.md": "7e66acb5322c4fbc80f05cc6f60a51195d6840801cebb8306e3c07d6bfc6f663",
+      "alternatives/sublinear-stream/proof/CAUSAL-COMPOSITION-v1.md": "47cfb457b8bad725b85e5cf7117e045ec2ae59e0391f28d3e6ed4c186251d943",
+      "alternatives/sublinear-stream/proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md": "28263b70a3aef702d697fcd445f86d1ef823e309a2287835f084b911057c4213",
+      "alternatives/sublinear-stream/tools/causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+      "alternatives/sublinear-stream/reports/causal-model-tests-v1.json": "7effb087f9f6552cb02b4f0bb420d3828faf9745ee7c681b8be75499a248d300",
+      "alternatives/sublinear-stream/reports/causal-model-execution-v1.json": "8f372d45152d18e7676fb5c356dfdd62cc0e55c96a8284988eb91edcd40ef3b0",
+      "alternatives/sublinear-stream/reports/hour4-review.receipt.json": "2e56457d8c3fb75fc161df786c3602a5366d3cb4cb85e04c83c1e6468e0e7aa8",
+      "alternatives/sublinear-stream/reports/hour4-review-attempt1.raw.txt": "1cf7d0c4f77e8c35621395be4f923351aae36b834ee027240df814c84465b7d1",
+      "alternatives/sublinear-stream/reports/hour4-review-blocker-1.json": "706246364762ea1c634de7042ec5fea7394c58c850ebf5ea8c5088030a478b25"
+    },
+    "scores": {
+      "main": [
+        {
+          "id": "D2",
+          "title": "算术见证与增长率",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.45689583,
+          "current": 0.9,
+          "remaining": 0.9,
+          "freshness": 0.685,
+          "effective_current": 0.81,
+          "effective_remaining": 0.805,
+          "confidence": 0.7,
+          "cost": 1.2,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M3",
+            "M7"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.810 余值=0.805 新鲜度=0.685 可信度=0.700 成本=1.20 邻接新信号=无"
+        },
+        {
+          "id": "M7",
+          "title": "不可证性→近多项式算法路线",
+          "layer": 2,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.34264028,
+          "current": 0.9,
+          "remaining": 0.85,
+          "freshness": 0.78916667,
+          "effective_current": 0.8075,
+          "effective_remaining": 0.77,
+          "confidence": 0.65,
+          "cost": 1.5,
+          "changed_neighbors": [
+            "D2"
+          ],
+          "neighbors": [
+            "D2",
+            "E11",
+            "E12",
+            "E6"
+          ],
+          "artifact": "notes/06-growth-v1.md",
+          "reason": "价值=0.808 余值=0.770 新鲜度=0.789 可信度=0.650 成本=1.50 邻接新信号=D2"
+        },
+        {
+          "id": "M6",
+          "title": "主目标桥接义务清单",
+          "layer": 2,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.30687778,
+          "current": 0.75,
+          "remaining": 0.85,
+          "freshness": 0.5772619,
+          "effective_current": 0.64142857,
+          "effective_remaining": 0.72428571,
+          "confidence": 0.7,
+          "cost": 1.5,
+          "changed_neighbors": [
+            "D4"
+          ],
+          "neighbors": [
+            "D1",
+            "D4",
+            "E12",
+            "E3",
+            "E4",
+            "E8",
+            "E9"
+          ],
+          "artifact": "proof/obligations.json",
+          "reason": "价值=0.641 余值=0.724 新鲜度=0.577 可信度=0.700 成本=1.50 邻接新信号=D4"
+        },
+        {
+          "id": "E12",
+          "title": "构造非循环主目标桥",
+          "layer": 3,
+          "status": "blocked",
+          "eligible": false,
+          "priority": 0.267525,
+          "current": 0.85,
+          "remaining": 0.9,
+          "freshness": 1.0,
+          "effective_current": 0.845,
+          "effective_remaining": 0.89,
+          "confidence": 0.6,
+          "cost": 2.0,
+          "changed_neighbors": [
+            "M6",
+            "M7"
+          ],
+          "neighbors": [
+            "M6",
+            "M7"
+          ],
+          "artifact": "notes/07-frontier-v1.md",
+          "reason": "价值=0.845 余值=0.890 新鲜度=1.000 可信度=0.600 成本=2.00 邻接新信号=M6,M7"
+        },
+        {
+          "id": "D4",
+          "title": "模型与反例审计",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.23255556,
+          "current": 0.4,
+          "remaining": 0.45,
+          "freshness": 0.32583333,
+          "effective_current": 0.395,
+          "effective_remaining": 0.445,
+          "confidence": 0.7,
+          "cost": 1.2,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M5",
+            "M6"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.395 余值=0.445 新鲜度=0.326 可信度=0.700 成本=1.20 邻接新信号=无"
+        },
+        {
+          "id": "D1",
+          "title": "自指与可证性工具",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.19186667,
+          "current": 0.2,
+          "remaining": 0.2,
+          "freshness": 0.3475,
+          "effective_current": 0.21,
+          "effective_remaining": 0.21666667,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "M6"
+          ],
+          "neighbors": [
+            "M1",
+            "M2",
+            "M6"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.210 余值=0.217 新鲜度=0.347 可信度=0.800 成本=1.00 邻接新信号=M6"
+        },
+        {
+          "id": "D3",
+          "title": "资源自指与精确相消",
+          "layer": 1,
+          "status": "open",
+          "eligible": false,
+          "priority": 0.14157143,
+          "current": 0.35,
+          "remaining": 0.45,
+          "freshness": 0.39166667,
+          "effective_current": 0.28,
+          "effective_remaining": 0.36,
+          "confidence": 0.6,
+          "cost": 1.4,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M1",
+            "M4"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.280 余值=0.360 新鲜度=0.392 可信度=0.600 成本=1.40 邻接新信号=无"
+        },
+        {
+          "id": "E1",
+          "title": "核验证明门控语言",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 1,
+          "remaining": 0.0,
+          "freshness": 0.9675,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.7,
+          "changed_neighbors": [
+            "M1"
+          ],
+          "neighbors": [
+            "M1"
+          ],
+          "artifact": "notes/01-gate-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.967 可信度=0.950 成本=0.70 邻接新信号=M1"
+        },
+        {
+          "id": "E10",
+          "title": "forcing与同自然数模型审计",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.87,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M5"
+          ],
+          "neighbors": [
+            "M5"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.870 可信度=0.900 成本=1.00 邻接新信号=M5"
+        },
+        {
+          "id": "E11",
+          "title": "核对不可证性→算法文献",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.95,
+          "remaining": 0.0,
+          "freshness": 1.0,
+          "effective_current": 0.18,
+          "effective_remaining": 0.17,
+          "confidence": 0.85,
+          "cost": 1.1,
+          "changed_neighbors": [
+            "M7"
+          ],
+          "neighbors": [
+            "M7"
+          ],
+          "artifact": "notes/06-growth-v1.md",
+          "reason": "价值=0.180 余值=0.170 新鲜度=1.000 可信度=0.850 成本=1.10 邻接新信号=M7"
+        },
+        {
+          "id": "E13",
+          "title": "有界证明自指的逃逸",
+          "layer": 3,
+          "status": "exhausted",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.8925,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.7,
+          "cost": 1.5,
+          "changed_neighbors": [
+            "M4"
+          ],
+          "neighbors": [
+            "M2",
+            "M4"
+          ],
+          "artifact": "notes/07-frontier-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.892 可信度=0.700 成本=1.50 邻接新信号=M4"
+        },
+        {
+          "id": "E14",
+          "title": "不可证性与扩张理论一致性",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M3",
+            "M5"
+          ],
+          "neighbors": [
+            "M3",
+            "M5"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.90 邻接新信号=M3,M5"
+        },
+        {
+          "id": "E2",
+          "title": "严格化自身P成员固定点",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.95,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.8,
+          "changed_neighbors": [
+            "M1",
+            "M2"
+          ],
+          "neighbors": [
+            "M1",
+            "M2"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.80 邻接新信号=M1,M2"
+        },
+        {
+          "id": "E3",
+          "title": "直接把E放入证明触发器",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.9025,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.9,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M2",
+            "M6"
+          ],
+          "neighbors": [
+            "M2",
+            "M6"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.902 可信度=0.900 成本=0.90 邻接新信号=M2,M6"
+        },
+        {
+          "id": "E4",
+          "title": "检查所有纯门控变体的共同缺口",
+          "layer": 3,
+          "status": "exhausted",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.7,
+          "remaining": 0.0,
+          "freshness": 0.6975,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.85,
+          "cost": 1,
+          "changed_neighbors": [
+            "M6"
+          ],
+          "neighbors": [
+            "M1",
+            "M6"
+          ],
+          "artifact": "notes/01-gate-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.698 可信度=0.850 成本=1.00 邻接新信号=M6"
+        },
+        {
+          "id": "E5",
+          "title": "标准P/NP算术范式",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M3"
+          ],
+          "neighbors": [
+            "M3"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.90 邻接新信号=M3"
+        },
+        {
+          "id": "E6",
+          "title": "反例搜索与总性桥",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.9675,
+          "effective_current": 0.09,
+          "effective_remaining": 0.085,
+          "confidence": 0.85,
+          "cost": 1.1,
+          "changed_neighbors": [
+            "M3",
+            "M7"
+          ],
+          "neighbors": [
+            "M3",
+            "M7"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.090 余值=0.085 新鲜度=0.967 可信度=0.850 成本=1.10 邻接新信号=M3,M7"
+        },
+        {
+          "id": "E7",
+          "title": "Cook编码资源闭环",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.7,
+          "remaining": 0.0,
+          "freshness": 0.87,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.8,
+          "cost": 1.2,
+          "changed_neighbors": [
+            "M4"
+          ],
+          "neighbors": [
+            "M4"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.870 可信度=0.800 成本=1.20 邻接新信号=M4"
+        },
+        {
+          "id": "E8",
+          "title": "高阶项精确相消的可计算条件",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.7,
+          "remaining": 0.0,
+          "freshness": 0.9675,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.7,
+          "cost": 1.4,
+          "changed_neighbors": [
+            "M4",
+            "M6"
+          ],
+          "neighbors": [
+            "M4",
+            "M6"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.967 可信度=0.700 成本=1.40 邻接新信号=M4,M6"
+        },
+        {
+          "id": "E9",
+          "title": "oracle屏障反例审计",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.75,
+          "remaining": 0.0,
+          "freshness": 0.8375,
+          "effective_current": 0.075,
+          "effective_remaining": 0.085,
+          "confidence": 0.95,
+          "cost": 0.9,
+          "changed_neighbors": [
+            "M5",
+            "M6"
+          ],
+          "neighbors": [
+            "M5",
+            "M6"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.075 余值=0.085 新鲜度=0.838 可信度=0.950 成本=0.90 邻接新信号=M5,M6"
+        },
+        {
+          "id": "M1",
+          "title": "证明门控NP编译器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.875,
+          "effective_current": 0.022,
+          "effective_remaining": 0.026,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D1",
+            "D3",
+            "E4"
+          ],
+          "neighbors": [
+            "D1",
+            "D3",
+            "E1",
+            "E2",
+            "E4"
+          ],
+          "artifact": "notes/01-gate-v1.md",
+          "reason": "价值=0.022 余值=0.026 新鲜度=0.875 可信度=0.800 成本=1.00 邻接新信号=D1,D3,E4"
+        },
+        {
+          "id": "M2",
+          "title": "反思与固定点判别器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.86,
+          "effective_current": 0.01,
+          "effective_remaining": 0.01,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D1",
+            "E13"
+          ],
+          "neighbors": [
+            "D1",
+            "E13",
+            "E2",
+            "E3"
+          ],
+          "artifact": "notes/02-reflection-v1.md",
+          "reason": "价值=0.010 余值=0.010 新鲜度=0.860 可信度=0.800 成本=1.00 邻接新信号=D1,E13"
+        },
+        {
+          "id": "M3",
+          "title": "反例搜索总性正规形",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.8225,
+          "effective_current": 0.045,
+          "effective_remaining": 0.045,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D2"
+          ],
+          "neighbors": [
+            "D2",
+            "E14",
+            "E5",
+            "E6"
+          ],
+          "artifact": "notes/03-arithmetic-v1.md",
+          "reason": "价值=0.045 余值=0.045 新鲜度=0.823 可信度=0.800 成本=1.00 邻接新信号=D2"
+        },
+        {
+          "id": "M4",
+          "title": "资源预算/相消审计器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.65,
+          "remaining": 0.0,
+          "freshness": 0.7575,
+          "effective_current": 0.0175,
+          "effective_remaining": 0.0225,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D3"
+          ],
+          "neighbors": [
+            "D3",
+            "E13",
+            "E7",
+            "E8"
+          ],
+          "artifact": "notes/04-resources-v1.md",
+          "reason": "价值=0.017 余值=0.023 新鲜度=0.757 可信度=0.800 成本=1.00 邻接新信号=D3"
+        },
+        {
+          "id": "M5",
+          "title": "模型转移检查器",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.65,
+          "remaining": 0.0,
+          "freshness": 0.7575,
+          "effective_current": 0.02,
+          "effective_remaining": 0.0225,
+          "confidence": 0.8,
+          "cost": 1,
+          "changed_neighbors": [
+            "D4"
+          ],
+          "neighbors": [
+            "D4",
+            "E10",
+            "E14",
+            "E9"
+          ],
+          "artifact": "notes/05-models-v1.md",
+          "reason": "价值=0.020 余值=0.023 新鲜度=0.757 可信度=0.800 成本=1.00 邻接新信号=D4"
+        }
+      ],
+      "closed-llm": [
+        {
+          "id": "D5",
+          "title": "LLM代理覆盖下的单遍受限分离",
+          "layer": 1,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.65166667,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [],
+          "neighbors": [
+            "M10",
+            "M8",
+            "M9"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.652 可信度=0.900 成本=1.00 邻接新信号=无"
+        },
+        {
+          "id": "E15",
+          "title": "INDEX确定性单遍下界",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 1,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.98,
+          "cost": 0.7,
+          "changed_neighbors": [
+            "M8"
+          ],
+          "neighbors": [
+            "M8"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.980 成本=0.70 邻接新信号=M8"
+        },
+        {
+          "id": "E16",
+          "title": "INDEX非确定性验证",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.95,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.95,
+          "cost": 0.8,
+          "changed_neighbors": [
+            "M8"
+          ],
+          "neighbors": [
+            "M8"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.950 成本=0.80 邻接新信号=M8"
+        },
+        {
+          "id": "E17",
+          "title": "统一模拟封闭200B策略",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M9"
+          ],
+          "neighbors": [
+            "M9"
+          ],
+          "artifact": "proof/LLM-SIMULATION.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.900 成本=1.00 邻接新信号=M9"
+        },
+        {
+          "id": "E18",
+          "title": "任务空间及人类接近度",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M9"
+          ],
+          "neighbors": [
+            "M9"
+          ],
+          "artifact": "TASK-SPACE.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.900 成本=1.00 邻接新信号=M9"
+        },
+        {
+          "id": "E19",
+          "title": "随机INDEX空间下界",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.9,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "M10"
+          ],
+          "neighbors": [
+            "M10"
+          ],
+          "artifact": "proof/RANDOMIZED.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.900 成本=1.00 邻接新信号=M10"
+        },
+        {
+          "id": "E20",
+          "title": "联合定理与反例审计",
+          "layer": 3,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.85,
+          "remaining": 0.0,
+          "freshness": 0.935,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.85,
+          "cost": 1.1,
+          "changed_neighbors": [
+            "M10",
+            "M8",
+            "M9"
+          ],
+          "neighbors": [
+            "M10",
+            "M8",
+            "M9"
+          ],
+          "artifact": "proof/SCOPE.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.935 可信度=0.850 成本=1.10 邻接新信号=M10,M8,M9"
+        },
+        {
+          "id": "M10",
+          "title": "随机性与适用边界",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.735,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "D5"
+          ],
+          "neighbors": [
+            "D5",
+            "E19",
+            "E20"
+          ],
+          "artifact": "proof/RANDOMIZED.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.735 可信度=0.900 成本=1.00 邻接新信号=D5"
+        },
+        {
+          "id": "M8",
+          "title": "INDEX资源分离",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.78916667,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "D5"
+          ],
+          "neighbors": [
+            "D5",
+            "E15",
+            "E16",
+            "E20"
+          ],
+          "artifact": "proof/MAIN.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.789 可信度=0.900 成本=1.00 邻接新信号=D5"
+        },
+        {
+          "id": "M9",
+          "title": "封闭LLM任务覆盖",
+          "layer": 2,
+          "status": "done",
+          "eligible": false,
+          "priority": 0.0,
+          "current": 0.8,
+          "remaining": 0.0,
+          "freshness": 0.75583333,
+          "effective_current": 0.0,
+          "effective_remaining": 0.0,
+          "confidence": 0.9,
+          "cost": 1,
+          "changed_neighbors": [
+            "D5"
+          ],
+          "neighbors": [
+            "D5",
+            "E17",
+            "E18",
+            "E20"
+          ],
+          "artifact": "proof/LLM-SIMULATION.md",
+          "reason": "价值=0.000 余值=0.000 新鲜度=0.756 可信度=0.900 成本=1.00 邻接新信号=D5"
+        }
+      ]
+    },
+    "at": 1793826391.6857986
+  },
+  "started": 1793824359.9847047
+}

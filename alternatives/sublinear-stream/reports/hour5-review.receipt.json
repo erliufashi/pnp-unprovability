@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour5",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 16,
+  "checks": [
+    {
+      "criterion": "1. proof/ADEQUACY-TIERS-v1.md区分功能law、渐近资源、明确预算可用性与人类代理假设；固定reference/输入/损失/预算单位/常数，不混任务覆盖质量δ_H与输出风险δ_r，明确旧T3及其他编译器不被当前方法差性能否定。",
+      "verdict": "pass",
+      "evidence": "以下相对路径基于 /home/desk/projects/pnp-unprovability/alternatives/sublinear-stream。读取 proof/ADEQUACY-TIERS-v1.md:1-69：任务定义先冻结输入域、reference完整执行语义、μ、有界损失和预算；F/U/B/H分开，κ与启动常数必须明确且不能用大O掩盖，未指定的真实部署参数明确标为待验证。第4-5节区分δ_out（即输出风险δ_r）、δ_H、β_exec、β_task，并给slack及覆盖界；第2、3、6节明确不修改T3、不从本方法差推所有编译器差。执行 sha256sum proof/*.md，ADEQUACY哈希69deea688134b66064b480215944d2c022d6f1b69771ff6d22c8da178b257751，与research/state.json:443-489证据一致。"
+    },
+    {
+      "criterion": "2. proof/APPROX-TRANSFER-v1.md完整证明EOS吸收后的逐步TV→序列/有界损失风险界、所用margin/softmax条件及不适用范围；给任务阈值slack如何影响人类任务族覆盖。proof/RESOURCE-LEDGER-v1.md区别allocated/live/peak与物理RSS，若宣称永久交叉点须有分析依据，不由有限扫描冒称全局；不把本方法上界当全体编译器下界。",
+      "verdict": "pass",
+      "evidence": "读取 proof/APPROX-TRANSFER-v1.md:1-93：有限共同horizon、EOS吸收、真实条件kernel与零概率prefix扩展；最大耦合给TV≤1−Π(1−ε_i)≤Σ ε_i，有界损失和输入积分、prefix混合证明；任务slack与ν覆盖1−δ_H−β_task；argmax gap>2η及tie反例；同温度理想softmax的tanh(η/(2τ))凸性/极值证明，列明greedy/top-k/top-p/量化/相关PRNG等不直接适用，额外ζ和资源失败另计。读取 proof/RESOURCE-LEDGER-v1.md:1-77：R=8t、A=3996 bit_length(t+1)、C=3996 popcount(t+1)、P=3996 floor(log2(t+2))，明确cache组件而非RSS及scratch排除；allocated及peak区间左端递推归纳证明永久性，instant在已证allocated阈值以下有限枚举、以上C≤A；明确非全体编译器下界。读取 tools/adequacy_probe.py:119-195验证区间阈值实现、重放公式与预算observer；检索 tools/prefix_query_forest.py 的 'clear|None|carry|def append|def push'（经cut/head限幅）命中37-45、96-106行，支持清低层再写carry的组件峰值口径。"
+    },
+    {
+      "criterion": "3. reports/adequacy-probe-tests-v1.json及实际执行记录保存退出0、精确有理序列概率/风险对照与负控制、明确的资源observer/重放口径，有限测试非人类经验数据。reports/preservation-hour5.json验证原35节点/T3及前4小时已认证产物不变，本地三层图谱按证据刷新。只读验收核对报告/源码即可，不要求重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/adequacy-probe-tests-v1.json:1-135，10组horizon1-5的有理TV/风险对照及argmax TV=1负控制；读取 tools/adequacy_probe.py:19-116，Fraction精确枚举EOS吸收序列law、parity风险、TV见证与assert，24 margin/2268浮点sanity不冒充证明。读取 reports/adequacy-probe-execution-v1.json:1-23（returncode=0、argv、时间、依赖哈希），reports/adequacy-probe-v1.stdout.log:1与tools/run_adequacy_gate.py:1-26（subprocess保存真实退出和日志）；ls显示stderr为0字节。读取tools/adequacy_probe.py:141-224、reports/adequacy-resource-trace-v1.json:1-24、tools/causal_model_probe.py:121-142；sed读取报告396-409行，明确2048合成组件observer非OS故障，post-feed非RSS。sha256sum核对probe源码49cb75c073165d540d2667acd46e08cb2585148f9f83e0dcf19fdcdc2d513881及trace 922ea9727d4630385e3374a8d861dd6cb60fd3550421fe11b16008cae6fd035e，与报告/执行记录一致。读取preservation-hour5.json:1-44、895-964；执行 diff <(sed -n '3,906p' reports/preservation-hour5.json) <(sed -n '911,1814p' reports/preservation-hour5.json)，无差异，涵盖baseline/readback文件哈希和评分。三批sha256sum实际核对报告所列原主图/状态/历史、closed-llm图/状态/历史及证明、TASK-SPACE、termination、T3回执、hour1-4证明/测试/执行记录/回执/源码等，均与preservation清单吻合。grep -c '\"id\"' 对主图和closed-llm图分别得到25、10。读取research/state.json:421-540及检索research/graph.json的D7/M16/E32/E33/E34、research/history.jsonl:37-47，三层节点证据已刷新，D7仍open且新下界候选未认证；当前ADEQUACY、APPROX、probe报告哈希与state一致。"
+    }
+  ],
+  "findings": [],
+  "note": "只按v0验收，未修改旧回执或任何产物，未重跑写入实验。checks_run按16个实质核对项计：分层、任务冻结、风险单位、T3/编译器边界、EOS耦合、损失转移、prefix混合、argmax、softmax、task slack、资源归纳、精确数值对照、执行记录、observer重放、preservation、三层图谱。真实人类/200B性能及实际部署κ/c/预算没有被验证，文档也未声称已验证。一次含source字样的bash检索和一次只读Python比对被白名单拦截，未执行；已改用read、sha256sum及diff完成对应核对。正式回执另用json_pp检查语法。"
+}

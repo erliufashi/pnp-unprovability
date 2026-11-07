@@ -1,0 +1,203 @@
+{
+  "schema": 1,
+  "title": "T3封闭LLM代理受限分离",
+  "scope": "one-pass logspace polynomial time; not ordinary P vs NP",
+  "nodes": [
+    {
+      "id": "D5",
+      "layer": 1,
+      "title": "LLM代理覆盖下的单遍受限分离",
+      "role": "独立第三终止分支，不影响旧节点",
+      "acceptance": "分离与覆盖同时完成且边界明确",
+      "artifact": "proof/MAIN.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M8",
+      "layer": 2,
+      "title": "INDEX资源分离",
+      "role": "只研究算法及确定性状态下界",
+      "acceptance": "完整渐近分离而非固定状态数差异",
+      "artifact": "proof/MAIN.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M9",
+      "layer": 2,
+      "title": "封闭LLM任务覆盖",
+      "role": "只研究统一模拟及任务成功保持",
+      "acceptance": "对任意profile给同策略模拟，不用查表",
+      "artifact": "proof/LLM-SIMULATION.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M10",
+      "layer": 2,
+      "title": "随机性与适用边界",
+      "role": "只研究随机下界与条件审计",
+      "acceptance": "错误1/3下界和无限资源反例分开",
+      "artifact": "proof/RANDOMIZED.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E15",
+      "layer": 3,
+      "title": "INDEX确定性单遍下界",
+      "role": "前缀可区分性",
+      "acceptance": "证明线性空间，控制状态全部计入",
+      "artifact": "proof/MAIN.md",
+      "seed": {
+        "current": 1,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.98,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "E16",
+      "layer": 3,
+      "title": "INDEX非确定性验证",
+      "role": "猜位置并顺序核验",
+      "acceptance": "非法索引饱和解析，空间O(log n)",
+      "artifact": "proof/MAIN.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.95,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "E17",
+      "layer": 3,
+      "title": "统一模拟封闭200B策略",
+      "role": "模拟任意有限profile",
+      "acceptance": "空间S+O(log n)、时间poly且不展开查表",
+      "artifact": "proof/LLM-SIMULATION.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E18",
+      "layer": 3,
+      "title": "任务空间及人类接近度",
+      "role": "任务/风险/阈值定义",
+      "acceptance": "证明指标转移，不将代理假设当经验事实",
+      "artifact": "TASK-SPACE.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E19",
+      "layer": 3,
+      "title": "随机INDEX空间下界",
+      "role": "条件熵证明",
+      "acceptance": "逐输入错误1/3需要Ω(n)状态信息",
+      "artifact": "proof/RANDOMIZED.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E20",
+      "layer": 3,
+      "title": "联合定理与反例审计",
+      "role": "检查同一模型兼容性",
+      "acceptance": "区分有限profile和无限KV，标准P/NP不变",
+      "artifact": "proof/SCOPE.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M8",
+      "D5"
+    ],
+    [
+      "M9",
+      "D5"
+    ],
+    [
+      "M10",
+      "D5"
+    ],
+    [
+      "E15",
+      "M8"
+    ],
+    [
+      "E16",
+      "M8"
+    ],
+    [
+      "E17",
+      "M9"
+    ],
+    [
+      "E18",
+      "M9"
+    ],
+    [
+      "E19",
+      "M10"
+    ],
+    [
+      "E20",
+      "M8"
+    ],
+    [
+      "E20",
+      "M9"
+    ],
+    [
+      "E20",
+      "M10"
+    ]
+  ]
+}

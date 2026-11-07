@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour2",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 16,
+  "checks": [
+    {
+      "criterion": "1. proof/KERNEL-SUMMARY-v1.md完整定义参考核、有限域/错误状态、摘要不变量、append/query算法及归纳证明或精确反例；把输入长度与b/d/域大小的成本分别写出，不把指数模型常数藏成实用O(1)。",
+      "verdict": "pass",
+      "evidence": "读取 proof/KERNEL-SUMMARY-v1.md:7-26：有限数值/错误字母表、纯总位函数、append-only左折叠参考及最终m/z语义；:30-44：M/D/A摘要不变量、初始化、append和query算法；:46-56：t=0基例、t到t+1归纳及逐位查询等式；:58-62：除零ERR反事实隔离与协议边界；:64-76：K_cache、b位编码、t方向成本、|Q|约2^(bd)、N约2^b及O(r b·2^(b(d+2)))位的显式指数成本；:78-90：append-only、位置编码、树归约、完整LLM和精度变化边界。"
+    },
+    {
+      "criterion": "2. reports/tiny-domain-tests-v1.json和执行记录保存实际实验退出码、逐前缀/逐query对照、常数摘要单元数量和至少一个错误简化的负控制，明确测试只是小域sanity check而非float32或所有LLM穷举；独立只读复核读取报告/源码即可，不要求重跑写入测试。",
+      "verdict": "pass",
+      "evidence": "读取 reports/tiny-domain-execution-v1.json:1-15：实际argv、cwd、returncode=0、stdout/stderr路径及源码SHA；执行 sha256sum tools/tiny_query_summary.py 得到同一SHA。读取 reports/tiny-domain-tests-v1.json:2-21：finite toy domain、9 queries、10 words、999 cache words、ERR；:23-52：两组全前缀逐query比较及512步全前缀比较，共59787+12285+4608=76680，cache_cells=999；:54-109：非结合顺序直方图和running denominator两个负控制；:111-113：运行时间、源码SHA及harness说明。读取 proof/KERNEL-SUMMARY-v1.md:86-90：明确仅sanity check、非float32/真实GPU/真实LLM穷举。读取 tools/run_tiny_gate.py:1-25：实际子进程执行并保存stdout/stderr/执行记录的源码。"
+    },
+    {
+      "criterion": "3. 新分支research/按证据更新M13/E25/E26及下一目标，reports/preservation-hour2.json验证原35节点、T3证书及已验收hour1证明不变；限定append-only/归约/位置/错误协议范围，未覆盖实证人类或任意实际GPU内核。",
+      "verdict": "pass",
+      "evidence": "读取 research/graph.json:112-150、:184-195：M13/E25/E26及其artifact、角色和验收/依赖；读取 research/state.json:169-229：三节点均status=done，分别有proof/report证据与范围说明；读取 notes/PREFIX-TREE-CANDIDATE-v0.md:1-30：下一未证目标及其尚未认证、树族、append-only和不扩大T3限制；读取 reports/hour2-summary.json:4-15：actual_probe_exit=0、76680比较、999单元、指数成本显式、old_35_and_hour1_proofs_unchanged=true及next_unproved。读取 reports/preservation-hour2.json:2-21 与 :890-909：baseline/readback对main/closed-llm graph/state/history、T3相关reviews/pnp-t3-submit-2.receipt.json、终止文件及hour1证明/报告的SHA逐项相同；当前sha256sum逐项与这些哈希匹配。独立计数当前原两图为main 25、closed-llm 10，合计原35节点。读取 proof/KERNEL-SUMMARY-v1.md:78-84、:58-62：append-only、左折叠而非树/GPU归约、位置须编码、错误协议需另证、非完整LLM/实际GPU范围。"
+    }
+  ],
+  "findings": [],
+  "note": "未重跑会写报告的实验；依据实际执行记录、保存日志路径、源码SHA和报告交叉核对。仅按spec_revision 0验收，未修改旧回执或研究产物。"
+}

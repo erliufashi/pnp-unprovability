@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /run/current-system/sw/bin/python3 "$HOME/.local/share/pnp-research/current/research.py" "$@"

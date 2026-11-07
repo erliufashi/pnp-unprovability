@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-10h-window",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 30,
+  "checks": [
+    {
+      "criterion": "research/watch/window-20261104T151758Z/state.json保存开始/截止epoch、Asia/Shanghai时间、3600秒节奏与暂停计数；对应hourly和deadline监控器armed状态已核对，时间门控及一次性暂停单元测试记录存在。",
+      "verdict": "pass",
+      "evidence": "W/state.json:5-18保存1793805478→1793841478、Asia/Shanghai、23:17:58→次日09:17:58、3600秒及pause_count；W/setup.json:2-23保存两个armed配置。S:343为原始起始时钟，S:358-359为实际status，两专用监控器ARMED、间隔3600000/60000ms，其余preset off。W/tests.json:1-78为18项通过记录，包含提前暂停拒绝、截止专属事件、重复暂停不增计数及暂停后静默；W/watch.py:12-52核到对应时间门控和幂等实现。"
+    },
+    {
+      "criterion": "每次实际唤醒先核截止条件，必要时task_edit解冻本task后做有信息价值的研究，日志只记录真实行动；到期前可等待已安排的监控唤醒，不伪造研究进展。",
+      "verdict": "pass",
+      "evidence": "S:379/447/501/558/618/676/732/807/871为hour1-9实际事件；S:381/449/503/560/620/678/738/809/873为各次推进前真实时钟、截止及last_ack检查；S:385/452/506/564/623/681/739/810/874为本task ready且unblock=true。S:418/499/556/591/674/730/805/869/936为九批实验completed、exit-code=0通知。R/hour1-exit.json:5及R/{tiny-domain,prefix-forest,causal-contract,causal-model,adequacy-probe,retrieval,pruning,hybrid,finite-budget}-execution-v1.json:2-12核到实际退出与结果；对应九批tests JSON:2均passed=true，R/hour1-review.receipt.json至hour9-review.receipt.json:4均pass。W/state.json:32-86逐批记录有限实验及限制，R/window-final-v1.md:4明确每小时唤醒不等于连续算力。S:364/440/492/549/667/723/798/862/929记录等待安排、不续期，不把等待记为研究。"
+    },
+    {
+      "criterion": "截止后pause_count=1、phase=paused，停止本窗口专用的两个监控器，仅汇报一次且不自动续期；保留原未解决数学节点与其他观察目标。",
+      "verdict": "pass",
+      "evidence": "S:938为实际PAUSE_ONCE；S:940先核09:18:47已到09:17:58截止，pause_count=0、last_ack=9、pending为空；S:941解冻仅办理暂停，S:945实际ack返回changed=true、phase=paused、pause_count=1。W/state.json:11-18、87-91及W/checkpoint-final.json:2-10持久化暂停，实际09:19:24。S:949-950分别Disarmed两个专用监控器；S:952-953实际status为0 armed，其他四preset保持off。S:955及R/window-pause-checks-v1.json:8-34核到实际截止后探针静默。S:956唯一命中实际暂停汇报，明确不续期、主目标未达；R/window-chat-report-v1.json:2-7为发送后记录且不声称用户已读。research/watch/ACTIVE.json:7、18、40-49保持paused、planned_next=null、auto_resume=false。research/termination.json:21-44仍T1/T2 unresolved、T3 proved_conditional_proxy；R/preservation-hour9.json:4-16给原始受保护文件基线，R/window-static-manifest-v1.json:4-16与之相符；实际校验R/window-static-manifest-v1.sha256得到104项全部成功，包含原graph/state/history、termination及T3回执。R/window-final-v1.json:101-120仍列未解数学与实证限制，不关闭主目标。"
+    }
+  ],
+  "findings": [],
+  "note": "路径别名：项目根=/home/desk/projects/pnp-unprovability；W=项目根/research/watch/window-20261104T151758Z；R=项目根/alternatives/sublinear-stream/reports；S=/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c.jsonl。checks_run按回执写入前成功完成的只读工具调用计30，排除两次被白名单拒绝的Python调用、缺失jq调用、一次超时调用；不计回执写入及语法解析。ACTIVE.md初查路径错误，后通过find定位并读取research/watch/ACTIVE.json；不据空搜索判缺失。未重新运行会写产物的实验或暂停命令，单测验收的是现存记录，实际到期链路另由主会话工具回执交叉核实。暂停确认延迟86.289秒已如实记录，本次不声称零延迟。通过仅针对v0窗口行政目标，不认证一般数学证明、真实200B/human/RSS，也不改写任何旧失败回执。"
+}

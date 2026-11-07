@@ -1,0 +1,32 @@
+{
+  "hour": 6,
+  "at": 1793828730.3008382,
+  "status": "local_review_pass",
+  "proofs": [
+    "proof/NEURAL-RETRIEVAL-v1.md",
+    "proof/MODEL-STATE-LOWER-v1.md"
+  ],
+  "actual_probe_exit": 0,
+  "equality_pairs": 5460,
+  "exhaustive_layout_comparisons": 4240,
+  "random_layout_comparisons": 384,
+  "exp_points": {
+    "exp32_0": 1.0,
+    "exp32_minus120": 0.0,
+    "minus120_output_hex": "00000000",
+    "implementation": "host binary64 exp then struct binary32; general theorem states required exp property"
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "not_claimed": [
+    "actual trained 200B lower bound",
+    "all compiler time lower bound",
+    "stock bilinear score implementation",
+    "fixed-language asymptotic contradiction",
+    "standard P vs NP result"
+  ],
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour6-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour6.v0.submit-1.933943a4-ca3d-4e49-ac91-04af8eb3bcfe.receipt.json",
+    "sha256": "91824ebfbbf483bdd5e312b154537f293dae09d34ae4120f196f84d0a4746cbe"
+  }
+}

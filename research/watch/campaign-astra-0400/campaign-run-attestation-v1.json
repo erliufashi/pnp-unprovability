@@ -1,0 +1,215 @@
+{
+  "campaign": "campaign-astra-0400",
+  "authorization_entry": "294191e3",
+  "deadline": "2026-11-07T04:00:00+08:00",
+  "model_required": "gateway_responses/gpt-6-astra:max",
+  "thinking_required": "max",
+  "runs": {
+    "astra-a": {
+      "run_id": "99ca0055-93ec-4386-9e1c-dd298f6c66ea",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "99ca0055-93ec-4386-9e1c-dd298f6c66ea",
+        "runnerProcessInstanceId": "12af2c0d-9e12-4acd-b1ec-789dcc3dc496",
+        "observedAt": 1793980912672,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "12af2c0d-9e12-4acd-b1ec-789dcc3dc496",
+            "closeObservedAt": 1793980912672,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980707088,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/0fef6fe6-61d2-4e3b-ad2e-f462a3baa484/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-a",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-a/RETURN-H1.md"
+    },
+    "astra-b": {
+      "run_id": "7e89b827-ad14-44c3-a9eb-ce319c0fcfb7",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "7e89b827-ad14-44c3-a9eb-ce319c0fcfb7",
+        "runnerProcessInstanceId": "ed83e22e-ee00-45e3-b0ec-df7dbfdd964f",
+        "observedAt": 1793980958039,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "ed83e22e-ee00-45e3-b0ec-df7dbfdd964f",
+            "closeObservedAt": 1793980958039,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980707064,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/5922fac2-0601-419c-8c7f-7f9c1dabd0fd/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-b",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-b/RETURN-H1.md"
+    },
+    "astra-c": {
+      "run_id": "486b3378-b372-475b-a736-8b8665805215",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "486b3378-b372-475b-a736-8b8665805215",
+        "runnerProcessInstanceId": "80d6d2f1-cbe8-4f64-9de2-e945a913947a",
+        "observedAt": 1793981200925,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "80d6d2f1-cbe8-4f64-9de2-e945a913947a",
+            "closeObservedAt": 1793981200925,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980707109,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/3a15ea5e-1096-469c-9aa3-2e052cdc8daf/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-c",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-c/RETURN-H1.md"
+    },
+    "astra-argon": {
+      "run_id": "1f7308de-d122-4ecf-aa97-e92869765d40",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "1f7308de-d122-4ecf-aa97-e92869765d40",
+        "runnerProcessInstanceId": "a977a16d-5d11-4735-a73e-3e260676ac96",
+        "observedAt": 1793980942946,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "a977a16d-5d11-4735-a73e-3e260676ac96",
+            "closeObservedAt": 1793980942946,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980706909,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/c12c4706-efff-41f3-8d5c-f610aad2a76a/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-argon",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-argon/RETURN-H1.md"
+    },
+    "astra-d": {
+      "run_id": "2cce61ae-92c4-4e2d-bffc-6e39b222d277",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "2cce61ae-92c4-4e2d-bffc-6e39b222d277",
+        "runnerProcessInstanceId": "aad94698-5154-4d0a-9a49-bb95e760de59",
+        "observedAt": 1793981064583,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "aad94698-5154-4d0a-9a49-bb95e760de59",
+            "closeObservedAt": 1793981064583,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980706929,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/8eeba196-420d-4865-9847-58cbade3ef65/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-d",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-d/RETURN-H1.md"
+    },
+    "astra-e": {
+      "run_id": "62109706-c782-410c-a5ec-2f2466fde602",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "62109706-c782-410c-a5ec-2f2466fde602",
+        "runnerProcessInstanceId": "b7f7afe1-9bc6-443c-bec2-18fb649ce8a3",
+        "observedAt": 1793981018406,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "b7f7afe1-9bc6-443c-bec2-18fb649ce8a3",
+            "closeObservedAt": 1793981018406,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980706907,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/f303d53e-fc62-405e-9770-dc14e030d68c/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-e",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-e/RETURN-H1.md"
+    },
+    "astra-f": {
+      "run_id": "c5b6e441-ca33-4657-965e-10aa6480efe5",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "c5b6e441-ca33-4657-965e-10aa6480efe5",
+        "runnerProcessInstanceId": "548f927e-59ae-422d-b962-53f89c3c9e9d",
+        "observedAt": 1793981101201,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "548f927e-59ae-422d-b962-53f89c3c9e9d",
+            "closeObservedAt": 1793981101201,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "started": 1793980706955,
+      "updated": null,
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "requested_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/2dd1dd64-19b3-4089-88cb-921382bbdbb2/run-0/session.jsonl",
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-f",
+      "output_file": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-f/RETURN-H1.md"
+    }
+  },
+  "fleet_terminal_check": "subagent fleet reported no active subagent fleet after campaign stop",
+  "old_wrong_mapping_preserved": "campaign-final-v1 old report remains historical; this attestation is corrected mapping",
+  "not_claimed": "This verifies run routing and terminal state only; it does not independently attest developer prompt injection or mathematical correctness."
+}

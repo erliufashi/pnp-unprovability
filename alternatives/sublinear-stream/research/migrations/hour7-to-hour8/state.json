@@ -1,0 +1,2587 @@
+{
+  "schema": 1,
+  "controller_version": "0.1.0",
+  "graph_digest": "18f278b7be9a7ba2e49c123693a76e33381bf0144882df96472286a3b0a2179d",
+  "round": 74,
+  "selected": null,
+  "nodes": {
+    "D6": {
+      "status": "open",
+      "current": 0.85,
+      "remaining": 0.9,
+      "novelty": 0.95,
+      "confidence": 0.65,
+      "cost": 1.4,
+      "last_work_round": 66,
+      "stagnation": 0,
+      "revision": 9,
+      "seen_neighbors": {
+        "M11": 1,
+        "M12": 1,
+        "M13": 2,
+        "M14": 2,
+        "M15": 3,
+        "M16": 2,
+        "M17": 2,
+        "M18": 3
+      },
+      "evidence": [
+        {
+          "path": "notes/ALL-QUERY-CANDIDATE-v0.md",
+          "sha256": "e0b4b007bb7b1d739cf13ebdf4041160973883dda4f88e7b9a205ee04365acfc"
+        },
+        {
+          "path": "notes/PREFIX-TREE-CANDIDATE-v0.md",
+          "sha256": "85ede22327cbcf231bcb7f63e3bd12420b492b33022e3093b03eaf5c1c96ccbf"
+        },
+        {
+          "path": "notes/CAUSAL-COMPOSITION-CANDIDATE-v0.md",
+          "sha256": "ced38cd1efb97edb70d0e16fec54a6a772bc42ec8c86b676c19edf9f606a87dd"
+        },
+        {
+          "path": "reports/causal-model-tests-v1.json",
+          "sha256": "7effb087f9f6552cb02b4f0bb420d3828faf9745ee7c681b8be75499a248d300"
+        },
+        {
+          "path": "reports/adequacy-probe-tests-v1.json",
+          "sha256": "f453baa6c30e6c9ab766cb5a96ec94213f7d7b7f8956fde5116cea646cb0acb1"
+        },
+        {
+          "path": "proof/MODEL-STATE-LOWER-v1.md",
+          "sha256": "1518f086044b36bc18d90818d04f99094fee5c4f8a08f6b64c9cfc079a33dc83"
+        },
+        {
+          "path": "reports/pruning-tests-v1.json",
+          "sha256": "79a592a27e036ecaa04d86f55722ef899727deb625486de98d7bd6d2c67c208b"
+        },
+        {
+          "path": "reports/pruning-tests-v1.json",
+          "sha256": "79a592a27e036ecaa04d86f55722ef899727deb625486de98d7bd6d2c67c208b"
+        }
+      ],
+      "note": "数值工作系数确降但原KV仍小；下一考虑固定horizon延迟重建，不预付巨表，未改证书"
+    },
+    "M11": {
+      "status": "done",
+      "current": 0.85,
+      "remaining": 0.0,
+      "novelty": 0.95,
+      "confidence": 0.85,
+      "cost": 1,
+      "last_work_round": 4,
+      "stagnation": 0,
+      "revision": 1,
+      "seen_neighbors": {
+        "D6": 0,
+        "E21": 1,
+        "E22": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/ENVELOPE-v1.md",
+          "sha256": "3a3e14d00545c73b0363d6c1e370176b7dcd388b6b15b4df780d0ba819649125"
+        }
+      ],
+      "note": "资源包络定理及动态profile充分条件已写，保持条件性、不扩大原证书"
+    },
+    "M12": {
+      "status": "done",
+      "current": 0.85,
+      "remaining": 0.0,
+      "novelty": 0.95,
+      "confidence": 0.85,
+      "cost": 1,
+      "last_work_round": 7,
+      "stagnation": 0,
+      "revision": 1,
+      "seen_neighbors": {
+        "D6": 0,
+        "E23": 1,
+        "E24": 2
+      },
+      "evidence": [
+        {
+          "path": "proof/QUALIFICATIONS-v1.md",
+          "sha256": "b17303f30860fb54fb4ce2f14123a6382c283bfb2db519d8f1d72a256acb4445"
+        }
+      ],
+      "note": "行局部纯DAG限定工具完成；生成器空间、打包数组和TM步数开销已在补充限定中明确"
+    },
+    "E21": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 0.95,
+      "confidence": 0.95,
+      "cost": 0.7,
+      "last_work_round": 1,
+      "stagnation": 0,
+      "revision": 1,
+      "seen_neighbors": {
+        "M11": 0
+      },
+      "evidence": [
+        {
+          "path": "proof/ENVELOPE-v1.md",
+          "sha256": "3a3e14d00545c73b0363d6c1e370176b7dcd388b6b15b4df780d0ba819649125"
+        }
+      ],
+      "note": "INDEX线性下界转移到所有log n≤f=o(n)的同一常数并集模型，长度头对硬族不泄露索引"
+    },
+    "E22": {
+      "status": "done",
+      "current": 0.85,
+      "remaining": 0.0,
+      "novelty": 0.95,
+      "confidence": 0.85,
+      "cost": 1.1,
+      "last_work_round": 3,
+      "stagnation": 0,
+      "revision": 1,
+      "seen_neighbors": {
+        "M11": 0
+      },
+      "evidence": [
+        {
+          "path": "proof/ENVELOPE-v1.md",
+          "sha256": "3a3e14d00545c73b0363d6c1e370176b7dcd388b6b15b4df780d0ba819649125"
+        }
+      ],
+      "note": "核对全部动态激活/输出反馈/地址与已知长度前提，给出C平方与C的适用范围和API错误边界"
+    },
+    "E23": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 0.95,
+      "confidence": 0.9,
+      "cost": 1,
+      "last_work_round": 2,
+      "stagnation": 0,
+      "revision": 1,
+      "seen_neighbors": {
+        "M12": 0
+      },
+      "evidence": [
+        {
+          "path": "proof/ATTENTION-v1.md",
+          "sha256": "5a80f369127862d24d6a6615560b830ddfb9411fbc8aa4fa2e4bd60ebac2db42"
+        }
+      ],
+      "note": "行局部纯数值DAG只改活跃存储和拓扑调度，保留primitive/原归约树，O(Cd)位级等价证明"
+    },
+    "E24": {
+      "status": "done",
+      "current": 0.8,
+      "remaining": 0.0,
+      "novelty": 0.95,
+      "confidence": 0.85,
+      "cost": 1.2,
+      "last_work_round": 6,
+      "stagnation": 0,
+      "revision": 2,
+      "seen_neighbors": {
+        "M12": 0
+      },
+      "evidence": [
+        {
+          "path": "proof/ATTENTION-v1.md",
+          "sha256": "5a80f369127862d24d6a6615560b830ddfb9411fbc8aa4fa2e4bd60ebac2db42"
+        },
+        {
+          "path": "reports/hour1-tests.json",
+          "sha256": "a22a26c4e0f9b3dc5c7acd9461f3f8da2710da1fcddceb85dd0b5355ab913347"
+        }
+      ],
+      "note": "原生终态exit0已收到；36组逐位相同、4规模辅助峰值及重结合/OOM反例已实测；不当作渐近证明"
+    },
+    "M13": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.7,
+      "cost": 1.4,
+      "last_work_round": 15,
+      "stagnation": 0,
+      "revision": 2,
+      "seen_neighbors": {
+        "D6": 1,
+        "E25": 4,
+        "E26": 3
+      },
+      "evidence": [
+        {
+          "path": "proof/KERNEL-SUMMARY-v1.md",
+          "sha256": "b2c9b489837ee723d9c37200a08ce10a038c76ae2f87bf7ba099aeba7195e5e9"
+        }
+      ],
+      "note": "左折叠有限query摘要工具局部完成；不涵盖平衡树、删除或完整LLM，不能隐去指数模型常数"
+    },
+    "E25": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 0.9,
+      "last_work_round": 14,
+      "stagnation": 0,
+      "revision": 4,
+      "seen_neighbors": {
+        "M13": 1
+      },
+      "evidence": [
+        {
+          "path": "notes/ALL-QUERY-CANDIDATE-v0.md",
+          "sha256": "e0b4b007bb7b1d739cf13ebdf4041160973883dda4f88e7b9a205ee04365acfc"
+        },
+        {
+          "path": "reports/tiny-domain-tests-v1.json",
+          "sha256": "08a41252f27ca0c4493984e82ac31a836b7b1f19668d4c9cd62d90d9a7920507"
+        }
+      ],
+      "note": "实际子进程返回0；76680次前缀query对照、999固定数值单元、直方图/当前分母负控制均通过。只属玩具小域sanity"
+    },
+    "E26": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.75,
+      "cost": 1.4,
+      "last_work_round": 13,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M13": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/KERNEL-SUMMARY-v1.md",
+          "sha256": "b2c9b489837ee723d9c37200a08ce10a038c76ae2f87bf7ba099aeba7195e5e9"
+        }
+      ],
+      "note": "有限域左折叠摘要归纳完成；最终m/z为固定反事实参数而非running值，明确指数模型成本及错误隔离"
+    },
+    "M14": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.75,
+      "cost": 1.2,
+      "last_work_round": 23,
+      "stagnation": 0,
+      "revision": 2,
+      "seen_neighbors": {
+        "D6": 2,
+        "E27": 3,
+        "E28": 4
+      },
+      "evidence": [
+        {
+          "path": "proof/PREFIX-FOREST-v1.md",
+          "sha256": "998a798c9f1a70dc725d7f1333c697f3d771aa4a962921727a42581a14342bbf"
+        }
+      ],
+      "note": "限定前缀树参数森林工具完成，不等同任意GPU树，也未做完整LLM组合"
+    },
+    "E27": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.8,
+      "cost": 1.1,
+      "last_work_round": 21,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M14": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/PREFIX-FOREST-v1.md",
+          "sha256": "998a798c9f1a70dc725d7f1333c697f3d771aa4a962921727a42581a14342bbf"
+        }
+      ],
+      "note": "明确B树/真实seed叶/二进制块不变量与右嵌套查询证明完成；共享shape位空间与模型规模成本明确"
+    },
+    "E28": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 0.9,
+      "last_work_round": 22,
+      "stagnation": 0,
+      "revision": 4,
+      "seen_neighbors": {
+        "M14": 1
+      },
+      "evidence": [
+        {
+          "path": "notes/PREFIX-TREE-CANDIDATE-v0.md",
+          "sha256": "85ede22327cbcf231bcb7f63e3bd12420b492b33022e3093b03eaf5c1c96ccbf"
+        },
+        {
+          "path": "reports/prefix-forest-tests-v1.json",
+          "sha256": "97be33f0f27b27d8749d5f69bbd428117262819bd7ddf5ebeb051f4d1fdfb54b"
+        }
+      ],
+      "note": "实际子进程exit0；33333通用前缀+76680核query对照，初值/左折叠/零padding负控制及levels/merge计数通过"
+    },
+    "M15": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.7,
+      "cost": 1.5,
+      "last_work_round": 35,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "D6": 4,
+        "E29": 3,
+        "E30": 3,
+        "E31": 4
+      },
+      "evidence": [
+        {
+          "path": "proof/CAUSAL-COMPOSITION-v1.md",
+          "sha256": "47cfb457b8bad725b85e5cf7117e045ec2ae59e0391f28d3e6ed4c186251d943"
+        },
+        {
+          "path": "proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md",
+          "sha256": "28263b70a3aef702d697fcd445f86d1ef823e309a2287835f084b911057c4213"
+        }
+      ],
+      "note": "补明S(t)用前缀峰值包络；有界采样时间不自动给log空间，实例还需采样/控制log工作界；toy固定4bit满足",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E29": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 0.75,
+      "last_work_round": 29,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M15": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/CAUSAL-CONTRACT-v1.md",
+          "sha256": "7e66acb5322c4fbc80f05cc6f60a51195d6840801cebb8306e3c07d6bfc6f663"
+        }
+      ],
+      "note": "mask/shape结构反例已验证4→0且0为严格单位元；契约明确增量reference不等同从头batch、计费位置/生成/RNG/输出；非真实GPU断言",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E30": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.8,
+      "cost": 1.3,
+      "last_work_round": 31,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M15": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/CAUSAL-COMPOSITION-v1.md",
+          "sha256": "47cfb457b8bad725b85e5cf7117e045ec2ae59e0391f28d3e6ed4c186251d943"
+        }
+      ],
+      "note": "给定精确kernel接口的token/层/头双归纳完成，计费位置/临时head计数/采样/EOF输出/多项式预算，不偷换batch或任意LM",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E31": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 1,
+      "last_work_round": 32,
+      "stagnation": 0,
+      "revision": 4,
+      "seen_neighbors": {
+        "M15": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/CAUSAL-CONTRACT-v1.md",
+          "sha256": "7e66acb5322c4fbc80f05cc6f60a51195d6840801cebb8306e3c07d6bfc6f663"
+        },
+        {
+          "path": "reports/causal-model-tests-v1.json",
+          "sha256": "7effb087f9f6552cb02b4f0bb420d3828faf9745ee7c681b8be75499a248d300"
+        }
+      ],
+      "note": "实际exit0且收到原生终态：240普通+2guard+1EOS+4长例，2539步/10156头计数/1551随机状态对照；编译数值存储在toy范围更大，未粉饰",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "D7": {
+      "status": "open",
+      "current": 0.9,
+      "remaining": 0.95,
+      "novelty": 0.95,
+      "confidence": 0.7,
+      "cost": 1.3,
+      "last_work_round": 72,
+      "stagnation": 0,
+      "revision": 5,
+      "seen_neighbors": {
+        "M16": 2,
+        "M17": 2,
+        "M18": 3
+      },
+      "evidence": [
+        {
+          "path": "notes/MODEL-COEFFICIENT-LOWER-BOUND-CANDIDATE-v0.md",
+          "sha256": "369edc86c33bff84d532de042db3a59f23f5844c6de5837c00c689d1bbcbb35a"
+        },
+        {
+          "path": "proof/MODEL-STATE-LOWER-v1.md",
+          "sha256": "1518f086044b36bc18d90818d04f99094fee5c4f8a08f6b64c9cfc079a33dc83"
+        },
+        {
+          "path": "reports/pruning-tests-v1.json",
+          "sha256": "79a592a27e036ecaa04d86f55722ef899727deb625486de98d7bd6d2c67c208b"
+        },
+        {
+          "path": "notes/HORIZON-HYBRID-CANDIDATE-v0.md",
+          "sha256": "7caaa5e35f275c436c6d54c4d0a6b88369f499bcf865178c336966c99db26378"
+        }
+      ],
+      "note": "充分性仍需看固定horizon/模型常数和resource口径，不由渐近小空间自动得域内实际难题",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "M16": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 1,
+      "last_work_round": 44,
+      "stagnation": 0,
+      "revision": 2,
+      "seen_neighbors": {
+        "D6": 4,
+        "D7": 1,
+        "E32": 3,
+        "E33": 3,
+        "E34": 4
+      },
+      "evidence": [
+        {
+          "path": "proof/ADEQUACY-TIERS-v1.md",
+          "sha256": "69deea688134b66064b480215944d2c022d6f1b69771ff6d22c8da178b257751"
+        }
+      ],
+      "note": "F/U/B/H质量资源分层工具及条件传递完成，未设用户κ/δ、未改T3或验证人类；当前编译器差不推出所有编译器差",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E32": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 0.75,
+      "last_work_round": 40,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M16": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/ADEQUACY-TIERS-v1.md",
+          "sha256": "69deea688134b66064b480215944d2c022d6f1b69771ff6d22c8da178b257751"
+        }
+      ],
+      "note": "F/U/B/H维度及reference/预算/风险slack/单位已明确；δ_H、δ_out、β_exec、β_task不混用，不修改旧T3或默认用户接受的κ",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E33": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 1.1,
+      "last_work_round": 42,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M16": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/APPROX-TRANSFER-v1.md",
+          "sha256": "c9d5065c3fa766e35add1722de9b972b1bf32a7c9b5c7f235f853c44dad0df5c"
+        }
+      ],
+      "note": "EOS最大耦合/平均prefix混合风险界、margin及理想softmax sharp界已证明；采样实现ζ、task slack/单位和预算失败另计",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E34": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 0.9,
+      "last_work_round": 43,
+      "stagnation": 0,
+      "revision": 4,
+      "seen_neighbors": {
+        "M16": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/ADEQUACY-TIERS-v1.md",
+          "sha256": "69deea688134b66064b480215944d2c022d6f1b69771ff6d22c8da178b257751"
+        },
+        {
+          "path": "reports/adequacy-probe-tests-v1.json",
+          "sha256": "f453baa6c30e6c9ab766cb5a96ec94213f7d7b7f8956fde5116cea646cb0acb1"
+        }
+      ],
+      "note": "实际exit0：10组精确序列law、24 margin、2268 float sanity、重放numeric账本；永久交叉有区间归纳而非扫描，假设预算非OS故障",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "M17": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.8,
+      "cost": 1.3,
+      "last_work_round": 55,
+      "stagnation": 0,
+      "revision": 2,
+      "seen_neighbors": {
+        "D6": 5,
+        "D7": 2,
+        "E35": 3,
+        "E36": 3,
+        "E37": 4
+      },
+      "evidence": [
+        {
+          "path": "proof/MODEL-STATE-LOWER-v1.md",
+          "sha256": "1518f086044b36bc18d90818d04f99094fee5c4f8a08f6b64c9cfc079a33dc83"
+        }
+      ],
+      "note": "紧凑generic神经score族另证指数模型依赖不可普遍消除；未证明现有上界所有因子最优或否定具体baseline",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E35": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 0.75,
+      "last_work_round": 51,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M17": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/NEURAL-RETRIEVAL-v1.md",
+          "sha256": "5ff81b0fc687590411d715c2b8770a337ba4608311964f985a54dc9923838d0c"
+        }
+      ],
+      "note": "ReLU XNOR/AND紧凑score及指定binary32 one-hot检索构造完整；非stock dot、不含外部答案oracle，固定d/horizon与模型族分开",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E36": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 1.1,
+      "last_work_round": 53,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M17": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/MODEL-STATE-LOWER-v1.md",
+          "sha256": "1518f086044b36bc18d90818d04f99094fee5c4f8a08f6b64c9cfc079a33dc83"
+        }
+      ],
+      "note": "固定d/m检索的计数/熵下界完整，全部输入相关控制计费；模型族小系数与单profile巨大常数/标准P-NP分开",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E37": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 1,
+      "last_work_round": 54,
+      "stagnation": 0,
+      "revision": 4,
+      "seen_neighbors": {
+        "M17": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/NEURAL-RETRIEVAL-v1.md",
+          "sha256": "5ff81b0fc687590411d715c2b8770a337ba4608311964f985a54dc9923838d0c"
+        },
+        {
+          "path": "reports/retrieval-tests-v1.json",
+          "sha256": "fc98219b049b5f63987cc7d57507239a61794a8f1e1ede7f1588c86cffe9a0ac"
+        }
+      ],
+      "note": "实际exit0：5460 equality pairs、4240小d双layout全值/索引比较、384随机双layout；canonical exp(-120)为0，非stock/200B测评",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "M18": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.8,
+      "cost": 1.3,
+      "last_work_round": 65,
+      "stagnation": 0,
+      "revision": 4,
+      "seen_neighbors": {
+        "D6": 7,
+        "D7": 4,
+        "E38": 3,
+        "E39": 4,
+        "E40": 4
+      },
+      "evidence": [
+        {
+          "path": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+          "sha256": "b1d02e850cb8e61c9e6618d37d2399dc0384be6aae18ea6a80d1a85df811115a"
+        },
+        {
+          "path": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+          "sha256": "b1d02e850cb8e61c9e6618d37d2399dc0384be6aae18ea6a80d1a85df811115a"
+        }
+      ],
+      "note": "selected投影及精确签名特化工具局部完成，不给未认证模型或最小商/多项式静态分析结论",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E38": {
+      "status": "done",
+      "current": 0.95,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.9,
+      "cost": 0.75,
+      "last_work_round": 62,
+      "stagnation": 0,
+      "revision": 3,
+      "seen_neighbors": {
+        "M18": 1
+      },
+      "evidence": [
+        {
+          "path": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+          "sha256": "b1d02e850cb8e61c9e6618d37d2399dc0384be6aae18ea6a80d1a85df811115a"
+        }
+      ],
+      "note": "完整selected参数投影/签名共享证明与empty/domain条件已写，toy有限flag闭包为安全过近似；counterfactual D逃出Z不等于错误，不用样例充域",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E39": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 1,
+      "last_work_round": 63,
+      "stagnation": 0,
+      "revision": 5,
+      "seen_neighbors": {
+        "M18": 2
+      },
+      "evidence": [
+        {
+          "path": "reports/pruning-tests-v1.json",
+          "sha256": "79a592a27e036ecaa04d86f55722ef899727deb625486de98d7bd6d2c67c208b"
+        },
+        {
+          "path": "reports/pruning-tests-v1.json",
+          "sha256": "79a592a27e036ecaa04d86f55722ef899727deb625486de98d7bd6d2c67c208b"
+        }
+      ],
+      "note": "实际exit0：54212kernel比较/2539三路feed/1551 RNG检查；const metadata未变，K为752/776，未声称native预算达成",
+      "freshness_origin": "admission, no work claimed"
+    },
+    "E40": {
+      "status": "done",
+      "current": 0.9,
+      "remaining": 0.0,
+      "novelty": 1,
+      "confidence": 0.85,
+      "cost": 1.1,
+      "last_work_round": 69,
+      "stagnation": 1,
+      "revision": 5,
+      "seen_neighbors": {
+        "M18": 2
+      },
+      "evidence": [
+        {
+          "path": "proof/PRUNING-COST-v1.md",
+          "sha256": "676d011c56b76545baf8c531241896949c3f0f34a2d9e6bf35faed3d7cb0f8b7"
+        },
+        {
+          "path": "proof/PRUNING-COST-v2.md",
+          "sha256": "e2233caa66365bfb37188d968ef6f405fd722352ee68382a7e93ff001d5d97de"
+        }
+      ],
+      "note": "metadata成本及仍较native大已列，两个不安全规则与inactive D边界/zero-key控制明确；不挑弱baseline作人类结果",
+      "freshness_origin": "admission, no work claimed"
+    }
+  },
+  "events": [
+    {
+      "seq": 1,
+      "at": "2026-11-04T16:30:24+00:00",
+      "round": 1,
+      "reason": "initialization",
+      "previous": null,
+      "selected": "E21",
+      "ranking": [
+        {
+          "id": "E21",
+          "priority": 1.11036905,
+          "reason": "价值=0.930 余值=0.770 新鲜度=0.651 可信度=0.950 成本=0.70 邻接新信号=无"
+        },
+        {
+          "id": "E23",
+          "priority": 0.77415,
+          "reason": "价值=0.930 余值=0.890 新鲜度=0.651 可信度=0.900 成本=1.00 邻接新信号=无"
+        },
+        {
+          "id": "E22",
+          "priority": 0.63685606,
+          "reason": "价值=0.850 余值=0.890 新鲜度=0.651 可信度=0.850 成本=1.10 邻接新信号=无"
+        },
+        {
+          "id": "E24",
+          "priority": 0.56111806,
+          "reason": "价值=0.810 余值=0.850 新鲜度=0.651 可信度=0.850 成本=1.20 邻接新信号=无"
+        }
+      ],
+      "details": {}
+    },
+    {
+      "seq": 2,
+      "at": "2026-11-04T16:35:40+00:00",
+      "round": 2,
+      "reason": "update:E21",
+      "previous": "E21",
+      "selected": "E23",
+      "ranking": [
+        {
+          "id": "E23",
+          "priority": 0.78015,
+          "reason": "价值=0.930 余值=0.890 新鲜度=0.684 可信度=0.900 成本=1.00 邻接新信号=无"
+        },
+        {
+          "id": "E22",
+          "priority": 0.64200758,
+          "reason": "价值=0.850 余值=0.890 新鲜度=0.684 可信度=0.850 成本=1.10 邻接新信号=无"
+        },
+        {
+          "id": "E24",
+          "priority": 0.56584028,
+          "reason": "价值=0.810 余值=0.850 新鲜度=0.684 可信度=0.850 成本=1.20 邻接新信号=无"
+        }
+      ],
+      "details": {
+        "node": "E21",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "INDEX线性下界转移到所有log n≤f=o(n)的同一常数并集模型，长度头对硬族不泄露索引",
+        "evidence": "proof/ENVELOPE-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 3,
+      "at": "2026-11-04T16:35:40+00:00",
+      "round": 3,
+      "reason": "update:E23",
+      "previous": "E23",
+      "selected": "E22",
+      "ranking": [
+        {
+          "id": "E22",
+          "priority": 0.64715909,
+          "reason": "价值=0.850 余值=0.890 新鲜度=0.717 可信度=0.850 成本=1.10 邻接新信号=无"
+        },
+        {
+          "id": "E24",
+          "priority": 0.5705625,
+          "reason": "价值=0.810 余值=0.850 新鲜度=0.717 可信度=0.850 成本=1.20 邻接新信号=无"
+        }
+      ],
+      "details": {
+        "node": "E23",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "行局部纯数值DAG只改活跃存储和拓扑调度，保留primitive/原归约树，O(Cd)位级等价证明",
+        "evidence": "proof/ATTENTION-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 4,
+      "at": "2026-11-04T16:35:40+00:00",
+      "round": 4,
+      "reason": "update:E22",
+      "previous": "E22",
+      "selected": "E24",
+      "ranking": [
+        {
+          "id": "E24",
+          "priority": 0.57528472,
+          "reason": "价值=0.810 余值=0.850 新鲜度=0.751 可信度=0.850 成本=1.20 邻接新信号=无"
+        }
+      ],
+      "details": {
+        "node": "E22",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "核对全部动态激活/输出反馈/地址与已知长度前提，给出C平方与C的适用范围和API错误边界",
+        "evidence": "proof/ENVELOPE-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 5,
+      "at": "2026-11-04T16:35:40+00:00",
+      "round": 5,
+      "reason": "update:M11",
+      "previous": "E24",
+      "selected": "E24",
+      "ranking": [
+        {
+          "id": "E24",
+          "priority": 0.58000694,
+          "reason": "价值=0.810 余值=0.850 新鲜度=0.784 可信度=0.850 成本=1.20 邻接新信号=无"
+        }
+      ],
+      "details": {
+        "node": "M11",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "资源包络定理及动态profile充分条件已写，保持条件性、不扩大原证书",
+        "evidence": "proof/ENVELOPE-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 6,
+      "at": "2026-11-04T16:44:07+00:00",
+      "round": 6,
+      "reason": "update:E24",
+      "previous": "E24",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E24",
+        "changes": {
+          "status": "blocked"
+        },
+        "note": "数值报告已生成并读回：36组逐位一致和峰值/反例；等待bec0515b8原生终态通知以记录真实exit后提交首小时验收，不轮询",
+        "evidence": "proof/ATTENTION-v1.md",
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 7,
+      "at": "2026-11-04T16:49:34+00:00",
+      "round": 7,
+      "reason": "update:E24",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E24",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "原生终态exit0已收到；36组逐位相同、4规模辅助峰值及重结合/OOM反例已实测；不当作渐近证明",
+        "evidence": "reports/hour1-tests.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 8,
+      "at": "2026-11-04T16:49:34+00:00",
+      "round": 8,
+      "reason": "update:M12",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M12",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "行局部纯DAG限定工具完成；生成器空间、打包数组和TM步数开销已在补充限定中明确",
+        "evidence": "proof/QUALIFICATIONS-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 9,
+      "at": "2026-11-04T16:49:35+00:00",
+      "round": 9,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.95,
+          "remaining": 0.95,
+          "novelty": 1.0,
+          "confidence": 0.75
+        },
+        "note": "现有行调度工具完成后，剩余价值转向新的有限query/max/分母历史摘要候选；该候选尚未认证",
+        "evidence": "notes/ALL-QUERY-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 10,
+      "at": "2026-11-04T16:57:04+00:00",
+      "round": 10,
+      "reason": "new-frontier:finite-query-summary",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "added": [
+          "M13",
+          "E25",
+          "E26"
+        ],
+        "planned_next": "E25",
+        "scheduled_for_hour": 2,
+        "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour1-to-hour2"
+      }
+    },
+    {
+      "seq": 11,
+      "at": "2026-11-04T17:28:55+00:00",
+      "round": 11,
+      "reason": "update:E25",
+      "previous": null,
+      "selected": "E25",
+      "ranking": [
+        {
+          "id": "E25",
+          "priority": 0.89344444,
+          "reason": "价值=0.950 余值=0.910 新鲜度=1.000 可信度=0.850 成本=0.90 邻接新信号=M13"
+        }
+      ],
+      "details": {
+        "node": "E25",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "收到用户预设第2小时真实唤醒，时间门槛已满足；启动有限查询摘要批次",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 12,
+      "at": "2026-11-04T17:28:55+00:00",
+      "round": 12,
+      "reason": "update:E26",
+      "previous": "E25",
+      "selected": "E25",
+      "ranking": [
+        {
+          "id": "E25",
+          "priority": 0.89344444,
+          "reason": "价值=0.950 余值=0.910 新鲜度=1.000 可信度=0.850 成本=0.90 邻接新信号=M13"
+        },
+        {
+          "id": "E26",
+          "priority": 0.50464286,
+          "reason": "价值=0.910 余值=0.950 新鲜度=1.000 可信度=0.750 成本=1.40 邻接新信号=M13"
+        }
+      ],
+      "details": {
+        "node": "E26",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "收到用户预设第2小时真实唤醒，时间门槛已满足；启动有限查询摘要批次",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 13,
+      "at": "2026-11-04T17:34:09+00:00",
+      "round": 13,
+      "reason": "update:E25",
+      "previous": "E25",
+      "selected": "E26",
+      "ranking": [
+        {
+          "id": "E26",
+          "priority": 0.50464286,
+          "reason": "价值=0.910 余值=0.950 新鲜度=1.000 可信度=0.750 成本=1.40 邻接新信号=M13"
+        }
+      ],
+      "details": {
+        "node": "E25",
+        "changes": {
+          "status": "blocked"
+        },
+        "note": "小域核验任务b3a96fdec已启动，等待真实结果与终态；转向可独立完成的E26归纳证明，不轮询实验",
+        "evidence": "notes/ALL-QUERY-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 14,
+      "at": "2026-11-04T17:41:58+00:00",
+      "round": 14,
+      "reason": "update:E26",
+      "previous": "E26",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E26",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "有限域左折叠摘要归纳完成；最终m/z为固定反事实参数而非running值，明确指数模型成本及错误隔离",
+        "evidence": "proof/KERNEL-SUMMARY-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 15,
+      "at": "2026-11-04T17:41:59+00:00",
+      "round": 15,
+      "reason": "update:E25",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E25",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际子进程返回0；76680次前缀query对照、999固定数值单元、直方图/当前分母负控制均通过。只属玩具小域sanity",
+        "evidence": "reports/tiny-domain-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 16,
+      "at": "2026-11-04T17:41:59+00:00",
+      "round": 16,
+      "reason": "update:M13",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M13",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "左折叠有限query摘要工具局部完成；不涵盖平衡树、删除或完整LLM，不能隐去指数模型常数",
+        "evidence": "proof/KERNEL-SUMMARY-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 17,
+      "at": "2026-11-04T17:41:59+00:00",
+      "round": 17,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.85,
+          "remaining": 0.9,
+          "novelty": 0.95,
+          "confidence": 0.65,
+          "cost": 1.4
+        },
+        "note": "新引理成立但模型规模指数代价降低实际覆盖把握；剩余价值转向显式前缀兼容归约树及组合审计",
+        "evidence": "notes/PREFIX-TREE-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 18,
+      "at": "2026-11-04T17:50:29+00:00",
+      "round": 18,
+      "reason": "new-frontier:prefix-compatible-tree",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "added": [
+          "M14",
+          "E27",
+          "E28"
+        ],
+        "descriptor_update": {
+          "M13.artifact": "proposal-v0 → proved-v1"
+        },
+        "planned_next": "E28",
+        "scheduled_for_hour": 3,
+        "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour2-to-hour3"
+      }
+    },
+    {
+      "seq": 19,
+      "at": "2026-11-04T18:31:19+00:00",
+      "round": 19,
+      "reason": "update:E28",
+      "previous": null,
+      "selected": "E28",
+      "ranking": [
+        {
+          "id": "E28",
+          "priority": 0.9415,
+          "reason": "价值=0.940 余值=0.910 新鲜度=1.000 可信度=0.900 成本=0.90 邻接新信号=M14"
+        }
+      ],
+      "details": {
+        "node": "E28",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "收到hour3真实监测，scheduled时间门槛已满足，启动明确B树实验与结构证明",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 20,
+      "at": "2026-11-04T18:31:19+00:00",
+      "round": 20,
+      "reason": "update:E27",
+      "previous": "E28",
+      "selected": "E28",
+      "ranking": [
+        {
+          "id": "E28",
+          "priority": 0.9415,
+          "reason": "价值=0.940 余值=0.910 新鲜度=1.000 可信度=0.900 成本=0.90 邻接新信号=M14"
+        },
+        {
+          "id": "E27",
+          "priority": 0.67163636,
+          "reason": "价值=0.900 余值=0.910 新鲜度=1.000 可信度=0.800 成本=1.10 邻接新信号=M14"
+        }
+      ],
+      "details": {
+        "node": "E27",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "收到hour3真实监测，scheduled时间门槛已满足，启动明确B树实验与结构证明",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 21,
+      "at": "2026-11-04T18:36:02+00:00",
+      "round": 21,
+      "reason": "update:E28",
+      "previous": "E28",
+      "selected": "E27",
+      "ranking": [
+        {
+          "id": "E27",
+          "priority": 0.67163636,
+          "reason": "价值=0.900 余值=0.910 新鲜度=1.000 可信度=0.800 成本=1.10 邻接新信号=M14"
+        }
+      ],
+      "details": {
+        "node": "E28",
+        "changes": {
+          "status": "blocked"
+        },
+        "note": "前缀树森林核验bc82f0d29已启动，等待实际报告；按依赖转向独立E27结构证明",
+        "evidence": "notes/PREFIX-TREE-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 22,
+      "at": "2026-11-04T18:45:21+00:00",
+      "round": 22,
+      "reason": "update:E27",
+      "previous": "E27",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E27",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "明确B树/真实seed叶/二进制块不变量与右嵌套查询证明完成；共享shape位空间与模型规模成本明确",
+        "evidence": "proof/PREFIX-FOREST-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 23,
+      "at": "2026-11-04T18:45:21+00:00",
+      "round": 23,
+      "reason": "update:E28",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E28",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际子进程exit0；33333通用前缀+76680核query对照，初值/左折叠/零padding负控制及levels/merge计数通过",
+        "evidence": "reports/prefix-forest-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 24,
+      "at": "2026-11-04T18:45:21+00:00",
+      "round": 24,
+      "reason": "update:M14",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M14",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "限定前缀树参数森林工具完成，不等同任意GPU树，也未做完整LLM组合",
+        "evidence": "proof/PREFIX-FOREST-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 25,
+      "at": "2026-11-04T18:45:21+00:00",
+      "round": 25,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.85,
+          "remaining": 0.9,
+          "novelty": 0.95,
+          "confidence": 0.6,
+          "cost": 1.5
+        },
+        "note": "核工具已推进到指定树，剩余价值转向真正prefix-stability及因果多层组合；模型指数常数与API仍降低实用覆盖把握",
+        "evidence": "notes/CAUSAL-COMPOSITION-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 26,
+      "at": "2026-11-04T18:54:37+00:00",
+      "round": 26,
+      "reason": "new-frontier:causal-contract-and-lifting",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "added": [
+          "M15",
+          "E29",
+          "E30",
+          "E31"
+        ],
+        "planned_next": "E29",
+        "scheduled_for_hour": 4,
+        "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour3-to-hour4",
+        "freshness_age_initialized_at_admission": true
+      }
+    },
+    {
+      "seq": 27,
+      "at": "2026-11-04T19:28:59+00:00",
+      "round": 27,
+      "reason": "update:E29",
+      "previous": null,
+      "selected": "E29",
+      "ranking": [
+        {
+          "id": "E29",
+          "priority": 1.0978,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.867 可信度=0.900 成本=0.75 邻接新信号=M15"
+        }
+      ],
+      "details": {
+        "node": "E29",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour4真实唤醒已满足scheduled门槛，开始契约审计/多层对照/条件性归纳",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 28,
+      "at": "2026-11-04T19:29:00+00:00",
+      "round": 28,
+      "reason": "update:E31",
+      "previous": "E29",
+      "selected": "E29",
+      "ranking": [
+        {
+          "id": "E29",
+          "priority": 1.1058,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.900 可信度=0.900 成本=0.75 邻接新信号=M15"
+        },
+        {
+          "id": "E31",
+          "priority": 0.779875,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.900 可信度=0.850 成本=1.00 邻接新信号=M15"
+        }
+      ],
+      "details": {
+        "node": "E31",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour4真实唤醒已满足scheduled门槛，开始契约审计/多层对照/条件性归纳",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 29,
+      "at": "2026-11-04T19:29:00+00:00",
+      "round": 29,
+      "reason": "update:E30",
+      "previous": "E29",
+      "selected": "E29",
+      "ranking": [
+        {
+          "id": "E29",
+          "priority": 1.1138,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.933 可信度=0.900 成本=0.75 邻接新信号=M15"
+        },
+        {
+          "id": "E31",
+          "priority": 0.78554167,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.933 可信度=0.850 成本=1.00 邻接新信号=M15"
+        },
+        {
+          "id": "E30",
+          "priority": 0.56871795,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.933 可信度=0.800 成本=1.30 邻接新信号=M15"
+        }
+      ],
+      "details": {
+        "node": "E30",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour4真实唤醒已满足scheduled门槛，开始契约审计/多层对照/条件性归纳",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 30,
+      "at": "2026-11-04T19:31:11+00:00",
+      "round": 30,
+      "reason": "update:E29",
+      "previous": "E29",
+      "selected": "E31",
+      "ranking": [
+        {
+          "id": "E31",
+          "priority": 0.79120833,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.967 可信度=0.850 成本=1.00 邻接新信号=M15"
+        },
+        {
+          "id": "E30",
+          "priority": 0.57282051,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.967 可信度=0.800 成本=1.30 邻接新信号=M15"
+        }
+      ],
+      "details": {
+        "node": "E29",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "mask/shape结构反例已验证4→0且0为严格单位元；契约明确增量reference不等同从头batch、计费位置/生成/RNG/输出；非真实GPU断言",
+        "evidence": "proof/CAUSAL-CONTRACT-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 31,
+      "at": "2026-11-04T19:39:32+00:00",
+      "round": 31,
+      "reason": "update:E31",
+      "previous": "E31",
+      "selected": "E30",
+      "ranking": [
+        {
+          "id": "E30",
+          "priority": 0.57692308,
+          "reason": "价值=0.900 余值=0.950 新鲜度=1.000 可信度=0.800 成本=1.30 邻接新信号=M15"
+        }
+      ],
+      "details": {
+        "node": "E31",
+        "changes": {
+          "status": "blocked"
+        },
+        "note": "2层2头逐步对照b5b93fcc5已启动，等待实际执行结果；转向E30条件性组合证明",
+        "evidence": "proof/CAUSAL-CONTRACT-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 32,
+      "at": "2026-11-04T20:04:38+00:00",
+      "round": 32,
+      "reason": "update:E30",
+      "previous": "E30",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E30",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "给定精确kernel接口的token/层/头双归纳完成，计费位置/临时head计数/采样/EOF输出/多项式预算，不偷换batch或任意LM",
+        "evidence": "proof/CAUSAL-COMPOSITION-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 33,
+      "at": "2026-11-04T20:04:38+00:00",
+      "round": 33,
+      "reason": "update:E31",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E31",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际exit0且收到原生终态：240普通+2guard+1EOS+4长例，2539步/10156头计数/1551随机状态对照；编译数值存储在toy范围更大，未粉饰",
+        "evidence": "reports/causal-model-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 34,
+      "at": "2026-11-04T20:04:38+00:00",
+      "round": 34,
+      "reason": "update:M15",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M15",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "条件性因果提升局部完成，D6可与核工具组合；不覆盖任意stock GPU/batch或真实OOM/latency",
+        "evidence": "proof/CAUSAL-COMPOSITION-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 35,
+      "at": "2026-11-04T20:04:38+00:00",
+      "round": 35,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.8,
+          "remaining": 0.9,
+          "novelty": 0.9,
+          "confidence": 0.55,
+          "cost": 1.6
+        },
+        "note": "完整增量族功能模拟有条件成立，但toy表31968槽对原KV1072明显不实用；下阶段优先质量/资源联合充分性定义，不把渐近覆盖冒称人类可用",
+        "evidence": "reports/causal-model-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 36,
+      "at": "2026-11-04T20:11:10+00:00",
+      "round": 36,
+      "reason": "update:M15",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M15",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "补明S(t)用前缀峰值包络；有界采样时间不自动给log空间，实例还需采样/控制log工作界；toy固定4bit满足",
+        "evidence": "proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 37,
+      "at": "2026-11-04T20:20:51+00:00",
+      "round": 37,
+      "reason": "new-frontier:quality-resource-adequacy",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "added": [
+          "D7",
+          "M16",
+          "E32",
+          "E33",
+          "E34"
+        ],
+        "planned_next": "E32",
+        "scheduled_for_hour": 5,
+        "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour4-to-hour5",
+        "freshness_age_initialized_at_admission": true
+      }
+    },
+    {
+      "seq": 38,
+      "at": "2026-11-04T20:32:40+00:00",
+      "round": 38,
+      "reason": "update:E32",
+      "previous": null,
+      "selected": "E32",
+      "ranking": [
+        {
+          "id": "E32",
+          "priority": 1.1032,
+          "reason": "价值=0.950 余值=0.910 新鲜度=0.867 可信度=0.900 成本=0.75 邻接新信号=M16"
+        }
+      ],
+      "details": {
+        "node": "E32",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour5真实监测已满足scheduled门槛；开始分层充分性/资源账本/近似风险转移",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 39,
+      "at": "2026-11-04T20:32:40+00:00",
+      "round": 39,
+      "reason": "update:E34",
+      "previous": "E32",
+      "selected": "E32",
+      "ranking": [
+        {
+          "id": "E32",
+          "priority": 1.1112,
+          "reason": "价值=0.950 余值=0.910 新鲜度=0.900 可信度=0.900 成本=0.75 邻接新信号=M16"
+        },
+        {
+          "id": "E34",
+          "priority": 0.922,
+          "reason": "价值=0.910 余值=0.950 新鲜度=0.900 可信度=0.900 成本=0.90 邻接新信号=M16"
+        }
+      ],
+      "details": {
+        "node": "E34",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour5真实监测已满足scheduled门槛；开始分层充分性/资源账本/近似风险转移",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 40,
+      "at": "2026-11-04T20:32:40+00:00",
+      "round": 40,
+      "reason": "update:E33",
+      "previous": "E32",
+      "selected": "E32",
+      "ranking": [
+        {
+          "id": "E32",
+          "priority": 1.1192,
+          "reason": "价值=0.950 余值=0.910 新鲜度=0.933 可信度=0.900 成本=0.75 邻接新信号=M16"
+        },
+        {
+          "id": "E34",
+          "priority": 0.92866667,
+          "reason": "价值=0.910 余值=0.950 新鲜度=0.933 可信度=0.900 成本=0.90 邻接新信号=M16"
+        },
+        {
+          "id": "E33",
+          "priority": 0.71760606,
+          "reason": "价值=0.910 余值=0.950 新鲜度=0.933 可信度=0.850 成本=1.10 邻接新信号=M16"
+        }
+      ],
+      "details": {
+        "node": "E33",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour5真实监测已满足scheduled门槛；开始分层充分性/资源账本/近似风险转移",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 41,
+      "at": "2026-11-04T20:34:52+00:00",
+      "round": 41,
+      "reason": "update:E32",
+      "previous": "E32",
+      "selected": "E34",
+      "ranking": [
+        {
+          "id": "E34",
+          "priority": 0.93533333,
+          "reason": "价值=0.910 余值=0.950 新鲜度=0.967 可信度=0.900 成本=0.90 邻接新信号=M16"
+        },
+        {
+          "id": "E33",
+          "priority": 0.72275758,
+          "reason": "价值=0.910 余值=0.950 新鲜度=0.967 可信度=0.850 成本=1.10 邻接新信号=M16"
+        }
+      ],
+      "details": {
+        "node": "E32",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "F/U/B/H维度及reference/预算/风险slack/单位已明确；δ_H、δ_out、β_exec、β_task不混用，不修改旧T3或默认用户接受的κ",
+        "evidence": "proof/ADEQUACY-TIERS-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 42,
+      "at": "2026-11-04T20:43:00+00:00",
+      "round": 42,
+      "reason": "update:E34",
+      "previous": "E34",
+      "selected": "E33",
+      "ranking": [
+        {
+          "id": "E33",
+          "priority": 0.72790909,
+          "reason": "价值=0.910 余值=0.950 新鲜度=1.000 可信度=0.850 成本=1.10 邻接新信号=M16"
+        }
+      ],
+      "details": {
+        "node": "E34",
+        "changes": {
+          "status": "blocked"
+        },
+        "note": "质量/资源核验b0af2cd73已启动；等待实际报告，转向独立E33风险转移与margin证明",
+        "evidence": "proof/ADEQUACY-TIERS-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 43,
+      "at": "2026-11-04T20:58:30+00:00",
+      "round": 43,
+      "reason": "update:E33",
+      "previous": "E33",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E33",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "EOS最大耦合/平均prefix混合风险界、margin及理想softmax sharp界已证明；采样实现ζ、task slack/单位和预算失败另计",
+        "evidence": "proof/APPROX-TRANSFER-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 44,
+      "at": "2026-11-04T20:58:30+00:00",
+      "round": 44,
+      "reason": "update:E34",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E34",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际exit0：10组精确序列law、24 margin、2268 float sanity、重放numeric账本；永久交叉有区间归纳而非扫描，假设预算非OS故障",
+        "evidence": "reports/adequacy-probe-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 45,
+      "at": "2026-11-04T20:58:30+00:00",
+      "round": 45,
+      "reason": "update:M16",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M16",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "F/U/B/H质量资源分层工具及条件传递完成，未设用户κ/δ、未改T3或验证人类；当前编译器差不推出所有编译器差",
+        "evidence": "proof/ADEQUACY-TIERS-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 46,
+      "at": "2026-11-04T20:58:30+00:00",
+      "round": 46,
+      "reason": "update:D7",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D7",
+        "changes": {
+          "current": 0.9,
+          "remaining": 0.95,
+          "novelty": 0.95,
+          "confidence": 0.7,
+          "cost": 1.3
+        },
+        "note": "定义与风险工具已落地，剩余关切是普遍低模型系数编译是否可能；compact检索族下界为待证新目标，actual baseline仍未知",
+        "evidence": "notes/MODEL-COEFFICIENT-LOWER-BOUND-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 47,
+      "at": "2026-11-04T20:58:30+00:00",
+      "round": 47,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.75,
+          "remaining": 0.85,
+          "novelty": 0.85,
+          "confidence": 0.55,
+          "cost": 1.7
+        },
+        "note": "具体指数表在当前toy不实用已量化；暂不扩大reference覆盖，等待普遍下界或可证特殊结构，保留model-specific改进余值",
+        "evidence": "reports/adequacy-probe-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 48,
+      "at": "2026-11-04T21:05:35+00:00",
+      "round": 48,
+      "reason": "new-frontier:compact-retrieval-state-lower-bound",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "added": [
+          "M17",
+          "E35",
+          "E36",
+          "E37"
+        ],
+        "planned_next": "E35",
+        "scheduled_for_hour": 6,
+        "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour5-to-hour6",
+        "freshness_age_initialized_at_admission": true
+      }
+    },
+    {
+      "seq": 49,
+      "at": "2026-11-04T21:26:50+00:00",
+      "round": 49,
+      "reason": "update:E35",
+      "previous": null,
+      "selected": "E35",
+      "ranking": [
+        {
+          "id": "E35",
+          "priority": 1.0978,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.867 可信度=0.900 成本=0.75 邻接新信号=M17"
+        }
+      ],
+      "details": {
+        "node": "E35",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour6真实事件满足scheduled门槛；启动紧凑score构造、检索核验和参数化信息下界",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 50,
+      "at": "2026-11-04T21:26:50+00:00",
+      "round": 50,
+      "reason": "update:E37",
+      "previous": "E35",
+      "selected": "E35",
+      "ranking": [
+        {
+          "id": "E35",
+          "priority": 1.1058,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.900 可信度=0.900 成本=0.75 邻接新信号=M17"
+        },
+        {
+          "id": "E37",
+          "priority": 0.81315,
+          "reason": "价值=0.900 余值=0.910 新鲜度=0.900 可信度=0.900 成本=1.00 邻接新信号=M17"
+        }
+      ],
+      "details": {
+        "node": "E37",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour6真实事件满足scheduled门槛；启动紧凑score构造、检索核验和参数化信息下界",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 51,
+      "at": "2026-11-04T21:26:50+00:00",
+      "round": 51,
+      "reason": "update:E36",
+      "previous": "E35",
+      "selected": "E35",
+      "ranking": [
+        {
+          "id": "E35",
+          "priority": 1.1138,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.933 可信度=0.900 成本=0.75 邻接新信号=M17"
+        },
+        {
+          "id": "E37",
+          "priority": 0.81915,
+          "reason": "价值=0.900 余值=0.910 新鲜度=0.933 可信度=0.900 成本=1.00 邻接新信号=M17"
+        },
+        {
+          "id": "E36",
+          "priority": 0.71412879,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.933 可信度=0.850 成本=1.10 邻接新信号=M17"
+        }
+      ],
+      "details": {
+        "node": "E36",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour6真实事件满足scheduled门槛；启动紧凑score构造、检索核验和参数化信息下界",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 52,
+      "at": "2026-11-04T21:28:43+00:00",
+      "round": 52,
+      "reason": "update:E35",
+      "previous": "E35",
+      "selected": "E37",
+      "ranking": [
+        {
+          "id": "E37",
+          "priority": 0.82515,
+          "reason": "价值=0.900 余值=0.910 新鲜度=0.967 可信度=0.900 成本=1.00 邻接新信号=M17"
+        },
+        {
+          "id": "E36",
+          "priority": 0.7192803,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.967 可信度=0.850 成本=1.10 邻接新信号=M17"
+        }
+      ],
+      "details": {
+        "node": "E35",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "ReLU XNOR/AND紧凑score及指定binary32 one-hot检索构造完整；非stock dot、不含外部答案oracle，固定d/horizon与模型族分开",
+        "evidence": "proof/NEURAL-RETRIEVAL-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 53,
+      "at": "2026-11-04T21:32:55+00:00",
+      "round": 53,
+      "reason": "update:E37",
+      "previous": "E37",
+      "selected": "E36",
+      "ranking": [
+        {
+          "id": "E36",
+          "priority": 0.72443182,
+          "reason": "价值=0.900 余值=0.950 新鲜度=1.000 可信度=0.850 成本=1.10 邻接新信号=M17"
+        }
+      ],
+      "details": {
+        "node": "E37",
+        "changes": {
+          "status": "blocked"
+        },
+        "note": "神经电路/one-hot数值核验be0573b92已启动，等待实际结果；转向E36参数化计数/信息论下界",
+        "evidence": "proof/NEURAL-RETRIEVAL-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 54,
+      "at": "2026-11-04T21:45:29+00:00",
+      "round": 54,
+      "reason": "update:E36",
+      "previous": "E36",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E36",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "固定d/m检索的计数/熵下界完整，全部输入相关控制计费；模型族小系数与单profile巨大常数/标准P-NP分开",
+        "evidence": "proof/MODEL-STATE-LOWER-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 55,
+      "at": "2026-11-04T21:45:30+00:00",
+      "round": 55,
+      "reason": "update:E37",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E37",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际exit0：5460 equality pairs、4240小d双layout全值/索引比较、384随机双layout；canonical exp(-120)为0，非stock/200B测评",
+        "evidence": "reports/retrieval-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 56,
+      "at": "2026-11-04T21:45:30+00:00",
+      "round": 56,
+      "reason": "update:M17",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M17",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "紧凑generic神经score族另证指数模型依赖不可普遍消除；未证明现有上界所有因子最优或否定具体baseline",
+        "evidence": "proof/MODEL-STATE-LOWER-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 57,
+      "at": "2026-11-04T21:45:30+00:00",
+      "round": 57,
+      "reason": "update:D7",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D7",
+        "changes": {
+          "current": 0.9,
+          "remaining": 0.9,
+          "novelty": 0.95,
+          "confidence": 0.7,
+          "cost": 1.3
+        },
+        "note": "最坏族下界已限定成立，下一价值在具体profile可证剪枝/等价类；不从普遍反例否定用户单个reference或人类假设",
+        "evidence": "proof/MODEL-STATE-LOWER-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 58,
+      "at": "2026-11-04T21:45:30+00:00",
+      "round": 58,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.8,
+          "remaining": 0.9,
+          "novelty": 0.95,
+          "confidence": 0.6,
+          "cost": 1.5
+        },
+        "note": "普遍polynomial模型系数受检索族阻碍，但特殊query/key结构仍可能降低常数，转向有证据的model-specific优化",
+        "evidence": "proof/MODEL-STATE-LOWER-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 59,
+      "at": "2026-11-04T21:51:41+00:00",
+      "round": 59,
+      "reason": "new-frontier:certified-profile-pruning",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "added": [
+          "M18",
+          "E38",
+          "E39",
+          "E40"
+        ],
+        "planned_next": "E38",
+        "scheduled_for_hour": 7,
+        "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour6-to-hour7",
+        "freshness_age_initialized_at_admission": true
+      }
+    },
+    {
+      "seq": 60,
+      "at": "2026-11-04T22:32:09+00:00",
+      "round": 60,
+      "reason": "update:E38",
+      "previous": null,
+      "selected": "E38",
+      "ranking": [
+        {
+          "id": "E38",
+          "priority": 1.0978,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.867 可信度=0.900 成本=0.75 邻接新信号=M18"
+        }
+      ],
+      "details": {
+        "node": "E38",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour7真实唤醒满足scheduled门槛，启动静态证书/特化验证/成本审计",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 61,
+      "at": "2026-11-04T22:32:09+00:00",
+      "round": 61,
+      "reason": "update:E39",
+      "previous": "E38",
+      "selected": "E38",
+      "ranking": [
+        {
+          "id": "E38",
+          "priority": 1.1058,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.900 可信度=0.900 成本=0.75 邻接新信号=M18"
+        },
+        {
+          "id": "E39",
+          "priority": 0.779875,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.900 可信度=0.850 成本=1.00 邻接新信号=M18"
+        }
+      ],
+      "details": {
+        "node": "E39",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour7真实唤醒满足scheduled门槛，启动静态证书/特化验证/成本审计",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 62,
+      "at": "2026-11-04T22:32:09+00:00",
+      "round": 62,
+      "reason": "update:E40",
+      "previous": "E38",
+      "selected": "E38",
+      "ranking": [
+        {
+          "id": "E38",
+          "priority": 1.1138,
+          "reason": "价值=0.940 余值=0.910 新鲜度=0.933 可信度=0.900 成本=0.75 邻接新信号=M18"
+        },
+        {
+          "id": "E39",
+          "priority": 0.78554167,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.933 可信度=0.850 成本=1.00 邻接新信号=M18"
+        },
+        {
+          "id": "E40",
+          "priority": 0.70331061,
+          "reason": "价值=0.900 余值=0.910 新鲜度=0.933 可信度=0.850 成本=1.10 邻接新信号=M18"
+        }
+      ],
+      "details": {
+        "node": "E40",
+        "changes": {
+          "status": "ready"
+        },
+        "note": "hour7真实唤醒满足scheduled门槛，启动静态证书/特化验证/成本审计",
+        "evidence": null,
+        "worked": false,
+        "gain": false
+      }
+    },
+    {
+      "seq": 63,
+      "at": "2026-11-04T22:34:49+00:00",
+      "round": 63,
+      "reason": "update:E38",
+      "previous": "E38",
+      "selected": "E39",
+      "ranking": [
+        {
+          "id": "E39",
+          "priority": 0.79120833,
+          "reason": "价值=0.900 余值=0.950 新鲜度=0.967 可信度=0.850 成本=1.00 邻接新信号=M18"
+        },
+        {
+          "id": "E40",
+          "priority": 0.70846212,
+          "reason": "价值=0.900 余值=0.910 新鲜度=0.967 可信度=0.850 成本=1.10 邻接新信号=M18"
+        }
+      ],
+      "details": {
+        "node": "E38",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "完整selected参数投影/签名共享证明与empty/domain条件已写，toy有限flag闭包为安全过近似；counterfactual D逃出Z不等于错误，不用样例充域",
+        "evidence": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 64,
+      "at": "2026-11-04T22:57:25+00:00",
+      "round": 64,
+      "reason": "update:E39",
+      "previous": "E39",
+      "selected": "E40",
+      "ranking": [
+        {
+          "id": "E40",
+          "priority": 0.71361364,
+          "reason": "价值=0.900 余值=0.910 新鲜度=1.000 可信度=0.850 成本=1.10 邻接新信号=M18"
+        }
+      ],
+      "details": {
+        "node": "E39",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际exit0：54212 kernel对照、2539三路策略feed、1551 RNG检查；静态metadata hash不变；full3996森林特化到752/776，不假称native预算达成",
+        "evidence": "reports/pruning-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 65,
+      "at": "2026-11-04T22:57:25+00:00",
+      "round": 65,
+      "reason": "update:E40",
+      "previous": "E40",
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E40",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "列出证书bytes/冷编译成本和仍大于native的word数；同号/观测q反例、inactive D例和zero-key控制均限定，最坏检索签名不合并",
+        "evidence": "proof/PRUNING-COST-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 66,
+      "at": "2026-11-04T22:57:25+00:00",
+      "round": 66,
+      "reason": "update:M18",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M18",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "selected参数证书投影工具局部完成，域证书来自全部有限phi输入；不冒称最小商、通用多项式模型成本或200B可用",
+        "evidence": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 67,
+      "at": "2026-11-04T22:57:25+00:00",
+      "round": 67,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.85,
+          "remaining": 0.9,
+          "novelty": 0.95,
+          "confidence": 0.65,
+          "cost": 1.4
+        },
+        "note": "建设性特化降低数值状态系数且保word，但当前范围仍比native大；下一检查延迟切换而非始终付大表常数",
+        "evidence": "reports/pruning-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 68,
+      "at": "2026-11-04T22:57:25+00:00",
+      "round": 68,
+      "reason": "update:D7",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D7",
+        "changes": {
+          "current": 0.9,
+          "remaining": 0.95,
+          "novelty": 0.95,
+          "confidence": 0.7,
+          "cost": 1.3
+        },
+        "note": "profile特化可行但resource口径仍未成实际H；进一步审计固定horizon常数/混合模拟是否让较弱终止条件过易",
+        "evidence": "reports/pruning-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 69,
+      "at": "2026-11-04T23:01:31+00:00",
+      "round": 69,
+      "reason": "update:E39",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E39",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "实际exit0：54212kernel比较/2539三路feed/1551 RNG检查；const metadata未变，K为752/776，未声称native预算达成",
+        "evidence": "reports/pruning-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 70,
+      "at": "2026-11-04T23:01:31+00:00",
+      "round": 70,
+      "reason": "update:E40",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "E40",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "metadata成本及仍较native大已列，两个不安全规则与inactive D边界/zero-key控制明确；不挑弱baseline作人类结果",
+        "evidence": "proof/PRUNING-COST-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 71,
+      "at": "2026-11-04T23:01:31+00:00",
+      "round": 71,
+      "reason": "update:M18",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "M18",
+        "changes": {
+          "remaining": 0.0,
+          "status": "done"
+        },
+        "note": "selected投影及精确签名特化工具局部完成，不给未认证模型或最小商/多项式静态分析结论",
+        "evidence": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 72,
+      "at": "2026-11-04T23:01:31+00:00",
+      "round": 72,
+      "reason": "update:D6",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D6",
+        "changes": {
+          "current": 0.85,
+          "remaining": 0.9,
+          "novelty": 0.95,
+          "confidence": 0.65,
+          "cost": 1.4
+        },
+        "note": "数值工作系数确降但原KV仍小；下一考虑固定horizon延迟重建，不预付巨表，未改证书",
+        "evidence": "reports/pruning-tests-v1.json",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 73,
+      "at": "2026-11-04T23:01:31+00:00",
+      "round": 73,
+      "reason": "update:D7",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "node": "D7",
+        "changes": {
+          "current": 0.9,
+          "remaining": 0.95,
+          "novelty": 0.95,
+          "confidence": 0.7,
+          "cost": 1.3
+        },
+        "note": "充分性仍需看固定horizon/模型常数和resource口径，不由渐近小空间自动得域内实际难题",
+        "evidence": "notes/HORIZON-HYBRID-CANDIDATE-v0.md",
+        "worked": true,
+        "gain": true
+      }
+    },
+    {
+      "seq": 74,
+      "at": "2026-11-04T23:08:47+00:00",
+      "round": 74,
+      "reason": "correction:hour7-bookkeeping",
+      "previous": null,
+      "selected": null,
+      "ranking": [],
+      "details": {
+        "administrative_only_rounds": [
+          69,
+          71,
+          72
+        ],
+        "editorial_not_new_theorem_round": 70,
+        "genuine_new_candidate_round": 73,
+        "raw_events_retained": true,
+        "last_work_round_restored": {
+          "E39": {
+            "before": 68,
+            "after": 63
+          },
+          "M18": {
+            "before": 70,
+            "after": 65
+          },
+          "D6": {
+            "before": 71,
+            "after": 66
+          }
+        },
+        "versioned_alias": {
+          "original_event": 70,
+          "old_recorded_path": "proof/PRUNING-COST-v1.md",
+          "sha256": "e2233caa66365bfb37188d968ef6f405fd722352ee68382a7e93ff001d5d97de",
+          "current_path": "proof/PRUNING-COST-v2.md"
+        },
+        "reason": "重复管理记录不算新科学进展；已被引用的v1恢复原字节，澄清版另存v2；没有删除原始事件或实验。"
+      }
+    }
+  ],
+  "mathematical_target": "UNRESOLVED",
+  "created": "2026-11-04T16:30:24+00:00"
+}

@@ -1,0 +1,2058 @@
+ Time-space tradeoff lower bounds for randomized computation of
+                        decision problems
+
+                             Paul Beamey                                    Michael Saksz
+                 Computer Science and Engineering                    Dept. of Mathematics
+                    University of Washington                          Rutgers University
+                    Seattle, WA 98195-2350                            New Brunswick, NJ
+                 beame@cs.washington.edu                          saks@math.rutgers.edu
+                         Xiaodong Sunz                                       Erik Veey
+                    Dept. of Mathematics                       Computer Science and Engineering
+                     Rutgers University                           University of Washington
+                    New Brunswick, NJ                             Seattle, WA 98195-2350
+                sunxd@math.rutgers.edu                          env@cs.washington.edu
+
+                                                 October 24, 2002
+
+
+
+                                                       Abstract
+
+          We prove the ﬁrst time-space lower bound tradeoffs for randomized computation of decision prob-
+      lems. The bounds hold even in the case that the computation is allowed to have arbitrary probability of
+      error on a small fraction of inputs. Our techniques are extension of those used by Ajtai [Ajt99a, Ajt99b]
+      and by Beame, Jayram1 , and Saks [BST98, BJS01] that applied to deterministic branching programs.
+      Our results also give a quantitative improvement over the previous results.
+          Previous time-space tradeoff results for decision problems can be divided naturally into results for
+      functions with boolean domain, that is, each input variable is f0; 1g-valued, and the case of large domain,
+      where each input variable takes on values from a set whose size grows with the number of variables.
+          In the case of boolean domain, Ajtai exhibited an explicit class of functions, and proved that any
+      deterministic Boolean branching program or RAM using space S = o(n) requires time T that is su-
+      perlinear. The functional form of the superlinear bound is not given in his paper, but optimizing the
+      parameters in his arguments gives T = (n log log n= log log log n) for S = O(n1  ). For the same
+                                  p
+      functions considered by Ajtai, we prove a time-space tradeoff (for randomized branching programs with
+                                       p
+      error) of the form T = (n log(n=S )= log log(n=S )). In particular, for space O(n1  ), this improves
+      the lower bound on time to (n log n= log log n).
+          In the large domain case, we prove lower bounds of the form T = (n log(n=S )) for randomized
+      computation of decision problems for the element distinctness function, and for certain functions associ-
+      ated to quadratic forms over large ﬁelds. These bounds improve on previous results of Beame, Jayram,
+      and Saks [BST98, BJS01], Ajtai [Ajt99a], and Pagter [Pag01].
+   A preliminary version of this paper appeared in the Proceedings of the 41st IEEE Symposium on Foundations of Computer
+Science
+   y Research supported by NSF grants CCR-9800124 and CCR-0098066.
+   zResearch supported by NSF grants CCR-9700239, CCR-9988526, and by DIMACS
+   1
+     T.S Jayram, formerly Jayram S. Thathachar
+
+
+
+                                                           1
+1 Introduction
+
+The efﬁciency of an algorithm is typically measured according to its use of some relevant computational
+resource. The most widely studied resource in this context is computation time, but another important
+resource is memory or computation space. Typically, algorithmic design problems focus on the goal of
+minimizing one of these resources. It is very natural to study the relationship between these two goals.
+    It is well known that these goals are somewhat compatible; if we have an upper bound of S on the amount
+of space used by a terminating algorithm, then that algorithm has at most 2S distinct memory conﬁgurations
+and therefore runs in time at most 2S . This observation shows that a very space-efﬁcient algorithm is at least
+somewhat time efﬁcient.
+    Typically, this 2S upper bound on time is very weak, and there are algorithms having much better time
+bounds. Indeed, for many fundamental computational problems such as sorting, matrix multiplication, and
+directed graph connectivity, the goals of minimizing time and space seem to be in conﬂict; the most time-
+efﬁcient algorithms known require heavy memory resources, and as one decreases the amount of memory
+used, the amount of time needed to solve the problem apparently increases signiﬁcantly. This apparent trade-
+off between time and space has motivated a large body of research within complexity theory [Bor93]. Such
+research has a dual motivation. First, we seek to provide a sound basis for the belief that such tradeoffs are
+inherent, and to understand the underlying characteristics of problems that exhibit such tradeoffs. Second,
+such research ﬁts into the broader goal of proving computational lower bounds. Since we have had only very
+limited success in proving lower bounds on the time needed to solve a particular computational problem,
+or on the space needed to solve a particular computational problem, one might hope to make progress by
+considering the simultaneous restriction of time and space.
+    As with most lower bound problems in complexity theory, research divides into uniform and nonuniform
+models. In the uniform computational setting, an algorithm is modeled by a single program or, more for-
+mally, by a Turing machine, that operates on inputs of all lengths. In the nonuniform setting, an algorithm
+is modeled by a sequence of simple combinatorial structures (typically, directed graphs), one for each input
+size. A further dichotomy is drawn between decision problems (whose output is a single bit, indicating
+“Yes” or “No”) and multi-output problems.
+    In the uniform setting, a series of recent papers have established time-space limitations on Turing ma-
+chines that are able to solve the CNF-satisﬁability (SAT) decision problem. The ﬁrst work along these lines
+was by Fortnow [For97], which was followed by [LV99] and [FvM00]. The latter gives the best
+                                                   o (1)                                       p current
+result: any algorithm for SAT that runs in space n       requires time at least (n ) where  = ( 5 1)=2
+and  is any positive constant. Although some of these lower bounds apply even to co-nondeterministic
+computation, none of them give any results for randomized algorithms.
+    In the nonuniform setting, the standard model is the branching program. In this model, a program for
+computing a function f (x1 ; : : : ; xn ) (where the variables take values in some ﬁnite domain D ) is represented
+as a DAG with a unique start node. Each non-sink node is labeled by a variable and the arcs out of a node
+correspond to the possible values of the variable. Each sink node is labeled by an output value. Executing
+the program on a given input corresponds to following a path from the start node using the values of the
+input variables to determine the arcs to follow. The output of the program is the value labelling the sink
+node reached. The maximum length of a path corresponds to time and the logarithm of the number of nodes
+corresponds to space. This model is often called the D -way branching program model; in the case that the
+domain D is f0; 1g is referred to as the Boolean branching program model.
+    In this model (or more precisely an extension that permits outputs along arcs during the course of com-
+putation), there was considerable success in proving time-space tradeoff lower bounds for multi-output func-
+
+
+                                                        2
+tions such as sorting, pattern matching, matrix-vector product and hashing [BC82, Bea91, Abr90, Abr91,
+MNT93]. The basic technique is to consider a space-limited computation, and show that in any short span
+of time, it is impossible to accurately produce more than a very small amount of the output. This technique
+is inherently incapable of providing results in the case of decision problems, where the entire output is a
+single bit.
+    Until recently, the only time-space tradeoff results for decision problems were for models where the
+access to the input was limited in some signiﬁcant way. In the comparison branching program model (where
+the inputs are numbers, and the only access to the input allowed is pairwise comparison to determine order)
+strong time-space tradeoffs were obtained for the element distinctness decision problem [BFMadH+ 87,
+Yao88]. There is also an extensive literature on various restricted read-k models ([BRS93, Oko93]) which
+have strict limitations on the number of times that any one variable may appear on any path in the branching
+program.
+    Recently, the ﬁrst results have been obtained for decision problems on unrestricted branching programs
+using time more than n. In the D -way model, [BST98, BJS01] exhibited a problem in P , where the domain
+D grows with the number of variables n, for which any subexponential size nondeterministic branching pro-
+gram has length (n log log n). (As we discuss later, the technique is powerful enough to show length lower
+bounds of (n log n) for sub-exponential size branching programs.) In the Boolean case, they obtained the
+ﬁrst (barely) nontrivial bound by exhibiting a problem in P and a constant  > 0 for which any subexpo-
+nential size branching program requires length at least (1 + )n. The lower bounds in [BST98, BJS01] were
+shown for functions based on quadratic forms over ﬁnite ﬁelds extending techniques of Borodin, Razborov,
+and Smolensky [BRS93] that showed size lower bounds for read-k branching programs computing bilinear
+forms.
+    In a remarkable breakthrough, Ajtai [Ajt99b] exhibited a P -time computable Boolean function (also
+based on quadratic forms) for which any subexponential size deterministic branching program requires
+superlinear length. Much of the technical argument for this result was contained in a previous paper of
+Ajtai [Ajt99a, Ajt98] which developed a key tool for analyzing the branching programs. The earlier paper
+gave similar lower bounds for two non-Boolean problems whose input is a list of n binary strings, each of
+length b = O (log n) bits: (1) Hamming closeness – determine whether the list contains a pair of strings
+within Hamming distance Æb for some ﬁxed Æ > 0, and (2) Element distinctness – determine whether
+the strings are all distinct. Ajtai’s proof of the lower bound for Hamming closeness used ideas similar to
+those used by Okol’nishnikova [Oko93] to prove lower bounds in the read-k case; however, his argument
+for element distinctness contains deeper ideas that are the key to his lower bounds for Boolean branching
+programs.
+    The basic approach of all of these time-space tradeoffs for decision problems on branching programs
+was to show that any branching program of “small” length and size must accept a subset of inputs that form a
+“large” embedded rectangle, and then to exhibit concrete functions that accept no large embedded rectangles.
+(We will deﬁne embedded rectangle in section 2.1; for now it sufﬁces for the reader to know that it is a highly
+structured subset of D n .) This was done for syntactic read-k branching programs in [BRS93, Oko93]. The
+ﬁrst lower bounds on embedded rectangle size for general branching programs of small size and length were
+shown in [BST98, BJS01]. These bounds gave the results from that paper mentioned above, and are also
+strong enough to give the Hamming closeness result of [Ajt99a], but were not strong enough to give the
+element distinctness and Boolean function lower bounds. Ajtai obtained these bounds by proving a striking
+sequence of combinatorial lemmas that gave a much stronger lower bound on embedded rectangle size.
+This directly gave his tradeoff results for element distinctness and was the basis for the subsequent Boolean
+branching program lower bound.
+
+
+
+                                                      3
+1.1 Our results
+
+In this paper, we extend Ajtai’s approach for deterministic branching programs in order to obtain the ﬁrst
+time-space tradeoff results for (two-sided error) randomized branching programs, and also for deterministic
+branching programs that are allowed to err on a small fraction of inputs. Previously, there were no known
+time-space tradeoffs even in the uniform setting for these modes of computation. We also extend the lower
+bound technique of Beame, Jayram, and Saks to randomized branching programs. Since the branching
+program model is stronger than the RAM model our results apply to (two-sided error) randomized RAM
+algorithms as well.
+    We obtain substantial quantitative improvement over the previous results. More speciﬁcally, we show
+that, for element distinctness and the boolean quadratic form considered
+                                                                      q by Ajtai, any two-sided error
+branching program of subexponential size must have length at least (n logloglogn n ). Ajtai does not explicitly
+give the functional form of his length bounds, but analyzing his argument gives at most an (n logloglogloglogn n )
+bound.
+    For functions whose variables take on values from a large domain, stronger lower bounds were already
+known, and we improve on these slightly. For certain quadratic forms over larger ﬁelds, an (n log log n)
+lower bound on length for deterministic branching programs of subexponential size was proved in [BST98,
+BJS01]. The same techniques can be applied to the natural generalizations of the quadratic forms considered
+by Ajtai to large domains, to immediately yield (n log n) length lower bounds for deterministic branching
+programs of subexponential size. We obtain the same bound for two-sided error randomized branching
+programs. For the Hamming closeness problem, Pagter [Pag01] had obtained an (n logloglogn n ) lower bound
+for one-sided error randomized branching programs of subexponential size by careful analysis of Ajtai’s
+argument [Ajt98, Ajt99a]. We improve this to an (n log n) lower bound that again holds for two-sided
+error branching programs.
+    Finally, while our argument relies heavily on Ajtai’s approach, our version is considerably simpler.
+    One superﬁcial difference in our presentation that makes some of the exposition simpler is that we apply
+the basic approach developed in [BST98, BJS01] of breaking up branching programs into collections of
+decision trees called decision forests and then analyzing the resulting decision forests. This has the effect
+of applying the space restriction only once, early in the argument, rather than carrying the space restriction
+throughout the argument. Our approach simpliﬁes the analysis without fundamentally changing its ideas.
+    Our extension of Ajtai’s lemma shows that for a small deterministic branching program not only is there
+a large embedded rectangle of accepted inputs, but there is a set of large embedded rectangles of accepted
+inputs that cover almost all such inputs without covering any one input too many times. From this we show
+that if the given branching program agrees with a given target function f on all but a small fraction of inputs
+then there is a large embedded rectangle almost all of whose inputs are ones of f . We obtain our lower
+bounds for random algorithms by strengthening Ajtai’s arguments about element distinctness, Hamming
+closeness, and the quadratic forms to show that, not only do the functions not accept any relatively large
+embedded rectangle, they reject a signiﬁcant fraction of inputs in any such rectangle.
+
+
+
+
+                                                        4
+2 Preliminaries
+
+2.1 Sets and functions
+
+Throughout this paper D denotes a ﬁnite set and n a positive integer. We write [n℄ for the set f1; : : : ; ng.
+For ﬁnite set N , D N is, as usual, the set of maps from N to D . An element of N is called a variable index
+or, simply, an index. We normally take N to be [n℄ for some integer n, and write D n for D [n℄.
+     If A  N , a point  2 D A is a partial input on A. For a partial input  , fixed( ) denotes the index
+set A on which it is deﬁned and unfixed( ) denotes the set N A. If  and  are partial inputs with
+fixed( ) \ fixed( ) = ; then  denotes the partial input on fixed( ) [ fixed( ) that agrees with 
+on fixed( ) and with  on fixed( ).
+    For x 2 D N and A  N , the projection xA of x onto A is the partial input on A that agrees with x. For
+S  DN , SA = fxA : x 2 S g.
+    For a partial input  , D N ( ), the set of extensions of  in D N , is fx 2 D N : xfixed() =  g.
+    A function whose range is f0; 1g is a decision function. A decision function whose domain is f0; 1gN
+for some index set N is a Boolean function.
+
+
+2.2 Embedded Rectangles
+
+A product U  V of two ﬁnite sets is called a (combinatorial) rectangle. If A  N is an index subset, and
+Y  DA and Z  DN A, then the product set Y  Z is naturally identiﬁed with the subset R = f :
+ 2 Y;  2 Z g of DN , and a set of this form is called a rectangle in DN . This notion of rectangle has been
+used, for example, in the study of communication complexity in the “best-partition” model and in the study
+of read-once branching programs.
+    We need a more general notion of rectangle. An embedded rectangle R in D N is a triple (B; A1 ; A2 )
+where A1 and A2 are disjoint subsets of N and B  D N satisﬁes: (i) The projection BN A1 A2 consists
+of a single partial input  , (ii) If 1 2 BA1 , 2 2 BA2 then the point 1 2  2 B . B is called the body of
+R and A1 and A2 are the feet of R. The sets BA1 and BA2 are the legs of the rectangle and  is the spine.
+Abusing terminology, we typically use the same letter for an embedded rectangle and its body, writing
+R = (R; A1 ; A2 ). This could cause trouble if we needed to refer to two rectangles with the same body but
+different feet, but this will not come up in this paper. We sometimes omit the word “embedded” and simply
+say that R is a rectangle.
+     We can specify an embedded rectangle by its feet, legs and spine. Let A1 and A2 be disjoint subsets of N ,
+Y1  DA1 and Y2  DA2 , and  be a partial input on N A1 A2 . Then the set f1 2  : 1 2 Y1 ; 2 2 Y2 g
+is the body of the unique embedded rectangle with feet (A1 ; A2 ), legs (Y1 ; Y2 ) and spine  .
+     For an embedded rectangle R = (R; A1 ; A2 ), and j 2 f1; 2g we deﬁne:
+
+    mj (R) = jAj j,
+    m(R) = minfm1 (R); m2 (R)g,
+    j (R) = jRAj j=jDjjAj j,
+    (R) = minf 1 (R); 2 (R)g.
+
+                                                      5
+  (R) is called the leg-density of R and j (R) is called the j -density of R for j = 1; 2. Let m 2 [n℄,
+ 2 [0; 1℄ and  : [n℄ ! [0; 1℄. We say that R is:
+    -balanced if m1(R)  m2 (R) and m2(R)  m1(R).
+    balanced if it is 1-balanced, i.e., m1(R) = m2(R).
+    -dense if (R)  (m(R)) and -sparse otherwise.
+    (m; )-large if m(R)  m, and R is -dense.
+    Let (R; A1 ; A2 ) be a rectangle with legs Y1 = RA1 and Y2 = RA2 and spine  . Let 1 = RA1 B1 and
+2 = RA2 B2 . For each 1 2 1 and 2 2 2 , the set R(1 2 ) = R \ Dn (1 2 ) is a rectangle with
+feet (B1 ; B2 ), spine 1 2 , and legs Yj (j ) = Yj \ D n (j ), for j 2 f1; 2g. The collection of rectangles
+f(R(1 2); B1 ; B2) : 1 2 1; 2 2 2 g partitions R and is called the (B1; B2 )-reﬁnement of R, and is
+denoted Re ne(R; B1 ; B2 ).
+
+
+2.3 Branching programs
+
+Since we are only interested in the computation of decision (single output) functions here, we present our
+deﬁnitions of branching programs only for this case. A (deterministic) branching program B on domain D
+and index set N is an acyclic directed graph with the following properties:
+
+    There is a unique source node, denoted start B .
+    Each sink node v has a label output (v), which is 0 or 1.
+    Each non-sink node v is labeled by an index i(v) 2 N
+    There are exactly jDj arcs out of each non-sink node, each with a different element value (a) of D.
+Intuitively, a branching program is executed on input x by starting at start B , reading the variable xi(start B )
+and following the unique arc labeled by xi(start B ) . This process is continued until a sink is reached and the
+output of the computation is the output value of the sink.
+    We say that B accepts the input x if the sink reached on input x is labeled 1. We view B as a decision
+function from D n by deﬁning B (x) = 1 if and only if B accepts x. For a function f : D N ! f0; 1g, we
+say that B computes f if B (x) = f (x) for all x and that B approximates f with error at most  if the fraction
+of inputs x such that f (x) 6= B (x) is at most .
+    Two measures associated with B are size which equals the number of nodes, and length which is the
+length of the longest path.
+     A branching program of length d is leveled if the nodes can be partitioned into d sets V0 ; V1 ; : : : ; Vd
+where V0 = fstart B g is the source, Vd is the set of sink nodes and every arc out of Vi goes to Vi+1 , for
+0  i < d. By a well-known observation (see, e.g. [BFK+81]), every branching program B of size s and
+length d, can be converted into a leveled branching program B 0 of length d that has at most s nodes in each
+of its levels and computes the same function as B (and is deterministic if B is).
+    For our purposes, a randomized branching program Be with domain D and index set N is a probability
+distribution over deterministic branching programs with domain D and index set N . Executing Be on input
+x 2 DN corresponds to selecting the deterministic branching program B according to the distribution Be
+
+                                                        6
+and evaluating B (x). We say that Be computes the function f with error at most  if for every input x,
+Pr [Be(x) = f (x)℄  1 . The length (resp. size) of Be is the maximum length of any branching program
+that gets nonzero probability under the distribution.
+    This notion of probabilistic branching program differs from the standard notion which is obtained by
+modifying the deﬁnition of deterministic branching program to allow “random” nodes which are not labeled
+by variables, but where the execution randomly selects an output arc. It is well known and easy to see that
+our notion is at least as powerful as the standard notion and thus is sufﬁcient for the purpose of proving
+lower bounds.
+    We note the following well known fact.
+
+Proposition 2.1. Let f : D n ! f0; 1g and suppose Be is a randomized branching program of size at most
+S and length at most T that computes f with error probability at most . Then there is a deterministic
+branching program B of size at most S and length at most T that approximates f with error at most .
+
+Proof. For deterministic branching
+                              P
+                                       program B and input x, let g (B ; x) = 1 if B (x) 6= f (x) and 0 other-
+wise. Deﬁne q (B ) = jD j n x2Dn g (B ; x). For each x, the probability that Be(x) 6= f (x) is equal to the
+expectation EB [g (Be; x)℄ which is at most , by hypothesis. Averaging over x, we have EB [q (B )℄   which
+              e                                                                            e
+means there is a B having nonzero probability under Be such that q (B )  .
+
+
+2.4 Decision Trees and Decision Forests
+
+A decision tree is a branching program B whose underlying graph is a tree rooted at start B . In particular,
+a decision tree is leveled. Every function on n variables is computable by a deterministic decision tree of
+length n. Following common practice, the length of a decision tree is referred to as its height.
+    A decision forest is a set of decision trees. More precisely for domain D and integers n and r and  > 0,
+an n-variate (r; )-decision forest F over D is a collection of at most r decision trees such that each tree is
+an n-variate tree over domain D and has height at most n. F is viewed as a function on D n by the rule
+F (x) = ^T 2F T (x). A decision forest F is inquisitive if on every input x, for each i 2 [n℄, at least one of
+the trees T 2 F reads xi .
+
+
+2.5 Converting branching programs to a disjunction of decision forests
+
+The following result is a minor variant of a lemma proved in [BST98, BJS01], which says roughly that the
+function computed by a branching program that is not too large and not too deep can be expressed as the
+OR of a not too large collection of decision forests, each of which consists of a small set of shallow trees.
+
+Lemma 2.2. Let k; S 2 R and n 2 N and D be a ﬁnite set. Let B be an n-variate branching program
+over domain D having length at most kn and size at most 2S . Then for any integer r 2 [kn℄, the function f
+computed by B can be expressed as:
+                                                   _u
+                                               f = Fi ;
+                                                   i=1
+where u  2 , each Fi is an inquisitive (r; r )-decision forest, and the sets Fi 1 (1) are pairwise disjoint
+              Sr                           k +2
+sets of inputs.
+
+
+
+
+                                                      7
+Proof. As noted in Section 2.3, there is a leveled branching program B 0 of length kn with at most 2S nodes
+per level that computes the same function as B . Furthermore, let B 00 be the length (k + 1)n branching
+program obtained from B 0 by adding n layers at the beginning that obliviously query each variable. For
+distinct nodes v and w of B 00 , let fv;w denote the function on D n which is 1 on input  if, starting from v ,
+the path consistent with  leads to w. It is easy to see that if v is at level i and w is at level j > i, then fv;w can
+be computed by a decision tree of height j i. For each positive integer i less than r deﬁne li = d ikn       r e. Note
+that l1 <    < lr 1 < kn divides the interval [0; kn℄ into r intervals each of size at most r + 1  ( k+1
+                                                                                                     kn
+                                                                                                                  r )n.
+An input is accepted by B 00 if and only there is a sequence of nodes v0 ; v1 ; v2 ; : : : ; vr 1 ; vr , where v0 is the
+start node, vr is the accepting node and for i 2 [r 1℄, vi is at level li , such that fvi 1 ;vi ( ) = 1 for each
+i 2 [r℄. Therefore
+                                                      _ r^1
+                                             f=                   fvi ;vi+1 :
+                                                  v1 ;:::vr 1 i=0
+                                          W
+There are at most 2S (r 1) terms in the , and each term is a (r; k+2       r ) decision forest.
+    Finally, each input follows a unique path, and so is accepted by at most one of the decision forests. Note
+that since B 00 obliviously reads all variables at the beginning, each of the decision forests in the decomposi-
+tion produced in the above argument is inquisitive.
+
+
+3 Overview and comparison to previous results
+
+The main approach taken in [BST98, BJS01, Ajt99a, Ajt99b] for proving time-space tradeoff lower bounds
+is to show that for any branching program running in time T and space S , where T and S are suitably small,
+if the fraction of inputs for which the branching program outputs 1 is not too small then there must be some
+embedded rectangle R having large feet and leg-density consisting entirely of inputs on which the program
+outputs 1.
+    There are two main differences between our results and previous results for decision problems. First
+of all, we obtain substantially larger values for the foot size and leg-density of the obtained rectangles.
+Secondly, we show that not only is there one large embedded rectangle on which the branching program
+outputs 1 but there is a collection of such embedded rectangles that together cover most of the inputs on
+which the branching program outputs 1, and such that no input is covered too many times. This allows
+us to prove lower bounds for randomized and distributional as well as deterministic branching program
+complexity.
+     We summarize the relationships between the different results in Table 1. Each result has the following
+form: Given a branching program of depth (time) T = kn and 2S nodes (space S ) of the indicated program
+type that computes function f that is 1 on at least a Æ (f ) fraction of its inputs, then there is a (balanced)
+embedded rectangle R that is (m; )-large (as deﬁned in section 2.2), for suitably large m and , that
+contains very few inputs of f 1 (0). The lower bound on foot size m has the form n= 0 (k ), and the lower
+bound on leg density has the form (m) = Æ (f )=2 1 (k)m+ 2 (k)S , where 0 ; 1 ; 2 are nonnegative valued
+functions. The quantity 1 (k )m + 2 (k )S , which appears in the exponent of 2 in the expression for (m)
+provides an upper bound on log2 (Æ (f )= (R)), which we call the leg-deﬁciency of R. Smaller values of
+  0 (k); 1 (k); 2 (k) give larger embedded rectangles and better the time-space tradeoff lower bounds.
+   The Error column indicates the fraction of inputs of the rectangle that belong to f 1 (0). This error is 0
+except in the case that the branching program has 2-sided error , in which case it is proportional to .
+    Any nonempty rectangle has leg-deﬁciency at most m log jD j, and to obtain non-trivial time-space trade-
+
+
+                                                           8
+       Paper         Foot Size         Leg Deﬁciency         Program Type        Error              Applicability
+                       m(R)           log2 (Æ(f )= (R))                       jR\f 1 (0)j
+                                                                                 jRj
+ [BST98, BJS01]      2 O(k) n         O(k)m + 2O(k) S         non-determ.          0        k = O(log n), jDj = 2 (k)
+ [Ajt99a, Pag01]     k O(k) n       O(k log k)m + kO(k) S       determ./           0             k = O( logloglogn n ),
+                                                             1-sided err.         0               jDj = k (k)
+       Here          2 O(k) n         O(k)m + 2O(k) S        2-sided err.       O()       k = O(log n), jDj = 2 (k)
+     [Ajt99a]        2 k O (k ) n    2 k (k) m + 2kO(k) S       determ.            0            k = O( logloglogloglogn n )
+                                                                                                           q
+       Here          k O(k2 ) n      k (1) m + kO(k2 ) S        determ.            0            k = O( logloglogn n )
+                                                                                                      q
+       Here          k O(k2 ) n      k (1) m + kO(k2 ) S     2-sided err.      O(k)           k = O( logloglogn n )
+Table 1: Properties of embedded rectangle R found given a D -way branching program with time T = kn
+and space S computing a function f : D n ! f0; 1g with Æ (f ) = jf 1 (1)j=jD n j.
+
+
+offs results, we will need leg-deﬁciency considerably smaller. Thus, in the expression 1 (k )m + 2 (k )S ,
+we need 1 (k ) to be sufﬁciently smaller than log jD j. In particular, the ﬁrst group of bounds in the table is
+useful only if jD j is sufﬁciently large. The second group of bounds has 1 (k ) = o(1) which enables us to
+obtain results for the most interesting case, D = f0; 1g.
+    In general, the best lower bound achievable from each result will be of the form T = (n 1 ( n logS jDj ))
+where (k ) = 0 (k )  2 (k ). The upper bound on k = T=n listed in the last column is the limit on the best
+lower bound achievable given a polynomial size branching program.
+    Section 5 contains the precise statements and proofs of the new stronger results outlined above that if
+f is a decision function computed by a small and shallow branching program then there is a collection of
+large rectangles that covers a substantial portion of f 1 (1). As in [BST98, BJS01], the main step (which
+appears in section 4) is to prove corresponding results for the case that f is computed by a small and
+shallow decision forest. Straightforward application of Lemma 2.2 then gives the desired results about
+small branching programs. Applications of this result to lower bounds on speciﬁc functions are given in
+section 6.
+
+
+4 Finding large embedded rectangles in decision forests
+
+Throughout this section, D is a ﬁxed ﬁnite domain, n  r  k  1 are integers and F is a ﬁxed inquisitive
+D-way (r; k=r)-decision forest over index set [n℄. (Such an F arises from a branching program of depth
+(k 2)n using the construction of Lemma 2.2.) Our goal here is to show that one can ﬁnd a collection of
+embedded rectangles, such that:
+
+(G1) Each rectangle is contained in F 1 (1).
+
+(G2) No single input belongs to “many” rectangles.
+
+(G3) The union of the rectangles covers all but a small number of inputs in F 1 (1).
+
+                                                       9
+(G4) Each rectangle in the collection has foot size at least n= 0 where 0 depends only on k and is as small
+     as possible.
+
+(G5) Each rectangle in the collection is -dense where  : [n℄ ! [0; 1℄ is a function that is as large as
+     possible and, in particular, satisﬁes (m)  jD j m for some constant  < 1.
+
+(G6) Each rectangle is balanced.
+
+    All but the ﬁrst and last of these conditions depend on parameters that will be selected as we proceed.
+The ﬁrst three conditions, (G1), (G2), (G3), concern the coverage of the set of rectangles with respect to
+F 1 (1), whereas the last three, (G4), (G5), (G6) refer to parameters of the individual rectangles within the
+cover. We will ﬁrst concentrate on obtaining sets of rectangles with the coverage properties that satisfy the
+parameter conditions (G4), (G5), which together imply that each rectangle is large; we will only derive the
+balance condition (G6) at the end of the argument. However, in proving conditions (G4) and (G5) we will
+ﬁnd it useful to ﬁrst ensure that the rectangles are all approximately balanced, more precisely 3-balanced;
+the ﬁnal balance condition will follow easily afterward.
+
+
+4.1 Constructing a rectangle partition from two disjoint forests
+
+Our ﬁrst step is to show that any pair (F1 ; F2 ) of disjoint subforests of F is naturally associated with a
+partition R(F1 ; F2 ) of F 1 (1) into embedded rectangles. We start by looking at the combinatorial structure
+induced by a single subforest on the set of inputs. Let T 2 F , F1  F , and x 2 D n We deﬁne:
+
+    read(x; T ) is the set of indices read by T on input x.
+    read(x; F1 ) = ST 2F1 read(x; T ).
+    ore(x; F1 ) = read(x; F1 ) read(x; F F1 ), the F1 -core of x, is the set of indices which on
+      input x are read by at least one tree in F1 and by no tree outside of F1 . By our assumption that F is
+      inquisitive, this is the same as [n℄ read(x; F F1 ).
+
+    stem(x; F1 ), the F1 -stem of x, is the partial input obtained by projecting x to [n℄         ore(x; F1 ).
+      Since F is inquisitive, this means that stem(x; F1 ) is the projection of x onto read(x; F     F1 ) .
+    stems(F1 ), the set of F1 stems, is the set of partial inputs  for which there exists x 2 Dn with
+      stem(x; F1 ) = .
+
+    For  2 stems(F1 ), it is clear from the deﬁnition that any x 2 D n satisfying stem(x; F1 ) =  belongs
+to D n (). The converse of this also true, though less obvious:
+
+Lemma 4.1. Let Fj be a subforest of an inquisitive decision forest F and let  2 stems(Fj ). For all
+x 2 Dn (), stem(x; Fj ) =  and ore(x; Fj ) = unfixed().
+Proof. Let x 2 D n (). Since  2 stems(Fj ) there is an input y with  = stem(y; Fj ). Since F is
+inquisitive,  is the projection of y onto read(y; F Fj ), which means that on input y , the trees of F Fj
+read precisely the indices of fixed(). Since x 2 D n (), each T 2 F Fj behaves the same on x as it
+does on y . So read(x; F Fj ) = fixed(). Thus ore(x; Fj ) = unfixed(), and the restriction of x to
+read(x; F Fj ) is also , i.e., stem(x; Fj ) = .
+
+
+
+                                                     10
+   Now we consider the combinatorial structure induced by a pair of subforests F1 and F2 which are disjoint
+subsets of F . Deﬁne:
+
+    stem(x; F1 ; F2 ) is the partial input on [n℄     ore(x; F1 )     ore(x; F2 ) obtained from projecting x.
+
+    We say that inputs x; y 2 F 1 (1) are (F1 ; F2 )-equivalent if and only if ore(x; F1 ) = ore(y; F1 ),
+ ore(x; F2 ) = ore(y; F2 ), and stem(x; F1 ; F2 ) = stem(y; F1 ; F2 ): Let R(F1 ; F2 ) be the set of (F1 ; F2 )-
+equivalence classes. For R 2 R(F1 ; F2 ), we write ore(R; F1 ) for the common value of ore(x; F1 )
+shared by all x 2 R and deﬁne ore(R; F2 ) and stem(R; F1 ; F2 ) analogously. For x 2 F 1 (1), let
+R(x; F1 ; F2 ) denote the equivalence class containing x.
+Lemma 4.2. Let F1 ; F2  F be disjoint subforests of the inquisitive decision forest F . Let R 2 R(F1 ; F2 ).
+Then R is an embedded rectangle with feet ( ore(R; F1 ); ore(R; F2 )) and spine stem(R; F1 ; F2 ).
+
+Proof. Let A1 = ore(R; F1 ) and A2 = ore(R; F2 ) and  = stem(R; F1 ; F2 ). By deﬁnition, A1 and
+A2 are disjoint. Let L1 = f1 2 DA1 : 1  2 stems(F2 )g and L2 = f2 2 DA2 : 2 2 stems(F1 )g.
+Let Q be the embedded rectangle with feet A1 and A2 , legs L1 and L2 , and spine  . It sufﬁces to show that
+R = Q.
+   First we show R  Q. Let x 2 R. By deﬁnition of R, ore(x; F1 ) = A1 and ore(x; F2 ) = A2 . Write
+x 2 R as 1 2 where 1 2 DA1 , and 2 2 DA2 . Since 1  = stem(x; F2 ) and 2 = stem(x; F2 ), we
+have 1 2 L1 and 2 2 L2 and therefore x 2 Q.
+   Next we show Q  R. Let x = 1 2 2 Q such that 1 2 L1 and 2 2 L2 . Now since 1  2 stems(F2 )
+and 2 2 stems(F1 ), by Lemma 4.1 we have ore(x; F2 ) = unfixed(1  ) = A2 and ore(x; F1 ) =
+unfixed(2 ) = A1 . Therefore, x 2 R.
+
+    Thus, each pair of disjoint forests F1 ; F2 induces a partition R(F1 ; F2 ) of F 1 (1) into embedded rect-
+angles (which thus satisﬁes the covering conditions (G1), (G2) and (G3)). However, we also want the
+rectangles in our collection to be suitably large (and balanced). There is no guarantee, for an arbitrary pair
+of forests F1 ; F2 , if we eliminate rectangles of its associated partition that are not suitably large, that the
+remainder will cover a sufﬁciently large fraction of F 1 (1) (violating (G3)). To help with this we use the
+probabilistic method to choose a pair of forests F1 ; F2 for which this idea sufﬁces in certain cases. Depend-
+ing on the notions of “suitably large” that we require, even applying this idea with a single pair of forests
+may not sufﬁce. For these stronger results we need to apply the probabilistic method to obtain several differ-
+ent choices of pairs of forests whose associated partitions have the property that the suitably large rectangles
+in the union of the partitions covers most of the inputs in F 1 (1). If the number of different choices is not
+too large then we will be able to satisfy (G3) without violating (G2).
+
+
+4.2 Analysis of core size for randomly chosen forests
+
+We begin by deﬁning a parameterized family of probability distributions over pairs (F1 ; F2 ) of forests and
+analyzing properties of R(F1 ; F2 ) when (F1 ; F2 ) is chosen according to a distribution in this family. In
+[BST98, BJS01], (F1 ; F2 ) was chosen to be a random partition of F into two parts. Ajtai [Ajt99a] used a
+more general parameterized family of distributions, and we use a variant of the ones he used. For q 2 (0; 21 ℄,
+let Fq be the distribution which chooses (F1 ; F2 ) by independently assigning each decision tree T 2 F as
+
+
+
+
+                                                       11
+follows:                            8
+                                    <F1
+                                    >                        with probability q
+                               T 2 F2                        with probability q
+                                  >
+                                  :
+                                   F F1 F2                   with probability 1      2q:
+The distribution used in [BST98, BJS01] corresponds to the case q = 1=2.
+   For x 2 D n , let (x; q ) = E [j ore(x; F )j℄ = E [j ore(x; F )j℄ for (F ; F ) selected according to
+                                                    1                         2            1   2
+Fq . We now show that (x; q) is a fairly large fraction of n, and also that for each x, with high probability,
+both ore(x; F1 ) and ore(x; F2 ) are close to (x; q ). This lemma generalizes a lemma proved in [BST98,
+BJS01] for the q = 1=2 case. Ajtai proved tighter concentration bounds for his distributions using a more
+detailed analysis, but since the tighter bounds are not signiﬁcant in the ﬁnal results, we content ourselves
+with a simple second moment argument.
+Lemma 4.3. Let n  r  k and let F be an n-variate inquisitive (r; k=r )-decision forest. Let x be any
+input. For any q , if (F1 ; F2 ) is chosen according to Fq , then:
+
+  (a) (x; q )  q k n.
+                                                                                     2
+  (b) for each j 2 f1; 2g, Pr [jj ore(x; Fj )j          (x; q)j  12 (x; q)℄  4rqkk
+Proof. By symmetry, it is enough to consider the case j = 1.
+    For i 2 [n℄. Pr [i 2 ore(P
+                             x; F1 )℄ = qt(i) , where t(i) is the number of trees that access variable
+                                                                                               P
+                                                                                                       i on input
+x. Thus E[j ore(x; F1 )j℄ = i2[n℄ q . Since F makes at most kn reads on input x, n i2[n℄ t(i)  k.
+                                      t(i )                                                  1
+                                                                     P               1         P
+By the arithmetic-geometric mean inequality, E[j ore(x; F1 )j℄ = i q t(i)  nq n i t(i)  q k n.
+   Next we upper bound Var[j ore(x; F1 )j℄. Let M (i) be the event that i 2 ore(x; F1 ). For 1  i; i0  n,
+we say i  i0 if there is T 2 F that accesses both xi and xi0 on input x. Now
+                                          X
+                  Var[j ore(x; F1 )j℄ =          (Pr [M (i) ^ M (i0 )℄ Pr [M (i)℄  Pr [M (i0 )℄):
+                                          i;i0
+If :(i  i0 ) then the events M (i) and M (i0 ) are independent and the corresponding term in the sum is 0.
+If i  i0 then we upper bound Pr [M (i) ^ M (i0 )℄ Pr [M (i)℄  Pr [M (i0 )℄ crudely by Pr [M (i)℄ = q t(i) .
+Since on input x, each tree reads at most kr n variables, for each i the number of i0 such that i  i0 is at most
+t(i) kr n. Thus,
+                                        n              n        n
+                                     k X            kX        X         k2 n
+                Var[j ore(x; F1 )j℄  n t(i)qt(i)        t(i) qt(j )       (x; q):
+                                     r i=1          r i=1     j =1
+                                                                         r
+(The second inequality uses a form of Chebyshev’s inequality
+                                                          Pn
+                                                              (e.g. [HLP52,
+                                                                      Pn
+                                                                            Theorem
+                                                                             Pn
+                                                                                    43, page 43]) which
+says that when ai and bi are positive and anti-correlated, i=1 ai bi  i=1 ai j =1 bj =n.)
+   We now use the more usual form of Chebyshev’s inequality: for any random variable Z with ﬁnite
+expectation and variance, Pr [jZ E[Z ℄j   ℄  Var[Z ℄= 2 .
+                                                                
+                                            1
+              Pr j ore(x; F1 )j (x; q)j℄j  (x; q)
+                                            2
+                                                                      4Var[j ore(x; F1 )j℄=(x; q)2
+                                                                               2           2
+                                                                      r4(kx;nq)  4rqkk :
+
+
+                                                            12
+4.3 Choosing rectangles with high leg-density: overview
+
+The lemma in the previous subsection implies that for (F1 ; F2 ) chosen according to Fq , the subset of
+R(F1 ; F2 ) consisting of those rectangles that both have foot size at least qk n=2 and are 3-balanced cov-
+ers all but a few inputs of F 1 (1). Provided that q is not too small, this would produce a set of rectangles
+that satisfy some version of the covering conditions (G1),(G2),(G3) as well as the lower bound on foot-size
+(G4) and approximate balance. If we did not care about the leg-density bound (G5), then we would choose
+q = 1=2, and we would essentially be done. However, we want the chosen rectangles to have sufﬁciently
+high leg-density to satisfy (G5). To obtain the time-space tradeoffs for the various functions considered in
+[BST98, BJS01] and [Ajt99a, Ajt99b], we will want the leg-density bound (m) = jD j m for some  < 1.
+(Notice that for (m)  jD j m , any nonempty rectangle is trivially -dense.)
+     We would like that for F1 ; F2 chosen according to the Fq , almost all inputs in F 1 (1) are in rectangles
+that are -dense, for some appropriate (m). In the special case that all of the trees in F are oblivious (that
+is, the choice of variables queried in a given tree depends only on the level and not on the path followed
+by the input), it is easy to show that this is true for every choice of (F1 ; F2 ) even if we take (m) to be a
+constant function. In this case, for any given pair (F1 ; F2 ), ore(x; F1 ) and ore(x; F2 ) are the same for all
+inputs x, so all of the rectangles in R(F1 ; F2 ) have the same pair of feet (A1 ; A2 ). Thus these rectangles are
+determined only by their spines  on [n℄ A1 A2 . For any  > 0, and for j 2 f1; 2g, any rectangle R with
+  j (R)   covers at most  jD j 1
+                                   jA j+jA2j inputs and there are only jDjn jA1 j jA2 j rectangles in R(F1 ; F2 ).
+Therefore, for the constant function (m) =  , the number of inputs that are not in -dense rectangles is at
+most 2 jD n j.
+    The idea of this argument is that the deﬁnition of -sparse imposes an upper bound on the size of each
+-sparse rectangle and we multiply this by (an upper bound on) jR(F1 ; F2 )j. In the general (nonoblivious)
+case, the rectangles in R(F1 ; F2 ) do not all have the same feet, which creates two problems: (1) the size
+upper bound on a -sparse rectangle also depends on the size of the feet, and so is different for different
+rectangles, and, more signiﬁcantly, (2) it is harder to get good upper bounds on jR(F1 ; F2 )j.
+    The rest of this section is devoted to proving two lemmas, Lemma 4.4 and Lemma 4.13. The ﬁrst lemma
+uses a simple argument that achieves a leg-density lower bound (m) = 2 O(km) , which is enough to
+prove time-space tradeoffs for some functions in the case that the domain D is large, in particular larger
+than 2 k for some constant . The second lemma is much harder and achieves a leg-density lower bound
+(m) = 2 m for  < 1, which is needed for the time-space tradeoffs for boolean functions and for the
+element distinctness problem.
+
+
+4.4 Weak lower bounds on leg-density
+
+Lemma 4.4. Let F be an n-variable inquisitive (r; k=r ) decision forest where n  r  k  2 are integers.
+Let 1 > 0 ; Æ 0 > 0 and suppose that r  2k+4 k 2 = 0 . Then there is a family R of disjoint rectangles such
+that each rectangle R 2 R is a subset of F 1 (1) and satisﬁes m(R) = m1 (R) = m2 (R)  dn=2k+1 e and
+  (R)  2 12(k+1)m(R) Æ0 , and such that the set j [R2R Rj has size at least (1 0 )jF 1 (1)j Æ0 jDn j.
+Proof. Let r  2k+4 k 2 = 0 and choose (F1 ; F2 ) according to F1=2 . By Lemma 4.3, for each x 2 F 1 (1),
+there is a wx = 12 (x; 1=2)  n=2k+1 such that Pr[j ore(x; Fj )j 62 [wx ; 3wx ℄℄  0 =2 for j = 1; 2.
+Therefore there is a pair (F1 ; F2 ) such that j ore(x; F1 )j; j ore(x; F2 )j 2 [wx ; 3wx ℄ for all inputs x in
+a subset J of F 1 (1) of size at least (1        0 )jF 1 (1)j. Let Q be the set of all embedded rectangles
+R 2 R(F1 ; F2 ) that contain at least one element of J . By construction every embedded rectangle R in Q
+has n=2k+1  m(R) = min(m1 (R); m2 (R)) and max(m1 (R); m2 (R))  3m(R).
+
+                                                       13
+    We ﬁrst partition each of the embedded rectangles in Q to produce a set Q0 of balanced rectangles
+as follows: For each embedded rectangle (R; A1 ; A2 ) in Q, if j 2 f1; 2g is an index such that m(R) =
+mj (R) = jAj j, we deﬁne Bj = Aj , deﬁne B3 j  [n℄ to be the set consisting of the smallest m(R)
+elements of A3 j and replace (R; A1 ; A2 ) by its partition into embedded rectangles with feet B1 and B2 ,
+Re ne(R; B1 ; B2 ) (as deﬁned in section 2.2). Clearly each embedded rectangle R0 2 Re ne(R; B1 ; B2 )
+has m(R0 ) = m1 (R0 ) = m2 (R0 ) = m(R)  n=2k+1 .
+    We now deﬁne the subset R of Q0 to be those embedded rectangles R0 such that jR0 j 
+2 12(k+1)m(R0 ) Æ0 jDj2m(R0 ) . We claim that the union of all rectangles in Q0
+                                                                 R contains at most Æ0 jDjn
+inputs.
+     Each rectangle in Q is deﬁned by its feet corresponding to the common core sets A1 ; A2  [n℄ and
+its spine, the partial assignment  2 D [n℄ A1 A2 corresponding to the common stem. Furthermore, each
+reﬁned rectangle R0 in Q0 is deﬁned by specifying the rectangle R in Q from which it was derived, together
+with the partial assignment to the max(m1 (R); m2 (R)) m(R) variables of largest index in the larger of
+A1 or A2 .
+    We count the rectangles in Q0 separately based on the possible values of m1 (R) and m2 (R) of the
+rectangle R from which they are derived. For each ﬁxed pair (m1 ; m2 ) of integers there are at most
+  n  n jD jn m1 m2 rectangles R 2 Q with m (R) = m and m (R) = m and thus at most
+ m1 m2                                         1         1       2         2
+                                                                           
+            n      n                                              n      n
+                       j Djn m1 m2 jDjmax(m1 ;m2 ) min(m1 ;m2 ) =             jDjn 2 min(m1 ;m2 )
+            m1 m2                                                 m1 m2
+rectangles R0 2 Q0 derived from such rectangles R. By construction we only need to consider integer
+pairs (m1 ; m2 ) with n  m1 ; m2  n=2k+1 such that   max(m1 ; m2 )  3 min(m1 ; m2 ). Now, using the
+                                                  n   2H2 (m=n)n where H (p) = p log (1=p) + (1
+fact (easily checkable given the standard bound m                          2            2
+p) log2 (1=(1 p))) that for `  1 if m  n=2` then mn  22`m , for these values of m1 and m2 ,
+                           
+                  n         n
+                  m1        m2
+                               jDjn 2 min(m1 ;m2)   22(k+1)(m1 +m2 ) jDjn 2 min(m1 ;m2 )
+                                                    28(k+1) min(m1 ;m2) jDjn 2 min(m1 ;m2 ):
+                                                                                      0              0
+Therefore the total number of inputs in rectangles R0 in Q0 with jR0 j < 2 12(k+1)m(R ) Æ 0 jD j2m(R ) such that
+m1 (R) = m1 and m2 (R) = m2 is at most 2 4(k+1) min(m1 ;m2 ) Æ0 jDjn . Summing over all pairs (m1 ; m2 ) we
+                                                                                                   k+1
+need to consider shows that the number of inputs in J not covered by R is at most n2 2 4(k+1)n=2 Æ 0 jD jn 
+Æ0 jDjn since m1 ; m2  n=2k+1 and n= log2 n  2k =k for n  r  2k+4 k2 .
+                                                                                                    0
+     Since any rectangle R0 with both feet of size m(R0 ) has precisely 1 (R0 ) 2 (R0 )jD j2m(R ) elements
+and since j (R0 )  1 for j = 1; 2, for every rectangle R0 in R, (R0 ) = min( 1 (R0 ); 2 (R0 )) 
+              0
+2 12(k+1)m(R ) Æ0 as required.
+    The proof of Lemma 4.4 is very similar to that of the result of [BST98, BJS01] cited in Table 1. The
+main difference here is that in [BST98, BJS01] the argument only produces a single rectangle that is suitably
+large and dense, while the above lemma gives a collection of disjoint rectangles that covers all but a small
+number of points in F 1 (1); this extension will permit lower bounds for randomized branching programs
+with 2-sided error. We get a small savings of a 2 r factor in the bound and the 12 in the exponent is slightly
+worse because of our extension to the randomized case, but these will not signiﬁcantly change the lower
+bound when we extend it to the entire branching program.
+   This lemma is the only part of this section needed to prove the time-space tradeoffs for branching pro-
+grams for the Hamming closeness function and for quadratic forms over large ﬁelds. The reader who wishes
+
+                                                      14
+to get an idea how the “large rectangle” results are applied can go to section 5.1 and then the relevant parts
+of section 6.
+
+
+4.5 A sufﬁcient condition for high leg-density
+
+We turn to the harder task of improving the density lower bounds on the rectangles in our cover to be much
+larger than 2 m . Conceptually, our approach closely follows that used to prove the main lemma of [Ajt99a].
+The overall strategy involves classifying inputs based on the pattern of accesses to their input variables made
+by the various trees in the decision forest.
+   We will begin by developing a general condition on a pair of forests F1 ; F2 and an arbitrary subset
+J  Dn of inputs that will allow us to obtain good leg-density lower bounds on the rectangles in R(F ; F )
+                                                                                                         1   2
+that cover most of J . We will then show that this condition holds if the restrictions of the access patterns
+of the inputs in J to the trees of F1 and F2 satisfy a certain property. Finally, we will show that there is a
+small set of probabilities q satisfying the following. If the inputs are partitioned into classes based on their
+overall access patterns, for any such class of inputs J there is some q 2 such that, for F1 ; F2 chosen from
+Fq , the restrictions of the access patterns of the inputs in J to F1 and F2 satisfy the desired property.
+    We now work out the condition that implies large leg-density. Fix a pair of forests F1 ; F2 . We begin
+with an alternate characterization of leg-density in terms of Fj -stems.
+
+Lemma 4.5. Let  2 stems(Fj ) and let R 2 R(F1 ; F2 ) satisfy R \ D n () 6= ;. Then j (R) = jR \
+Dn ()j=jDn ()j.
+Proof. Let  and R be as hypothesized. Let A1 ; A2 be the feet of R,  be the spine and Y1 ; Y2 be the legs.
+Suppose x 2 R \ D n (). Let  be the restriction of x to A3 j . Then  2 Y3 j and  = stem(x; Fj ). By
+Lemma 4.1  =  . Since R = f1 2  : 1 2 Y1 ; 2 2 Y2 g, we have that R \ D n () = fj  : j 2 Yj g
+and thus jR \ D n ()j = jYj j = j (R)jD Aj j = j (R)jD n ()j.
+
+    Now ﬁx a subset J  D n of inputs. Very roughly, if one could show that for any x 2 J there are very
+few rectangles in R(F1 ; F2 ) containing inputs in J that extend stem(x; Fj ) then by some kind of averaging
+one would expect that most points in J will lie in rectangles that have relatively large j -density. In order to
+make this rough argument precise we need the following property of stems(Fj ) which follows immediately
+from Lemma 4.1.
+
+Lemma 4.6. fD n () :  2 stems(Fj )g is a partition of D n .
+
+    Let  : [n℄ ! [0; 1℄ be an arbitrary function and let Qj be the set of rectangles
+                                                                                 P
+                                                                                      R in R(F1 ; F2 ) with
+ j (R) < (mj (R)). The number of inputs of J that belong to elements of Q is R2Qj jR \ J j. To upper
+                                                                             j
+bound this sum, we classify points according to their Fj -stem and separately upper bound the number of
+
+
+
+
+                                                      15
+points in each class that are contained in such sparse rectangles.
+   X                            X           X
+         jR \ J j =                              jR \ J \ Dn()j
+  R2Qj                      2stems(Fj ) R2Qj
+                                X                X
+                                                           jR \ Dn()j
+                            2stems(Fj )       R2Qj
+                                           R\J \Dn ()6=;
+                                X                X
+                                                             j (R)  jD ()j
+                    =                                                  n
+                            2stems(Fj )       R2Qj
+                                           R\J \Dn ()6=;
+                                X
+                    <                      jfR 2 R(F1 ; F2 ) : R \ J \ Dn() 6= ;gj  (junfixed()j)  jDn()j:
+                            2stems(Fj )
+
+   Deﬁne numre ts(; J ) = jfR 2 R(F1 ; F2 ) : R \ J \ D n () 6= ;gj. We rewrite the last line and
+continue:
+
+                         X
+                                  jDn()j  (junfixed()j)  numre ts(; J )
+                   2stems(Fj )
+                                                                                        X
+                         2stems
+                             max (junfixed()j)  numre ts(; J )
+                                  (F )
+                                                                                                    jDn()j
+                                        j
+                                                                                    2stems (Fj )
+                        =    jDnj         max
+                                      2stems(Fj )
+                                                     (junfixed()j)  numre ts(; J );
+
+where the last equality follows from Lemma 4.6. Let Pm;j = f 2 stems(Fj ) : junfixed()j = mg.
+Since
+
+            max         (junfixed()j)  numre ts(; J ) = max ((m) max numre ts(; J ));
+         2stems(Fj )                                                 m; Pm;j 6=;       2Pm;j
+
+we thus arrive at the following:
+Lemma 4.7. Let F be an n-variable inquisitive decision forest on domain D , let F1 ; F2 be subforests of
+F and J  F 1 (1). Let j 2 f1; 2g,  2 [0; 1℄, and for each m 2 [n℄ let Pm;j = f 2 stems(Fj ) :
+junfixed()j = mg. If  : [n℄ ! [0; 1℄ satisﬁes
+                                                                  
+                                            (m) 
+                                                       max2Pm;j numre ts(; J )
+for each m such that Pm;j 6= ;, then the rectangles R in R(F1 ; F2 ) with j (R) < (mj (R)) together cover
+at most  jD n j points of J .
+
+
+4.6 Upper bounding numre ts (; J )
+
+To use this lemma, we need a good upper bound on max2Pm;j numre ts(; J ). Of course, this quantity
+depends on F1 ; F2 and J . To this end, we prove an alternative characterization of numre ts(; J ):
+Proposition 4.8. Fix the forest pair F1 ; F2 . Let J be a subset of F 1 (1). For j 2 f1; 2g, and  2
+stems(Fj ), numre ts(; J ) is equal to the number of subsets C of [n℄ for which there is an x 2 J with
+stem(x; Fj ) =  and ore(x; F3 j ) = C .
+
+                                                                16
+Proof. For x 2 D n (), we have ore(x; Fj ) = unfixed() and stem(x; F1 ; F2 ) is simply the pro-
+jection of  onto fixed()           ore(x; F3 j ). From this we conclude that for x; y 2 D n () \ J ,
+R(x; F1 ; F2 ) = R(y; F1 ; F2 ) if and only if ore(x; F3 j ) = ore(y; F3 j ). The conclusion of the propo-
+sition is immediate.
+
+    Thus numre ts(; J ) is the size of a particular collection of subsets of [n℄, which we will upper bound
+using:
+
+Proposition 4.9. If C is a collection of subsets of [n℄ such that for any two
+                                                                           P         B 2 C , the symmetric
+                                                                              sets A;
+difference AB has size at most d, then jCj  S (n; d), where S (n; d) = j d j . n
+
+    Thus an upper bound on numre ts(; J ) will follow from an upper bound for j = 1; 2 on
+j ore(x; F3 j ) ore(y; F3 j )j for all x; y 2 J having the same Fj -stem. We will carefully partition
+almost all of F 1 (1) into sets J and choose subforests F1 ; F2 depending on certain properties of J so that
+for j = 1; 2 all x; y 2 J with the same Fj -stem will be such that ore(x; F3 j ) ore(y; F3 j ) is much
+smaller than ore(x; Fj ) = ore(y; Fj ).
+    In order to do this, for j = 1; 2 we will associate each input x 2 J with a subset of variables (depending
+on j ) so that for any two inputs x; y with the same Fj -stem, ore(x; F3 j ) ore(y; F3 j ) is contained in
+the union of the subset associated with x and the subset associated with y . Our goal will be achieved by
+showing that for j = 1; 2 and every x 2 J the subset of variables associated with x is much smaller than
+  ore(x; Fj ).
+    The subset associated with x will be determined by classifying variables according to which trees read
+them on input x. In particular, it will depend on F1 and F2 and also on an auxiliary parameter ` which we
+will be free to choose later.
+    With (F1 ; F2 ) ﬁxed, we deﬁne for j 2 f1; 2g and positive integer `  r :
+
+           vset(x; `) =      fi 2 [n℄ : on input x, exactly ` trees of F read xig
+              Bj (x; `) =      ore(x; Fj )   vset(x; `)
+              Bj0 (x; `) =   fi 2 [n℄ : on input x, i is read in exactly ` trees of Fj ,
+                                   in at least one tree of F3 j and in no trees of F       F1 F2 . g:
+
+   We now show that associating each x 2 D n to the subset B3 j (x; `) [ B30 j (x; `), we get the desired
+property.
+
+Lemma 4.10. Let (F1 ; F2 ) be a pair of disjoint subforests of the forest F and let ` be a positive integer. For
+j 2 f1; 2g and inputs x; y 2 Dn such that stem(x; Fj ) = stem(y; Fj ) we have
+           ore(x; F3 j ) ore(y; F3 j )  B3 j (x; `) [ B30 j (x; `) [ B3 j (y; `) [ B30 j (y; `):
+
+Proof. By symmetry in j; x; y , it sufﬁces to consider the case j = 2 and i 2 ore(x; F1 )        ore(y; F1 ) and
+show i 2 B1 (x; `) [ B10 (y; `).
+    If i 62 vset(x; `), then i 2 B1 (x; `). Suppose i 2 vset(x; `). On input x, i is read by exactly
+` trees in F1 , and by no trees of F F1 F2 , and the same is true for y since x and y agree outside
+of ore(x; F2 ) = ore(y; F2 ). Since i 62 ore(y; F1 ), at least one tree of F2 reads i on input y , so
+i 2 Bj0 (y; `). Therefore i 2 B1 (x; `) [ B10 (y; `).
+
+
+                                                      17
+   The free parameter ` in the above lemma gives us some freedom in choosing the sets to associate to
+each input. We want to choose (F1 ; F2 ) and ` so that for almost all inputs x, B3 j (x; `) [ B30 j (x; `) is
+substantially smaller than ore(x; Fj ).
+    The key observation is that no variable whose index is in B3 j (x; `) [ B30 j (x; `) is read in exactly `
+trees of F . We will group inputs in F 1 (1) into classes Jq;` for a certain small set of values of q 2 (0; 1=2℄
+and ` 2 [r ℄ such that for (F1 ; F2 ) chosen according to Fq for almost all x 2 Jq;` , the overwhelming majority
+of the variables in ore(x; F1 ) and ore(x; F2 ) are read in exactly ` trees of F . Therefore for almost
+all x 2 Jq;` , the sizes of B1 (x; `) and B2 (x; `) will be substantially smaller than the sizes of the cores,
+  ore(x; F1 ) and ore(x; F2 ); a similar argument will allow us to obtain comparable upper bounds on the
+sizes of B10 (x; `) and B20 (x; `).
+    We now show how to group the inputs into the sets Jq;` . Our bounds substantially improve those implicit
+in [Ajt99a, Ajt99b] because we give a more precise description of these two quantities and give a sharper
+calculation of their expected sizes. Roughly speaking, in each case, the analysis in [Ajt99a] only uses the
+randomness of one of the forests in the pair (F1 ; F2 ) while holding the other ﬁxed. We restructure the
+analysis so that we can use the randomness of both forests.
+
+Lemma 4.11. Let F be an n-variable inquisitive (r; k=r )-decision forest with n  r  k  3. Let
+q1  1=4k. For every input x, there is a pair (`; b) = (`(x); b(x)) of integers with 1  `  k and
+1 < b  2k, such that for (F1 ; F2 ) chosen according to Fqb and j 2 f1; 2g,
+                                                              1
+
+  (a) E[jBj (x; `)j℄  4q1  (x; q1b ).
+
+  (b) E[jBj0 (x; `)j℄  2kq1  (x; q1b ).
+                                                                                     P
+Proof. Let h = jvset(x; h)j for h = 1; : : : ; r . It is easy to see that (x; q ) = rh=1 h q h : We will choose
+` and q = q1b so that term ` q` overwhelmingly dominates the sum.
+                                                                              h(a)
+    For a  1, let qa = q1a . Let h(a) be the least index such that h(a) qa  h qah for all h  1. Clearly
+h(a) is a positive integer and we claim:
+  (1) h(1)  k .
+
+  (2) h(a) is non-increasing with respect to a.
+                                      P                                       P
+For the ﬁrst claim, by Lemma 4.3, h h q1h = (x; q1 )  q1k n. Since h>k h q1h < nq1k+1  k+1           n qk ,
+                                                                                                             1
+           P                   k , and so for some ` 2 f1; : : : ; k g,  q ` > n q k   P
+we have hk h q1h > kkn     q
+                           +1 1                                          ` 1    k+1 1       h>k  h q h , which
+                                                                                                      1
+                                                                                  h(a)
+proves the ﬁrst claim. For the second claim we have for all h > h(a), h(a) qa          hqah which implies
+         (a) >  qh , so h(a + 1)  h(a).
+h(a) qah+1     h a+1
+    By the pigeonhole principle, there exists a b 2 f2; : : : ; 2k g such that h(b 1) = h(b) = h(b + 1). Set
+` = `(x) to be h(b) and let b(x) = b. For h  `, hq1(b 1)h  `q1(b 1)` implies h qbh  `qb` q1h ` . Similarly,
+               (b+1)h   q(b+1)` implies  qh   q` q` h. Thus for h 6= `,  qh   q`  qjh `j: Then for
+for h  `, h q1         ` 1               h b      ` b 1                         h b    ` b 1
+
+
+
+
+                                                       18
+(F1 ; F2 ) chosen according to the distribution Fqb we have:
+                                                       X                  X
+                                 E[jBj (x; `)j℄ =             h qbh            ` qb`  q1j` hj
+                                                       h6=`               h6=`
+                                                                  1
+                                                                  X
+                                                   2`qb`              q1p  4` qb`  q1
+                                                                  p=1
+                                                   4q1  (x; qb);
+proving the ﬁrst part of the lemma.
+     Note Bj0 (x; `)  [h`+1 vset(x; h). For h  ` + 1 and i 2 vset(x; h), i 2 Bj0 (x; `) if and only if
+exactly ` out of the h trees that read i on x are in Fj and the rest are in F3 j , which happens with probability
+      
+               1 2 : : : h `  qb (k + 1) , since `  k. Summing over h > ` and i 2 vset(x; h), we
+qbh h` = qbh `+1  `+2      h        h        h `
+have:
+                                           r           
+                         0                X            h
+                    E[jBj (x; `)j℄ =           hqb h
+                                         h=`+1
+                                                       `
+                                          Xr                          Xr
+                                              hqbh (k + 1)h `           ` qb` (k + 1)h ` q1h `
+                                         h=`+1                      h=`+1
+                                                             1
+                                                             X
+                                         ` qb` (k + 1)q1         ((k + 1)q1 )p  2kq1 (x; qb );
+                                                             p=0
+
+where the last inequality uses k  3 (so that (k + 1)  43k ), q1  41k and ` qb`  (x; qb ).
+
+
+4.7 Putting things together
+
+For b 2 f2; : : : ; 2k g and ` 2 f1; : : : ; k g, let C `;b = fx 2 F 1 (1) : `(x) = `; b(x) = bg, and let
+C b = [` C `;b. We now apply the probabilistic method for each b separately to show that if I  C b for some
+b 2 f2; : : : ; 2kg, we can choose a pair of disjoint subforests (F1b ; F2b ) so that for most points x of I , the
+rectangle R(x; F b ; F b ) is large.
+                  1   2
+Lemma 4.12. Let F be an n-variable inquisitive (r; k=r ) decision forest with n  r  k  8. Let
+                                                                                                       2
+q1  1=(4k), let b 2 f2; : : : ; 2kg and let qb = q1b . Let I  C b . Let ; Æ > 0, and suppose r  4kqk . Then
+                                                                                                      b
+there is a pair of forests (F ; F ) and a subset I 0 of I with jI 0 j  jI j(1 6 ) 2Æ jD jn such that for each
+                             1    2
+x 2 I 0 and j 2 f1; 2g the rectangle R = R(x; F1 ; F2 ) satisﬁes:
+                                                     (x; qb ) 3(x; qb )
+                                          mj (R) 2 [          ;           ℄
+                                                         2        2
+                                                               Æ
+                                             j (R)        10 kq           :
+                                                     kS (n; 1 mj (R))
+
+Proof. Select (F1 ; F2 ) according to Fqb .
+    Let z 2 I and let ` = `(z ). We claim that with probability at least 1                      6 , the following three events
+hold for both j 2 f1; 2g.
+
+  (i) 12 (z; qb )  j ore(z; Fj )j  32 (z; qb ),
+
+                                                             19
+  (ii) jB3 j (z; `)j  8q1 j ore(z; Fj )j= ,
+
+ (iii) jB30 j (z; `)j  4kq1 j ore(z; Fj )j= .
+
+    Conditions (ii) and (iii) follow from (i) and the conditions (ii’) jB3 j (z; `)j  4q1 (z; qb )= and (iii’)
+jB30 j (z; `)j  2kq1(z; qb )= . For each j , Lemma 4.3 says that (i) fails with probability at most 4k2 =(rqbk ),
+which is at most by hypothesis, and Lemma 4.11 with Markov’s inequality implies that (ii’) and (iii’) each
+fail with probability at most . This proves the claim.
+    It follows that there is a ﬁxed pair (F1 ; F2 ) and a I 00  I with jI 00 j  (1 6 )jI j, such that for
+each z 2 I 00 , (i), (ii), and (iii) hold for j = 1 and j = 2. Note that (i) implies the desired bounds on
+mj (R(z; F1 ; F2 )).
+    For each ` 2 [k ℄, let I`00 = fx 2 I 00 : `(x) = `g. We will apply Lemma 4.7 with J = I`00 separately for
+each ` and j = 1; 2. Consider the Fj -stem  of some input in I`00 . Lemma 4.10 with (ii) and (iii) above imply
+that for x; y 2 D n ()\I`00 , j ore(y; F3 j ) ore(x; F3 j )j  (8k+16)q1 junfixed()j since ore(x; Fj ) =
+  ore(y; Fj ) = unfixed(). Since k  8 this is at most 10kq1 junfixed()j. By Propositions 4.8 and 4.9,
+numre ts(; I`00 )  S (n; 10kq1 junfixed()j).
+      Now apply Lemma 4.7 for j = 1; 2 with  = Æ=k and (m) = =S (n; 10kq1 m). This gives I`0  I`00
+of size at least jI`00 j 2Æ jD jn =k , such that for every x 2 I`0 , for R = R(x; F1 ; F2 ) and for j = 1; 2,
+                        10kq1 m (R))) which gives the claimed bound on (R) as a function of m (R). Let
+   j (R)  Æ=(kS (n;             j                                         j                        j
+I 0 = [k`=1I`0 . Then jI 0 j  jI 00 j 2ÆjDjn  jI j(1 6 ) 2ÆjDjn .
+    We now combine the results for each b 2 f2; : : : ; 2k g from Lemma 4.12 and convert (most of) the
+resulting rectangles into balanced rectangles to arrive at the main result of this section, which says that we
+can ﬁnd a collection of large rectangles, each contained in F 1 (1), that covers all but a small number of
+inputs in F 1 (1).
+
+Lemma 4.13. Let F be an n-variable inquisitive (r; k=r ) decision forest where n  r  k  8 are integers.
+Let q1  1=(4k ). Let 0 ; Æ 0 > 0, and suppose r  48      k2
+                                                       0 q12k2 . Then there is a family R of rectangles each
+                               S                                                                  0 ) jDn jÆ0 ,
+contained in F 1 (1) such that R2R R covers a subset of F 1 (1) of size at least jF 1 (1)j(1
+and such that R can be partitioned into subcollections fR : b 2 f2; : : : ; 2k gg, where for each b, the
+                                                                b
+rectangles in Rb are disjoint and each R 2 Rb satisﬁes
+                                                     1
+                            m(R) = m1 (R) = m2 (R)  q1bk n
+                                                     2
+                                                               0 Æ0
+                                       1 (R); 2 (R)  2                     :
+                                                     8k S (n; 360kq
+                                                                  0 1 m(R))
+
+Proof. For each b 2 f2; : : : ; 2k g, apply the previous lemma with I = I b = C b and             = 0 =12 and
+       0                b   b
+Æ = Æ =4k. Let (F1 ; F2 ) be the set of subforests and       b            0
+                                                           J be the set I from the conclusion of the lemma.
+     Q b = fR(x; F b ; F b ) : x 2 J b g. Let J = S2k J b and Q = S2k Qb . Then jJ j = P jJ b j 
+                 0 =2) 1 jD2 n jÆ0 =2k  jF 1 (1)j(1 b0 ==22) jDn jÆ0 . The rectangles
+                                                                              b=2
+Let
+P                                                                                                       b
+    b jI j(1
+         b                                                                              in Q are all 3-balanced.
+We would like to replace this by a collection of balanced rectangles. Consider (Q; A1 ; A2 ) 2 Q and without
+loss of generality assume that jA2 j  jA1 j. From the conclusion of Lemma 4.12, we have 1 (Q); 2 (Q) 
+Æ0 =(4k2 S (n; 360kq
+                   0 1 jA2 j)) since jA1 j  3jA2 j . Choose B1  A1 such that jB1 j = jA2 j and consider the
+(B1 ; A2 )-reﬁnement of Q, Re ne(Q; B1 ; A2 ) as deﬁned in section 2.2. It is easy to see that 2 (P ) = 2 (Q)
+
+                                                        20
+for every P 2 Re ne(Q; B1 ; A2 ). Also, each P 2 Re ne(Q; B1 ; A2 ) satisﬁes jP j = 1 (P )jD jjB1 j .
+Since there are at most jD jjA1 j jB1 j such rectangles, the number of points covered by rectangles P with
+             0                     0                      0
+  1 (P )  2 1 (Q) is at most 2 1 (Q)jDjjA1 j = 2 jQj. Thus, if we replace Q by the set of rectangles
+                                            0
+P 2 Re ne(Q; B1 ; A2 ) with 1 (P )  2 1 (Q), we obtain a collection R(Q) of disjoint subrectangles of
+Q each with feet (B1 ; A2 ) that together cover at least (1 0 =2)jQj points and such that each R 2 R(Q)
+satisﬁes 2 (R) = 2 (Q) and 1 (R)  0 1 (Q)=2. Take R to be the union of R(Q) over Q 2 Q, and
+J 0 to be the union of all the rectangles in R, so jJ 0 j  jJ j(1 0 =2)  jF 1 (1)j(1 0 ) jDn jÆ0 . The
+conclusion of Lemma 4.12, together with the lower bound on (x; q ) given by Lemma 4.3 implies that the
+rectangles in R have the claimed properties.
+
+
+5 Embedded Rectangles in Branching Programs
+
+Lemmas 4.4 and 4.13 showed that every suitably small decision forest admits a nice family of rectangles
+that covers most of the accepted inputs. In this section, we use the connection between branching programs
+and decision forests given by Lemma 2.2 together with these two lemmas to show that most inputs accepted
+by an efﬁcient branching program can be covered by a nice family of rectangles.
+
+
+5.1 Embedded rectangles with small leg-density
+
+We use the simple bound given in Lemma 4.4 to show the existence of embedded rectangles in branching
+programs.
+
+Theorem 5.1. Let k  4 be an integer and n  r  2k+6 k 2 . Let B be a branching program of length at
+most (k 2)n and size 2S . There is a collection R of disjoint embedded rectangles such that each rectangle
+R 2 R is a subset of B 1 (1) and satisﬁes m(R) S= m1 (R) = m2 (R)  n=2k+1 and 1 (R); 2 (R) 
+2 12(k+1)m(R) 2 Sr jB 1 (1)j=jDjn , and such that R2R R covers at least jB 1 (1)j=2 inputs in B 1 (1).
+Proof.W By Lemma 2.2, there is a family S consisting of 2Sr inquisitive (r; k=r )-decision forests, such that
+B = F 2S F . Note that the collection of sets fF 1 (1) : F 2 Sg partitions B 1(1).
+    For each forest F 2 S , apply Lemma 4.4 with 0 = 1=4, and Æ 0 = jB 1 (1)j=(2Sr+2 jD nS    j), and let RF
+              of embedded rectangles obtained in the conclusion of the lemma. Deﬁne R = F 2S RF . By
+be the family S
+construction, R2R R covers a subset of B 1 (1) of size at least (1   0 )jB 1 (1)j 2Sr Æ0 jDn j = 1 jB 1 (1)j,
+                                                                                                  2
+and each R 2 R has m(R) = m1 (R) = m2 (R)  n=2k+1 and 1 (R); 2 (R)  2 12(k+1)m(R) Æ 0 =
+2 12(k+1)m(R) 2 Sr jB 1 (1)j=jDjn as required.
+Corollary 5.2. Let k  4 be an integer and n  r  2k+6 k 2 . Let B be an n-variate branching program
+over domain D of length at most (k 2)n and size 2S .
+
+  (i) [BST98, BJS01] There is an embedded rectangle R contained in B 1 (1) satisfying m(R) = m1 (R) =
+      m2 (R)  n=2k+1 and (R)  2 12(k+1)m(R) Sr 2 jB 1 (1)j=jDjn .
+ (ii) Let f be an n-variate decision function over D and suppose B agrees with f on at least (1 )jD n j
+      inputs. Let Æ  jf 1 (1)j=jD n j. Then there is an embedded rectangle R contained in B 1 (1) satisfy-
+      ing m(R) = m1 (R) = m2 (R)  n=2k+1 and (R)  2 12(k+1)m(R) Sr 2 (Æ ), such that f is 0
+      on at most a 2=(Æ ) fraction of points in R.
+
+
+
+                                                     21
+Proof. Apply Theorem 5.1 and let R be the resulting collection of rectangles contained in B 1 (1). The ﬁrst
+part of the corollary follows by choosing any R 2 R. For the second part, the hypothesis on B implies that
+jB 1(1)j=jDn j  Æ  so all rectangles R 2 R satisfy (R)  2 12(k+1)m(R) Sr 2 (Æ ) and together
+they cover at least (Æ )jD n j=2 points in B 1 (1). Since B and f differ on at most jD n j inputs, f is 0 for
+at most jD n j of the at least (Æ )jD n j=2 points covered by R. Since the rectangles in R are disjoint, there
+must be some rectangle R 2 R in which f is 0 on at most 2=(Æ ) fraction of the points in R.
+
+
+5.2 Embedded rectangles with large leg-density
+
+Now, using a similar argument and Lemma 4.13 in place of Lemma 4.4, we derive our main theorem which
+is more widely applicable than Theorem 5.1.
+                                                                          2
+Theorem 5.3. Let k  8 be an integer, q1  2 40 k 8 , n  r  200k 2 =q14k . Let B be a branching program
+of length at most (k 2)n and size 2S . There is a collection R of embedded rectangles that satisﬁes:
+
+   1. Each rectangle of R is contained in B 1 (1).
+        S
+         R2R R  jB
+   2.                    1 (1)j=2.
+
+   3. No input belongs to more than 2k       1 rectangles of R.
+   4. Each rectangle R 2 R satisﬁes m(R)              = m1 (R) = m2 (R)  q12k2 n=2 and (R) 
+         1=2
+      2 q1 m(R) Sr jB 1 (1)j=jDjn .
+Proof.W By Lemma 2.2, there is a family S consisting of 2Sr inquisitive (r; k=r )-decision forests, such that
+B = F 2S F . Note that the collection of sets fF 1 (1) : F 2 Sg partitions B 1(1).
+    For each forest F 2 S , apply Lemma 4.13 with 0 = 1=4 and Æ 0 = jB 1 (1)j=(2Sr+2 jD nSj), and let RF
+be the family of embedded rectangles obtained in the conclusion of the lemma. Deﬁne R = F 2S RF . We
+claim that R satisﬁes the four conditions asserted in the conclusion of the theorem.
+    The rectangles of RF are contained in F 1 (1) so every R 2 R is contained in B 1 (1). Since no
+input is covered by more than 2k 1 rectangles in RF and the sets covered by F 1 (1) are disjoint for
+distinct F 2 S , each input is covered by at most 2k 1 rectangles of R. For each F , RF covers at least
+3 jF 1 (1)j jB 1 (1)j=2Sr+2 points of F 1 (1), so summing over at most 2Sr different F , we have that RF
+4
+covers at least jB 1 (1)j=2 points of B 1 (1).
+                                                                                                    2
+    Again by the conclusion of Lemma 4.13 each R 2 RF has m(R) = m1 (R) = m2 (R)  q12k n=2
+and (R)  jB 1 (1)j=(2Sr jD n j128k 2 S (n; 1440kq m(R))). It remains only to show that, under the given
+                                                     1
+hypotheses on k; q1 ; r and n, this last quantity is at least the claimed lower bound on    (R), and for this it
+sufﬁces to show that the following two inequalities hold:
+                                                                  1=2
+                                                   128k2    2q1 m(R)=2 ;
+                                                               1=2
+                                     S (n; 1440kq1 m(R))    2q1 m(R)=2 :
+                                       1=2         2k2 +1=2 n=4  128k2 by the hypotheses on q and n.
+For the ﬁrst inequality, we note that q1 m(R)=2  q1                                    P     1 
+For the second inequality, let = 1440kq1 m(R)=n. Since 2 [0; 1℄, we have S (n; n) = k n nk 
+P        n k n           n (1 + )n  (e= ) n . Therefore, it sufﬁces to show (e= ) n  2q11=2 m(R)=2
+  k n k
+
+
+
+                                                      22
+which is equivalent to showing (e= )2880k(q1 )
+                                                   1=2
+                                                           2. Since m(R)  q12k2 n=2, e=  q1 4k2 and so:
+                                                             3 1=2     q1=8
+                                            1=2        1 11520k (q1 )    1 1
+                             (e= )2880k(q1 )                                  2
+                                                       q1                q1
+          1=8
+since x1=x       2 for all x  248 .
+    In the above theorem, we obtain a rectangle cover that misses at most half of the points in B 1 (1). By
+a straightforward but tedious change in the analysis, we can strengthen the conclusion so that the fraction
+of uncovered points of B 1 (1) is arbitrarily small. This stronger version is not needed for the branching
+program lower bounds.
+    The ﬁrst part of the following corollary is a quantitative strengthening of Ajtai’s main technical result
+for proving time-space tradeoffs branching programs; the second part extends this to branching programs
+that are allowed to make a small fraction of errors.
+                                                                               2
+Corollary 5.4. Let k  8 be an integer, q1  2 40 k 8 , n  r  q1 5k . Let B be an n-variate branching
+program over domain D of length at most (k 2)n and size 2S .
+
+  (i) There is an embedded rectangle R contained in B 1 (1) satisfying m(R) = m1 (R) = m2 (R) 
+                             1=2
+      q12k2 n=2 and (R)  2 q1 m(R) Sr jB 1 (1)j=jDjn .
+  (ii) Let f be an n-variate decision function over D and suppose B agrees with f on at least (1 )jD n j
+       inputs. Let Æ  jf 1 (1)j=jD n j. Then there is an embedded rectangle R contained in B 1 (1) satisfy-
+                                             2                     1=2
+       ing m(R) = m (R) = m (R)  q 2k n=2 and (R)  2 q1 m(R) Sr (Æ ), such that f is 0 on at
+                        1            2         1
+      most a 4k=(Æ         ) fraction of points in R.
+Proof. Apply Theorem 5.3 (noting that the lower bound on r in the hypothesis of the present corollary
+implies the hypothesis on r for that theorem) and let R be the resulting collection of rectangles. The ﬁrst
+part of the corollary follows by choosing any R in R. For the second part, note that the hypotheses imply
+                                                                            1=2
+that jB 1 (1)j=jD n j  Æ , so all rectangles in R satisfy (R)  2 q1 m(R) Sr (Æ ), and together the
+rectangles cover at least (Æ )jD n j=2 inputs of B
+                                                  P
+                                                      1 (1). Call an input x bad if B(x) 6= f (x) and for R 2 R,
+let Bad(R) be the set of bad inputs of R. Now R2R jBad(R)j  2kjD n j since each input appears in at
+most 2k rectangles. Also R2R jBad(R)j  minR jBad             (R)j P                    jBad(R)j Æ  jDn j. So the
+                            P
+                                                            jRj      R2R jRj  minR jRj           2
+rectangle minimizing jBad(R)j=jRj satisﬁes jBad     (R)j  4k=(Æ ).
+                                                  jRj
+
+6 Lower Bounds
+
+We now use our two branching program characterizations from Corollaries 5.2 and 5.4 to derive lower
+bounds for a number of natural decision problems on branching programs and random access machines.
+These include two general classes of problems: problems based on quadratic forms over ﬁnite ﬁelds and
+problems involving all pairwise comparisons between input variables over large domains such as element
+distinctness and a related problem that we call Hamming closeness.
+    Most of these bounds apply for domains in which each input variable is from a relatively large domain
+D. For these our largest lower bounds are of the form T = (n log( n log n
+                                                                     S )) and are the largest known for
+general non-uniform computation of problems in NP . More importantly, we also obtain lower bounds for
+
+                                                            23
+the most interesting case of Boolean computation
+                                            p     and improve bounds of Ajtai [Ajt99b] for the computation
+of quadratic forms over GF (2) to T = (n log(n=S )= log log(n=S )) which is substantially better than the
+best previous bounds for Boolean problems. In all cases, our lower bounds apply to randomized computation
+with 2-sided error as well as to deterministic computation.
+    There are three axes on which to consider our lower bounds: the function analyzed, deterministic versus
+randomized computation, and whether the bounds of Corollary 5.2 can be used or the bounds of Corol-
+lary 5.4 are required. (In general, where it is applicable, Corollary 5.2 will give larger lower bounds but its
+applicability is much more limited than Corollary 5.4.)
+    We analyze the problems related to quadratic forms ﬁrst. For these problems, we present the arguments
+for the randomized case directly since the proof that no large embedded rectangles with small error exist is
+not much more involved than the one that no large error-free embedded rectangles exist. The lower bound
+for Boolean branching programs, which requires Corollary 5.4, is given in Theorem 6.6; then the lower
+bounds over large ﬁnite ﬁelds using Corollary 5.2 are given in Theorems 6.9 and 6.10.
+    We then analyze the element distinctness and Hamming closeness problems. For these problems, the
+deterministic analysis is much simpler than the randomized analysis so we present the deterministic lower
+bounds separately ﬁrst. The methods for element distinctness and Hamming closeness are very similar to
+each other although the element distinctness lower bounds require the use of Corollary 5.4, but Corollary 5.2
+sufﬁces for Hamming closeness. The reader who wishes to see the simplest application of the embedded
+rectangle methods is encouraged to read to the deterministic lower bounds for element distinctness ﬁrst.
+    While we state all of our results for branching programs, they apply to general sequential computa-
+tion [BC82], which includes random access machines (even non-uniform ones) and Turing machines. For
+the functions deﬁned over large domains in particular, the implications of these results for random access
+machines are especially natural and we include a number of these corollaries.
+
+
+6.1 Quadratic Forms
+
+If D is a ﬁnite ﬁeld and M is an n  n matrix with entries in D , let FM denote the quadratic form function
+on D n given by FM (x) = xT Mx.
+    Inspired by Borodin, Razborov, and Smolensky’s use of bilinear forms to prove lower bounds for read-k
+branching programs [BRS93], Beame, Jayram, and Saks, [BST98, BJS01] considered quadratic forms over
+ﬁnite ﬁelds. In particular, taking M to be a slightly modiﬁed version of any of the Sylvester matrix used
+in [BRS93], and employing a variant of the deterministic case of Corollary 5.2, they showed that determining
+whether or not FM (x) = 0 requires T = (minfn log log n; n log( n log  S )g).
+                                                                         n
+
+    To derive this lower bound they extended ideas of Borodin, Razborov, and Smolensky to show that, in
+the case D = GF (p) for prime power p, if M is a symmetric matrix that is rigid, in the sense that all sub-
+matrices of M have rank that is suitably large relative to their size, then xT Mx cannot be constant on any
+large embedded rectangle. The lower bounds for the quadratic forms based on modiﬁed Sylvester matrices
+follow from a lower bound on the rigidity of Sylvester matrices.
+    By considering different quadratic form functions in the case D = GF (2), Ajtai constructed an
+explicit family of boolean functions which cannot be computed by a deterministic branching program
+of subexponential size and linear length [Ajt99b]. To derive non-trivial bounds, in addition to a more
+generally applicable branching program analysis than Corollary 5.2(i), he required matrices with larger
+rigidity than
+           p that of Sylvester matrices. Using our stronger branching program analysis we obtain        a
+T = (n log(n=S )= log log(n=S )) lower bound for this Boolean function and a T = (n log( S ))   n log n
+
+
+
+                                                      24
+lower bound for related functions over larger ﬁnite ﬁelds, both of which hold for randomized branching
+programs.
+    We begin by strengthening the previous properties of quadratic forms derived from matrix rigidity for
+use with randomized branching programs. As a preliminary we analyze bilinear forms and show that for an
+m  m matrix P of suitably high rank and 2 GF (p), any large rectangle U  V 2 GF (p)  GF (p) has
+many pairs (u; v ) of vectors such that uT P v = .
+
+Lemma 6.1. Let P be an m  m matrix over GF (p) where p is a prime power. Let U; V  GF (p)m ,
+  = jU j=pm , and = jV j=pm . Let 2 GF (p) and N be the number of pairs (u; v) 2 U  V such that
+uT P v = . Then jN jU jjV j=pj is at most p pprank(
+                                               1
+                                                    P)
+                                                       jU jjV j=p
+Proof. Let r = rank(P ) and for x 2 GF (p) deﬁne
+                                                  (
+                                                    1        1 if x =
+                                          (x) =              p
+                                                        1
+                                                        p        if x 6= .
+
+Let  = N      jU jjV j=p and observe that  = Pu2U Pv2V (uT P v).
+    Each x 2 GF (p) can be realized as a k -dimensional vector over GF (q ) for some prime q and some
+integer k . For x; y 2 GF (p), deﬁne hx; y i to be the scalar product of vectors corresponding to x; y . For
+h 2 GF (p), let h (x) = e2ihh;xi=q be characters of GF (p). can be expressed as a linear combination of
+h (for h 2 GF (p)) as follows                      X
+                                               =                 j j ;
+                                                   h2GF (p)
+where 0 = 0 and h = 1p e 2ihh; i=q for h 6= 0.
+    We can write P = K T L where K and L are each r  m matrices of rank r over GF (p). Deﬁne integer-
+valued vectors a; b indexed by GF (p)r where a(y ) for y 2 GF (p)r is the number of vectors u 2 U such
+that Ku = y and b(z ) for z 2 GF (p)r is the number of vectors v 2 V such that Lv = z .
+     For h 2 GF (p) let Mh be the pr  pr complex matrix whose rows and columns are indexed by vectors
+in GF (p)r with MhP
+                    (y; z ) = h(yT z ) where yT z isPthe inner product mod p. Observe that for h 2 GF (p),
+Mh Mh (y1 ; y2 ) = z2GF (p)r h (y1T z )h (y2T z ) = z2GF (p)r h ((y2 y1 )T z ) which is 0 if y1 6= y2 and
+   
+
+
+
+
+                                                        25
+pr if y1 = y2 . Then
+                                XX
+                       2 = (               (uT K T Lv))2
+                                u2U v2V
+                                   X               XX
+                          = (                  h               h(uT K T Lv))2
+                               h2GF (p);h6=0       u2U v2V
+                                            X                    XX
+                                                                                      2
+                           (p 1)                       j h   j2     (uT K T Lv)
+                                                                          h
+                                        h2GF (p);h6=0           u2U v2V
+                                                                                  2
+                            p 1   X          XX
+                          =                          (uT K T Lv)
+                             p h2GF (p);h6=0 u2U v2V h
+                              2
+                                                                                          2
+                              p 1    X             X         X
+                          =                                         (yT z )a(y)b(z )
+                               p2 h2GF (p);h6=0 y2GF (p)r z2GF (p)r h
+                              p 1    X
+                          =     2                aT Mh b 2
+                               p h2GF (p);h6=0
+                              p 1    X
+                               2
+                               p h2GF (p);h6=0
+                                                kak2 kMh bk2
+                              p 1    X
+                          =
+                               p2 h2GF (p);h6=0
+                                                kak2 bT Mh Mhb
+                              p 1    X
+                          =
+                               p2 h2GF (p);h6=0
+                                                kak2 kbk2 pr
+                              (p 1)2 2 2 r
+                          =
+                                p2
+                                    kak kbk p
+where k  k is the Euclidean norm. (The inequalities on the third and seventh line are applications of the
+Cauchy-Schwartz inequality; the ﬁfth line follows using the deﬁnitions of a and b and the next-to-last line
+follows by the properties of Mh .)
+                              P
+     Now kak2  maxx a(x) x a(x)  pm r jU j, and similarly kbk2  pm r jV j. Thus 2  (1
+1 )2 p2m r jU jjV j and so
+p
+                                   s
+                                       (p 1)2 p2m                 p 1
+                                                  j U jjV j=p = p r jU jjV j=p
+                                         jU jjV jpr                 p
+as required.
+
+Lemma 6.2. Let M be a n  n matrix with entries in GF (p) and suppose that (R; A1 ; A2 ) is an embedded
+rectangle in GF (p)n with jA1 j = jA2 j. Let P be the submatrix of M + M T induced on A1  A2 . Suppose
+that (R)  p3 rank(P )=2 . Then for each 2 GF (p), the fraction of inputs of x 2 R for which xT Mx 
+(mod p) is more than 1=(4p).
+Proof. Let m = jA1 j = jA2 j, A0 = [n℄ A1 A2 , and, for (i; j ) 2 f0; 1; 2g2 , let Mi;j denote the submatrix
+of M indexed by Ai  Aj . Let  be the spine of R. For x 2 R, writing x1 for xA1 and x2 for xA2 we have:
+                                xT Mx = C + f (x ) + f (x ) + xT P x
+                                                     1 1          2 2         1   2
+
+                                                          26
+where C =  T M0;0  , P = M1;2 + M2T;1 and for j 2 f1; 2g, fj is a function with domain RAj which is
+deﬁned by fj (xj ) = xTj Mj;j xj + xTj (Mj;0 + M0T;j ) .
+    We partition R based on the values of the fj on the RAj for j = 1; 2. For each pair ( 1 ; 2 ) 2 GF (p)2 ,
+let U 1 = f1 1 ( 1 ) \ RA1 and V 2 = f2 1 ( 2 ) \ RA2 .
+   For at least 1/2 the elements x 2 R the unique ( 1 ; 2 ) such that (x1 ; x2 ) 2 U 1  V 2 satisfy jU 1 jjV 2 j 
+jRj=(2p2 ) which implies that jU 1 jjV 2 j=p2m  p4 rank(P )=2. For each such (x1 ; x2 ) 2 U 1  V 2 , we have
+(x1 x2 )T M (x1 x2 ) = C + 1 + 2 + xT1 P x2 . By Lemma 6.1, xT1 P x2 =             C 1 2 for more than
+jU 1 jjV 2 j=(2p) of the pairs (x1 ; x2 ) 2 U 1  V 2 . For each such pair, x = x1 x2 is a point in R such that
+xT Mx = . Since these elements over all such ( 1 ; 2 ) account for at least 1/2 of R, in total more than a
+1=(4p) fraction of the points x 2 R have xT Mx = .
+   Combining this lemma with Corollary 5.4 gives the following result which says that if M is a matrix
+over GF (2) whose quadratic form function is well approximated by a small branching program then M
+must have a large submatrix of small rank, that contains no entry on the diagonal.
+                                                                                                    2
+Theorem 6.3. Let n; r; k be positive integers and q1 > 0 with k  8, q1  2 40 k 8 , n  r  q1 5k . Let M
+be an n  n matrix with entries in GF (2), with associated quadratic form function f . Suppose that B is an
+n-variate branching program over GF (2) of length at most (k 2)n and size 2S that disagrees with f on
+at most a fraction 1=80k of inputs. Then there are two disjoint subsets A1 ; A2  [n℄ with jA1 j = jA2 j = m
+                 2
+where m  q12k n=2 such that the submatrix of P = M + M T induced by A1  A2 has rank at most
+2Sr + 2q11=2 m + 10.
+Proof. Let b 2 f0; 1g be such that jf 1 (b)j  2n 1 . Deﬁne the function f 0 by f 0 (x) = f (x) + b 1 and
+deﬁne the branching program B 0 analogously from B by replacing output 0 by b 1 and output 1 by b.
+    Applying the second part of Corollary 5.4 to f 0 and B 0 with Æ  1=2 and  = 1=80k , we get a balanced
+                                                                                            2
+rectangle R = (R; A1 ; A2 ) contained in (B 0 ) 1 (1) satisfying m(R) = jA1 j = jA2 j  q12k n=2 and (R) 
+    1=2                        1=2
+2 q1 m(R) Sr ( 21 801k )  2 q1 m(R) Sr 2 such that f 0 is 0 on at most a 4(1=80k)k=(1=2 1=80k) < 1=8
+fraction of points of R. By Lemma 6.2 with p = 2, (R) must be less than 23 rank(P )=2 . Combining the
+                                                                     1=2
+upper and lower bounds on (R) we deduce rank(P )  2Sr + 2q1 m(R) + 10.
+
+    This theorem can be applied to give time-space tradeoffs for the quadratic form function for any matrix
+M over GF (2) for which M + M T has the property that every large submatrix that avoids the diagonal
+has large enough rank. The Sylvester matrices considered in [BRS93, BST98] have the property that every
+s  s submatrix has rank at least s2 =n. However, this property is not strong enough to get good time-space
+tradeoff lower bounds over GF (2) using Theorem 6.3.
+    Ajtai looked instead at Hankel matrices, matrices whose every anti-diagonal is constant. Given a vector
+y 2 GF (p)2n 1 , deﬁne the Hankel matrix H [y℄ whose i; j entry is H [y℄i;j = yi+j 1. Ajtai proved the
+following lemma concerning the rigidity properties of random Hankel matrices over GF (p). (Here a random
+Hankel matrix means a matrix H [y ℄ where y is chosen uniformly at random from GF (p)2n 1 .)
+Lemma 6.4. [Ajt99b, Lemma 9] Assume that n; s; R; t are positive integers, t2 < s < n, R < Q = bs=t2 .
+If H is a random n  n Hankel matrix over GF (p), the probability that there is some s  s sub-matrix of
+H of rank less than R is at most
+                                                          
+                                       n 2  Q       1         2
+                                                  p 4 (Q R+1)t :
+                                       Qt Q R + 1
+
+                                                        27
+   As a direct consequence we get:
+Corollary 6.5. Let n be an integer and H be a random n  n Hankel matrix over GF (p). With probability
+at least 1/2, for all integers s satisfying (1024 + 64 log p n)2 < s < n every s  s submatrix of H has rank
+at least 12 s=(1024 + 64 log p (n=s))2 2.
+
+Proof. Let s be an integer in the range given in the hypothesis, let t = b1024 + 64 logp (n=s) , let Q =
+bs=t2 , and R = bQ=2 (which is at least 12 s=(1024 + 64 logp(n=s))2 2). By Lemma 6.4, the probability
+that H has an s  s submatrix of rank less than R is at most:
+             2                                       2Qt                 2Qt
+              n          Q                                en
+              Qt      Q R+1
+                                     1 (Q R+1)t2
+                                   p 4                       Qt
+                                                                    Q
+                                                                  2 p   s= 8  4n  Qt
+                                                                                       p s=8
+                                                                 2s=t
+                                                              4nt
+                                                              s
+                                                                        p s=8  p s=16  2 s=16 :
+                                                                                                   p
+The ﬁrst inequality uses (Q R + 1)t2  s=2 and nk  (en=k )k . The second uses 21=2t e  2e  4
+and the third uses the fact that uses that (4n=k )k is increasing in k for k < n, and that Qt  s=t < n. The
+fourth inequality uses (4nt=s)  pt=32 which follows from t < 2t=64  pt=64 and 4n=s < pt=64 .
+    Finally, summing the above bound over all integers s  s0 = d(1024 + 64 log p n)2 e, we get that the
+failure probability is at most 2 s0 =16 =(1 2 1=16 ). Using 1 2 x > x=2 for x 2 (0; 1) this is at most
+2 s0 =16+5 which is easily seen to be less than 1/2.
+    The rigidity property of random Hankel matrices above is strong enough but to prove a tradeoff for the
+function FM using Theorem 6.3 we need that M + M T be rigid rather than M itself. Hankel matrices are
+symmetric which means that M + M T = 0 since we are over GF (2), which seems like a serious problem.
+Ajtai showed how this problem is easily overcome. Deﬁne L(M ) to be the lower triangular matrix obtained
+by changing all entries of M that are on or above the diagonal to 0. Then L(M ) + L(M )T agrees with M
+except on the diagonal and we can apply Theorem 6.3 to L(M ) instead of M .
+    Another important issue is that we want lower bounds for explicit functions; we already know that hard
+functions exist by simple counting arguments. A random Hankel matrix does not give an explicit function.
+However, since a Hankel matrix is speciﬁed by only 2n 1 values, we can prove lower bounds on the
+explicit function Gn (x; y ) where x 2 GF (2)n and y 2 GF (2)2n 1 , which is deﬁned to be xT Mx where
+M = L(H [y℄).
+Theorem 6.6. There is a constant 0 > 0 such that any randomized Boolean branching program
+computing Gn(x; y) in time T and size 2S with probability of error at most 0 n=T requires T 
+ 0 nplog(n=S )= log log(n=S ).
+
+Proof. Choose n to be a sufﬁciently large integer. Let Be be a randomized branching program with in-
+put variables x1 ; : : : ; xn ; y1 ; : : : ; y2n 1 of length at most (k 2)n and size 2S and suppose that the
+probability Be(x; y) 6= G(x; y) is less than 1=160k. We want to show that for some constant 0 , k 
+ 0 plog(n=S )= log log(n=S ).
+    We will apply Theorem 6.3 and to this end, we assume withoutp
+                                                                      loss of generality that k  8 and deﬁne
+                                   2
+for q1 = 2 40 k 8 , and r = dq1 5k e. If n < r 2 , then k        log n= log log n for some , and the desired
+result is trivial. So we may assume that k is such that n  r 2 .
+   By Proposition 2.1, we can ﬁx a deterministic branching program B that agrees with G(x; y ) on at least
+a 1 1=160k fraction of all inputs. For each y , let B [y ℄ be the branching program obtained from B by
+
+                                                     28
+hardwiring the values of y , and let (y ) be the fraction of inputs x such that B [y ℄(x) 6= xT H [y ℄x. Let Y be
+the set of all y 2 Y , such that H [y ℄ has the rigidity property speciﬁed in the conclusion of Corollary 6.5.
+By that corollary, half of all y belong to Y . Therefore, there must exist a y 2 Y such that (y ) < 1=80k .
+Fix such a y and apply Theorem 6.3 for the matrix H [y ℄ and the branching program B [y ℄. We conclude
+                                                                       2
+that there are disjoint subsets A1 ; A2 of [n℄, of equal size m  q12k n=2 such that the submatrix M of H [y ℄
+                                                     1=2
+induced on A1  A2 has rank at most 2Sr + 2q1 m + 10. For sufﬁciently large n and any k satisfying
+                                                           2     p
+the restrictions at the beginning of the proof, m = q12k n  n  (1024 + 64 log 2 n)2 and since y 2 Y ,
+Corollary 6.5 implies that M has rank at least b = 21 m=(1024 + 64 log 2 (n=m))2 2. Again, for sufﬁciently
+                              1=2                                                            1=2
+large n, it is easy to see 2q1 m + 10 < b=2 so we conclude that 2Sr > b=2 > 2q1 m which implies
+S  q11=2 m=r which is atpleast n=k k2 for some constant > 0. It follows that for some constant 0 > 0 and
+sufﬁciently large n, k  log(n=S )= log log(n=S ).
+
+Corollary 6.7. For any  < 1=2, there is a constant > 0 such that any randomized Boolean branch-
+ing program computing Gn (x; y ) in time T and size 2S with probability of error at most  requires
+T  n log1=2 (n=S )=(log log(n=S ))3=2 .
+Proof. Let B be such a branching program. As in standard probability ampliﬁcation if one run of a ran-
+domized algorithm has error at most  < 1=2, taking the majority answer from some  log log(n=S ) inde-
+pendent copies of the algorithm run on the same input sufﬁces to reduce the error to less than 1= log(n=S ).
+This can be computed by chaining together  log log(n=S ) copies of B where each node is also replicated
+  log log(n=S ) times at each time step to store the running tally of the number of copies of B in which 1
+has been produced so far. The resulting branching program will have time T 0 =  T log log(n=S ) and space
+S 0  S + 0 log log log(n=S ) for some constant 0 > 0. Applying Theorem 6.6 implies a lower bound on T 0
+(and thus the desired lower bound on Tp) since if T is smaller than 0 n log1=2 (n=S )=(log log(n=S ))3=2 the
+error 0 n=T 0 permitted there is at least log log(n=S 0 )= log(n=S 0 ) which is larger than 1= log(n=S ).
+
+    We also can deﬁne quadratic form functions over large domains for which we can obtain even larger
+lower bounds using Corollary 5.2. We could apply the deterministic part of this corollary (implicit
+in [BST98]) to the problem of determining if FM (x) = 0 with M and x over GF (p) for p  n to derive
+lower bounds of the form T = (n log( n log    n
+                                           S )). To be able to show bounds for constant-error randomized
+algorithms we deﬁne related functions that are more balanced between outputs 0 and 1.
+    For M and n  n matrix over GF (p) and G  GF (p), deﬁne FM;G : GF (p)n ! f0; 1g by FM;G (x) =
+1 iff xT Mx 2 G. Natural examples of sets G to choose include   0
+                                                                   elements with low order bit equal 1, the
+quadratic residues modulo p in the case p is prime, or if p = 2p some linear map  : GF (p) ! GF (2).
+Theorem 6.8. Let n  r  k be positive integers with k  4 and r  2k+6 k 2 . Let M be an n  n matrix
+with entries in GF (p) for p > 2 a prime power, and let G  GF (p) be any set of size bp=2 . Suppose
+that B is an n-variate branching program over GF (p) of length at most (k 2)n and size 2S that disagrees
+with FM;G on at most a 1=50 fraction of inputs. Then there are two disjoint subsets A1 ; A2  [n℄ with
+jA1 j = jA2j = m where m  n=2k+1 such that the submatrix of P = M + M T induced by A1  A2 has
+rank at most (2Sr + 24(k + 1)m(R) + 8)= log 2 p + 6.
+
+                                      1 (b)j  pn =2. Deﬁne the function f by f (x) = F (x) + b 1
+Proof. Let b 2 f0; 1g be such that jFM;G                                               M;G
+                                    0
+and deﬁne the branching program B analogously from B by replacing output 0 by b 1 and output 1 by b.
+    Applying the second part of Corollary 5.2 to f and B 0 with Æ  1=2 and  = 1=50, we get a balanced
+rectangle R = (R; A1 ; A2 ) contained in (B 0 ) 1 (1) satisfying m(R) = jA1 j = jA2 j  n=2k+1 and (R) 
+2 12(k+1)m(R) Sr 2 ( 12 501 )  2 12(k+1)m(R) Sr 4 such that f is 0 on at most a 2(1=50)=(1=2 1=50) =
+
+                                                       29
+1=12 fraction of points of R. There are at least (p 1)=2 elements 2 GF (p) such that xT Mx = implies
+f (x) = 0. Therefore there is some value 2 GF (p) such that xT Mx = for at most a 6(p1 1)  1=(4p)
+fraction of points of R. By Lemma 6.2, (R) must be less than p3 rank(P )=2 . Combining the upper and
+lower bounds on (R) we deduce rank(P )  6 + (2Sr + 24(k + 1)m(R) + 8)= log 2 p.
+
+    We now apply this to the functions Jp;G n : GF (p)3n 1 ! f0; 1g based on Hankel matrices over GF (p)
+                        L(H [y℄);G (x); i.e. Jp;G is 1 if and only if x L(H [y ℄)x 2 G.
+          n (x; y ) = F
+given by Jp;G                                 n                        T
+Theorem 6.9. Let p  n be a prime power. Let G  GF (p) with jGj = bp=2 . Any randomized GF (p)-
+                                   n in time T and size 2S with probability of error at most 1=100
+way branching program computing Jp;G
+requires T = (n log( n log n
+                        S )).
+
+Proof. Choose n to be a sufﬁciently large integer. Let Be be a randomized GF (p)-way branching program
+with input variables x1 ; : : : ; xn ; y1 ; : : : ; y2n 1 of length at most (k 2)n and size 2S and suppose that
+the probability Be(x; y ) 6= Jp;G (x; y ) is less than 1=100. We want to show that for some constant 0 , k 
+ 0 log( n log n ).
+           S
+   We will apply Theorem 6.8 and to this end, we assume without loss of generality that k  4 and deﬁne
+r = 2k+6 k2 . Assume that k  2 29 log n since otherwise the theorem follows immediately.
+                                        2
+    By Proposition 2.1, we can ﬁx a deterministic branching program B that disagrees with Jp;G (x; y ) on
+at most a 1=100 fraction of all inputs. For each y , let B [y ℄ be the branching program obtained from B by
+hardwiring the values of y , and let (y ) be the fraction of inputs x such that B [y ℄(x) does not compute the
+value of the predicate xT L(H [y ℄)x 2 G. Let Y be the set of all y 2 Y , such that H [y ℄ has the rigidity
+property speciﬁed in the conclusion of Corollary 6.5. By that corollary, half of all y belong to Y . Therefore,
+there must exist a y 2 Y such that (y )  1=50.
+    Fix such a y and apply Theorem 6.8 for the matrix H [y ℄ and the branching program B [y ℄. We conclude
+that there are disjoint subsets A1 ; A2 of [n℄, of equal size m  n=2k+1 , such that the submatrix MR
+of L(H [y ℄) + L(H [y ℄)T induced on A1  A2 has rank at most (2Sr + 24(k + 1)m + 8)= log 2 p + 6.
+Observe that, since Hankel matrices are symmetric and MR contains no elements from the diagonal of
+L(H [y℄) + L(H [y℄)T , MR is a submatrix of H [y℄. Therefore by Corollary 6.5, since m  n=2k+1 the
+submatrix MR has rank at least 12 m=(1024+64 log p (n=m))2 2  m=223 2. Thus (2Sr +24(k +1)m +
+8)= log2 p + 6  m=223 2 and so
+                     S    1r ([2 24 log2 p 12(k + 1)℄m 4 log2 p 4)
+                          k2 21k+6 ([2 24 log2 p 12(k + 1)℄n=2k+1 4 log2 p 4)
+                          C k2122k n log2 n
+for some constant C and n sufﬁciently large since log2 p  log2 n > 229 (k + 1) in this case. This implies
+that k  0 log2 ( n log n                  0
+                     S ) for some constant > 0.
+
+   It is easy to see that, by applying probability ampliﬁcation using a constant number of independent
+copies of the branching program as in Corollary 6.7, the asymptotic bound of Theorem 6.9 also applies for
+any error  < 1=2.
+    We can also applying Theorem 6.8 to the modiﬁed Sylvester matrices studied in [BST98]; for example,
+these matrices include the standard Hadamard matrices over f1; 1g with their diagonals replaced by the
+value 0. This result extends the bound of [BST98, BJS01] to randomized branching programs.
+
+                                                      30
+Theorem 6.10. Let p  n be a prime power. Let M be a modiﬁed Sylvester matrix over GF (p) and
+G  GF (p) with jGj = (p 1)=2. Any randomized GF (p)-way branching program computing FM;G in
+time T and size 2S with probability of error at most 1=50 requires T = (minfn log log n; n log( n log
+                                                                                                   S g)).
+                                                                                                      n
+
+
+6.2 Element Distinctness and Hamming Closeness
+
+Ajtai [Ajt99a] gave the ﬁrst general time-space tradeoff lower bounds for element distinctness and also gave
+lower bounds for a related problem he deﬁned which we call the Hamming closeness problem.
+    The bounds for Hamming closeness use signiﬁcantly simpler techniques than those for element distinct-
+ness. While Ajtai only claimed non-trivial time-space tradeoff lower bounds for Hamming closeness when
+time T is linear in n, Pagter observed [Pag01] that by optimizing the technique of [Ajt99a], one can derive
+non-trivial lower bounds for Hamming closeness when T  n log n= log log n for some > 0 and these
+bounds apply in the presence of 1-sided error (but not nondeterminism, which is stronger).
+    However, the technique of [BST98] mentioned in Table 1 and predating [Ajt99a] yields even better
+tradeoffs for Hamming closeness. It applies when T  n log n for some constant > 0 and even applies
+to nondeterministic branching programs. Corollary 5.2 extends this technique to 2-sided error randomized
+computation and we show how it applies to the Hamming closeness problem. Since the deterministic lower
+bound is considerably simpler we present it ﬁrst.
+    To derive lower bounds for element distinctness, Ajtai developed most of the machinery required for
+his Boolean branching program lower bounds. Again he only claimed to produce lower bounds when time
+T is linear in n but, as in the Boolean case, a careful analysis of his arguments show that they apply even
+when Tpis as large as n log log n= log log log n for some > 0. Our results improve this range up to
+T  n log n= log log n and generalize the bounds to randomized branching programs with 2-sided error.
+
+Deterministic Branching Programs
+
+To prove a lower bound for a deterministic branching program all we need is a lower bound on the fraction
+of inputs on which the function takes on a given value as well as an upper bound on the sizes of embedded
+rectangles on which the function can take on that value.
+
+
+Element Distinctness
+
+Deﬁne the element distinctness function ED : D n ! f0; 1g is 1 if and only if there is no pair i 6= j 2 X
+such that x(i) = x(j ).
+
+Proposition 6.11. If jD j  n2 , at least a 1=e fraction of all inputs x 2 D n have ED (x) = 1.
+
+Proof. It is easy to check that for N  n2 , N !=(N    n)!  N n =e.
+Lemma 6.12. Let ED : D n ! f0; 1g. Any embedded rectangle R  D n such that ED (x) = 1 for all
+x 2 R has (R)  2 m(R) .
+Proof. Let A1 ; A2 be the feet of R, and for j 2 f1; 2g, let Sj = [i2Aj Ri (where Ri is the set of elements
+of D that appear in coordinate i of some point of R). ED (x) = 1 for all x 2 R implies S1 \ S2 = ;, so for
+                                                                   m(R)
+some index h, jSh j  jD j=2. Thus h (R)  (jSh j=jD j)mh (R)  21      .
+
+
+                                                      31
+                            deterministic branching program computing ED : [n2 ℄n ! f0; 1g in time T
+Theorem 6.13. Any [n2 ℄-way p
+and size 2S requires T = (n log(n=S )= log log(n=S )).
+
+Proof. Suppose we have a branching program B of length (k 2)n and size 2S for ED . Apply Corol-
+                                             2
+lary 5.4(i) with q1 = 2 40 k 8 and r = dq1 5k e. We obtain an embedded rectangle on which B outputs
+                      2                 1=2               1=2
+1 such that m  q12k n=2 and        2 q1 m Sr =e > 2 q1 m Sr 2 . Using Lemma 6.12, this means
+    1=2
+2 q1 m Sr 2  2 m and thus Sr  m(1 q11=2 ) 2  q12k2 n=4 or S  q12k2 n=(4r). Thus for some
+                                                                                    2
+constant > 0 any algorithm solving ED in time (k 2)n requires space at least k k n. Substituting
+T = (k 2)n, and re-arranging we obtain the claimed tradeoff.
+Corollary 6.14. For any   0 there pis a constant  , such that any RAM algorithm for element distinctness
+               2
+on inputs in [n ℄ taking at most  n log n= log log n time requires at least n1  space.
+
+
+Hamming Closeness
+
+We now deﬁne the Hamming closeness problem HAM for 0 < < 1=2. For 0 < < 1=2 let =
+ ( )  0 be minimum such that for all b  1, 22b =S ( b; b)  1 where
+                                                                   P
+                                                                        S (d; n) is the size of the Hamming
+ball of radius d about a vector of length n. Recall that S (d; n) = j d nj  2H2 (d=n)n where H2 is the
+binary entropy function, H2 (q ) = q log2 q (1 q ) log2 (1 q ). Observe by this bound on S (d; n) that
+ ( )  2=(1 H2 ( )).
+    Given two elements u; v 2 [N ℄ we say that u and v are -close to each other if the Hamming distance
+between u and v represented in binary, H (u; v )  log2 N and -far from each other otherwise. (Also
+given two subsets U; V  [N ℄ we say that U and V are -close if there is a pair of elements u 2 U and
+v 2 V that are -close to each other, and U and V are -far if all such pairs of elements are -far from
+each other.) The Hamming closeness problem HAM : [N ℄n ! f0; 1g where N is a power of 2 and
+0 < < 1=2. HAM (x1 ; : : : ; xn ) = 1 if and only if there is some pair of indices i 6= j such that xi and xj
+are -close to each other.
+   The following propositions are minor variants of those shown by Ajtai [Ajt99a].
+
+Proposition 6.15. For 0 < < 1=2, there is a constant ( ) = 2=(1          H2 ( )) such that for    ( ) and
+N = n , HAM 1 (0) contains at least 1=2 of all inputs in [N ℄n .
+Proof. Let  2=(1 H2 ( )) and b = log2 N = log2 n be the number of bits in each xi . The Hamming
+ball of radius
+            P
+                 b about
+                        any element of [N ℄ contains S ( b; b)  2H2 ( )b elements, where we recall that
+S (d; n) = j d j  2H2 (d=n)n . Therefore the fraction of pairs x and y from [N ℄ that are -close to each
+                   n
+other is at most
+                          2H2 ( )b =2b = 2 (1 H2 ( ))b = 2 (1 H2 ( )) log2 n  n 2 :
+                                                                          
+There are n2 pairs (xi ; xj ) with i 6= j so HAM has value 1 for at most n2 n 2  1=2 of the inputs in
+[N ℄n .
+Proposition 6.16. For 0 < < 1=2, there is a constant        = ( ) > 0 such that any two sets U; V  [N ℄
+with jU j; jV j  N 1 are -close.
+
+Proof. Let b = log2 N and choose as large as possible such that S (( 1 2 )b; b) < 2(1 )b . (Thus > 0
+will be roughly 1 H2 ( 1 2 ) since log2 S (d; n) is asymptotic to H2 (d=n)n as n ! 1 and d=n is ﬁxed.)
+
+
+
+                                                     32
+By the classic isoperimetric bound of Harper [Har66], the b-Hamming neighborhood of U will contain a
+set of size > S (( 1+2 )b; b) and thus will only miss a set of size < S (( 1 2 )b; b) < 2(1 )b  jV j.
+
+Lemma 6.17. Let 0 < < 1=2 and HAM : [N ℄n ! f0; 1g. Then there is a constant = ( ) > 0 such
+that any embedded rectangle R  [N ℄n with HAM (x) = 0 for all x 2 R has (R)  N m(R) .
+
+Proof. Let A1 ; A2 be the feet of R, and for j 2 f1; 2g, let Sj = [i2Aj Ri (where Ri is the set of elements of
+D that appear in coordinate i of some point of R). Let = ( ) > 0 be the constant from Proposition 6.16.
+HAM (x) = 0 for all x 2 R implies S1 and S2 are not -close, so by Proposition 6.16 for some index h
+jShj  N 1 . Thus h(R)  (jShj=N )mh (R)  N m(R) .
+Theorem 6.18. Let < 1=2 and  2=(1 H2 ( )). Any [n ℄-way deterministic branching program
+computing HAM : [n ℄n ! f0; 1g in time T and size 2S requires T = (n log( n log n
+                                                                             S )).
+
+Proof. Let B be a deterministic branching program of length (k 2)n and size 2S computing HAM .
+Therefore there is branching program B 0 of the same length and size computing :HAM on [N ℄ = [n ℄.
+By Proposition 6.15, B 0 outputs 1 on at least 1=2 of the inputs in [N ℄n . Assume without loss of generality that
+k  18 log2 n and apply Corollary 5.2(i) with r = 2k+6 k2 to B0 to obtain an embedded rectangle (R; A1 ; A2 )
+on which HAM is 0 satisfying m(R) = m1 (R) = m2 (R)  n=2k+1 and (R)  2 12(k+1)m(R) Sr 3 .
+Using Lemma 6.17, this means 2 12(k+1)m(R) Sr 3  N m(R) for some constant                        = ( ) > 0.
+Therefore S > (( log2 N 3)m(R) 12(k + 1))=r  (C 2 3k n log2 n) for some C > 0 for n sufﬁciently
+large and the theorem follows.
+
+Corollary 6.19. For any   0 and with 0 < < 1=2 and  2=(1 H2 ( )) there is a constant ; > 0,
+such that any RAM algorithm for HAM on inputs in [n ℄ taking at most ; n log n time requires at least
+n1  space.
+
+Randomized Branching Programs
+
+We now consider randomized branching programs for both element distinctness and Hamming closeness.
+We already have lower bounds on the fraction of inputs for which these functions take on particular values.
+To apply the second parts of Corollaries 5.2 and 5.4, respectively, we will now need to show that any
+rectangle on which the functions mostly have those values cannot be very dense. The two arguments are
+very similar to each other but unfortunately will only be able to tolerate rather small error.
+
+
+Element Distinctness
+
+Lemma 6.20. If (R; A1 ; A2 ) is an n-variate embedded rectangle over [N ℄ with jA1 j = jA2 j = m such that
+               1 fraction of x 2 R have ED(x) = 0 then
+at most an  < 24
+                                                                       H2 (8)
+                               (R)  8(8=9)m=2 maxf1; (8=9)m=2 2         3       N=m g:
+
+Proof. Call a point of D m non-repetitive if all the coordinates are distinct and repetitive otherwise. For
+j 2 f1; 2g, let Qj be the set of non-repetitive points of RAj . Let Q be the subrectangle of R having
+QAj = Qj for each j . Clearly j (Q)  j 2(R) since otherwise R has too many points x with ED(x) = 0.
+Thus rectangle R0  R with legs Q1 and Q2 has (R0 )  (R)=2. Observe that each element of Qj
+
+
+
+                                                       33
+corresponds to an m-subset of [N ℄ and that for any point x 2 R0 with ED (x) = 1 the sets corresponding to
+the xQ1 2 Q1 and xQ2 2 Q2 must be disjoint.
+    We will now apply an argument used by Babai, Frankl, and Simon [BFS86] to derive a lower bound
+on -error communication complexity for this set-disjointness problem. (Note that the arguments used later
+by Kalayanasundaram and Schnitger [KS87] or Razborov [Raz90] to get optimal communication com-
+plexity bounds are not useful to us because these require precise linear relationships between the set and
+universe sizes.) However, because different m-subsets of [N ℄ may correspond to different numbers of the
+m-permutations in the Qj , we will need to argue that our translation into the set-disjointness problem pre-
+serves not only the size of the rectangle involved but also its relative error. For this we apply the following
+easy lemma.
+Lemma 6.21. Let Y and Z be sets such that jY j = M  jZ j; let S : Y ! Z be such that for all z 2 Z ,
+jS 1 (z)j = M and let f : Z ! [0; 1℄. If Y 0  Y satisﬁes jY 0j  jY j and Ey2Y 0 [f (S (y))℄   then there
+is a Z 0  Z such that jZ 0 j  2 jZ j and for every z 2 Z 0 , f (z )  2.
+
+Proof. By Markov’s inequality there is a set Y 00  Y 0 such that jY 00 j  jY 0 j=2  2 jY j such that for all
+y 2 Y 00 , f (S (y))  2. Deﬁne Z 0 = S (Y 00 ). Then jZ 0 j  jY 00 j=M  2 jY j=M = 2 jZ j and for z 2 Z 0
+there is some y 2 Y 00 such that f (z ) = f (S (y ))  2.
+
+    Given sets T and T 0 deﬁne the indicator variable T;T 0 to be 1 if T \ T 0 6= ; and 0 otherwise. We
+ﬁrst apply Lemma 6.21 with Y the set of m-permutations of [N ℄, Z = [N       ℄, the set of m-subsets of [N ℄,
+                                                                           m                    
+Y 0 = Q2 , S the map from an m-permutation to its corresponding m-subset, and, for T 0 2 [Nm℄ , f (T 0) equal
+to Eq2Q1 [S (q);T 0 ℄. Since ED (x) = 0 for at most an  fraction of elements of R0 , Ey2Q2 [f (S (y ))℄  .
+                                                                                              
+Therefore by Lemma 6.21 we obtain a set G of m-subsets of [N ℄ such that jGj  (4R) N       m and for every
+T 0 2 G, Eq2Q1 [S (q);T 0 ℄  2 so
+                                        Eq2Q1 ET 0 2G [S (q);T 0 ℄  2:
+We now apply Lemma 6.21 again with the same values of S , Y , and Z but with Y 0 = Q1 and f (T ) =
+                                                                                      
+ET 0 2G [T;T 0 ℄ We obtain a set F of m-subsets of [N ℄ such that jF j; jGj  (4R) Nm and for every T 2 F ,
+ET 0 2G [T;T 0 ℄  4  1=6; i.e. each element of F intersects at most 4  1=6 of all elements of G. The
+following is a simple generalization of part of the argument in [BFS86].
+                                                                                                          
+Proposition 6.22. Let d  3 and let F be a collection of m-subsets of [N ℄. If jF j S
+                                                                                    > 2(4(d 1)=d2 )m=2 Nm
+then F contains a sequence of p = dN=(dm)e sets S1 ; : : : ; Sp such that jSj \ i<j Si j  m=2 for j =
+1; : : : ; p, i.e. at least half the elements of Sj do not occur in earlier sets.
+Proof. We construct S1 ; : : : ; Sp inductively. Select S1 2 F arbitrarily. For j > 1, having chosen
+S1 ; : : : ; Sj 1 , we show that for j  p, the number of sets that have more thanS
+                                                                                         half their elements in earlier
+ sets is less than jF j and so we can select Sj 2 F as required. Let Uj = i<j Si . Since j  dN=(dm)e,
+jPUj j  N=d, the number        of m-subsets of [N ℄ having more than half their elements in Uj is at most
+               jUj j n jUj j  P         N=d (1 1=d)N . It is easy to check that since d  3 as h increases,
+    hm=2 h           m h          h m=2   h     m h
+ each successive term is at most half the previous so the sum is at most 2 dm=  N=d  (1 1=d)N : Using the easily
+                                                     
+                                                                                    2e bm=2
+ veriﬁable inequalities that for b  a   d, a db < ( a4+      ab ) (a+b)=2 (a+b)=2  and N=2 N=2  N 
+                                                                b                   d                   d         +d
+ we upper bound this strictly by 2(4(d 1)=d2 )m=2 N     m   which   is less than j F j .
+
+    If (R)  8(8=9)m=2 then we are done. Otherwise, applying the proposition with d = 3 to our set
+F , we can ﬁnd p = dN=(3m)e sets S1 ; : : : ; Sp in F each of which contains at least m=2 elements not
+
+                                                          34
+occurring in earlier sets. For T 2 G, let w(T ) be the number of Sj that intersect it. Since each Sj 2 F ,
+ 1 P w(T )  4p, so at most half of the T 2 G have w(T ) > 8p. Let G0 be the set of T 2 G with
+jGj T
+w(T )  8p. Thus jG0 j  jGj=2.
+    We now upper bound the number of elements in G0 and thus G. An element T of G0 can be described
+by giving a subset J  [p℄ of (1 8)p indices such that T \ Sj = ; for all j 2 J and then specifying
+T as an m-subset of the elements outside these subsets. By the claim, any collection of (1 8)p ofthe
+sets has a total of m(1 8)p  N=9 elements since   24  1 . Therefore jGj  2jG0 j  2 p 8N=9 <
+                                                                                         8p m
+21+H2 (8)N=(3m) (8=9)m Nm and thus (R)  23+H2 (8)N=(3m) (8=9)m .
+Theorem 6.23. There is a constant > 0 such that any randomized [n2 ℄-way branching program com-
+               ℄n ! f0; 1g in time T and size 2S with probability of error at most (T=n) (T=n)2 re-
+puting ED : [n2p
+quires T = (n log(n=S )= log log(n=S )). Furthermore, any randomized [n2 ℄-way branching program
+computingpED : [n2 ℄n ! f0; 1g in time T and size 2S with probability of error at most S=n requires
+T = (n log(n=S ) log log(n=S )).
+Proof. By Proposition 2.1, it sufﬁces to prove the lower bound for deterministic branching programs that
+approximate ED within error .
+    Choose n to be a sufﬁciently large integer. We will apply the second part of Corollary 5.4 and to this
+                                                                                                 2
+end, we assume without loss of generality that k  8 and deﬁne for q1 = 2 40 k 8 , and r = dq1 5k e. There
+                                                                   2
+is a constant > 0 such that for all positive   (k 2) (k 2) and k  8, H2 (8)  16 log2 1 
+ 1        32k2 and 4k  1 . Fix such a and assume that   (k 2) (k 2)2 .
+16 (32k)          1=e  24
+   Let B be a deterministic branching program of length at p
+                                                           most (k 2)n and size 2S that approximates
+                                            0
+ED within . We will show that for some > 0, k          0  log(n=S )= log log(n=S ). If n < r2 this is
+                           2
+immediate, so assume n > r .
+   Applying Corollary 5.4(ii) and the fact that ED is 1 for least a 1=e fraction of all inputs in [n2 ℄ and
+                                                                                                    1=2
+1=e  > 1=4, we obtain a balanced rectangle R with m = m(R)  q12k2 n=2 and (R)  2 Sr q1 m 5
+                                           4k  1 of inputs in R by our assumption on . Applying
+such that ED is 0 for at most a fraction (1=e )  24
+                                                                 H2 (8) 2                              2
+Lemma 6.20, we have that (R)  8(8=9)m=2 maxf1; (8=9)m=2 2 3 n =m g. Now n2 =m  4mq1 4k 
+             2              2
+4m(240 k8 )4k = 4m(32k)32k so
+                                       H2 (8)                    4H (8)      2
+                          (8=9)m=2 2     3       n2 =m
+                                                      2 m=12+ 23 m(32k)32k
+                                                                                 2
+                                                      2 m3 (1=4 4H2 (8)(32k)32k )
+                                                      1
+since H2 (8)  16  1 (32k) 32k2 . Therefore (R)  8(8=9)m=2  23 m=12 . Combining the upper and
+                                                                   1=2
+lower bounds on (R) and simplifying we get 2Sr  2m=12 q1 m 8 , which, for n sufﬁciently large and
+k satisfying the restrictions above, is at least 2m=13 . From this we deduce S  13mr  r 1 q12k2 n=26 which
+                     2                                                                          0
+is at least 0 n=k 1 k for some
+                            p 0 ; 1 independent of n and k . It follows that for some constant > 0 and
+sufﬁciently large n, k  0 log(n=S )= log log(n=S ).
+                                                                2
+     Also observe that our conditions on  hold for  = r 1 q 2k =26 which is our lower bound on S=n and
+                                                              1
+from this the second part of the theorem follows.
+
+Corollary 6.24. For any Æ  0 there is a constant Æ such that for n sufﬁciently large any randomized RAM
+
+
+                                                         35
+                                                                        p
+algorithm for element distinctness on inputs in [n2 ℄ taking at most Æ n    log n= log log n time and having at
+most n Æ error requires at least n1 Æ space.
+
+
+Hamming Closeness
+
+Lemma 6.25. If (R; A1 ; A2 ) is an n-variate embedded rectangle over [N ℄ with jA1 j = jA2 j = m such that
+               1 fraction of x 2 R have HAM (x) = 1 then
+at most an  < 24
+                                                                                 1
+                       (R)  8(36N )m=2 maxf1; (N =36)m=2 23H2 (8)N                 =m g:
+
+Proof. As in the proof of Lemma 6.20 but replacing the condition ED (x) = 0 with HAM (x) = 1 we ﬁnd
+two collections of m-subsets of [N ℄, F and G, such that jF j; jGj  (R)=4 N    m and for each T 2 F at most
+a 4 fraction of T 0 2 G have the property that there exist t 2 T and t0 2 T 0 such that H (t; t0 )  log2 N .
+    Let d = N =3 where the value of = ( ) is given by Proposition 6.16. By Proposition 6.22, if
+  (R) > 8(36N )m=2 > 8(4(d 1)=d2 )m=2 then F contains p = dN=(dm)e sets S1 ; : : : ; Sp such that
+each set Sj has at most m=2 elements occurring in Si for i < j .
+    As in the proof of Lemma 6.20, prune G to obtain a set G0 with jG0 j  jGj=2 such that each element
+T 0 2 G is -close to at most 8p of S1 ; : : : ; Sp . We can describe a set T 0 in G0 by naming the (1 8)p
+sets Si from which it is -far and then specifying each element in T 0 from among the elements that are -far
+from these sets. The (1 8)p sets together contain at least mp=3  N=(3d) = N 1 elements of [N ℄ and
+so by Proposition 6.16 at most N 1 elements of [N ℄ are -far from these sets. Therefore
+                                                                                      
+                                                N1
+                    jGj  2jG0j  2 8pp         m
+                                                          21+3H2 (8)N 1 =m N       m   N
+                                                                                         m
+and thus   (R)  8N     m 23H2 (8)N 1   =m from which the lemma follows.
+
+    Although the parameters in this lemma make it appear stronger than Lemma 6.20, the value of N for
+which we will need to use it is much larger than in the case of element distinctness and we will only be able
+to obtain lower bounds for much smaller error. It is conceivable that a much stronger result holds since (1)
+the collection of sets S1 ; : : : ; Sp in Proposition 6.22 was chosen to maximize the unions of subcollections
+rather than to maximize the number of elements that are -close to these subcollections, and (2) no use was
+made of the property that each set in F and G must only contain elements that are -far from each other.
+
+Theorem 6.26. Let 0 < < 1=2 and  2=(1 H2 ( )). Any randomized [n ℄-way branching program
+computing HAM : [n ℄n ! f0; 1g in time T and size 2S with probability of error at most n2 requires
+T = (n log( n log n
+               S )).
+
+Proof. By Proposition 2.1, it sufﬁces to prove the lower bound for deterministic branching programs that
+approximate HAM within error  = n2 .
+     Choose n to be a sufﬁciently large integer. Let k  4 and let B be a deterministic branching program of
+length at most (k 2)n and size 2S approximates HAM within . Therefore the branching program B 0 ,
+set to be B with the labels of its two sink nodes swapped, approximates :HAM within .
+    We will show that for some 0 > 0, k  0 log((n log n)=S ). Let = ( ) > 0 be the constant
+from Proposition 6.16. If k  ( log2 n)=32 then we are done so assume without loss of generality
+that 2k < n =32 . Let r = 2k+6 k 2 and apply Corollary 5.2(ii) to B 0 to obtain a balanced rectangle R
+
+                                                      36
+with m = m(R)  n=2k+1 and (R)  2 12(k+1)m Sr 5 such that HAM is 1 for at most a fraction
+(1=2 )  24 of inputs in R.
+   2      1
+    Applying Lemma 6.25 with N = n , we have
+                                                                                   (1   ) =m
+                       (R)  8(36n      )m=2 maxf1; (n        =36)m=2 23H2 (8)n               g:
+Now since m2  n2 =22k+2 , n (1     ) =m  22k+2 n (1 ) 2 m so
+                                             (1   ) =m           =2 212H2 (8)22k n 2 =6)m
+                  (n    =36)m=2 23H2 (8)n                (n
+                                                          (n    =2 12H2 (8)n 2 =2 m
+                                                                   2                     =6)
+                                                          1
+where the second line follows from our assumption on k and the third follows since H2 (8)  16(
+2)n2 log2 n  121 n2 + =2 for n sufﬁciently large.
+    Therefore (R)  8(36n )m=2  23 m( 2 log2 n 3) . Combining the upper and lower bounds on
+  (R) and simplifying we get 2Sr  2m( 2 log2 n (12k+15)) 8  2 8 m log2 n by our assumptions on k. From
+this we deduce S  2 2k 2 log2 k 10 n log2 n  2 3k 14 n log2 n since k  4. Rearranging, we obtain
+k  0 log( n log n                           0
+              S ) for some positive constant .
+
+
+7 Discussion
+
+The time-space tradeoff lower bounds we obtain for decision problems on general randomized branch-
+ing programs are nearly as good as the best lower bounds known even for the much simpler oblivious
+deterministic branching programs. The best lower bounds in the oblivious case have all been obtained
+using some form of communication complexity. Using two-party communication complexity, Alon and
+Maass [AM88] derived lower bounds of the form T = (n log(n=S )) and using multi-party communica-
+tion complexity, Babai, Nisan, and Szegedy [BNS92] derived the best current lower bounds which are of the
+form T = (n log2 (n=S )).
+    The use of rectangles in our results as well as all those referenced in Table 1 is related to 2-party com-
+munication complexity (see e.g. [KN97]) and most of the difﬁculty in these arguments is in extending the
+bounds from the oblivious to the general case. In fact, the basic approach provides an alternate way to obtain
+the same bounds as [AM88] for oblivious branching programs (see the discussion prior to Lemma 4.4). Re-
+cently, these methods have been extended [BV02] to include multi-party communication complexity ideas
+which yield an alternate way to obtain the bounds of [BNS92] for oblivious branching programs. These
+results also extend the technique of [BJS01] using multi-party communication complexity ideas to obtain
+lower bounds over large domains. However, it is not at all clear if it is possible to extend results to in-
+clude multi-party communication complexity ideas in the Boolean case using the ideas of [Ajt99b]; a key
+stumbling block seems to be the lack of a multi-party analogue of Lemma 4.10 in that case.
+    A larger goal would be to extend these lower bounds to apply when time is n(log n)!(1) and even
+achieve tradeoffs for decision problems such as T = (n2 =S ), a bound we already can prove for multi-
+output problems such as sorting. Attempting to show this ﬁrst for oblivious branching programs seems like
+a good way to start.
+    Finally, we remark that in our lower bounds the error bounds on the randomized algorithms that our
+arguments tolerate vary a great deal from problem to problem. We are able to obtain time-space tradeoff
+
+                                                         37
+lower bounds for branching programs whose error approaches 1/2 when solving the quadratic form prob-
+lems. However, for the element distinctness and Hamming closeness problems, the bounds we prove are for
+error that is inverse polynomial in the input size; probability ampliﬁcation of these bounds does not yield
+non-trivial lower bounds for error approaching 1/2.
+
+
+Acknowledgements
+
+Many thanks to Jeff Edmonds and Michal Koucky for their helpful comments on drafts of this paper. Also
+many thanks to Martin Sauerhoff for his comments on technical points of the paper.
+
+
+References
+
+[Abr90]         Karl R. Abrahamson. A time-space tradeoff for Boolean matrix multiplication. In Pro-
+                ceedings 31st Annual Symposium on Foundations of Computer Science, pages 412–419, St.
+                Louis, MO, October 1990. IEEE.
+
+[Abr91]         Karl R. Abrahamson. Time–space tradeoffs for algebraic problems on general sequential
+                models. Journal of Computer and System Sciences, 43(2):269–289, October 1991.
+
+[Ajt98]         M. Ajtai. Determinism versus non-determinism for linear time RAMs with memory restric-
+                tions. Technical Report TR98-077, Electronic Colloquium in Computation Complexity,
+                http://www.eccc.uni-trier.de/eccc/, 1998. Revision 1.
+
+[Ajt99a]        M. Ajtai. Determinism versus non-determinism for linear time RAMs with memory restric-
+                tions. In Proceedings of the Thirty-First Annual ACM Symposium on Theory of Computing,
+                pages 632–641, Atlanta, GA, May 1999.
+
+[Ajt99b]        M. Ajtai. A non-linear time lower bound for boolean branching programs. In Proceedings
+                40th Annual Symposium on Foundations of Computer Science, pages 60–70, New York,NY,
+                October 1999. IEEE.
+
+[AM88]          Noga Alon and Wolfgang Maass. Meanders and their applications in lower bounds argu-
+                ments. Journal of Computer and System Sciences, 37:118–129, 1988.
+
+[BC82]          Allan Borodin and Stephen A. Cook. A time-space tradeoff for sorting on a general sequen-
+                tial model of computation. SIAM Journal on Computing, 11(2):287–297, May 1982.
+
+[Bea91]         Paul W. Beame. A general time-space tradeoff for ﬁnding unique elements. SIAM Journal
+                on Computing, 20(2):270–277, 1991.
+
+[BFK+ 81]       Allan Borodin, Michael J. Fischer, David G. Kirkpatrick, Nancy A. Lynch, and Martin
+                Tompa. A time-space tradeoff for sorting on non-oblivious machines. Journal of Computer
+                and System Sciences, 22(3):351–364, June 1981.
+
+[BFMadH+ 87] Allan Borodin, Faith E. Fich, Friedhelm Meyer auf der Heide, Eli Upfal, and Avi Wigder-
+             son. A time-space tradeoff for element distinctness. SIAM Journal on Computing, 16(1):97–
+             99, February 1987.
+
+
+
+                                                    38
+[BFS86]   László Babai, P. Frankl, and Janos Simon. Complexity classes in communication com-
+          plexity theory. In 27th Annual Symposium on Foundations of Computer Science, pages
+          337–347, Toronto, Ontario, October 1986. IEEE.
+[BJS01]   Paul Beame, T. S. Jayram, and Michael Saks. Time-space tradeoffs for branching programs.
+          Journal of Computer and System Sciences, 63(4):542–572, December 2001.
+
+[BNS92]   László Babai, Noam Nisan, and Márió Szegedy. Multiparty protocols, pseudorandom gen-
+          erators for logspace, and time-space trade-offs. Journal of Computer and System Sciences,
+          45(2):204–232, October 1992.
+[Bor93]   Allan Borodin. Time space tradeoffs (getting closer to the barrier?). In 4th International
+          Symposium on Algorithms and Computation, pages 209–220, Hong Kong, December 1993.
+[BRS93]   Allan Borodin, A. A. Razborov, and Roman Smolensky. On lower bounds for read-k times
+          branching programs. Computational Complexity, 3:1–18, October 1993.
+[BST98]   Paul W. Beame, Michael Saks, and Jayram S. Thathachar. Time-space tradeoffs for branch-
+          ing programs. In Proceedings 39th Annual Symposium on Foundations of Computer Sci-
+          ence, pages 254–263, Palo Alto, CA, November 1998. IEEE.
+
+[BV02]    Paul Beame and Erik Vee. Time-space tradeoffs, multiparty communication complexity,
+          and nearest-neighbor problems. In Proceedings of the Thirty-Fourth Annual ACM Sympo-
+          sium on Theory of Computing, pages 688–697, Montreal, Quebec, Canada, May 2002.
+
+[For97]   L. Fortnow. Nondeterministic polynomial time versus nondeterministic logarithmic space:
+          Time-space tradeoffs for satisﬁability. In ProceedingsTwelfth Annual IEEE Conference on
+          Computational Complexity (formerly: Structure in Complexity Theory Conference), pages
+          52–60, Ulm, Germany, June 1997.
+
+[FvM00]   L. Fortnow and D. van Melkebeek. Time-space tradeoffs for nondeterministic computation.
+          In ProceedingsFifteenth Annual IEEE Conference on Computational Complexity, pages 2–
+          13, Florence, Italy, July 2000.
+[Har66]   L.H. Harper. Optimal numberings and isoperimetric problems on graphs. Journal of Com-
+          binatorial Theory, 1:385–394, 1966.
+[HLP52]   G. H. Hardy, J. E. Littlewood, and G. Polya. Inequalities. Cambridge University Press,
+          1952.
+[KN97]    E. Kushilevitz and N. Nisan. Communication Complexity. Cambridge University Press,
+          Cambridge [England] ; New York, 1997.
+
+[KS87]    B. Kalyanasundaram and Georg Schnitger. The probabilistic communication complexity of
+          set intersection. In Proceedings, Structure in Complexity Theory, Second Annual Confer-
+          ence, pages 41–49, Cornell University, Ithaca, NY, June 1987. IEEE.
+[LV99]    R. Lipton and A. Viglas. Time-space tradeoffs for SAT. In Proceedings 40th Annual Sym-
+          posium on Foundations of Computer Science, pages 459–464, New York,NY, October 1999.
+          IEEE.
+[MNT93]   Y. Mansour, N. Nisan, and P. Tiwari. The computational complexity of universal hashing.
+          Theoretical Computer Science, 107:121–133, 1993.
+
+                                             39
+[Oko93]   E. Okol’nishnikova. On lower bounds for branching programs. Siberian Advances in Math-
+          ematics, 3(1):152–166, 1993.
+
+[Pag01]   J. Pagter. Time-Space Tradeoffs. PhD thesis, BRICS, March 2001.
+
+[Raz90]   A. A. Razborov. On the distributional complexity of disjointness. In Michael S. Paterson,
+          editor, Automata, Languages, and Programming: 17th International Colloquium, volume
+          443 of Lecture Notes in Computer Science, pages 249–253, Warwick University, England,
+          July 1990. Springer-Verlag.
+
+[Yao88]   A. C. Yao. Near-optimal time-space tradeoff for element distinctness. In 29th Annual
+          Symposium on Foundations of Computer Science, pages 91–97, White Plains, NY, October
+          1988. IEEE.
+
+
+
+
+                                             40
+

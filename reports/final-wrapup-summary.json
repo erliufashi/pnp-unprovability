@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "wrapup_at": "2026-11-07T22:49:24+08:00",
+  "user_wrapup_entry": "9dd0011e",
+  "top_level_verdicts": {
+    "T1_ZFC_unprovability_of_P_eq_NP": "UNRESOLVED",
+    "T2_ZFC_unprovability_of_P_neq_NP": "UNRESOLVED",
+    "T3_v1_closed_single_pass_proxy": "proved_conditional_proxy (historical finite-profile record only)",
+    "T3_v2_capability_preserving_separation": "UNRESOLVED"
+  },
+  "branches": {
+    "main_standard_unprovability": {
+      "path": "research/",
+      "nodes": 25,
+      "edges": 32,
+      "round": 27
+    },
+    "closed_llm_t3_v1": {
+      "path": "alternatives/closed-llm/",
+      "nodes": 10,
+      "edges": 11,
+      "round": 12
+    },
+    "sublinear_stream_10h": {
+      "path": "alternatives/sublinear-stream/",
+      "nodes": 38,
+      "edges": 41,
+      "round": 99
+    },
+    "practical_core_t3_v2": {
+      "path": "alternatives/practical-core/",
+      "nodes": 54,
+      "edges": 88,
+      "round": 95
+    }
+  },
+  "total_milestone_nodes": 127,
+  "key_deliverables": {
+    "wrapup_report": "docs/FINAL-WRAPUP-REPORT.md",
+    "root_readme": "README.md",
+    "practical_core_contract_v2": "alternatives/practical-core/CONTRACT-v2.md",
+    "practical_core_task_space_v2": "alternatives/practical-core/TASK-SPACE-v2.md",
+    "practical_core_coverage_spec": "alternatives/practical-core/coverage-spec.json"
+  },
+  "highlighted_results": [
+    {
+      "kind": "pruned_route",
+      "id": "D1/E1-E4",
+      "summary": "Gödel proof-gated compiler fixed point collapses to local Löb reflection; weird-oracle transfer to empty oracle implies Con(T).",
+      "artifact": "notes/02-reflection-v1.md"
+    },
+    {
+      "kind": "pruned_route",
+      "id": "E49/A57/C56",
+      "summary": "One reread breaks single-pass INDEX in O(log m) space; sublinear-fuel OR separation excludes full-input SUM (7n+9 steps).",
+      "artifact": "alternatives/practical-core/evidence/A57/c06631756405738ffadd6b9a51053470f0b88297495654e04c6082c88006c673.md"
+    },
+    {
+      "kind": "pruned_route",
+      "id": "E-chief-cert-1/C57",
+      "summary": "Two monotone read-only heads on a proof tape with O(log n) workspace recover all of NP, blocking free-certificate low-space SAT shortcuts.",
+      "artifact": "alternatives/practical-core/evidence/C57/f36c0fa9f7b1e2726c3e87d2e1849246d0b26824b58835f63f5db46807ad946c.md"
+    },
+    {
+      "kind": "candidate_separation_and_bottleneck",
+      "id": "E-argon-FNS-audit1/C62/RAND-ED-2",
+      "summary": "Full-scan BRAM (M=floor(sqrt(n)), F=32n+512) admits SUM/DOT and ND_COLLISION while BSSV excludes deterministic BRAM, but explicit threshold is n=2^3315164 and epsilon=1/3 randomized lower bound remains open.",
+      "artifact": "alternatives/practical-core/evidence/C62/13ae918c99fde7d80a6ae18994d0ccfc50099770c069f30715dab33723160124.md"
+    },
+    {
+      "kind": "literature_repair",
+      "id": "C59/C60/C61",
+      "summary": "Identified and repaired unmarking-vs-uncovered counting slip in Cook-Moshkovitz (CCC 2024, Lemma 52) with self-contained bound h*S_aug*T > delta*N^2/18432.",
+      "artifact": "alternatives/practical-core/evidence/C60/c2859740e989b544d6fd09b0a2672b9d13eba20917e7f7d2b72c3e5ee1ff679e.md"
+    },
+    {
+      "kind": "tight_frontier",
+      "id": "ASTRA-E-PARITY-INDEX-1",
+      "summary": "Nonlinear reusable s-bit index with q adaptive probes for binary inner products satisfies 2^s * sum_{i<=q} binom(N,i) >= 2^N.",
+      "artifact": "alternatives/practical-core/evidence/ASTRA-E-PARITY-INDEX-1/45cf3751e17fe3f06b0e0098f416a20a76919390d417984ce81bfd91d1aa4619.md"
+    },
+    {
+      "kind": "tight_frontier",
+      "id": "B56/B57/D-GVC-BATCH-1",
+      "summary": "Dynamic OR under U SET updates requires 1+sum_{k<=U} binom(N,k) initial states; K-round batch-L 1-bit verification capacity is 1+sum_{j<K} min(L,2^j).",
+      "artifact": "alternatives/practical-core/evidence/D-GVC-BATCH-1/9d22dc34a9a116e0f6e09d54e16884d3679a298a36453d917a579fd9ceac1bd5.md"
+    }
+  ]
+}

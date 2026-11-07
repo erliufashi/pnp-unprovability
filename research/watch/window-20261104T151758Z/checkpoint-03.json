@@ -1,0 +1,20 @@
+{
+  "hour": 3,
+  "at": 1793818574.7783759,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour3-review.receipt.json",
+  "research_root": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "probe_exit": 0,
+  "generic_prefix_comparisons": 33333,
+  "kernel_query_comparisons": 76680,
+  "final_toy_shape": {
+    "seed_inclusive_count": 513,
+    "level_span": 10,
+    "active_blocks": 2,
+    "allocated_word_slots": 9990,
+    "live_numeric_words": 1998,
+    "merges": 510489
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "new_candidate": "M15/E29/E31/E30 causal contract/lifting, unproved",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

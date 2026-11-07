@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour1",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 20,
+  "checks": [
+    {
+      "criterion": "新分支proof/ENVELOPE-v1.md给出精确模型、INDEX推广及LLM工作空间条件；proof/ATTENTION-v1.md明确数值纯操作、原归约顺序、输入窗口及错误/超时适用边界，并给空间/时间论证或明确未解点。",
+      "verdict": "pass",
+      "evidence": "实际分段读取 /home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/proof/ENVELOPE-v1.md:1-57：定义非降可计算f、O(f)常数并集、单遍/多项式/输出不可回读模型及长度头协议；INDEX固定宽度、NP对数空间见证、确定性配置下界及随机信息下界；全部可变状态、窗口在线管理、输出反馈和采样计费条件齐备。读取 proof/ATTENTION-v1.md:1-54：确定性有限位primitive、禁止更换FMA及归约树、行局部依赖、DAG归纳逐位证明、计入QKV与输出的O(Cd*b+log C)存储、算术节点数和错误/超时边界。读取 proof/QUALIFICATIONS-v1.md:1-37：补充DAG生成器空间、打包值与Python容器区别、标准TM多项式扫描开销及正常完成路径限制。"
+    },
+    {
+      "criterion": "reports/hour1-tests.json与完整日志保存实际原型测试退出0、逐位匹配案例和浮点重结合反例；测量明确是否排除预先分配输入，不以有限测试替代一般证明。独立只读复核可以读取实际报告/源码，不要求重新执行会写文件的测试。",
+      "verdict": "pass",
+      "evidence": "读取 reports/hour1-tests.json:1-42、273-384，reports/hour1-exit.json:1-10，reports/hour1-tests.log:1，以及 /home/desk/.pi/tasks/01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c-3711474/bec0515b8.output:1；原始输出与保存日志相同，记录36案例、4规模，退出记录为completed/exit_code=0。读取 tools/attention_probe.py:1-153（分两段）：仅标准库；两个调度共用primitive和fold，struct打包字节比较assert，6*3*2案例循环；反例left=3.140000104904175、right=0；测量在QKV创建后才启动tracemalloc。报告C=16/32/64/128辅助峰值分别为物化22853/77125/283973/1090885字节、行调度5653/10133/19093/37525字节，inputs_excluded_from_trace=true。实际执行 sha256sum /home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/attention_probe.py，得到a47a58e3302f3b0d39f11f8dbe214c7a9827e6de191dc53c243b8697e218e754，与报告source_sha256一致。ATTENTION-v1.md:45-54及QUALIFICATIONS-v1.md明确有限测量不证明渐近界、非GPU/200B实测。"
+    },
+    {
+      "criterion": "新分支research/三层DAG只在本命名空间更新；reports/preservation-hour1.json证明原main和closed-llm的graph/state/history及已认证证明字节不变。记录下一待查问题，不冒称200B实测或所有attention内核已覆盖。",
+      "verdict": "pass",
+      "evidence": "分段读取 alternatives/sublinear-stream/research/graph.json:1-138：D6层1，M11/M12层2，E21-E24层3，六条边均为3→2→1且无环；artifact均在新分支。执行 grep -nE '\"id\"|\"status\"|artifact|QUALIFICATIONS|NEXT' 新分支/research/state.json | cut -c1-300 | head -20，以及 grep -nE 'sublinear|D6|E2[1-4]|M1[12]|QUALIFICATIONS' 新分支/research/history.jsonl | cut -c1-300 | head -20，实际命中新节点状态及9条本地历史。读取 preservation-hour1.json:1-70、877-903、1758-1770；执行 diff <(sed -n '3,882p' preservation-hour1.json) <(sed -n '886,1765p' preservation-hour1.json)，无差异，前后files及scores完全一致。实际sha256sum核对 research/{graph.json,state.json,history.jsonl}、alternatives/closed-llm/research/{graph.json,state.json,history.jsonl}、closed-llm/proof/{LLM-SIMULATION,MAIN,RANDOMIZED,SCOPE}.md、closed-llm/TASK-SPACE.md、research/termination.json、reviews/pnp-t3-submit-2.receipt.json，共13项当前哈希均与preservation基线匹配。执行 grep -c '\"id\"' 两个旧graph.json | cut -c1-300 | head -20，分别25和10。读取 notes/NEXT.md:1-11，且 grep -nE '未|候选|200B|证明|T3' notes/ALL-QUERY-CANDIDATE-v0.md README.md | cut -c1-300 | head -20，命中下一阶段摘要候选、尚未证明/未认证、指数常数不可冒称200B可用及不覆盖任意内核等边界。上述相对路径均位于/home/desk/projects/pnp-unprovability或其alternatives/sublinear-stream内；diff参数使用该报告的绝对路径执行。"
+    }
+  ],
+  "findings": [],
+  "note": "仅验收v0局部研究成果，不形成或扩大T3终止证书。checks_run按实际成功执行的只读工具调用计20次（组合shell调用计一次），不计回执写入及一次被只读闸拒绝的python3汇总调用；该Python命令未执行，随后已用sha256sum、diff、限定范围读取完成对应核查。未重跑会写报告的测试；退出0依据实际保存退出记录，并与原始任务输出、日志、报告和源码哈希交叉核对。历史不变结论以保存的baseline/readback及当前文件哈希一致为依据，不声称重新观测了过去执行过程。未修改旧回执或任何研究产物。"
+}

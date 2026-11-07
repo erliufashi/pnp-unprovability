@@ -1,0 +1,1 @@
+{"nodes":[{"id":"C57","layer":3,"title":"双只进证书头的共享一致性是否恢复NP","role":"证书访问契约压力测试：每头read-once不等于全局read-once","acceptance":"给two-head one-way logspace verifier的tableau构造及资源界，区分NL未知严格性与NP包含，不偷ND workspace","artifact":"evidence/C57/immutable-artifact","seed":{"current":0.85,"remaining":0.85,"novelty":1,"confidence":0.85,"cost":0.75}}],"edges":[["C57","M22"]]}

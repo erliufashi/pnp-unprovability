@@ -1,0 +1,179 @@
+{
+  "lifecycleArtifactVersion": 3,
+  "runId": "05fadeb8-0753-4ec0-9aa0-325e953d7748",
+  "sessionId": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c.jsonl",
+  "completionOwnerId": "ace5df9c-d5c1-4f32-81f9-9843500304a8",
+  "mode": "single",
+  "state": "failed",
+  "steering": {
+    "requested": 0,
+    "scheduled": 0,
+    "pending": 0,
+    "delivered": 0,
+    "failed": 0,
+    "recovered": 0,
+    "recent": []
+  },
+  "lastActivityAt": 1793967103334.986,
+  "startedAt": 1793967103313,
+  "lastUpdate": 1793967108366,
+  "pid": 730343,
+  "pidNamespaceScope": "pid:[4026531836]",
+  "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon",
+  "currentStep": 0,
+  "chainStepCount": 1,
+  "parallelGroups": [],
+  "launchContractDigest": "fb11042d5fd5bcfff2951b53148ed2e2540ef297b0e9e8d46904266eb0d4fcee",
+  "launchResolvedExtensions": {
+    "version": 1,
+    "source": "launch-resolved",
+    "disableAmbientExtensions": false,
+    "runtime": [
+      "sha256:6cacd4d2b90dd2f5"
+    ],
+    "configured": [
+      "sha256:e129a93168d6a694"
+    ],
+    "required": [],
+    "effective": [
+      "sha256:6cacd4d2b90dd2f5",
+      "sha256:e129a93168d6a694"
+    ],
+    "omitted": {
+      "runtime": 0,
+      "configured": 0,
+      "required": 0,
+      "effective": 0
+    }
+  },
+  "runFanoutBudget": {
+    "used": 4,
+    "limit": 4,
+    "remaining": 0
+  },
+  "processTerminal": {
+    "version": 1,
+    "state": "observed",
+    "runId": "05fadeb8-0753-4ec0-9aa0-325e953d7748",
+    "runnerProcessInstanceId": "323d0e45-c0ac-4499-aa21-a06c39506ffa",
+    "observedAt": 1793967108622,
+    "instances": [
+      {
+        "kind": "runner",
+        "processInstanceId": "323d0e45-c0ac-4499-aa21-a06c39506ffa",
+        "closeObservedAt": 1793967108622,
+        "exitCode": 0,
+        "signal": null
+      }
+    ],
+    "resumeDisposition": "resumable",
+    "canonicalSession": {
+      "canonicalSessionId": "c7267fe99f06f71beaf23f85145a035bd6f5ae07bee310cecc433590a47b2062",
+      "leaseDisposition": "released",
+      "freeAtObservation": true,
+      "canonicalSessionLeaseReleased": true
+    }
+  },
+  "steps": [
+    {
+      "agent": "pnp-divergent",
+      "sessionName": "pnp-divergent: You are reviving a previous subagent conversation. Origin...",
+      "description": "[prompt redacted]",
+      "context": "fresh",
+      "launchContractDigest": "fb11042d5fd5bcfff2951b53148ed2e2540ef297b0e9e8d46904266eb0d4fcee",
+      "launchResolvedExtensions": {
+        "version": 1,
+        "source": "launch-resolved",
+        "disableAmbientExtensions": false,
+        "runtime": [
+          "sha256:6cacd4d2b90dd2f5"
+        ],
+        "configured": [
+          "sha256:e129a93168d6a694"
+        ],
+        "required": [],
+        "effective": [
+          "sha256:6cacd4d2b90dd2f5",
+          "sha256:e129a93168d6a694"
+        ],
+        "omitted": {
+          "runtime": 0,
+          "configured": 0,
+          "required": 0,
+          "effective": 0
+        }
+      },
+      "status": "failed",
+      "sessionFile": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/3e8a6add-fa1e-492c-b7db-fc61b9b62cac/run-0/session.jsonl",
+      "transcriptPath": "/home/desk/.pi/agent/sessions/--home-desk--/subagent-artifacts/05fadeb8-0753-4ec0-9aa0-325e953d7748_pnp-divergent_transcript.jsonl",
+      "skills": [
+        "agent-mail"
+      ],
+      "model": "iksvip/gemini-4-argon:high",
+      "contextLimit": 1000000,
+      "thinking": "high",
+      "requestedModel": "iksvip/gemini-4-argon:high",
+      "recentTools": [],
+      "recentOutput": [],
+      "processTerminal": {
+        "version": 1,
+        "runId": "05fadeb8-0753-4ec0-9aa0-325e953d7748",
+        "childIndex": 0,
+        "runnerProcessInstanceId": "323d0e45-c0ac-4499-aa21-a06c39506ffa",
+        "resumeDisposition": "resumable",
+        "state": "not-started"
+      },
+      "startedAt": 1793967103316,
+      "lastActivityAt": 1793967103334.986,
+      "endedAt": 1793967108365,
+      "durationMs": 5049,
+      "exitCode": 1,
+      "error": "Agent is already processing. Specify streamingBehavior ('steer' or 'followUp') to queue the message.\nRequired file-only output was not produced: /home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/ARGON-H1-RETURN.md",
+      "effects": {
+        "settlementDiagnostic": {
+          "finalTextPresent": false,
+          "mutation": {
+            "attempted": false,
+            "observed": false
+          },
+          "requiredOutput": {
+            "kind": "file-only",
+            "path": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/ARGON-H1-RETURN.md",
+            "missing": true
+          },
+          "afterCompactionSettlement": false
+        }
+      },
+      "acceptance": {
+        "status": "not-required",
+        "evidenceStatus": "not-required",
+        "explicit": true,
+        "effectiveAcceptance": {
+          "level": "none",
+          "explicit": true,
+          "inferredReason": [
+            "default lightweight attestation"
+          ],
+          "criteria": [],
+          "evidence": [],
+          "verify": [],
+          "stopRules": [],
+          "reason": "divergent proposals, not proof acceptance"
+        },
+        "inferredReason": [
+          "default lightweight attestation"
+        ],
+        "criteria": [],
+        "runtimeChecks": [],
+        "verifyRuns": []
+      }
+    }
+  ],
+  "artifactsDir": "/home/desk/.pi/agent/sessions/--home-desk--/subagent-artifacts",
+  "sessionDir": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/3e8a6add-fa1e-492c-b7db-fc61b9b62cac/async-2a3c8ffd-9eda-4262-8599-f0dc630e7b56",
+  "outputFile": "/tmp/pi-subagents-uid-1000/async-subagent-runs/05fadeb8-0753-4ec0-9aa0-325e953d7748/output-0.log",
+  "outputs": {},
+  "endedAt": 1793967108366,
+  "sessionFile": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/3e8a6add-fa1e-492c-b7db-fc61b9b62cac/run-0/session.jsonl",
+  "error": "Agent is already processing. Specify streamingBehavior ('steer' or 'followUp') to queue the message.\nRequired file-only output was not produced: /home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/ARGON-H1-RETURN.md"
+}

@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "E-argon-RAND-ED-2",
+      "layer": 3,
+      "title": "全扫描 COLLISION 候选的随机化 BPP_BRAM 边界审计：BSSV Thm6.23 误差条件与指纹哈希反例",
+      "role": "补齐 E-argon-FNS-audit1 / C62 仅处理确定性 BSSV Thm6.13、尚未解决 1/3 有界错误随机化求解器是否被排除的缺口",
+      "acceptance": "核验 BSSV 原文 §6.2 Theorem 6.23 / Corollary 6.24 对随机化 Element Distinctness 的精确误差假设（双边误差 <= 2^-Omega(log^2 n) 或成功概率上界），证明或反驳在 F=32n+512, M=floor(sqrt(n)) 下常数 1/3 误差随机化 BRAM 是否存在碰撞检测算法（含随机哈希/分桶碰撞反例或随机化分支程序下界转移），不冒称已解决 BPP_BRAM 分离",
+      "artifact": "evidence/E-argon-RAND-ED-2/immutable-artifact",
+      "seed": {
+        "current": 0.91,
+        "remaining": 0.92,
+        "novelty": 1.0,
+        "confidence": 0.88,
+        "cost": 1.0
+      }
+    }
+  ],
+  "edges": [
+    [
+      "E-argon-RAND-ED-2",
+      "M22"
+    ],
+    [
+      "E-argon-RAND-ED-2",
+      "M23"
+    ]
+  ]
+}

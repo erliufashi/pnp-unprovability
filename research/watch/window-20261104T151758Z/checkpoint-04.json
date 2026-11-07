@@ -1,0 +1,48 @@
+{
+  "hour": 4,
+  "at": 1793823709.6857247,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour4-review.receipt.json",
+  "review_attempts": 2,
+  "first_attempt_not_counted": "unparseable JSON",
+  "actual_probe_exit": 0,
+  "totals": {
+    "ordinary_cases": 240,
+    "guard_cases": 2,
+    "EOS_control_cases": 1,
+    "long_cases": 4,
+    "feed_step_trace_comparisons": 2539,
+    "per_head_phase_count_checks": 10156,
+    "random_state_checks": 1551,
+    "distinct_hidden_word_codes": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "distinct_output_patterns": 24,
+    "ordinary_cases_with_EOS": 60
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "cost_gap_observed": {
+    "reference": {
+      "kv_numeric_words": 1072,
+      "position": 134,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    "compiled": {
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 134,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    }
+  },
+  "next_unproved": "D7/M16 quality-resource adequacy",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

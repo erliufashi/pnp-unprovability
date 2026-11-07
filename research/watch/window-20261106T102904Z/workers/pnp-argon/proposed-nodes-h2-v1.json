@@ -1,0 +1,56 @@
+{
+  "nodes": [
+    {
+      "id": "E-argon-RAND-ED-2",
+      "layer": 3,
+      "title": "全扫描 COLLISION 候选的随机化 BPP_BRAM 边界审计：BSSV Thm6.23 误差条件与指纹哈希反例",
+      "role": "补齐 E-argon-FNS-audit1 / C62 仅处理确定性 BSSV Thm6.13、尚未解决 1/3 有界错误随机化求解器是否被排除的缺口",
+      "acceptance": "核验 BSSV 原文 §6.2 Theorem 6.23 / Corollary 6.24 对随机化 Element Distinctness 的精确误差假设（双边误差 <= 2^-Omega(log^2 n) 或成功概率上界），证明或反驳在 F=32n+512, M=floor(sqrt(n)) 下常数 1/3 误差随机化 BRAM 是否存在碰撞检测算法（含随机哈希/分桶碰撞反例或随机化分支程序下界转移），不冒称已解决 BPP_BRAM 分离",
+      "artifact": "evidence/E-argon-RAND-ED-2/immutable-artifact",
+      "seed": {
+        "current": 0.91,
+        "remaining": 0.92,
+        "novelty": 1.0,
+        "confidence": 0.88,
+        "cost": 1.0
+      }
+    },
+    {
+      "id": "E-argon-OPAQUE-CRIT-2",
+      "layer": 3,
+      "title": "Opaque 比较器模型 vs 明文位 BRAM：输入接口对偶性与基数分桶/哈希逃逸反例",
+      "role": "批判性审查 E-chief-OPAQUE-1：明确仅暴露 CMP(i,j) 是改变输入观察原语（Information-Theoretic Oracle）而非同输入表示下的计算复杂性分离",
+      "acceptance": "在同一底层输入数组上对比 CMP-only 接口与标准 INPUT(i) 明文位接口：构造当 M >= n（或值域 <= M）时明文 BRAM 用 O(n) 步直接寻址/基数查重打破 ceil(log2(n!)) 比较下界的可执行程序；证明 CMP-only 的 Omega(n log n) 下界是查询信道容量限制（类似单遍 INDEX 的通道限制），不能等同于标准明文位输入上的 P_R vs NP_R 分离",
+      "artifact": "evidence/E-argon-OPAQUE-CRIT-2/immutable-artifact",
+      "seed": {
+        "current": 0.89,
+        "remaining": 0.90,
+        "novelty": 0.95,
+        "confidence": 0.90,
+        "cost": 0.85
+      }
+    },
+    {
+      "id": "E-argon-LOC-SAT-2",
+      "layer": 3,
+      "title": "小见证局部约束问题（Small-Witness 2-CSP/Subgraph）在亚线性工作空间 RATM/BRAM 下的同预算 D vs ND",
+      "role": "修复 E-chief-PPST-1 中 FLMV SAT 下界因标准 SAT 见证長 Θ(n) 无法放进 o(n^d) 非确定性工作空间而导致的 D/ND 预算失配",
+      "acceptance": "针对 E-chief-PPST-1 揭示的 FLMV 缺口（SAT 不在 DTISP[n^1.4, n^0.01]，但标准 SAT 猜测赋值需 Ω(n) 空间或免费长证书），构造见证大小仅为 k = O(1) 或 O(log n) 个字（完全装入 16w 寄存器或 O(log n) 空间）的局部约束/子图同构/k-SUM 变体，审计其在 F=O(n), M=O(sqrt(n)) BRAM 下的完整计费 ND 上界与多路分支程序 D 下界",
+      "artifact": "evidence/E-argon-LOC-SAT-2/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.90,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 0.95
+      }
+    }
+  ],
+  "edges": [
+    ["E-argon-RAND-ED-2", "M22"],
+    ["E-argon-RAND-ED-2", "M23"],
+    ["E-argon-OPAQUE-CRIT-2", "M22"],
+    ["E-argon-LOC-SAT-2", "M22"],
+    ["E-argon-LOC-SAT-2", "M24"]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "hour": 9,
+  "at": 1793839634.0396378,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour9-review.receipt.json",
+  "incomplete_attempt_1_preserved": true,
+  "actual_probe_exit": 0,
+  "ND_cases": 948,
+  "ND_branches": 7368,
+  "logical_encoding_transitions": 105328,
+  "all_small_prefix_maps": 131344,
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_action": "only absolute-deadline pause and administrative summary",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

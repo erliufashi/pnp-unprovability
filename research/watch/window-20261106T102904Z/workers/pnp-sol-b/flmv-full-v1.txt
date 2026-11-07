@@ -1,0 +1,1504 @@
+                   Time-Space Lower Bounds for Satisfiability∗
+     Lance Fortnow                        Richard Lipton                       Dieter van Melkebeek†
+  University of Chicago           Georgia Institute of Technology             University of Wisconsin
+                                           Anastasios Viglas
+                                          University of Sydney
+
+                                           September 7, 2004
+
+
+
+                                                 Abstract
+          We establish the first polynomial time-space lower bounds for satisfiability on general models
+      of computation. We show that for any constant c less than the golden ratio there exists a positive
+      constant d such that no deterministic random-access Turing machine can solve satisfiability in
+      time nc and space nd , where d approaches 1 when c does. On conondeterministic
+                                                                                √             instead of
+      deterministic machines, we prove the same for any constant c less than 2.
+          Our lower bounds apply to nondeterministic linear time and almost all natural NP-complete
+      problems known. In fact, they even apply to the class of languages that can be solved on a
+      nondeterministic machine in linear time and space n1/c .
+          Our proofs follow the paradigm of indirect diagonalization. We also use that paradigm to
+      prove time-space lower bounds for languages higher up in the polynomial-time hierarchy.
+
+
+
+
+  ∗
+     This paper combines extended abstracts that appeared in the Proceedings of the 40th IEEE Symposium on
+Foundations of Computer Science [LV99] and in the Proceedings of the 15th IEEE Conference on Computational
+Complexity [FvM00].
+   †
+     Partially supported by NSF Career award CCR-0133693.
+
+
+                                                      1
+1    Introduction
+Proving lower bounds remains the most difficult of tasks in computational complexity theory.
+Even for satisfiability, the seminal NP-complete problem of deciding whether a given propositional
+formula has at least one satisfying assignment, little is known. While we expect satisfiability to
+take exponential time in the worst case and to require a linear exponent in the number of variables
+of the formula, we do not even know how to rule out the existence of a linear-time algorithm on a
+random-access Turing machine. Obviously, linear time is needed since we have to look at the entire
+formula in the worst case. To date no better time lower bound than the trivial one is known on
+unrestricted random-access machines.
+    However, if we limit the amount of work space a machine solving satisfiability is allowed to use
+then we can establish nontrivial lower bounds on its running time. Fortnow [For00b] established a
+slightly super-linear time lower bounds for such machines: For any positive constant ǫ, satisfiability
+cannot be solved on a deterministic random-access Turing machine in time n1+o(1) and space n1−ǫ .
+In this work, we improve Fortnow’s result and obtain a polynomial lower bound of constant degree
+larger than 1 for the same type of machines; the degree approaches the golden ratio φ ≈ 1.618 when
+the space bound becomes subpolynomial. More precisely, we obtain the following result.
+                         . √
+Theorem 1.1 Let φ = ( 5 + 1)/2 denote the golden ratio. For any constant c < φ there exists a
+positive constant d such that satisfiability cannot be solved on a deterministic random-access Turing
+machine in time nc and space nd . Moreover, d approaches 1 from below when c approaches 1 from
+above.
+
+    Deterministic time-space lower bounds for satisfiability relate to the P-versus-NP problem. Sim-
+ilarly, in the context of the NP-versus-coNP problem, one can establish time-space lower bounds
+for satisfiability on conondeterministic machines. In fact, Fortnow’s lower bound also holds for
+conondeterministic machines [For00b]. Our techniques allow us to improve that lower bound from
+slightly superlinear to a polynomial of constant degree larger than 1, albeit a smaller degree than
+in the deterministic case.
+                                       √
+Theorem 1.2 For any constant c < 2 there exists a positive constant d such that satisfiability
+cannot be solved on a conondeterministic random-access Turing machine in time nc and space nd .
+Moreover, d approaches 1 from below when c approaches 1 from above.
+
+    Our results as well as the earlier ones by Fortnow exploit the tight relationship between satisfi-
+ability and nondeterministic linear time. Satisfiability is complete for nondeterministic quasi-linear
+time under reductions that use quasi-linear time and logarithmic space [Coo88]. Time-space lower
+bounds for satisfiability and for nondeterministic linear time are equivalent up to polylogarithmic
+factors. The equivalence holds not just for satisfiability but for all natural NP-complete problems
+we know of. Thus, our lower bounds for satisfiability actually apply to all these problems.
+    Our proofs can be characterized as indirect diagonalization arguments. By way of contradic-
+tion, we assume we can simulate nondeterministic linear time efficiently on deterministic (in the
+case of Theorem 1.1) or conondeterministic (in the case of Theorem 1.2) machines. We view that
+hypothesis as an unlikely inclusion of complexity classes and use it to derive more and more unlikely
+inclusions of complexity classes up to the point where we reach a contradiction with a direct diag-
+onalization result. Kannan [Kan84] used a similar approach in his investigation of the relationship
+between nondeterministic and deterministic linear time. His results do not imply lower bounds for
+
+
+                                                  2
+satisfiability but we will cast his argument in such a way that we can use it as a starting point for
+our exposition.
+    We can get lower bounds for nondeterministic linear time even if we restrict the amount of space
+the nondeterministic machine can use. For example, we show that for every constant c less than the
+golden ratio there exists a positive constant d and a language computable by a nondeterministic
+machine in linear time and n1/c space that cannot be computed by deterministic machines that
+run in time nc and space nd . A similar lower bound√for conondeterministic instead of deterministic
+simulations holds for every constant c less than 2. These are instantiations of more general
+tradeoffs between the various time and space parameters. They constitute the first nontrivial
+time-space lower bounds for nondeterministic linear-time computations with sublinear space.
+    Our approach applies to languages higher up in the polynomial-time hierarchy as well. We show
+that Σℓ TIME[n] cannot be solved in deterministic time nc and space nd for c < ℓ and some positive
+constant d (depending on c).
+
+1.1   Organization
+Section 2 contains some preliminaries, including a description of the machine model we focus on
+in our proofs, the direct diagonalization results we need, and constructibility conventions we use
+throughout the paper.
+    In Section 3, we argue that time-space lower bounds for satisfiability and for nondeterministic
+linear time are equivalent up to polylogarithmic factors and that the same holds for all natural
+NP-complete problems we know of. Whereas in this section we have stated our main results in
+terms of satisfiability, in the rest of the paper we will think in terms of nondeterministic linear
+time.
+    Section 4 describes the proof paradigm of indirect diagonalization in more detail. It provides
+the structure and basic ingredients for all our arguments.
+    We derive our lower bounds for nondeterministic linear time on deterministic machines in Section
+5. We start out by casting Kannan’s result about nondeterministic versus deterministic linear time
+as an indirect diagonalization argument. We then develop our indirect diagonalization approach
+and derive explicit relationships between the constants c and d in the time and space bounds of
+Theorem 1.1, as well as further strengthenings. In Section 6, we do the same for our lower bounds
+for nondeterministic linear time on conondeterministic machines as stated in Theorem 1.2. Section
+7 contains the application of our approach to complexity classes other than nondeterministic linear
+time.
+    Finally, we discuss some related subsequent work and directions for further research in Section
+8.
+
+
+2     Preliminaries
+In this section, we describe our machine model, the direct diagonalization results we need, and
+constructibility conventions we assume in the rest of the paper. We refer the reader to the textbooks
+by Balcázar, Dı́az and Gabarró [BDG95], and by Papadimitriou [Pap94] for general background on
+computational complexity and for notation.
+
+
+
+
+                                                 3
+2.1   Machine model
+Up to polylogarithmic factors, our results are robust with respect to the choice of random-access
+machine model. Our arguments work for all models we know; for some models extra polylogarithmic
+factors arise in the analysis due to simulations of machines within the model. In this paper, we
+choose the particular model below. It has the advantage that simulations can be done with only
+constant factor overheads in time and space, which keeps the analysis clean.
+    We use random-access Turing machines with an arbitrary number of tapes. A machine can have
+two types of tapes: non-index tapes and index tapes. Every non-index tape T except the output
+tape has an associated index tape I. The machine can move the head on T in one step to the
+position indexed by the contents of I. The contents of I is erased in such a step.
+    The input tape is read-only and has an associated index tape; the output tape is write-only,
+has no index-tape, and is one-directional. The input and output tapes do not count towards the
+space usage of the machine. Non-index tapes contribute the largest position ever read (indexed) to
+the space usage.
+    Note that according to our definition the space can be exponential in the running time. However,
+by using an appropriate data structure to store the contents of the tape cells accessed, we can
+prevent the space from being larger than the running time without blowing up the running time
+by more than a polylogarithmic factor.
+    A configuration of a machine M consists of the internal state of M , the contents of the work
+and index tapes, and the head positions on the index tapes. We use the notation C ⊢τM,x C ′ to
+denote that machine M on input x can go from configuration C to configuration C ′ in τ steps. The
+computation tableau of M on input x is a representation of the entire computation. It consists of
+a table in which successive rows describe the successive configurations of M on input x, starting
+from the initial configuration of M . If M runs in time t and space s, each configuration has size
+O(s) and the computation tableau contains at most t rows.
+    Based on our machine model, we define complexity classes in the standard way. Apart from the
+usual acronyms, we also employ the following notation: DTISP[t, s] for the class of languages that
+can be accepted by a deterministic machine running in time O(t) and space O(s), and NTISP[t, s]
+for the corresponding nondeterministic class. Σℓ TIME[t] stands for the class of languages computed
+by Σℓ -machines that run in time O(t). Using Πℓ -machines instead of Σℓ -machines yields the class
+Πℓ TIME[t].
+
+2.2   Diagonalization results
+Most of our indirect diagonalization arguments use the following straightforward direct diagonaliza-
+tion result. It states that, for a fixed number of alternations, switching from universal to existential
+initial states and allotting a little bit more time allows us to do something what we could not do
+before. We include a proof sketch for completeness.
+
+Theorem 2.1 Let ℓ be a positive integer and t a time constructible function. Then
+
+                                     Σℓ TIME[t] 6⊆ Πℓ TIME[o(t)].
+
+Proof: Fix a positive integer ℓ. Paul, Prauß, and Reischuk [PPR80] show, for the multitape Turing
+machine model, that every Σℓ -machine running in time τ with an arbitrary number of tapes can
+
+
+
+                                                   4
+be simulated in time O(τ ) by a Σℓ -machine with a fixed number of tapes. The same holds for our
+model of computation.
+    Let M denote the Σℓ -machine that takes an input x and runs the above simulation of the Σℓ -
+machine described by x on input x; clock M such that it runs in time t. The language L defined
+by M lies in Σℓ TIME[t].
+    Consider any Πℓ -machine N that runs in time o(t). Then there are infinitely many strings
+x that describe a Σℓ -machine that does the opposite of N . For large enough strings x in that
+sequence, M will finish its computation on input x before the clock kicks in, and therefore do the
+opposite of what N does on that input. Since M accepts L, N cannot accept L. Thus, L is not in
+Πℓ TIME[o(t)].                                                                                  
+
+   Except in Section 7, we will apply Theorem 2.1 with ℓ = 1, i.e., we will use the fact that
+NTIME[t] 6⊆ coNTIME[o(t)].
+   A similar result to Theorem 2.1 also holds in the time-space bounded setting. We will only use
+the instance for ℓ = 1:
+
+Theorem 2.2 Let t and s be functions that are (t, s) time-space constructible. Then
+
+                                 NTISP[t, s] 6⊆ coNTISP[o(t), o(s)].
+
+Proof: Fortnow and Lund [FL93] argue that the result of Paul, Prauß, and Reischuk for multitape
+Turing machines also holds in the time-space bounded setting. Their proof carries over for our
+model of computation. The rest of the argument is the same as in the proof of Theorem 2.1.   
+
+   One of our results (part of Theorem 6.2) relies on a more intricate direct diagonalization result,
+namely the nondeterministic time hierarchy theorem.
+
+Theorem 2.3 ([SFM78, Ž83]) Let t1 (n) and t2 (n) be functions with t2 (n) time constructible. If
+t1 (n + 1) ∈ o(t2 (n)) then
+                               NTIME[t1 ] ( NTIME[t2 ].
+
+2.3   Constructibility Issues
+Unless stated otherwise, a function will always denote a function from the natural numbers to the
+natural numbers. Let f , t, and s be functions. We say that f is (t, s) time-space constructible if
+there exists a deterministic machine that outputs 1f (|x|) on input x and runs in time O(t) and space
+O(s).
+    Constructibility conditions are needed when we do time and/or space bounded simulations, as
+in the diagonalization results above or in padding results like the following.
+
+Theorem 2.4 Let f , t, s, s′ , and σ be functions such that f (n) ⩾ n + 1 and is (f, s′ ) time-space
+constructible and s′ = O(σ(f )). Then
+
+                                    NTISP[n, σ] ⊆ coNTISP[t, s]
+
+implies
+                          NTISP[f, σ(f )] ⊆ coNTISP[t(f ) + f, s(f ) + s′ ].
+
+
+                                                  5
+    We will not explicitly state the constructibility conditions in the rest of this paper. We tacitly
+assume that the bounds in the general formulations of our results satisfy these requirements. We
+also assume that they are at least logarithmic, nondecreasing and do not grow too fast in the sense
+that f (O(n)) ⊆ O(f (n)). The bounds we use in our concrete results will be polynomials, which are
+sufficiently smooth to meet all these conditions.
+
+
+3      Satisfiability versus Nondeterministic Linear Time
+This section discusses the tight connection between satisfiability and nondeterministic linear time
+as far as time-space lower bounds are concerned.
+    Cook’s Theorem states that satisfiability (SAT) is NP-complete. Gurevich and Shelah [GS89]
+show that, in fact, satisfiability is complete for nondeterministic quasi-linear time under quasi-linear
+reductions. Recall that “quasi-linear” means O(n logO(1) n). Therefore, proving time lower bounds
+for satisfiability and for nondeterministic linear time are equivalent up to polylogarithmic factors.
+    We are interested in simultaneous time and space bounds, though. Since satisfiability lies in
+nondeterministic quasi-linear time, time-space lower bounds for satisfiability also hold for nonde-
+terministic linear time modulo polylogarithmic factors. The converse is also true but does not
+immediately follow from the completeness result by Gurevich and Shelah. The problem is that
+we do not have the space to store the result of the reduction of a problem in nondeterministic
+quasi-linear time to satisfiability, nor the time to redo the whole reduction each time we need a
+piece of it. The way around it is to construct a reduction each bit of which can be computed on
+the fly in polylogarithmic time using logarithmic work space. This leads to the following result.
+Theorem 3.1 There exists a constant r such that the following holds. If
+                                          SAT ∈ DTISP[t, s],
+then
+                     NTIME[n] ⊆ DTISP[t(n logr n) · logr n, s(n logr n) + log n].
+We include a detailed proof of Theorem 3.1 in Section 3.1.
+    Theorem 3.1 allows us to translate time-space lower bounds for nondeterministic linear time
+into the same time-space lower bounds for satisfiability up to polylogarithmic factors. In particular,
+for polynomial bounds we obtain:
+Corollary 3.2 Let c and d be constants. If
+                                     NTIME[n] 6⊆ DTISP[nc , nd ],
+then for any constants c′ < c and d′ < d
+                                                         ′   ′
+                                        SAT 6∈ DTISP[nc , nd ].
+   The simple reductions to satisfiability that underly Theorem 3.1 also exist to all of the standard
+natural NP-complete problems. In fact, to the best of the authors’ knowledge, all known natural NP-
+complete problems in nondeterministic quasi-linear time share the latter property. Consequently,
+Theorem 3.1 and Corollary 3.2 hold if we replace satisfiability by any of these problems. They also
+hold if we replace DTISP by coNTISP in both hypothesis and conclusion.
+   From now on, our goal will be to obtain time-space lower bounds for nondeterministic linear
+time. Results for satisfiability and other NP-complete problems then follow from Theorem 3.1 or
+Corollary 3.2 and their variants.
+
+                                                   6
+3.1   Proof of Theorem 3.1
+Gurevich and Shelah [GS89] show how to simulate nondeterministic random-access machines by
+multitape Turing machines. Their proof builds on Schnorr’s result [Sch78] that one can sort in
+quasi-linear time on a nondeterministic multitape Turing machine.
+
+Theorem 3.3 (Gurevich-Shelah [GS89]) There exists a constant r such that every language
+that is accepted by a nondeterministic random-access Turing machine using time t is also accepted
+by a nondeterministic multitape Turing machine using time O(t logr t).
+
+    Because of Theorem 3.3 the following theorem finishes the proof of Theorem 3.1.
+
+Theorem 3.4 There exists a constant r such that the following holds. If
+
+                                        SAT ∈ DTISP[t, s],
+
+then every language accepted by a linear-time nondeterministic multitape Turing machine belongs
+to
+                          DTISP[t(n log2 n) · logr n, s(n log2 n) + log n].
+
+Proof: Let M be a deterministic random-access Turing machine deciding satisfiability in time t
+and space s.
+    Consider an arbitrary language L accepted by a linear-time nondeterministic multitape Turing
+machine. Hennie and Stearns [HS66] show that there exists an oblivious 2-tape nondeterministic
+Turing machine that accepts L in time O(n log n). Cook [Coo88], building on work by Pippenger
+and Fischer [PF79], uses this result to construct for a given input x of length n, a Boolean formula
+φ such that φ ∈ SAT iff x ∈ L. The formula φ has size m = dn log n for some constant d depending
+on L, only depends on n, and uses the bits xi of the input x as well as some some additional Boolean
+variables y. More precisely, φ is of the form (∧ni=1 xi = yi ) ∧ ψ where ψ only uses the variables y.
+Given a pointer to a bit of ψ, we can compute that bit in simultaneous time O(logr1 m) = O(logr1 n)
+and space O(log m) = O(log n) for some constant c1 independent of L.
+    The following algorithm decides L in time O(t(n log n) · logr n) and space O(s(n log n) + log n)
+on a deterministic random-access Turing machine for some constant r independent of L. We will
+simulate running M on input φ without storing φ in memory and without recomputing all of φ each
+time we have to access one of its bits. When given φ, running M on φ takes time t(dn log n) and
+space s(dn log n). Whenever M needs a bit from ψ, we compute that individual bit from scratch
+in time O(logr1 n) and space O(log n), without moving the input tape head above x. During the
+periods when M is accessing the part of φ that depends on the input x, the easy structure of that
+part allows us to compute the bit of φ we need in time O(logr2 n) and space O(log n) for some
+constant r2 independent of L. This operation may require moving the input tape head above x. All
+together, we can simulate M on φ with a multiplicative time overhead of O(logr n) and an additive
+space overhead of O(log n), where r = max(r1 , r2 ).                                               
+
+
+
+4     Structure of Our Arguments
+All time-space lower bounds for nondeterministic linear time to date share the same high-level struc-
+ture, which can be characterized as indirect diagonalization. This section describes the paradigm
+
+                                                 7
+and the main ingredients for its application in this paper. We refer to the survey paper by Fortnow
+[For00a] for other applications of indirect diagonalization.
+    Indirect diagonalization is a technique to separate complexity classes. In our case, we would
+like to obtain separations of the form NTIME[n] 6⊆ DTISP[t, s] for some interesting values of the
+parameters t and s (t should be at least linear and s at least logarithmic).
+    The proofs go by contradiction and have the following outline:
+
+  1. We assume that the separation does not hold, i.e., we assume the unlikely inclusion NTIME[n]
+     ⊆ DTISP[t, s].
+
+  2. Next, using our hypothesis, we derive more and more unlikely inclusions of complexity classes.
+
+  3. We keep on doing this until we reach a contradiction with a direct diagonalization result.
+
+We first describe the two techniques we will apply to derive more inclusions in step 2, namely
+trading alternations for time and trading time for alternations. Then we will see how to combine
+these techniques to obtain a contradiction, and thereby refute the hypothesis made in step 1.
+
+4.1   Trading Alternations for Time
+Trading alternations for time means reducing the running time by allowing more alternations. We
+know how to do this in general for space-bounded computations using a divide-and-conquer strategy.
+The technique has been known for a long time and has been applied extensively in computational
+complexity, for example, in the proof of Savitch’s theorem.
+    Suppose we have a deterministic machine M that runs in space S. We are given two configu-
+rations C and C ′ of M on an input x, and would like to know whether M goes from C to C ′ in
+T steps. One way to do this is to run the machine for T steps from configuration C and check
+whether we end up in configuration C ′ . In other words, we fill in the whole tableau in Figure 1(a)
+row by row.
+    Using the power of alternation, we can speed up this process as follows. We can break up the
+tableau into b equal blocks, guess the configurations C1 , C2 , . . . , Cb−1 at the common borders of the
+blocks, treat each of the blocks i, 1 ⩽ i ⩽ b, as a subtableau and verify that M on input x goes
+from configuration Ci−1 to Ci in T /b steps. See Figure 1(b).
+    In terms of logical formulas, we are using the following property of configurations:
+
+                     C ⊢T C ′ ⇔ (∃ C1 , C2 , . . . , Cb−1 )(∀ 1 ⩽ i ⩽ b) Ci−1 ⊢T /b Ci ,               (1)
+           .            .
+where C0 = C and Cb = C ′ . We can perform this process on a Σ2 -machine using time O(bS) for
+guessing the b − 1 intermediate configurations of size S each in the existential phase, time O(log b)
+to guess the block i we want to verify in the universal phase, and time O(T /b) to deterministically
+run M for T /b steps to verify the ith block. Since the O(log b) term can be ignored, we obtain
+
+                                  DTISP[T, S] ⊆ Σ2 TIME[bS + T /b].                                    (2)
+                                                                                                 p
+The running time of the Σ2 -machine is minimized (up to a constant) by choosing b =                  T /S,
+resulting in                                         √
+                               DTISP[T, S] ⊆ Σ2 TIME[ T S].                                            (3)
+
+
+
+                                                     8
+                                 S                                        S
+                                     -                                            -
+                         6       C                               6   C0 = C             6
+                                                                                        T /b
+                                                                          C1            ?
+                                                                                        6
+                                                                                        T /b
+                                                                          C2            ?
+                     T                                       T
+                                                                           ..
+                                                                            .
+
+                                                                      Cb−1
+                                                                                        6
+                                                                                        T /b
+                         ?      C′                               ?   Cb   = C′          ?
+
+                                (a)                                       (b)
+
+                   Figure 1: Tableaus of a computation using time T and space S
+
+
+The final deterministic phase of our simulation consists of an easier instance of our original problem.
+Therefore, we can apply the divide-and-conquer strategy again, and again. Each application in-
+creases the number of alternations by 2. k recursive applications with block numbers b1 , b2 , . . . , bk ,
+respectively, yield:                                 X               Y
+                          DTISP[T, S] ⊆ Σ2k TIME[(       bi )S + T /( bi )].                          (4)
+                                                         i                      i
+
+The running time of the Σ2k -machine is minimized (up to a constant) by picking the block numbers
+all equal to (T /S)1/(k+1) . We obtain:
+
+                                DTISP[T, S] ⊆ Σ2k TIME[(T S k )1/(k+1) ].                              (5)
+
+We point out for later reference that minimizing the running time of the Σ2k -machine may not be
+the best thing to do if this simulation is just an intermediate step in a derivation. In particular, in
+the proofs of Theorems 1.1 and 1.2 the block numbers are not all equal.
+
+4.2   Trading Time for Alternations
+The other tool we will use to derive more unlikely inclusions of complexity classes from our hypoth-
+esis NTIME[n] ⊆ DTISP[t, s] consists of the opposite of what we just did. We will now see how we
+can trade time for alternations, i.e., how we can get rid of alternations by – moderately – increasing
+the running time.
+    In general, we only know how to remove one alternation at an exponential cost in running
+time. However, our hypothesis implies that NTIME[n] is included in DTIME[t]. If t is small, this
+means that we can simulate nondeterminism deterministically and thus eliminate alternations at a
+moderate expense.
+
+
+
+                                                    9
+   For example, it follows that for any function τ
+
+                                   Σ2 TIME[τ ] ⊆ Σ1 TIME[t(n + τ )].                              (6)
+
+Proof: Consider a Σ2 -machine running in time τ on an input x of length n. Its acceptance criterion
+can be written as
+                          (∃ y1 ∈ {0, 1}τ ) (∀ y2 ∈ {0, 1}τ ) R(x, y1 , y2 ),                   (7)
+                                            |            {z               }
+                                                          (α)
+
+where R denotes a predicate computable in deterministic linear time. Part (α) of (7) defines a
+conondeterministic computation on input x and y1 . The running time is O(τ ), which is linear
+in the input length n + τ . Therefore, our hypothesis implies that we can transform (α) into a
+deterministic computation on input x and y1 taking time O(t(n + τ )). All together, (7) then
+describes a nondeterministic computation on input x of time complexity O(τ + t(n + τ )) = O(t(n +
+τ )).                                                                                           
+
+
+   Note that (6) also follows from the weaker hypothesis NTIME[n] ⊆ coNTIME[t]. Then (α) in (7)
+can only be transformed into a nondeterministic instead of a deterministic computation running in
+time O(t(n+τ )), but (7) as a whole still remains a nondeterministic computation taking O(t(n+τ ))
+time. The same argument also works for a larger number of alternations.
+
+Lemma 4.1 Let a ⩾ 2 be an integer and t and τ functions. If
+
+                                       NTIME[n] ⊆ coNTIME[t]
+
+then
+                                  Σa TIME[τ ] ⊆ Σa−1 TIME[t(n + τ )].
+
+In particular, in case t is of the form t(n) = nc for some constant c and τ is at least linear, we can
+eliminate an alternation at the cost of raising the running time to the power c.
+
+4.3    Obtaining a Contradiction
+So far we have seen techniques:
+
+  1. to trade alternations for time, and
+
+  2. to trade time for alternations.
+
+What remains is to combine them in the right way so as to reduce both resources enough and
+obtain a contradiction with a direct diagonalization result.
+    The two most obvious ways of combining the techniques are to apply the first one and then the
+second one, or vice versa.
+
+   • Fortnow [For00b] first traded time for alternations, and then alternations for time. We refer
+     the reader to a survey paper by Van Melkebeek [vM04] for this view of Fortnow’s approach.
+
+   • Kannan [Kan84] did it the other way around. His approach forms the basis for our results
+     and we will discuss it in the next section.
+
+                                                  10
+5        Lower Bounds for Nondeterministic Linear Time on Determin-
+         istic Machines
+This section covers our time-space lower bounds for nondeterministic linear time on deterministic
+machines. Our starting point is an indirect diagonalization argument used by Kannan [Kan84]. We
+show how to modify his argument and add some more ingredients to obtain the golden ratio time
+lower bound for subpolynomial space bounds. We then derive our time lower bound for general
+space bounds, quantify the tradeoff in Theorem 1.1, and further strengthen it.
+
+5.1        Kannan’s Argument
+Kannan [Kan84] investigates the relationship between deterministic time O(t) and nondeterministic
+time O(t) for various time bounds t, in particular for polynomials. In the case of linear t, he shows
+that NTIME[n] 6⊆ DTISP[n, o(n)] using essentially1 the following argument. We cast the argument
+in the indirect diagonalization paradigm presented at the beginning of Section 4.
+
+Step 1 We assume by way of contradiction that
+
+                                              NTIME[n] ⊆ DTISP[n, o(n)].                         (8)
+
+Step 2 Consider the class DTISP[τ, o(τ )] for some super-linear function τ . By first trading alter-
+     nations for time as in (3) and then time for alternations as in (6), we obtain the following
+     unlikely inclusion:
+                            DTISP[τ, o(τ )] ⊆ Σ2 TIME[o(τ )] ⊆ NTIME[o(τ )].                     (9)
+
+Step 3 The hypothesis (8) padded to time τ , closure under complementation of DTISP classes,
+     and (9) yield:
+
+                          NTIME[τ ] ⊆ DTISP[τ, o(τ )] = coDTISP[τ, o(τ )] ⊆ coNTIME[o(τ )].
+
+          This is a contradiction with Theorem 2.1 for, say, τ (n) = n2 .
+
+Kannan uses this argument to derive other results about the relationship between DTIME[t] and
+NTIME[t] for nonlinear t. We do not discuss these results but move on to our modification of the
+argument.
+
+5.2        The Road to The Golden Ratio
+We want to rule out deterministic simulations of nondeterministic linear time that use more time
+but less space than in Kannan’s original setting. For ease of exposition, we focus on subpolynomial
+space bounds first. We present the general analysis in Section 5.3. Thus, we would like to establish
+results of the form
+                                  NTIME[n] 6⊆ DTISP[nc , no(1) ],                               (10)
+where c is a constant larger than 1.
+   Let us run through the argument of Section 5.1 with the modified parameters.
+    1
+        Kannan uses the nondeterministic time hierarchy theorem instead of Theorem 2.1.
+
+
+
+                                                          11
+Step 1 Assume that NTIME[n] ⊆ DTISP[nc , no(1) ].
+
+Step 2 For any function τ (n) ⩾ n2 ,
+                                                               1                    c
+                                DTISP[τ, τ o(1) ] ⊆ Σ2 TIME[τ 2 +o(1) ] ⊆ NTIME[τ 2 +o(1) ].
+
+Step 3 For any function τ (n) ⩾ n2/c ,
+                                                                                               2
+                NTIME[τ ] ⊆ DTISP[τ c , τ o(1) ] = coDTISP[τ c , τ o(1) ] ⊆ coNTIME[τ c /2+o(1) ].
+
+      We obtain a contradiction with Theorem 2.1 as long as c2 /2 < 1.
+                                                  √
+We conclude that (10) holds for any constant c <√ 2.
+    In order to establish (10) for constants c ⩾ 2, one might try to improve Step 2 by applying
+the divide-and-conquer strategy of Section 4.1 recursively. That is, we use more alternations, as in
+(4), to reduce the running time further and then remove them using Lemma 4.1 repeatedly. We
+obtain the following substitute for Step 2 by choosing the block numbers bi in (4) optimally.
+
+Lemma 5.1 Suppose that
+                                             NTIME[n] ⊆ DTIME[nc ]
+for some constant c ⩾ 1. Then for any function T and any positive integer k
+
+                                       DTISP[T, T o(1) ] ⊆ NTIME[T ek +o(1) ]
+                         2k−1
+provided T ek (n) ⩾ nc          , where
+
+                                              e1 = c/2
+                                            ek+1 = c2 ek /(1 + cek ).
+
+The sequence (ek )k converges monotonically to the positive fixed point of the transformation e →
+                           .
+c2 e/(1 + ce), i.e., to e∞ = c − 1c .
+    Unfortunately, using Lemma 5.1 in Step 2 does not yield stronger results. Indeed, for k levels
+of recursion we obtain in Step 3 that for any sufficiently large polynomial τ
+
+             NTIME[τ ] ⊆ DTISP[τ c , τ o(1) ] = coDTISP[τ c , τ o(1) ] ⊆ coNTIME[τ cek +o(1) ].
+
+We reach a contradiction with Theorem 2.1 as long as c·ek < 1 for some positive integer k. Because
+of the monotonicity of the sequence (ek )k we only have to check the starting point e1 = c/2, which
+we already dealt with, and the limit value e∞ = c − 1c . However,
+
+                                     c · e∞ < 1 ⇔ c2 < 2 ⇔ c · e1 < 1.
+
+In other words, recursion does not help. Each additional level of recursion allows us to further
+reduce the running time of the intermediate alternating machine. The latter also uses two more
+alternations, though. We have to eliminate these alternations subsequently, which involves, for
+each extra alternation, raising the running time of the simulation to the power c. Both effects even
+out.
+    However, we can achieve the same savings in the running time of the intermediate alternating
+machine with only half as many alternations. In order to do so, we exploit the closure under
+
+                                                         12
+complementation of deterministic complexity classes, or equivalently, the following property of
+deterministic computations.
+                              C ⊢T C ′ ⇔ (∀C ′′ 6= C ′ ) C 0T C ′′ .                       (11)
+That is, a deterministic machine M goes from a configuration C to a configuration C ′ in T steps
+iff for every configuration C ′′ different from C ′ , M cannot reach C ′′ from C in T steps. To verify
+the latter we use the divide-and-conquer strategy of Section 4.1. We replace the matrix of (11) by
+the negation of the right-hand side of (1) and rename C ′′ to Cb for convenience.
+
+               C ⊢T C ′ ⇔ (∀ Cb 6= C ′ )(∀ C1 , C2 , . . . , Cb−1 )(∃ 1 ⩽ i ⩽ b) Ci−1 0T /b Ci ,    (12)
+
+where C0 denotes C. In terms of the tableau of Figure 2, M reaches C ′ from C in T steps iff
+
+                                                         S
+                                                                 -
+
+                                              6     C0 = C            6
+                                                                      T /b
+                                                         C1           ?
+                                                                      6
+                                                          kQ
+                                                          Q    T /b
+                                                            Q
+                                                         C2 Q  ?
+                                                             Q
+                                          T                   Q
+                                                         ..           BUG!
+                                                          .
+
+                                                     Cb−1
+                                                                      6
+                                                                      T /b
+                                              ?     Cb   6= C ′       ?
+
+                                      Figure 2: Saving alternations
+
+the following holds. If we break up the tableau into b blocks then for every choice of intermediate
+configurations Ci , 1 ⩽ i ⩽ b − 1, and of a final configuration Cb other than C ′ , there has to be a
+block i that cannot be completed in a legitimate way.
+    Applying this idea recursively amounts to replacing the matrix Ci−1 0T /b Ci of the Π2 -formula
+(12) by a Σ2 -formula which is the negation of a formula of the same type as the whole right-hand
+side of (12). The existential quantifiers merge and the resulting formula is of type Π3 . In general, k
+recursive applications result in a Πk+1 -formula. If we denote the block numbers for the successive
+recursive applications by b1 , b2 , . . . , bk , we conclude in a similar way as in Section 4.1 that
+                                                             X               Y
+                          DTISP[T, S] ⊆ Πk+1 TIME[(              bi )S + T /( bi )].                 (13)
+                                                                  i          i
+
+So, we achieve the same speed-up as in (4) but with only half as many alternations. An improvement
+of Lemma 5.1 follows.
+
+Lemma 5.2 Suppose that
+                                         NTIME[n] ⊆ DTIME[nc ]
+
+                                                         13
+for some constant c ⩾ 1. Then for any function T and any integer k ⩾ 0
+
+                                 DTISP[T, T o(1) ] ⊆ coNTIME[T fk +o(1) ]
+                     k
+provided T fk (n) ⩾ nc , where
+                                          f0 = 1
+                                                                                                  (14)
+                                        fk+1 = c · fk /(1 + fk ).
+     For future reference, we point out some properties of the sequence (fk )k , the first few terms of
+which are f0 = 1, f1 = c/2, f2 = c2 /(2 + c), etc. The fact that the transformation x → x/(1 + x) is
+monotone increasing for x ⩾ 0 implies that (i) for each k ⩾ 1, fk is a monotone increasing function
+of c for c ⩾ 1, and (ii) for each fixed c ⩾ 1, the sequence (fk )k monotonically converges to the fixed
+                                                               .
+point of the transformation f → c · f /(1 + f ), i.e., to f∞ = c − 1. The sequence (fk )k is decreasing
+iff f0 > f1 , or equivalently, iff c < 2. An explicit expression for the sequence is:
+                                          (
+                                            1/(k + 1)         if c = 1
+                                     fk =               1
+                                            (c − 1) · 1− 2−c if c > 1.
+                                                          ck
+
+Since fk has value 1/(k + 1) ⩽ 1 for c = 1 and monotonically grows unbounded for k ⩾ 1, the
+transformation c → 1/fk has a unique fixed point c ⩾ 1. The fixed point depends on k and
+monotonically increases to the fixed point c ⩾ 1 of c → 1/f∞ , which is the golden ratio φ as φ
+satisfies φ(φ − 1) = 1.
+    We will prove a generalization of Lemma 5.2 in Section 5.3. Applying Lemma 5.2 in a similar
+way as Lemma 5.1, Step 3 reads
+
+                          NTIME[τ ] ⊆ DTISP[τ c , τ o(1) ] ⊆ coNTIME[τ cfk +o(1) ],
+
+for any integer k ⩾ 0 and sufficiently large polynomial τ . Thus, we obtain a contradiction with
+Theorem 2.1 as long as c · fk < 1 for some positive integer k. The latter is the case iff c · f∞ =
+c(c − 1) < 1. We conclude that
+
+                                      NTIME[n] 6⊆ DTISP[nc , no(1) ]
+
+for any constant c < φ.
+
+5.3   The General Lower Bound
+We now derive our time-space lower bounds for nondeterministic linear time on deterministic ma-
+chines in their most general form and establish Theorem 1.1 as well as some other results.
+    We start with a version of Lemma 5.2 for arbitrary space bounds. We also weaken its hypoth-
+esis somewhat, reflecting the fact that trading time for alternations only requires simulations of
+nondeterministic computations on conondeterministic (as opposed to deterministic) machines.
+
+Lemma 5.3 Suppose that
+                                        NTIME[n] ⊆ coNTIME[nc ]
+for some constant c ⩾ 1. Then for any functions T and S and any integer k ⩾ 0
+                                                                              k
+                           DTISP[T, S] ⊆ coNTIME[(T · S k )fk + (n + S)c ],
+
+where fk is given by (14).
+
+                                                     14
+    The proof of Lemma 5.3 essentially uses (13) and optimizes the number of blocks b1 , b2 , . . . ,
+bk at the successive levels of recursion. We obtained (5) by setting these numbers the same at
+every level. Intuitively, this isn’t optimal because the subsequent trading of time for alternations
+raises the contributions of later blocks to the running time more often to the power c than the
+contributions of earlier blocks. Thus, later levels should have fewer blocks than earlier ones. The
+precise balance is determined in the next proof.
+Proof of Lemma 5.3: We give a proof by induction on k. The base case k = 0 trivially holds.
+    For the induction step k → k + 1, since DTISP[T, S] is closed under complementation, it suffices
+to show that
+                                                                         k+1
+                        DTISP[T, S] ⊆ NTIME[(T · S k+1 )fk+1 + (n + S)c ]                      (15)
+assuming that statement of the lemma holds for k.
+   Consider a deterministic machine M that runs in time T and space S on an input x of length
+n. Let us analyze the simulation defined by (1) when we apply the induction hypothesis to the
+matrix:
+                         (∃ C1 , C2 , . . . , Cb−1 ) (∀ 1 ⩽ i ⩽ b) Ci−1 ⊢T /b Ci .
+                                                                   |    {z      }
+                                                                       (α)
+                                               |             {z                 }
+                                                             (β)
+                          |                        {z                           }
+                                                   (γ)
+
+Part (α) corresponds to a deterministic computation on input x, Ci−1 , and Ci with the following
+parameters:
+                                        input size: n + 2S
+                                    running time: O(T /b)
+                                       space used: O(S).
+By the induction hypothesis, we can turn (α) into a conondeterministic computation running in
+time
+                                                             k
+                                 O((T /b · S k )fk + (n + S)c ).
+Thus (β) becomes a conondeterministic computation on input x and C0 , C1 , . . . , Cb with the fol-
+lowing parameters:
+
+                           input size: n + (b + 1)S
+                                                                          k
+                        running time: O(log b + (T /b · S k )fk + (n + S)c ).
+
+Along the lines of Section 4.2, the hypothesis of the lemma allows us to transform this conondeter-
+ministic computation into a nondeterministic one resulting in a nondeterministic simulation of (γ)
+taking time
+                                                                              
+                                                                               k c
+                O (b − 1)S + n + (b + 1)S + log b + (T /b · S k )fk + (n + S)c     .
+
+The latter expression simplifies to big O of
+                                                                      k+1
+                                (bS + (T /b · S k )fk )c + (n + S)c         .                   (16)
+
+Our goal is to minimize (16) up to constant factors by picking b appropriately. Note that the
+first term in (16) increases with b whereas the second one decreases with b; the other terms are
+
+                                                   15
+independent of b. Thus, without any constraints on b, (16) is minimized up to a factor of 2 by
+equating the first two terms. If the resulting value b∗ is smaller than 1, the best we can do is
+setting b = 1. In that case, the first term dominates the second one and is dominated itself by
+the term independent of b. If b∗ exceeds T , the resulting simulation becomes trivial since it runs
+in time more than bS ⩾ T . If b∗ lies in the range [1, T ], rounding b∗ to the nearest integer affects
+the value of the objective function by only a constant factor. Thus, in each case we can obtain a
+nondeterministic simulation that runs in time a constant factor times the value of (16) for b = b∗ .
+    Solving bS = (T /b · S k )fk for b results in the following expression for (16):
+                                                                          k+1
+                                2 · (T · S k+1 )cfk /(1+fk ) + (n + S)c         .
+
+This establishes (15) since fk+1 is given by (14).                                                  
+
+    Plugging in Lemma 5.3 into our indirect diagonalization approach yields the following general
+result.
+Theorem 5.4 For any constant c ⩾ 1 and functions t and s,
+
+                              NTIME[n] 6⊆ coNTIME[nc ] ∩ DTISP[t, s]                             (17)
+
+if for some integer k ⩾ 0
+                                                         k
+                                        (t · sk )fk + sc = o(n),                                 (18)
+where fk is given by (14).
+Proof: Assume that
+                              NTIME[n] ⊆ coNTIME[nc ] ∩ DTISP[t, s]                              (19)
+for some integer k ⩾ 0 such that (18) holds. For any function τ (n) ⩾ n, we have
+
+           NTIME[τ ] ⊆ DTISP[t(τ ), s(τ )] (by padding (19))
+                                                                          k
+                       ⊆ coNTIME[(t(τ ) · s(τ )k )fk + (n + s(τ ))c ] (by Lemma 5.3)
+                                                                k                       k
+                       = coNTIME[(t(τ ) · s(τ )k )fk + s(τ )c ] (provided t(τ (n))fk ⩾ nc )
+                       ⊆ coNTIME[o(τ )] (by (18)),
+
+which is a con tradition with Theorem 2.1. Note that we can assume without loss of generality that
+                                                               k
+t(n) ⩾ n so there exists a function τ such that t(τ (n))fk ⩾ nc , e.g., a polynomial of sufficiently
+large degree.                                                                                     
+
+    One instantiation of Theorem 5.4 states that either NTIME[n] is not in logspace or else there
+exists a constant c > 1 such that NTIME[n] is not contained in coNTIME[nc ]. Fortnow [For00b]
+already proved that instantiation. In general, Theorem 5.4 implies quantitative improvements over
+Fortnow’s results but in this particular case the improvement is hidden in the statement, namely
+in the dependence of the constant c on the running time of the presumed logspace algorithm for
+nondeterministic linear time. Say that running time is O(na ) for p   some constant a. A careful
+                                                                   2k−1
+analysis of Fortnow’s technique rules out any c such that c <           (k + 1)/a for some integer
+k ⩾ 1. Theorem 5.4 rules out any c < 1 + 1/a, which is a stronger statement.
+    We can use Theorem 5.4 to obtain the following lower bound on the time-space product of any
+deterministic simulation of nondeterministic linear time.
+
+                                                    16
+                                                              √
+Corollary 5.5 If NTIME[n] ⊆ DTISP[t, s] then ts 6= o(n 2 ).
+Proof: Assume that NTIME[n] ⊆ DTISP[t, s]. Let c ⩾ 1 be any constant and k ⩾ 0 an integer. We
+consider three cases:
+   • If t 6= O(nc ) then ts 6= o(nc ).
+          k                                k
+   • If sc 6= o(n) then ts 6= o(n1+1/c ) since without loss of generality t(n) ⩾ n.
+                              k
+   • If t = O(nc ) and sc = o(n) then by Theorem 5.4 tsk 6= o(n1/fk ) and therefore ts 6=
+     o(n1/(kfk ) t1−1/k ) and thus ts 6= o(n1−1/k−1/(kfk ) ).
+We conclude that ts 6= o(na ) for a = maxc⩾1 min(c, 1 + 1/ck , 1 − 1/k − 1/(kfk )). The latter
+expression turns out √
+                     to be maximized for k = 1, yielding a = maxc⩾1 min(c, 1 + 1/c, 2/c) =
+maxc⩾1 min(c, 2/c) = 2.                                                                     
+
+    Theorem 5.4 naturally gives lower bounds on tsk for DTISP[t, s]-simulations of nondeterministic
+linear time for values of k larger than 1. As an example, we state the result for k = 2.
+Corollary 5.6 If NTIME[n] ⊆ DTISP[t, s] then ts2 6= o(na ), where a is the positive solution of
+a(a2 − 1) = 2, about 1.521.
+Proof: The same approach as in the proof of Corollary 5.5 leads to optimal results for k = 2.
+It results in the lower bound ts2 6= o(na ) for a = maxc⩾1 min(c, 1 + 2/c2 , (2 + c)/c2 ). Since
+(2 + c)/c2 ⩽ 1 + 2/c2 for c ⩾ 1, a is the positive solution to c = (2 + c)/c2 .               
+
+    Similar statements follow from Theorem 5.4 for larger values of k. Letting k grow to infinity
+leads to the result we obtained at the end of Section 5.2, namely that NTIME[n] 6⊆ DTISP[nc , no(1) ]
+for any constant c < φ. In fact, we can show the stronger statement given in Theorem 1.1, the
+quantitative proof of which we embark on next.
+    We can simplify the statement of the general lower bound of Theorem 5.4 as follows in the case
+where t(n) = O(nc ).
+Theorem 5.7 For any constant c ⩾ 1 and integer k ⩾ 1,
+                                     NTIME[n] 6⊆ DTISP[nc , o(nd )],
+where
+                                         d = min((1/fk − c)/k, 1/ck )                           (20)
+and fk is defined by (14).
+    We observe that d = 1 for c = 1, giving Kannan’s result from Section 5.1. For a given value of
+k, the right-hand side of (20) is positive as long as c is less than the fixed point of c → 1/fk for
+c ⩾ 1. Note also that d < 1 for c > 1.
+Proof of Theorem 5.7: Theorem 5.4 with t = nc and s = o(nd ) gives us the separation as long as
+               k
+n(c+kd)fk + ndc = O(n). The latter condition is equivalent to d being at most the right-hand side
+of (20).                                                                                       
+
+    Which value of k realizes the maximum of (20) depends on the value of c. The bound for k = 2
+turns out to be always at least as good as the one for k = 1. We explicitly state the bound obtained
+for k = 2.
+
+                                                     17
+Corollary 5.8 For any constant c ⩾ 1,
+                                                             1 c+2
+                                NTIME[n] 6⊆ DTISP[nc , o(n 2 ( c2 −c) )].
+
+Note that Corollary 5.8 yields nontrivial statements as long as c+2 c2
+                                                                       − c > 0, or equivalently, c is
+less than the fixed point of c → 1/f2 . This condition works out to c(c2 − 1) < 2, or approximately,
+c ⩽ 1.521.
+    Since the fixed point of c → 1/fk converges to the golden ratio for k → ∞, Theorem 5.7 gives
+interesting results for c up to the golden ratio, as stated in Theorem 1.1.
+Proof of Theorem 1.1: The statement trivially holds for c < 1. For c ⩾ 1 the proof follows from
+Theorem 5.7. The expression (20) is positive as long as there exists some k such that c · fk < 1.
+Since fk monotonically decreases to f∞ = c − 1, the latter condition is equivalent to c(c − 1) < 1,
+i.e., to c < φ.
+     By considering, for example, k = 1, one can see that the value of d approaches 1 when c does. 
+
+    Theorem 5.7 also lets us improve the lower bound on the time-space product of Corollary 5.5
+in the case of polynomial time bounds.
+
+Corollary 5.9 If NTIME[n] ⊆ DTISP[t, s] for some t of the form t = nc then ts 6= o(n1.573 ).
+
+Proof: A trivial bound is ts 6= o(nc ). Theorem 5.7 tells us that for every integer k ⩾ 1, ts 6= o(na )
+where a = c + min((1/fk − c)/k, 1/ck ). This gives us a better bound than the trivial one as long
+as c · fk < 1. The minimum over c ⩾ 1 of the resulting compound bound is maximized for k = 4,
+namely at c ≈ 1.4572, resulting in a ≈ 1.5738.                                                      
+
+
+
+6    Lower Bounds for Nondeterministic Linear Time on Cononde-
+     terministic Machines
+Our indirect diagonalization approach lends itself to establishing time-space lower bounds for non-
+deterministic linear time on conondeterministic machines as well. The results are somewhat weaker
+than for deterministic machines. We derive them in this section.
+   As the first step we assume by way of contradiction that
+
+                             NTIME[n] ⊆ coNTIME[nc ] ∩ coNTISP[t, s]                              (21)
+
+for some constant c. The two techniques we developed in Sections 4.1 and 4.2 to derive more
+unlikely inclusions apply to the nondeterministic setting, too.
+    In particular, the divide-and-conquer strategy (1) works for nondeterministic machines M .
+Breaking up the computation into b equal blocks leads to the inclusion
+
+                                 NTISP[T, S] ⊆ Σ3 TIME[bS + T /b].
+
+Note that we have one more alternation than in (2) because the matrix predicate on the right-hand
+side of (1) becomes Σ1 in case of nondeterministic machines M . This is one reason why we obtain
+weaker results.
+
+
+                                                   18
+    As in Section 4.1, we can apply the divide-and-conquer strategy recursively. Corresponding to
+(4) we obtain                                       X              Y
+                         NTISP[T, S] ⊆ Σ2k+1 TIME[(    bi )S + T /( bi )].
+                                                               i                i
+
+In Section 5.2, we showed how to achieve the same speed-up as in (4) using only half the number
+of alternations. However, (13) does not carry over to the nondeterministic setting because NTIME
+classes are not known to be closed under complementation. In terms of the exposition in Section
+5.2, property (11) fails for a generic nondeterministic machine because nondeterministic machines
+may be able to reach more than one configuration on a given input in T steps. This is the other
+reason why we cannot quite match the deterministic results of the previous section.
+    There are no complications as far as trading time for alternations is concerned. We observed in
+Section 4.2 and already used in Section 5.3 that (6) follows from the hypothesis that NTIME[n] ⊆
+coNTIME[t].
+    Combining these ingredients as before we obtain the following counterpart to Lemma 5.3.
+
+Lemma 6.1 Suppose that
+                                      NTIME[n] ⊆ coNTIME[nc ]
+for some constant c ⩾ 1. Then for any functions T and S and any integer k ⩾ 0
+                                                                                    2k
+                          NTISP[T, S] ⊆ NTIME[(T · S k )gk + (n + S)c ],
+
+where
+                                         g0 = 1
+                                                                                                 (22)
+                                       gk+1 = c2 gk /(1 + cgk ).
+
+    The sequence (gk )k starts out with g0 = 1, g1 = c2 /(1 + c), etc. Similar arguments as the ones
+we made for the sequence (fk )k exhibit the following properties: For each k ⩾ 1, gk is a monotone
+increasing function of c for c ⩾ 1. For each fixed c ⩾ 1, the sequence (gk )k monotonically converges
+                                                                          .
+to the fixed point of the transformation g → c2 g/(1 + cg), i.e., to g∞ = c − 1/c. The sequence (gk )k
+is decreasing iff g0 > g1 , or equivalently, iff c < φ. For each k, the transformation c → 1/gk has a
+unique fixed point c ⩾ 1, which monotonically increases to the fixed point of c → 1/g∞ , namely
+√
+  2. An explicit expression for the sequence is:
+                                       (
+                                          1/(k + 1)            if c = 1
+                                 gk =     (c − 1c ) · 1+c−c
+                                                        1
+                                                            2  if c > 1.
+                                                      1−
+                                                            c2k+1
+
+
+Proof of Lemma 6.1: The proof goes by induction on k. As usual, the base case trivially holds.
+    For the induction step k → k + 1, consider a nondeterministic machine M that runs in time
+T and space S on an input x of length n. As in the deterministic case, we analyze the simulation
+defined by (1) when we apply the induction hypothesis to the matrix:
+
+                          (∃ C1 , C2 , . . . , Cb−1 ) (∀ 1 ⩽ i ⩽ b) Ci−1 ⊢T /b Ci .
+                                                                    |    {z      }
+                                                                          (α)
+                                                  |                 {z                   }
+                                                                    (β)
+                          |                           {z                                 }
+                                                      (γ)
+
+
+
+                                                      19
+Part (α) defines a nondeterministic computation on input x, Ci−1 , and Ci with the following
+parameters:
+                                       input size: n + 2S
+                                    running time: O(T /b)
+                                      space used: O(S).
+By the induction hypothesis combined with the hypothesis of the lemma, we can turn (α) into a
+conondeterministic computation running in time
+                                                                      2k
+                                   O(((T /b · S k )gk + (n + S)c )c ).
+
+This way, (β) becomes a conondeterministic computation on input x and C0 , C1 , . . . , Cb with the
+following parameters:
+
+                          input size: n + (b + 1)S
+                                                                          k
+                       running time: O(log b + ((T /b · S k )fk + (n + S)c )c ).
+
+Applying the hypothesis of the lemma once more, we can transform this conondeterministic com-
+putation into a nondeterministic one and thus obtain a nondeterministic simulation of (γ) taking
+time                                                                           c 
+                                                                             k
+              O (b − 1)S + n + (b + 1)S + log b + ((T /b · S k )fk + (n + S)c )c      .
+
+The latter expression simplifies to big O of
+                                                                           2(k+1)
+                               (bS + (T /b · S k )cgk )c + (n + S)c                 .            (23)
+
+A similar argument as in the proof of Lemma 5.3 shows that the best running time we can realize
+is within a constant factor of (23) when we equate the first two terms, i.e., when we set bS =
+(T /b · S k )cgk . That value equals
+                                              2                             2(k+1)
+                              2 · (T · S k+1 )c gk /(1+cgk ) + (n + S)c                 ,
+
+which finishes the induction step as gk+1 satisfies the recurrence (22).                            
+
+    Lemma 6.1 corresponds to Step 2 of our indirect diagonalization approach from Section 5.1. In
+Step 3, we aim for a contradiction with a direct diagonalization result. So far we used Theorem 2.1
+to do so. We could equally well have used the nondeterministic time hierarchy theorem (Theorem
+2.3). In the setting of this section, the application of our two direct diagonalization tools leads to
+different results. The one using Theorem 2.1 will turn out to be critical for the proof of Theorem
+1.2 but we state both.
+
+Theorem 6.2 For any constant c ⩾ 1 and functions t and s,
+
+                     NTIME[n] 6⊆ coNTIME[nc ] ∩ (NTISP[t, s] ∪ coNTISP[t, s])
+
+if for some integer k ⩾ 0
+                                                           2k
+                                        (t · sk )gk + sc        = o(n),                          (24)
+where gk is given by (22).
+
+                                                    20
+Proof: We first prove the coNTISP result by obtaining a contradiction with Theorem 2.1 from the
+assumption that
+                            NTIME[n] ⊆ coNTIME[nc ] ∩ coNTISP[t, s]                        (25)
+for some integer k ⩾ 0 for which (24) holds. For any function τ (n) ⩾ n, we have
+          NTIME[τ ] ⊆ coNTISP[t(τ ), s(τ )] (by padding (25))                                        (26)
+                                                 k gk                  c2k
+                       ⊆ coNTIME[(t(τ ) · s(τ ) )       + (n + s(τ ))        ] (by Lemma 6.1)
+                                                              c2k                               2k
+                       = coNTIME[(t(τ ) · s(τ )k )gk + s(τ )        ] (provided t(τ (n))gk ⩾ nc )
+                       ⊆ coNTIME[o(τ )] (by (24)).
+                                                                        2k
+Note that there exists a function τ such that t(τ (n))gk ⩾ nc . For example, a polynomial of
+sufficiently large degree will do since we can assume without loss of generality that t(n) ⩾ n. Thus,
+we obtain the contradiction with Theorem 2.1 we need.
+    The NTISP result is similar but starts with an NTISP simulation instead of a coNTISP simu-
+lation in step (26) and obtains a contradiction with the nondeterministic time hierarchy theorem
+instead of Theorem 2.1.                                                                            
+
+    The instantiation of Theorem 6.2 for logarithmic space s implies that either NTIME[n] is not in
+nondeterministic logspace or else there exists a constant c > 1 such that NTIME[n] is not contained
+in coNTIME[nc ]. As in the deterministic case, Fortnow [For00b] already proved this instantiation
+and we get an improvement in the dependence of the constant c on the running time, O(na ), of the
+presumed nondeterministic logspace algorithm for nondeterministic
+                                                        p             linear time. A careful analysis
+                                                       2k
+of Fortnow’s technique rules out any c such that c <      (k + 1)/a for some integer k ⩾ 1, whereas
+letting k grow to infinity in Theorem 6.2 and using the fact that gk converges to c − 1/c rules out
+any c for which c < 1/c + 1/a.
+    Similar to Corollary 5.5 for deterministic simulations, we obtain the following bound on the
+time-space product of any conondeterministic simulation of nondeterministic linear time.
+Corollary 6.3 If NTIME[n] ⊆ coNTISP[t, s] then ts 6= o(na ), where a is the positive solution of
+a(a2 − 1) = 1, about 1.324.
+Proof: A similar analysis as in the proof of Corollary 5.5 leads to the lower bound ts 6= o(na )
+where a = maxc⩾1 min(c, 1 + 1/c2k , 1 − 1/k − 1/(kgk )). The latter expression turns out to be
+maximized for k = 1, yielding a = maxc⩾1 min(c, 1 + 1/c2 , (1 + c)/c2 ). Since the second term is
+at least as large as the third one for c ⩾ 1, we have that a is the positive solution to c = (1+c)/c2 . 
+
+   Multiple applications of the divide-and-conquer strategy (1) allow us to establish larger lower
+bounds on tsk where k denotes the number of applications.
+   For conondeterministic simulations with running times of the form t(n) = O(nc ) for some
+constant c, Theorem 6.2 implies the following simpler statement.
+Theorem 6.4 For any constant c ⩾ 1 and integer k ⩾ 1,
+                                   NTIME[n] 6⊆ coNTISP[nc , o(nd )],
+where
+                                     d = min((1/gk − c)/k, 1/c2k )                                   (27)
+and gk is defined by (22).
+
+                                                   21
+     Note that d = 1 for c = 1 and that d < 1 for c > 1. A given value of k yields nontrivial results
+iff c is less than the fixed point of c → 1/gk for c ⩾ 1.
+Proof of Theorem 5.7: Analogous to the proof of Theorem 5.7 but use the coNTISP part of The-
+orem 6.2 instead of Theorem 5.4.                                                          
+
+    Considering the case k = 1 in (27), we have:
+Corollary 6.5 For any constant c ⩾ 1,
+                                                               1+c
+                                NTIME[n] 6⊆ coNTISP[nc , o(n c2 −c )].
+    Depending on c, larger values of k may give stronger results than Corollary 6.5. In particular,
+Corollary 6.5 only gives nontrivial results in case 1+c
+                                                      c2
+                                                          − c > 0. The latter condition is equivalent to
+c being less than the fixed point of c → 1/g1 , i.e., to c(c2 − 1) < 1, and implies an upper bound for
+c of about 1.324.                                        √
+                  √ point of c → 1/gk converges to 2, Theorem 6.4 gives interesting results for
+    Since the fixed
+values of c up to 2.
+Proof of Theorem 1.2: The proof is similar to the proof of Theorem 1.1 but uses the sequence gk
+instead of fk . Since the sequence gk is monotone, the condition that there exists an integer k for
+which c · gk < 1 is equivalent to√the condition that c · g0 < 1 or c · g∞ < 1. Since g∞ = c − 1/c, we
+end up with the condition c < 2.                                                                    
+                                                                                          √
+    In particular, Theorem 1.2 implies that NTIME[n] 6⊆ coNTIME[nc , no(1) ] for any c < 2.
+    We point out the crucial role of Theorem 2.1 in the results of this section. If our strategy was
+to obtain a contradiction with the nondeterministic time hierarchy theorem instead of Theorem 2.1
+in the proof of Theorem 5.7, we would have needed one more application of our hypothesis that
+NTIME[n] ⊆ coNTIME[nc ] to transform the final conondeterministic simulation into a nondeter-
+ministic one. Since the latter transformation raises the running time to the power c, the condition
+in the proof of Theorem 1.2 would become c2 · g∞ < 1, or equivalently, c(c2 − 1) < 1. The use of
+Theorem 2.1 allows us to relax the                        2
+                                  √ latter condition to c − 1 < 1, resulting in an increase in the
+bound on c from about 1.324 to 2 ≈ 1.414.
+    Similar to the deterministic case, Theorem 6.4 allows us to improve the lower bound on the
+time-space product of Corollary 6.3 in the case of polynomial time bounds.
+Corollary 6.6 If NTIME[n] ⊆ coNTISP[t, s] for some t of the form t = nc then ts 6= o(n1.406 ).
+Proof: The result follows from the solution of a similar optimization problem as in the proof of
+Corollary 5.9. Replacing the term fk by gk and ck by c2k in that proof leads to optimal choices of
+k = 4 and c ≈ 1.3841 resulting in the lower bound ts 6= o(na ) for a = 1.4064.                  
+
+
+
+7    Lower Bounds for Other Complexity Classes
+In this section, we apply our indirect diagonalization argument to obtain time-space lower bounds
+for complexity classes other than nondeterministic linear time. We first strengthen some of the
+lower bounds of Sections 5 and 6 by showing that they hold not just for NTIME[n] but even for
+NTISP[n, na ] for some a < 1. Then we apply our technique to classes higher up in the polynomial-
+time hierarchy.
+
+                                                   22
+7.1   Nondeterministic Linear Time and Sublinear Space
+The crux of our lower bounds for nondeterministic linear time in Sections 5 and 6 are careful simu-
+lations that follow from hypotheses like NTIME[n] ⊆ DTISP[nc , nd ] or NTIME[n] ⊆ coNTISP[nc , nd ].
+As we will see next, the amount of space we need for these simulations is typically only about t1/c ,
+where t denotes the running time of the simulation. It follows that several of our previous lower
+bounds even hold for NTISP[n, n1/c ].
+    We revisit both the deterministic and the conondeterministic lower bounds for nondeterministic
+linear time from this perspective. We start by analyzing the space needed for the transformations
+underlying Lemma 5.3.
+
+Lemma 7.1 Suppose that
+                                    NTISP[n, σ] ⊆ coNTISP[nc , ρ]                                (28)
+for some constant c ⩾ 1 and functions σ and ρ. Then for any functions T and S and any integer
+k⩾1
+                             DTISP[T, S] ⊆ coNTISP[R, R1/c + ρ(R1/c )],
+         .                       k
+where R = (T · S k )fk + (n + S)c and fk is defined by (14), provided that
+                                                                       k
+                                                 S = O(σ(R1/c ))
+                                  n1/c + ρ(n1/c ) = O(σ(n)).                                     (29)
+
+Condition (29) is not required for k = 1.
+
+Proof: We follow the induction proof of Lemma 5.3 but start with k = 1 as the base case. For
+easy reference, we recall the key notation from that proof:
+
+                          (∃ C1 , C2 , . . . , Cb−1 ) (∀ 1 ⩽ i ⩽ b) Ci−1 ⊢T /b Ci .
+                                                                    |    {z      }
+                                                                           (α)
+                                                  |              {z              }
+                                                                 (β)
+                          |                           {z                         }
+                                                      (γ)
+
+   For k = 1, we view (β) as a conondeterministic computation on input x and C0 , C1 , . . . , Cb with
+the following parameters:
+                                     input size: n + (b + 1)S
+                                  running time: O(T /b)
+                                         space: O(S).
+Setting bS = T /b as in the proof of Lemma 5.3 and noting that R = (T S)c/2 +(n+S)c, (β) becomes
+a conondeterministic computation on an input of size O(R1/c ) that runs in time O(R1/c ) and space
+O(S). Provided S = O(σ(R1/c )), we can apply (28) to transform (β) into a nondeterministic
+computation taking time O(R) and space O(ρ(R1/c )). This way, (γ) becomes a nondeterministic
+computation that runs in time O(bS + R) = O(R) and space O(bS + ρ(R1/c )) = O(R1/c + ρ(R1/c )),
+the additional time and space being for guessing and storing the intermediate configurations. This
+takes care of the base case k = 1.
+    For the induction step k → k + 1, we first need to transform (α) into a conondeterministic
+                                                                                        k
+computation. We can use the induction hypothesis to do so provided S = O(σ(R̃1/c )), where
+
+                                                      23
+                                k
+R̃ = ((T /b) · S k )fk + (n + S)c . We thereby turn (β) into a conondeterministic computation with
+the following parameters:
+                                      input size: n + (b + 1)S
+                                   running time: O(R̃)
+                                          space: O(R̃1/c + ρ(R̃1/c )).
+Provided the latter space bound is O(σ(n + bS + R̃)), we can apply (28) to turn (β) into a nonde-
+terministic computation that runs in time O((n + bS + R̃)c ) and space O(ρ(n + bS + R̃)). With the
+settings as in the proof of Lemma 5.3, we have that R = Θ((n + bS + R̃)c ). Thus, (29) guarantees
+that the provision for applying (28) is met. We end up with a nondeterministic simulation of (γ)
+that runs in time O(bS + R) = O(R) and space O(bS + ρ(R1/c )) = O(R1/c + ρ(R1/c )). This finishes
+the induction step.                                                                             
+
+   In Section 5, we combined Lemma 5.3 with Theorem 2.1 to obtain separations of the form (17).
+Similarly, by combining Lemma 7.1 with Theorem 2.2 we can derive separations of the form
+
+                              NTISP[n, σ] 6⊆ coNTISP[nc , ρ] ∩ DTISP[t, s]                            (30)
+
+for some constants c ⩾ 1 and interesting functions σ, ρ, s, and t. This leads to a strengthening of
+Theorem 5.4. We refrain from stating that general result because it involves too many parameters.
+Instead, we immediately state the corresponding strengthening of Theorem 5.7, where we restrict
+attention to time bounds t(n) = O(nc ) and space bounds s = O(ρ).
+    How much we can restrict the space bound σ depends on the choice of the space bound ρ.
+Because condition (29) is not needed for k = 1, the case k = 1 allows for a more relaxed relationship
+between σ and ρ than other values of k. We state the result for k = 1 first.
+
+Theorem 7.2 For any constants c ⩾ 1 and d ⩽ 2/c − c,
+                                                c+d
+                                    NTISP[n, n 2 ] 6⊆ DTISP[nc , o(nd )].                             (31)
+
+Proof: Assume for contradiction that NTISP[n, na ] ⊆ DTISP[nc , o(nd )]. By Lemma 7.1 with k = 1,
+σ(n) = na and ρ(n) = o(nd ) we have that for a sufficiently large polynomial τ
+
+                      NTISP[τ, τ a ] ⊆ DTISP[τ c , o(τ d )] ⊆ coNTISP[o(R), o(R1/c )]                 (32)
+
+provided that τ d = O(Ra/c ), where R = τ (c+d)c/2 . We obtain a contradiction with Theorem 2.2 as
+long as R = O(τ ) and R1/c = O(τ a ). The conditions we need are equivalent to d ⩽ 2/c − c and
+a ⩾ (c + d)/2.                                                                                  
+                                                                              √
+   The interesting values of c in Theorem 7.2 are in the range 1 ⩽ c <            2. For large values of k,
+we can let c approach the golden ratio φ.
+
+Theorem 7.3 For any integer k ⩾ 1 and constants c ⩾ 1 and d ⩽ min( k1 ( f1k − c), ckcf
+                                                                                    −kf
+                                                                                       k
+                                                                                         ),
+                                                                                                k
+
+
+                                     NTISP[n, na ] 6⊆ DTISP[nc , o(nd )],
+                       k
+where a = max( 1c , (c+kd)f
+                       c d
+                            k
+                              ) and fk is given by (14).
+
+
+                                                      24
+Proof: We follow the same proof outline as for Theorem 7.2. Inclusion (32) now follows provided
+                   k                                             k
+that τ d = O(Ra/c ) and n1/c = O(na ) where R = τ (c+kd)fk + τ c d . The contradiction requirements
+R = O(τ ) and R1/c = O(τ a ) remain. Let r = max((c + kd)fk , ck d). The conditions we get are
+equivalent to r ⩽ 1, a ⩾ 1/c and a ⩾ ck d/r. Note that if ck d > (c + kd)fk then r = ck d and the last
+requirement for a implies that a ⩾ 1. In that case, we do not get an improvement over Theorem 5.7.
+Therefore, we additionally impose the condition ck d ⩽ (c + kd)fk . In that case, the requirement
+r ⩽ 1 simplifies to (c+kd)fk ⩽ 1. Solving for d yields the bound in the statement of the theorem. 
+
+    As the above proof shows, the discrepancy in the bound on d in Theorems 5.7 and 7.3 for a
+given value of k is solely due to our desire to obtain a simpler expression for a in the case where
+we can obtain a strengthening of Theorem 5.7. In cases where the bounds effectively differ, our
+approach does not allow us to derive lower bounds for NTISP[n, σ] for sublinear σ.
+    An analysis of the expressions involved in the statement of Theorem 7.3 shows that for k ⩽ 3,
+the bounds on d in Theorems 5.7 and 7.3 coincide and equal the fixed point of c → 1/fk . For k ⩽ 2,
+the expression for a in Theorem 7.3 simplifies to a = 1/c for the entire range of d. For k = 1,
+Theorem 7.2 allows a value of a = (c + d)/2, which can be seen to be at most 1/c. Therefore,
+Theorem 7.2 is stronger than Theorem 7.3 for k = 1. Using the simplified bounds for k = 2,
+Theorem 7.3 implies the following strengthening of Corollary 5.8.
+
+Corollary 7.4 For any constant c ⩾ 1,
+                                                                 1 c+2
+                             NTISP[n, n1/c ] 6⊆ DTISP[nc , o(n 2 ( c2 −c) )].
+
+    For higher values of k, the range of d may be more restricted (although still nontrivial) and the
+value of a may be larger than 1/c for a subrange of d. However, for small enough d (depending on
+k), the value of a in Theorem 7.3 equals 1/c. Thus, we can strengthen Theorem 1.1 as follows.
+
+Corollary 7.5 For any constant c < φ there exists a positive constant d such that
+
+                                  NTISP[n, n1/c ] 6⊆ DTISP[nc , nd ].                            (33)
+
+Moreover, d approaches 1 from below when c approaches 1 from above.
+
+Proof: Since the statement trivially holds for c < 1, we only need to consider the case where c ⩾ 1.
+                                                         .
+For 1 ⩽ c < φ, there exists an integer k such that d∗ = 1/fk − c > 0. By picking d ⩽ d∗ small
+enough but still positive, we can ensure that ck d/((c + kd)fk ) ⩽ 1/c. Then Theorem 7.3 implies
+(33).
+   The fact that d approaches 1 when c does follows from the proof of Theorem 1.1 since there are no
+more constraints on the relationship between c and d than in the proof of that theorem for k = 1. 
+
+   We can also strengthen the results from Section 6 to lower bounds for conondeterministic
+simulations of NTISP[n, σ] for sublinear σ.
+   A space analysis of Lemma 6.1 shows the following stronger result. The proof is analogous to
+the one of the strengthening of Lemma 5.3 given in Lemma 7.1.
+
+Lemma 7.6 Suppose that
+                                   NTIME[n, σ] ⊆ coNTIME[nc , ρ]                                 (34)
+
+                                                   25
+for some constant c ⩾ 1 and functions σ and ρ. Then for any functions T and S and any integer
+k⩾1
+                              NTISP[T, S] ⊆ NTISP[R, R1/c + ρ(R1/c )],                   (35)
+         .                       2k
+where R = (T · S k )gk + (n + S)c and gk is defined by (22), provided that
+                                                                  2k
+                                             S = O(σ(R1/c ))
+                                       ρ(n1/c ) = O(σ(n))
+                                          n1/c = O(σ(n)).
+The last condition is not required for k = 1.
+
+    The NTISP hierarchy theorem [BM80] implies that NTISP[t, s] 6⊆ NTISP[o(t), o(s)] provided t
+and s are sufficiently nice functions that don’t grow too fast. Note that (35) by itself does not
+contradict the NTISP hierarchy theorem for c ⩾ 1. For some settings of the parameters in Lemma
+7.6, the time on the right-hand side of (35) is little o of the time on the left-hand side, but the space
+on the right-hand side always exceeds the space on the left-hand side. Under the hypothesis (34),
+Lemma 7.6 lets us simulate nondeterministic time T and space S in less time but somewhat more
+space. The hypothesis (34) itself allows us to do the opposite – increase time but reduce space –
+at the cost of switching from nondeterministic to conondeterministic computations. By combining
+the two we get a contradiction with Theorem 2.2 and thereby refute hypothesis (34).
+    This is how we can strengthen our conondeterministic lower bounds from Section 6. We do not
+state the strengthening of Theorem 6.2 in its full generality because there are too many parameters
+involved. We do spell out the strengthening of Theorem 6.4 and some corollaries. The proofs are
+analogous to those of the corresponding deterministic results we just covered.
+    For the same reason as before, we single out the case k = 1.
+Theorem 7.7 For any constants c ⩾ 1 and d ⩽ (1 + c)/c2 − c,
+                             NTISP[n, nc(c+d)/(c+1) ] 6⊆ coNTISP[nc , o(nd )].
+   As a corollary, we can strengthen Corollary 6.5 as follows.
+Corollary 7.8 For any constant c ⩾ 1,
+                                                                       1+c
+                               NTISP[n, n1/c ] 6⊆ coNTISP[nc , o(n c2 −c )].
+   For general k, we obtain the following counterpart to Theorem 7.7.
+Theorem 7.9 For any integer k ⩾ 1 and constants c ⩾ 1 and d ⩽ min( k1 ( g1k − c), c2kcg k
+                                                                                      −kg
+                                                                                          ),
+                                                                                              k
+
+                                               a              c        d
+                                   NTISP[n, n ] 6⊆ DTISP[n , o(n )],
+                       2k
+                      c d
+where a = max( 1c , (c+kd)g k
+                              ) and gk is given by (22).
+    Analogous remarks as we made about the phrasing of Theorem 7.3 are in place here. An analysis
+of the expressions involved shows that for k ⩽ 2, the bound on d in Theorem 7.9 coincides with
+the one given in Theorem 6.4 and equals the fixed point of c → 1/g1 . For k = 1, the value of a in
+Theorem 7.9 equals 1/c for the entire range of d. Since c(c + d)/(c + 1) ⩽ 1/c for d ⩽ (1 + c)/c2 − c,
+this implies that Theorem 7.7 is stronger than the general Theorem 7.9 for k = 1.
+    Theorem 7.9 allows us to strengthen Theorem 1.2.
+
+                                                    26
+                                         √
+Corollary 7.10 For any constant c <          2 there exists a positive constant d such that
+
+                                   NTISP[n, n1/c ] 6⊆ DTISP[nc , nd ].
+
+Moreover, d approaches 1 from below when c approaches 1 from above.
+
+7.2   Higher Levels of The Polynomial-Time Hierarchy
+We end with a simple application of our indirect diagonalization argument to linear-time classes in
+higher levels of the polynomial-time hierarchy.
+
+Theorem 7.11 For any integer ℓ ⩾ 2, if Σℓ TIME[n] 6⊆ DTISP[t, s] then tsℓ−1 6= o(nℓ ).
+
+Proof: Assume that Σℓ TIME[n] ⊆ DTISP[t, s]. Applying (13) with k = ℓ − 1, T = t and S = s, we
+have that
+                                               Xk             k
+                                                              Y
+                         Σℓ TIME[n] ⊆ Πℓ TIME[(    bi )s + t/( bi )].
+                                                        i=1         i=1
+
+The running time of the Πℓ simulation is minimized up to a constant factor by picking bi equal to
+b where b is such that b · s = t/bk , i.e., b = (t/s)1/(k+1) . This setting results in a running time of
+O((t · sk )1/(k+1) ). Thus, we get that
+
+                                  Σℓ TIME[n] ⊆ Πℓ TIME[(tsℓ−1 )1/ℓ ],
+
+which contradicts Theorem 2.1 as long as tsℓ−1 = o(nℓ ).                                              
+
+
+Corollary 7.12 For any integer ℓ ⩾ 2 and constant ǫ > 0,
+
+                               Σℓ TIME[n] 6⊆ DTISP[nℓ−ǫ , o(nǫ/(ℓ−1) )].
+
+
+8     Further Research
+The obvious open problem is to improve   √ the quantitative results we get, in particular the golden
+ratio exponent in Theorem 1.1 and the 2 exponent in Theorem 1.2. There seems to be room for
+improvement as the ingredients we use in our indirect diagonalization argument are rather simple
+and we combine them in a straightforward way.
+    On the other hand, some complexity theorists feel that improving the golden ratio exponent
+beyond 2 would require a breakthrough. One can ask about the limits of indirect diagonalization in
+showing time-space lower bounds for NP-complete problems, or more generally, about its limitations
+as a proof technique in computational complexity. Note that indirect diagonalization provides the
+opportunity to exploit nonrelativizing inclusion results. In that sense, it does not suffer from oracle
+objections as direct diagonalization does.
+    Another direction for further research are time-space lower bounds for satisfiability and other
+NP-complete problems on randomized machines with bounded two-sided error. Theorem 1.2 imme-
+diately implies time-space lower bounds for satisfiability on randomized machines that only err on
+the no-side. This is because the latter type of machine is a conondeterministic machine. However,
+
+
+                                                   27
+we currently do not see how to apply our techniques to randomized computations with two-sided
+error or with one-sided error on the yes-side.
+    We should point out that Beame et al. [BSSV03], building on earlier work by Ajtai [Ajt99],
+establish nonuniform time-space lower bounds for a problem in P based on binary quadratic forms.
+They show that any branching program for that problem that uses only space n1−ǫ for some positive
+constant ǫ takes time                       p
+                                      Ω(n · log n/ log log n),                              (36)
+and manage to extend their lower bounds to randomized computations with two-sided error. As
+we argued in Section 3, time-space lower bounds for problems that are easier than satisfiability
+imply time-space lower bounds for satisfiability provided the problems have the property that each
+bit of the translation to satisfiability can be computed on the fly in a time and space efficient way.
+The latter is the case for all problems in nondeterministic linear time. However, it does not seem
+like the results of Beame et al. carry over to satisfiability in this way. First, since their bound
+(36) is only slightly superlinear, an extremely efficient reduction of the problem they consider to
+satisfiability is needed in order to obtain nontrivial lower bounds for satisfiability. The reduction
+we described in Section 3 (Theorem 3.1) would not do. Moreover, their problem does not appear
+to be in nondeterministic quasi-linear time. As far as we know, nothing nontrivial is known about
+time-space lower bounds for satisfiability on randomized machines with two-sided error.
+    Another related work is by Allender et al. [AKR+ 01], in which these authors establish time-
+space lower bounds on randomized machines with unbounded error but for a problem that is harder
+than satisfiability. They consider the problem MAJ-MAJ-SAT consisting of all Boolean formulas
+ψ(x, y) such that for a majority of assignments to x, a majority of the assignments to y satisfies
+ψ(x, y). They show that no randomized machine with unbounded error can solve MAJ-MAJ-SAT
+in time n1+o(1) and space n1−ǫ for any positive constant ǫ. More generally, they establish time-
+space lower bounds for simulations of the second level of the counting hierarchy on randomized
+machines with unbounded error. Their proofs use our indirect diagonalization paradigm. Roughly
+speaking, whereas our deterministic results can be viewed as lower bounds for complete problems
+for the first level of the polynomial-time hierarchy on machines that correspond to the zero-th level
+of the polynomial-time hierarchy, the results by Allender et al. can be regarded as lower bounds
+for complete problems of the second level of the counting hierarchy on machines that correspond
+to the first level of the counting hierarchy.
+    Time-space lower bounds for satisfiability on nonuniform models form another topic for further
+investigation. Time-space lower bounds for deterministic machines straightforwardly translate into
+size-width lower bounds for sufficiently uniform circuits, and into depth-logarithm-of-the-size lower
+bounds for sufficiently uniform branching programs. Logtime uniformity is good enough for all of
+our results to carry over without any changes in the parameters. Fortnow shows how to apply
+his technique to logspace-uniform NC1 circuits [For00b]. Allender et al. [AKR+ 01] extend this
+result to logspace-uniform SAC1 circuits and their negations, and Fortnow [For00b] states it for
+logspace-uniform branching programs. Van Melkebeek [vM04] derives all these circuit results as
+instantiations of a general theorem, and shows directly that in each case NTISP[nO(1) , n1−ǫ ] unifor-
+mity for any positive constant ǫ suffices. Tourlakis [Tou01] argues that the arguments of Fortnow
+[For00b] carry through when the machines receive subpolynomial advice. The same holds for our
+results.
+    An appealing feature of the lower bounds in this paper is their robustness – they hold for
+virtually any reasonable general model of computation. On the other hand, they do not yield
+
+
+                                                 28
+any lower bounds for algorithms for satisfiability that use linear space, such as algorithms that
+explicitly store an assignment to the given formula. Another line of research tries to establish
+pure time lower bounds for satisfiability but on more restricted models of computation. Van
+Melkebeek and Raz [vMR04] build on our techniques to obtain such bounds on Turing machines
+with one d-dimensional work tape and randomp access to the input. They show that no such machine
+can solve satisfiability in time nc for c < (d + 2)/(d + 1) deterministically, and for c such that
+c3 < 1 + c/(d + 1) conondeterministically.
+
+
+Acknowledgments
+DvM would like to thank Rahul Santhanam, Madhu Sudan, and Iannis Tourlakis for discussions
+about the topic of this paper and/or comments on earlier drafts. He is grateful to Steve Cook for
+bringing him into contact with Iannis Tourlakis.
+
+
+References
+[Ajt99]    M. Ajtai. A non-linear time lower bound for Boolean branching programs. In Proceedings
+           of the 40th IEEE Symposium on Foundations of Computer Science, pages 60–70. IEEE,
+           1999.
+
+[AKR+ 01] E. Allender, M. Koucky, D. Ronneburger, S. Roy, and V. Vinay. Time-space tradeoffs in
+          the counting hierarchy. In Proceedings of the 16th IEEE Conference on Computational
+          Complexity, pages 295–302. IEEE, 2001.
+
+[BDG95]    J. Balcázar, J. Dı́az, and J. Gabarró. Structural Complexity I, volume 11 of EATCS
+           Monographs on Theoretical Computer Science. Springer-Verlag, 1995.
+
+[BM80]     A. Bruss and A. Meyer. On time-space classes and their relation to the theory of real
+           addition. Theoretical Computer Science, 11:59–69, 1980.
+
+[BSSV03] P. Beame, M. Saks, X. Sun, and E. Vee. Time-space trade-off lower bounds for ran-
+         domized computation of decision problems. Journal of the ACM, 50(2):154–195, 2003.
+
+[Coo88]    S. Cook. Short propositional formulas represent nondeterministic computations. Infor-
+           mation Processing Letters, 26:269–270, 1988.
+
+[FL93]     L. Fortnow and C. Lund. Interactive proof systems and alternating time-space com-
+           plexity. Theoretical Computer Science, 113:55–73, 1993.
+
+[For00a]   L. Fortnow. Diagonalization. Bulletin of the European Association for Theoretical
+           Computer Science, 71:102–112, 2000.
+
+[For00b]   L. Fortnow. Time-space tradeoffs for satisfiability. Journal of Computer and System
+           Sciences, 60:337–353, 2000.
+
+[FvM00]    L. Fortnow and D. van Melkebeek. Time-space tradeoffs for nondeterministic computa-
+           tion. In Proceedings of the 15th IEEE Conference on Computational Complexity, pages
+           2–13. IEEE, 2000.
+
+                                               29
+[GS89]    Y. Gurevich and S. Shelah. Nearly-linear time. In Proceedings, Logic at Botik ’89,
+          volume 363 of Lecture Notes in Computer Science, pages 108–118. Springer-Verlag,
+          1989.
+
+[HS66]    F. Hennie and R. Stearns. Two-tape simulation of multitape Turing machines. Journal
+          of the ACM, 13:533–546, 1966.
+
+[Kan84]   R. Kannan. Towards separating nondeterminism from determinism. Mathematical Sys-
+          tems Theory, 17:29–45, 1984.
+
+[LV99]    R. Lipton and A. Viglas. On the complexity of SAT. In Proceedings of the 40th IEEE
+          Symposium on Foundations of Computer Science, pages 459–464. IEEE, 1999.
+
+[Pap94]   C. Papadimitriou. Computational Complexity. Addison-Wesley, 1994.
+
+[PF79]    N. Pippenger and M. Fischer. Relations among complexity measures. Journal of the
+          ACM, 26:361–381, 1979.
+
+[PPR80]   W. Paul, E. Prauß, and R. Reischuk. On alternation. Acta Informatica, 14:243–255,
+          1980.
+
+[Sch78]   C. Schnorr. Satisfiability is quasilinear complete in NQL. Journal of the ACM, 25:136–
+          145, 1978.
+
+[SFM78]   J. Seiferas, M. Fischer, and A. Meyer. Separating nondeterministic time complexity
+          classes. Journal of the ACM, 25:146–167, 1978.
+
+[Tou01]   I. Tourlakis. Time-space lower bounds for SAT on nonuniform machines. Journal of
+          Computer and System Sciences, 63(2):268–287, 2001.
+
+[vM04]    D. van Melkebeek. Time-space lower bounds for NP-complete problems. In G. Paun,
+          G. Rozenberg, and A. Salomaa, editors, Current Trends in Theoretical Computer Sci-
+          ence, pages 265–291. World Scientific, 2004.
+
+[vMR04]   D. van Melkebeek and R. Raz. A time lower bound for satisfiability. In Proceedings of
+          the 31st International Colloquium On Automata, Languages and Programming, pages
+          971–982. Springer-Verlag, 2004.
+
+[Ž83]    S. Žàk. A Turing machine time hierarchy. Theoretical Computer Science, 26:327–333,
+          1983.
+
+
+
+
+                                              30
+

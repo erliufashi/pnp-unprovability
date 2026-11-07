@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "32 dyadic seed distributions and all subset sizes passed"
+  ],
+  "pair_failure_threshold_2over3": 111,
+  "upper_bound_counterexample": {
+    "C": 2,
+    "actual_each": 1,
+    "upper_each": 100,
+    "W": 2,
+    "actual_total": 2,
+    "claimed_necessary_bound": 200
+  }
+}

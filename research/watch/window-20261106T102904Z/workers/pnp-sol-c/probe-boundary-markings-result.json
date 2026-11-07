@@ -1,0 +1,13 @@
+{
+  "paths_checked": 49680,
+  "all_prefix_marking_budget_checks": true,
+  "backward_and_head_to_head_jumps": true,
+  "literal_uncovered_steps_counterexample": {
+    "N": 64,
+    "T": 100,
+    "far_interval_unmark_events": 0,
+    "far_interval_uncovered_steps": 100,
+    "incorrect_bound_8T_over_N": 12.5
+  },
+  "scope": "finite geometric-lemma sanity test, not a substitute for entropy/collision proof"
+}

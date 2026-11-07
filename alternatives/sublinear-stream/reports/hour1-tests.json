@@ -1,0 +1,384 @@
+{
+  "passed": true,
+  "kind": "finite sanity + auxiliary Python allocation; not proof assistant",
+  "checks": [
+    {
+      "name": "36 finite shape/mask cases bitwise equal",
+      "passed": true,
+      "cases": 36
+    },
+    {
+      "name": "reassociation changes canonical float32 result",
+      "passed": true
+    },
+    {
+      "name": "4 auxiliary-memory measurements and logical buffer counts",
+      "passed": true
+    },
+    {
+      "name": "observable memory-limit return may change",
+      "passed": true
+    }
+  ],
+  "numerical_cases": [
+    {
+      "C": 1,
+      "d": 1,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "bd7344cc07e6dd1e8d4d37099ffb904882fc5ed98a046e88db59d0b0946c227e"
+    },
+    {
+      "C": 1,
+      "d": 1,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "bb27eab95b5f6d3552a998c1cc892915b01c6263a210c0d45d023894b501b952"
+    },
+    {
+      "C": 1,
+      "d": 2,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "1469ab2674e64d0f58345c1e2e56dffe34b824db5f49cf41953dc0c948928e25"
+    },
+    {
+      "C": 1,
+      "d": 2,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "c2a4c0d89cfded896d9fbd0fdf60266a99b4dca3b159d9d1136d0ecb388286a1"
+    },
+    {
+      "C": 1,
+      "d": 4,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "1d66c793af7215f8696e0b299cb256eec3dca35e849f94e55ce4fdd4a58ccf5a"
+    },
+    {
+      "C": 1,
+      "d": 4,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "054c59d15e1cfe01aeed28b1b5a9f5e2d373fd95c9a023bbd8e5c8bebc762cbd"
+    },
+    {
+      "C": 2,
+      "d": 1,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "54f3ea5f79197149deebe92c0b58552fb69d2552da3886595491a3496e08cb6f"
+    },
+    {
+      "C": 2,
+      "d": 1,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "65b85cceb1cb9900050cfde50d9709f11cf828c4a97b049ea305b1e1b5e07669"
+    },
+    {
+      "C": 2,
+      "d": 2,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "9996b51b1f1a5f294970e6e7f51fcb42abb6edfe8cdfbb6ded0f9ef8dc7a6ccb"
+    },
+    {
+      "C": 2,
+      "d": 2,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "8936b54f860c7d3bf1059b7efc137d4bb1c1d40c2259d8e3bbd1d08ab9d974e1"
+    },
+    {
+      "C": 2,
+      "d": 4,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "dd6f725888fe6ba0b0ca642f2f35a2c99538267b54025ca8981d977bdd3aff81"
+    },
+    {
+      "C": 2,
+      "d": 4,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "35f8e6add427d8b641aa3ad6df13662e6683b78ed67ff78bc8c5cfb690ddad39"
+    },
+    {
+      "C": 3,
+      "d": 1,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "6576866e14060d6523e5ee5068321275dd2bf729f51b2003cb49ead49dc49ab8"
+    },
+    {
+      "C": 3,
+      "d": 1,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "ad021fa131009327be67eb28c3a4a3e7da257d926dc855c09142d1cf473f0a8c"
+    },
+    {
+      "C": 3,
+      "d": 2,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "b9ac5f968d1f7c99e0a5fd1a8e6285074e73c377261977ad8ac56a92a18bef84"
+    },
+    {
+      "C": 3,
+      "d": 2,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "e779a0871a1b54baede6bfbedd6e341f0af1479fff20c2dbf6b82f6476f6e482"
+    },
+    {
+      "C": 3,
+      "d": 4,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "c325b961140803d88b9dd959e4811b694d8144fa7c9878ddfc4f4c232cf00a35"
+    },
+    {
+      "C": 3,
+      "d": 4,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "3a993d21e1345dfae0248d2f56b98dab6b35ad56ce1ab8d83e194a8c22644756"
+    },
+    {
+      "C": 7,
+      "d": 1,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "145d7d2e587b78bc5d1f1789e0af32de390b402854205dd0d358d56d49c69d14"
+    },
+    {
+      "C": 7,
+      "d": 1,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "c63d4e3800413c20b767c3f88465bcebbcbe5de22da8a6d8f72b6efe7ed84016"
+    },
+    {
+      "C": 7,
+      "d": 2,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "87aebc4b1a10d928de0b2660f5353d0515ba368ff7dae3daeba2bdd5a4178538"
+    },
+    {
+      "C": 7,
+      "d": 2,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "97579373d892a03e03edd1ab60a84397740efb311cf35e3b8cdb2636f6cd758c"
+    },
+    {
+      "C": 7,
+      "d": 4,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "7f3fc70012de869c1a76a8877e3a1f140219664f40222d4d02bdc4139322607f"
+    },
+    {
+      "C": 7,
+      "d": 4,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "c65dd9719ba89e26ef18b87565eedcfd5fc0d2124ab58d9eec158ae2e11438b4"
+    },
+    {
+      "C": 16,
+      "d": 1,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "a883133a09b9747d6dcc799970d220dc10019eaf59c23b04ce3dc81c57d27b0c"
+    },
+    {
+      "C": 16,
+      "d": 1,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "5fc5f4e724aad009d03cb7cc427818bee4647e10fea55cda935556ecee3e1526"
+    },
+    {
+      "C": 16,
+      "d": 2,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "f9831401401f8d0a6703aa1bfa456fac7ad80ac93586d68fa13db782a1a48ff9"
+    },
+    {
+      "C": 16,
+      "d": 2,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "b762b5b76bc6f5720e6c2161b8f8f7923df952283b492460eab28205de0f9d94"
+    },
+    {
+      "C": 16,
+      "d": 4,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "01acfe0ca0f9d21bb6392d45caf9f890baadf14b0a8dc49ad6d02fa81e8ab889"
+    },
+    {
+      "C": 16,
+      "d": 4,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "319cce0346bd4f8879167093059f09aba34048f0564a09ce1d816658034bf0cf"
+    },
+    {
+      "C": 31,
+      "d": 1,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "c2ece190c66b0146240fc76d162f3035f99cb2b5cb729fdb0456078f06d3e7f5"
+    },
+    {
+      "C": 31,
+      "d": 1,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "df8dad0dc81ebfb62302d0e42c7306570632c35f37ca6c79a8a539a208cfbec4"
+    },
+    {
+      "C": 31,
+      "d": 2,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "9377833a7c603ac74c28d980124fe56914f3c615b0f386c7e7e044f71d1be2e5"
+    },
+    {
+      "C": 31,
+      "d": 2,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "89948d5738e76644471411e51a6fb38e6cef0d81f295a0ac428436a39f3cc0ea"
+    },
+    {
+      "C": 31,
+      "d": 4,
+      "causal": false,
+      "bitwise_equal": true,
+      "output_sha256": "5a2a607b0451e5b3054756047c7b3d8ddef7c2b1fbfd54d113fdf638029e0cee"
+    },
+    {
+      "C": 31,
+      "d": 4,
+      "causal": true,
+      "bitwise_equal": true,
+      "output_sha256": "dfd4138b03bb285cf33e8f90c931a8eb41bc95007d19e4d6b0d25af559becbc3"
+    }
+  ],
+  "reassociation_counterexample": {
+    "a": 1.0000000200408773e+20,
+    "b": -1.0000000200408773e+20,
+    "c": 3.140000104904175,
+    "left": 3.140000104904175,
+    "right": 0.0,
+    "equal": false
+  },
+  "memory_measurements": [
+    {
+      "C": 16,
+      "d": 4,
+      "materialized": {
+        "aux_peak_bytes": 22853,
+        "seconds": 0.00391427194699645,
+        "score_cells": 256,
+        "probability_cells": 256
+      },
+      "row_scheduled": {
+        "aux_peak_bytes": 5653,
+        "seconds": 0.0038856249302625656,
+        "peak_score_cells": 16,
+        "peak_probability_cells": 16
+      },
+      "bitwise_equal": true,
+      "inputs_excluded_from_trace": true
+    },
+    {
+      "C": 32,
+      "d": 4,
+      "materialized": {
+        "aux_peak_bytes": 77125,
+        "seconds": 0.014983998844400048,
+        "score_cells": 1024,
+        "probability_cells": 1024
+      },
+      "row_scheduled": {
+        "aux_peak_bytes": 10133,
+        "seconds": 0.01460157404653728,
+        "peak_score_cells": 32,
+        "peak_probability_cells": 32
+      },
+      "bitwise_equal": true,
+      "inputs_excluded_from_trace": true
+    },
+    {
+      "C": 64,
+      "d": 4,
+      "materialized": {
+        "aux_peak_bytes": 283973,
+        "seconds": 0.061137259006500244,
+        "score_cells": 4096,
+        "probability_cells": 4096
+      },
+      "row_scheduled": {
+        "aux_peak_bytes": 19093,
+        "seconds": 0.05761307803913951,
+        "peak_score_cells": 64,
+        "peak_probability_cells": 64
+      },
+      "bitwise_equal": true,
+      "inputs_excluded_from_trace": true
+    },
+    {
+      "C": 128,
+      "d": 4,
+      "materialized": {
+        "aux_peak_bytes": 1090885,
+        "seconds": 0.24764021788723767,
+        "score_cells": 16384,
+        "probability_cells": 16384
+      },
+      "row_scheduled": {
+        "aux_peak_bytes": 37525,
+        "seconds": 0.24708855408243835,
+        "peak_score_cells": 128,
+        "peak_probability_cells": 128
+      },
+      "bitwise_equal": true,
+      "inputs_excluded_from_trace": true
+    }
+  ],
+  "budget_counterexample": {
+    "C": 16,
+    "score_cell_budget": 32,
+    "materialized": "OOM",
+    "row_scheduled": "OK"
+  },
+  "semantics": "Python arithmetic then struct binary32; same host libm exp then binary32; shared primitive/reduction helpers",
+  "not_claimed": [
+    "torch or GPU kernel equivalence",
+    "all IEEE32 hardware implementations",
+    "real 200B measurement",
+    "proof of asymptotic complexity from finite measurements",
+    "unchanged OOM/wallclock-timeout protocol"
+  ],
+  "source_sha256": "a47a58e3302f3b0d39f11f8dbe214c7a9827e6de191dc53c243b8697e218e754",
+  "execution_evidence": {
+    "task_id": "bec0515b8",
+    "task_name": "逐行attention精确性实验",
+    "status": "completed",
+    "exit_code": 0,
+    "source": "native background-task-notification received by main agent",
+    "output_file": ".pi/tasks/01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c-3711474/bec0515b8.output",
+    "observed_at": 1793810974.8693054,
+    "no_status_repoll": true
+  }
+}

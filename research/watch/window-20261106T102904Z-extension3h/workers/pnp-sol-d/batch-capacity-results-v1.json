@@ -1,0 +1,1 @@
+{"capacity_examples_K10": {"0": 1, "1": 11, "1024": 1024, "16": 112, "2": 20, "3": 28, "4": 36}, "cases": "n=1..8, three integer prior families, K=0..4, L=0..min(4,n)", "exact_tree_checks": 510, "limits": "finite model verification, not real-world coverage or standard P/NP separation", "ok": true, "scheduled_cap_checks": 512}

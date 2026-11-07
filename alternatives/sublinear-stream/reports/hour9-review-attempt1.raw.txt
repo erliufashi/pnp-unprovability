@@ -1,0 +1,24 @@
+{
+  "goal_id": "pnp-hour9",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 12,
+  "checks": [
+    {
+      "criterion": "1. proof/FINITE-BUDGET-SEPARATION-v1.md明确定义U_m、D_s/ND_s和输入/EOF/状态边界，自含证明m>s时确定性不能全对，并给ND协议及可核对的≤8b+64保留状态编码（b=ceil(log2(m+1))），解释scratch/PC/cursor/ROM/RNG，不把逻辑状态数称Python或设备RAM。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/sublinear-stream/proof/FINITE-BUDGET-SEPARATION-v1.md:1-56：第7-15行定义U_m、b、D_s/ND_s、EOF及状态边界；第19-23行给出m>s碰撞证明；第27-44行给出ND协议、I/J/Q/L、cursor、scratch、PC/flags的8b+64编码及ROM/RNG/日志/物理RAM/Python口径；第48行给出同预算条件。"
+    },
+    {
+      "criterion": "2. proof/FINITE-BUDGET-RANDOM-v1.md自含均匀X/J平均error≤1/3的entropy下界，精确整数3^48<2^77证c>1/16，使m=16s+1为保守见证；浮点只作诊断，区分实际任务分布/pointwise与有限上下文。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/sublinear-stream/proof/FINITE-BUDGET-RANDOM-v1.md:1-47：第3-7行固定均匀X/I与完整prefix state；第15-25行完成entropy/error下界；第27-39行给出h2、精确3^48<2^77、c>1/16和m=16s+1；第27行区分平均与pointwise，第39行说明浮点仅诊断，第43-47行区分ND fit、context C及真实任务分布/人类范围。"
+    },
+    {
+      "criterion": "3. reports/finite-budget-tests-v1.json及实际退出记录保存小m的完整ND协议/分支与finite collision sanity、ND预算条件和m≤C账本；reports/preservation-hour9.json证原35/T3/前8小时认证产物不变。不得因外域见证或ND上界未fit而冒称域内人类难题/无解；标准P/NP仍未解，DAG按实际结果刷新。只读验收核对已有数据，不重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/sublinear-stream/reports/finite-budget-tests-v1.json:1-180、300-374：passed=true，ND_protocol含948 tasks/642 valid/306 invalid、7368 branches、105328 transitions、70 malformed；deterministic_encoders含小(m,s)完整prefix maps、示例collision、total_prefix_maps=131344且passed=true；thresholds含s=128,m=129,ND_declared_bits=128,ND_same_budget_certificate=true以及payload/wire的m_within_C、full_protocol_data_fit和不冒称警告。读取 reports/finite-budget-execution-v1.json:1-14 与 finite-budget-v1.stdout.log:1：returncode=0、passed=true，stdout报告同样的948/7368/131344；stderr检索无error/traceback/fail命中。读取 reports/preservation-hour9.json:1-70、939-1007：passed=true且保存原研究/DAG/T3及前1-8小时文件哈希；读取 reports/hour9-summary.json:1-27：actual_probe_exit=0、old_35_and_prior_proofs_unchanged=true、not_claimed列明不宣称200B/真实RAM/人类/标准P/NP/改变T3；读取 reports/hour9-frontier-migration.json:1-31：before_nodes=34、after_nodes=38并实际加入M20/E44/E45/E46。读取 proof/FINITE-BUDGET-SCOPE-v1.md:1-27：明确外域见证、ND上界未fit不推出容易/不可能、标准P/NP与ZFC仍UNRESOLVED、原T3不变。"
+  ],
+  "findings": [],
+  "note": "按v0只读核对既有产物，未重跑实验；三条标准均有文件与行号证据。"
+}

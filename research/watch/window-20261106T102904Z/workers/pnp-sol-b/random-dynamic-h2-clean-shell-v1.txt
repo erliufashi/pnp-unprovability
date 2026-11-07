@@ -1,0 +1,9 @@
+test_all_one_bit_encoders_on_three_bits (__main__.CapacityTests.test_all_one_bit_encoders_on_three_bits) ... ok
+test_entropy_endpoints_and_error_units (__main__.CapacityTests.test_entropy_endpoints_and_error_units) ... ok
+test_public_random_coordinate_code (__main__.CapacityTests.test_public_random_coordinate_code) ... ok
+test_zero_error_requires_all_bits (__main__.CapacityTests.test_zero_error_requires_all_bits) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK

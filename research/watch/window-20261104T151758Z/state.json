@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "window_id": "window-20261104T151758Z",
+  "task_id": "pnp-10h-window",
+  "timezone": "Asia/Shanghai",
+  "start_epoch": 1793805478,
+  "deadline_epoch": 1793841478,
+  "start_local": "2026-11-04T23:17:58+08:00",
+  "deadline_local": "2026-11-05T09:17:58+08:00",
+  "interval_seconds": 3600,
+  "phase": "paused",
+  "last_ack_hour": 9,
+  "pause_count": 1,
+  "paused_at_epoch": 1793841564.2890153,
+  "session_scoped": true,
+  "monitor_ids": [
+    "pnp-hourly-10h",
+    "pnp-deadline-10h"
+  ],
+  "log": [
+    {
+      "action": "window_configured",
+      "at": 1793805675.2435884,
+      "note": "用户授权10小时研究窗口；1小时唤醒推进，截止仅暂停一次。没有启动外部LLM或持续占用算力的子代理。"
+    },
+    {
+      "action": "initial_research_batch",
+      "at": 1793805929.7610798,
+      "artifact": "/home/desk/projects/pnp-unprovability/research/watch/window-20261104T151758Z/RESEARCH-00.md",
+      "note": "提出次线性空间推广及精确浮点attention峰值内存核算问题；草稿未扩大正式T3证书。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 1,
+      "at": 1793811425.0439632,
+      "note": "首批限定次线性推广及原DAG行调度已独立验收；36组逐位一致、4规模辅助峰值、浮点重结合/OOM反例，实验bec0515b8 exit0；旧35节点不变。新有限query摘要候选已入网等待第2小时，尚未认证。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 2,
+      "at": 1793814629.4908342,
+      "note": "有限query/max/分母左折叠历史摘要已给完整归纳并独立验收；玩具域76680次逐前缀query比较、999数值单元、两个错误简化负控制通过，实际实验子进程exit0；明确指数模型成本，未扩大T3。M14前缀树森林为下一小时未证目标。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 3,
+      "at": 1793818574.6667917,
+      "note": "明确B前缀树参数森林已独立验收；33333通用前缀+76680 kernel query对照、seed/左折叠/padding负控制通过，实际子进程exit0。共享shape、allocated/live及指数模型成本明确，旧35节点/T3和hour1/2产物不变。下一小时M15条件性因果提升，先E29契约审计。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 4,
+      "at": 1793823709.5803967,
+      "note": "操作前缀契约与条件性token/层/头提升经第2次合法回执独立验收；首轮JSON回执语法故障保留未计通过。247 toy例/2539步/10156头计数/1551 RNG对照，实际exit0；编译31968槽对原KV1072更大如实保留。旧35/T3/前三小时产物不变。下一方向D7质量-资源充分性，未改旧证书。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 5,
+      "at": 1793826391.588997,
+      "note": "质量-资源分层、EOS/TV/损失/margin/理想softmax条件及资源账本经独立验收。10组精确序列law、24margin/2268float sanity、toy重放和交叉点分析实际exit0；区分当前live/peak/allocated，未设用户预算或测人类。原35/T3及前4小时产物不变。下一M17紧凑检索族下界为待证，不从差上界倒推。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 6,
+      "at": 1793829101.4849753,
+      "note": "紧凑ReLU检索核及参数化state下界已独立验收；5460 equality pairs、4240小d双layout全检索与384随机双layout实际exit0。区分模型族/单π、固定d/horizon、全控制状态及canonical FP32，不否定实际baseline或标准P/NP。原35/T3/前5小时不变。下一M18静态安全特化未认证。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 7,
+      "at": 1793834005.2658498,
+      "note": "selected参数证书特化已独立通过：54212 kernel比较、2539三路feed和1551 RNG检查实际exit0；K3996降752/776但仍比native大，metadata另计。重复管理日志已显式更正不算新成果，v1原字节恢复/v2独立保留，原35/T3/前6小时不变。下一固定H混合/非空洞性未认证。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 8,
+      "at": 1793836524.8500025,
+      "note": "fixed-H重建/非空洞性已独立通过第2次；第1次非法JSON不计pass且原始保留。480cases/4448feed/2915RNG，355重建12664 Read实际exit0。缓存子界非整设备，H16正常长例仍大于native；原35/T3/前7小时不变。下一有限数值budget候选未认证；绝对截止不变。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 9,
+      "at": 1793839634.028504,
+      "note": "有限state预算已第2次独立通过；首个非法JSON原始保留不计pass。948cases/7368 ND branches/105328编码transition、131344小prefix映射实际exit0；v2澄清payload/wire而不改v1。逻辑state非物理RAM，未测human/200B，原35/T3/前8小时不变。研究批次收束，等待09:17:58单次暂停，不启动第10批。"
+    },
+    {
+      "action": "paused_once",
+      "at": 1793841564.2890153,
+      "note": "原10小时墙钟截止已到；九个小时研究批次均局部复核通过，原35/T3保全，标准P/NP不可证性仍未证明，无pending后台实验。执行一次暂停，只做归档/通知/本窗口验收，不自动续期。"
+    }
+  ]
+}

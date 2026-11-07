@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {
+      "id": "ASTRA-CHIEF-CONTRACT-MATRIX-1",
+      "layer": 3,
+      "title": "同权限同生命周期能力/分离合同矩阵",
+      "role": "chief综合已交付边界，消除raw/opaque、反馈、index、prep和强reference之间的非法比较",
+      "acceptance": "把当前局部产物按输入可见性、response alphabet、persistent state、prep/query/update、成功量词和reference兼容性分格；每格标INVALID_COMPARISON条件与可继承结论；不制造新现实覆盖或标准P/NP定理",
+      "artifact": "evidence/ASTRA-CHIEF-CONTRACT-MATRIX-1/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.85,
+        "novelty": 0.85,
+        "confidence": 0.85,
+        "cost": 0.8
+      }
+    }
+  ],
+  "edges": [
+    [
+      "ASTRA-CHIEF-CONTRACT-MATRIX-1",
+      "M21"
+    ],
+    [
+      "ASTRA-CHIEF-CONTRACT-MATRIX-1",
+      "M22"
+    ],
+    [
+      "ASTRA-CHIEF-CONTRACT-MATRIX-1",
+      "M23"
+    ]
+  ]
+}

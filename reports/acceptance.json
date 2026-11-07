@@ -1,0 +1,290 @@
+{
+  "schema": 1,
+  "checks": [
+    {
+      "command": [
+        "/run/current-system/sw/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "/home/desk/projects/pnp-unprovability",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.6484,
+      "stdout": "",
+      "stderr": "test_age_capped (test_research.ScoringTests.test_age_capped) ... ok\ntest_blocked_excluded (test_research.ScoringTests.test_blocked_excluded) ... ok\ntest_context_resume_records_new_round (test_research.ScoringTests.test_context_resume_records_new_round) ... ok\ntest_current_value_changes_choice (test_research.ScoringTests.test_current_value_changes_choice) ... ok\ntest_done_parent_prevents_orphan_work (test_research.ScoringTests.test_done_parent_prevents_orphan_work) ... ok\ntest_exhausted_not_resurrected_by_neighbor (test_research.ScoringTests.test_exhausted_not_resurrected_by_neighbor) ... ok\ntest_freshness_changes_choice (test_research.ScoringTests.test_freshness_changes_choice) ... ok\ntest_neighbor_parameters_propagate (test_research.ScoringTests.test_neighbor_parameters_propagate) ... ok\ntest_no_gain_decays_freshness (test_research.ScoringTests.test_no_gain_decays_freshness) ... ok\ntest_reject_nan (test_research.ScoringTests.test_reject_nan) ... ok\ntest_reject_reverse_dependency (test_research.ScoringTests.test_reject_reverse_dependency) ... ok\ntest_reject_same_layer_and_cycle (test_research.ScoringTests.test_reject_same_layer_and_cycle) ... ok\ntest_remaining_value_changes_choice (test_research.ScoringTests.test_remaining_value_changes_choice) ... ok\ntest_cli_context_resume (test_research.StoreTests.test_cli_context_resume) ... ok\ntest_done_requires_evidence (test_research.StoreTests.test_done_requires_evidence) ... ok\ntest_evidence_cannot_escape_root (test_research.StoreTests.test_evidence_cannot_escape_root) ... ok\ntest_exhaustion_update_immediately_reselects (test_research.StoreTests.test_exhaustion_update_immediately_reselects) ... ok\ntest_graph_change_rejected (test_research.StoreTests.test_graph_change_rejected) ... ok\ntest_history_projection_matches_authority (test_research.StoreTests.test_history_projection_matches_authority) ... ok\ntest_json_failure_exit_nonzero (test_research.StoreTests.test_json_failure_exit_nonzero) ... ok\ntest_missing_history_repaired_by_explicit_refresh (test_research.StoreTests.test_missing_history_repaired_by_explicit_refresh) ... ok\ntest_no_silent_reinitialization (test_research.StoreTests.test_no_silent_reinitialization) ... ok\ntest_reject_tampered_evidence (test_research.StoreTests.test_reject_tampered_evidence) ... ok\ntest_restore_preserves_audit_history (test_research.StoreTests.test_restore_preserves_audit_history) ... ok\ntest_snapshot_path_traversal_rejected (test_research.StoreTests.test_snapshot_path_traversal_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 0.603s\n\nOK\n",
+      "passed": true
+    },
+    {
+      "command": [
+        "/bin/sh",
+        "-c",
+        "command -v pnp-research && pnp-research --help"
+      ],
+      "cwd": "/",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0369,
+      "stdout": "/home/desk/.local/bin/pnp-research\nusage: research.py [-h] [--version] [--root ROOT] [--json]\n                   {init,check,status,next,refresh,update,history,snapshot,restore,paths} ...\n\nP/NP不可证性三层研究网络；调度通过不等于数学证明通过\n\npositional arguments:\n  {init,check,status,next,refresh,update,history,snapshot,restore,paths}\n    init                初始化一次\n    check               校验图谱、状态、证据及日志\n    status              查看三层节点\n    next                查看当前推荐目标\n    refresh             重算并记录一轮\n    update              根据证据调整节点\n    history             读取选择历史\n    snapshot            保存研究状态快照\n    restore             恢复快照中的节点参数，保留审计历史\n    paths               发现入口与数据位置\n\noptions:\n  -h, --help            show this help message and exit\n  --version             show program's version number and exit\n  --root ROOT           研究目录（默认读取XDG配置）\n  --json                仅输出机器JSON\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/bin/sh",
+        "-c",
+        "pnp-research --version && pnp-research --version"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0856,
+      "stdout": "0.1.0\n0.1.0\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/etc/profiles/per-user/desk/bin/zsh",
+        "-ic",
+        "command -v pnp-research && pnp-research --version"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": false,
+      "returncode": 0,
+      "seconds": 0.1906,
+      "stdout": "\u001b]2;/tmp\u001b\\/home/desk/.local/bin/pnp-research\n0.1.0\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "check",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0382,
+      "stdout": "{\"ok\": true, \"valid\": true, \"layers\": 3, \"nodes\": 25, \"edges\": 31, \"round\": 1, \"mathematical_target\": \"UNRESOLVED\", \"warning\": \"只校验调度与证据完整性，不校验数学定理\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "status",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0335,
+      "stdout": "{\"ok\": true, \"round\": 1, \"selected\": \"E1\", \"mathematical_target\": \"UNRESOLVED\", \"nodes\": [{\"id\": \"E1\", \"title\": \"核验证明门控语言\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 1.18840476, \"current\": 1, \"remaining\": 0.9, \"freshness\": 0.65083333, \"effective_current\": 0.98, \"effective_remaining\": 0.87, \"confidence\": 0.95, \"cost\": 0.7, \"changed_neighbors\": [], \"neighbors\": [\"M1\"], \"artifact\": \"notes/01-gate-v1.md\", \"reason\": \"价值=0.980 余值=0.870 新鲜度=0.651 可信度=0.950 成本=0.70 邻接新信号=无\"}, {\"id\": \"E2\", \"title\": \"严格化自身P成员固定点\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.98374479, \"current\": 0.95, \"remaining\": 0.8, \"freshness\": 0.61833333, \"effective_current\": 0.94, \"effective_remaining\": 0.805, \"confidence\": 0.95, \"cost\": 0.8, \"changed_neighbors\": [], \"neighbors\": [\"M1\", \"M2\"], \"artifact\": \"notes/02-reflection-v1.md\", \"reason\": \"价值=0.940 余值=0.805 新鲜度=0.618 可信度=0.950 成本=0.80 邻接新信号=无\"}, {\"id\": \"E5\", \"title\": \"标准P/NP算术范式\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.88578704, \"current\": 0.9, \"remaining\": 0.9, \"freshness\": 0.61833333, \"effective_current\": 0.89, \"effective_remaining\": 0.9, \"confidence\": 0.95, \"cost\": 0.9, \"changed_neighbors\": [], \"neighbors\": [\"M3\"], \"artifact\": \"notes/03-arithmetic-v1.md\", \"reason\": \"价值=0.890 余值=0.900 新鲜度=0.618 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E14\", \"title\": \"不可证性与扩张理论一致性\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.83274537, \"current\": 0.8, \"remaining\": 0.9, \"freshness\": 0.61833333, \"effective_current\": 0.79, \"effective_remaining\": 0.885, \"confidence\": 0.95, \"cost\": 0.9, \"changed_neighbors\": [], \"neighbors\": [\"M3\", \"M5\"], \"artifact\": \"notes/03-arithmetic-v1.md\", \"reason\": \"价值=0.790 余值=0.885 新鲜度=0.618 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E3\", \"title\": \"直接把E放入证明触发器\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.80641667, \"current\": 0.9, \"remaining\": 0.8, \"freshness\": 0.58583333, \"effective_current\": 0.89, \"effective_remaining\": 0.825, \"confidence\": 0.9, \"cost\": 0.9, \"changed_neighbors\": [], \"neighbors\": [\"M2\", \"M6\"], \"artifact\": \"notes/02-reflection-v1.md\", \"reason\": \"价值=0.890 余值=0.825 新鲜度=0.586 可信度=0.900 成本=0.90 邻接新信号=无\"}, {\"id\": \"E9\", \"title\": \"oracle屏障反例审计\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.73352315, \"current\": 0.75, \"remaining\": 0.7, \"freshness\": 0.52083333, \"effective_current\": 0.745, \"effective_remaining\": 0.73, \"confidence\": 0.95, \"cost\": 0.9, \"changed_neighbors\": [], \"neighbors\": [\"M5\", \"M6\"], \"artifact\": \"notes/05-models-v1.md\", \"reason\": \"价值=0.745 余值=0.730 新鲜度=0.521 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E11\", \"title\": \"核对不可证性→算法文献\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.69589242, \"current\": 0.95, \"remaining\": 0.98, \"freshness\": 0.68333333, \"effective_current\": 0.94, \"effective_remaining\": 0.974, \"confidence\": 0.85, \"cost\": 1.1, \"changed_neighbors\": [], \"neighbors\": [\"M7\"], \"artifact\": \"notes/06-growth-v1.md\", \"reason\": \"价值=0.940 余值=0.974 新鲜度=0.683 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"M7\", \"title\": \"不可证性→近多项式算法路线\", \"layer\": 2, \"status\": \"open\", \"eligible\": false, \"priority\": 0.69256, \"current\": 0.9, \"remaining\": 0.95, \"freshness\": 0.65083333, \"effective_current\": 0.89666667, \"effective_remaining\": 0.94866667, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"D2\", \"E11\", \"E6\"], \"artifact\": \"notes/06-growth-v1.md\", \"reason\": \"价值=0.897 余值=0.949 新鲜度=0.651 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"D2\", \"title\": \"算术见证与增长率\", \"layer\": 1, \"status\": \"open\", \"eligible\": false, \"priority\": 0.66533333, \"current\": 0.85, \"remaining\": 0.9, \"freshness\": 0.65083333, \"effective_current\": 0.855, \"effective_remaining\": 0.905, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"M3\", \"M7\"], \"artifact\": \"notes/03-arithmetic-v1.md\", \"reason\": \"价值=0.855 余值=0.905 新鲜度=0.651 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"M2\", \"title\": \"反思与固定点判别器\", \"layer\": 2, \"status\": \"open\", \"eligible\": false, \"priority\": 0.66533333, \"current\": 0.9, \"remaining\": 0.9, \"freshness\": 0.61833333, \"effective_current\": 0.885, \"effective_remaining\": 0.885, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"D1\", \"E13\", \"E2\", \"E3\"], \"artifact\": \"notes/02-reflection-v1.md\", \"reason\": \"价值=0.885 余值=0.885 新鲜度=0.618 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"M3\", \"title\": \"反例搜索总性正规形\", \"layer\": 2, \"status\": \"open\", \"eligible\": false, \"priority\": 0.65763333, \"current\": 0.85, \"remaining\": 0.9, \"freshness\": 0.61833333, \"effective_current\": 0.85, \"effective_remaining\": 0.9025, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"D2\", \"E14\", \"E5\", \"E6\"], \"artifact\": \"notes/03-arithmetic-v1.md\", \"reason\": \"价值=0.850 余值=0.903 新鲜度=0.618 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"E6\", \"title\": \"反例搜索与总性桥\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.6534697, \"current\": 0.85, \"remaining\": 0.95, \"freshness\": 0.65083333, \"effective_current\": 0.855, \"effective_remaining\": 0.945, \"confidence\": 0.85, \"cost\": 1.1, \"changed_neighbors\": [], \"neighbors\": [\"M3\", \"M7\"], \"artifact\": \"notes/03-arithmetic-v1.md\", \"reason\": \"价值=0.855 余值=0.945 新鲜度=0.651 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E10\", \"title\": \"forcing与同自然数模型审计\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.6477, \"current\": 0.8, \"remaining\": 0.75, \"freshness\": 0.55333333, \"effective_current\": 0.77, \"effective_remaining\": 0.75, \"confidence\": 0.9, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"M5\"], \"artifact\": \"notes/05-models-v1.md\", \"reason\": \"价值=0.770 余值=0.750 新鲜度=0.553 可信度=0.900 成本=1.00 邻接新信号=无\"}, {\"id\": \"M6\", \"title\": \"主目标桥接义务清单\", \"layer\": 2, \"status\": \"open\", \"eligible\": false, \"priority\": 0.63910476, \"current\": 0.8, \"remaining\": 0.95, \"freshness\": 0.61833333, \"effective_current\": 0.78714286, \"effective_remaining\": 0.91714286, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"D1\", \"D4\", \"E12\", \"E3\", \"E4\", \"E8\", \"E9\"], \"artifact\": \"proof/obligations.json\", \"reason\": \"价值=0.787 余值=0.917 新鲜度=0.618 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"M1\", \"title\": \"证明门控NP编译器\", \"layer\": 2, \"status\": \"open\", \"eligible\": false, \"priority\": 0.62557333, \"current\": 0.9, \"remaining\": 0.75, \"freshness\": 0.61833333, \"effective_current\": 0.878, \"effective_remaining\": 0.752, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"D1\", \"D3\", \"E1\", \"E2\", \"E4\"], \"artifact\": \"notes/01-gate-v1.md\", \"reason\": \"价值=0.878 余值=0.752 新鲜度=0.618 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"D1\", \"title\": \"自指与可证性工具\", \"layer\": 1, \"status\": \"open\", \"eligible\": false, \"priority\": 0.55466667, \"current\": 0.65, \"remaining\": 0.75, \"freshness\": 0.55333333, \"effective_current\": 0.69333333, \"effective_remaining\": 0.77333333, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"M1\", \"M2\", \"M6\"], \"artifact\": \"notes/02-reflection-v1.md\", \"reason\": \"价值=0.693 余值=0.773 新鲜度=0.553 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"E4\", \"title\": \"检查所有纯门控变体的共同缺口\", \"layer\": 3, \"status\": \"ready\", \"eligible\": true, \"priority\": 0.55009167, \"current\": 0.7, \"remaining\": 0.6, \"freshness\": 0.45583333, \"effective_current\": 0.73, \"effective_remaining\": 0.65, \"confidence\": 0.85, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"M1\", \"M6\"], \"artifact\": \"notes/01-gate-v1.md\", \"reason\": \"价值=0.730 余值=0.650 新鲜度=0.456 可信度=0.850 成本=1.00 邻接新信号=无\"}, {\"id\": \"D4\", \"title\": \"模型与反例审计\", \"layer\": 1, \"status\": \"open\", \"eligible\": false, \"priority\": 0.54353333, \"current\": 0.65, \"remaining\": 0.75, \"freshness\": 0.55333333, \"effective_current\": 0.665, \"effective_remaining\": 0.77, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"M5\", \"M6\"], \"artifact\": \"notes/05-models-v1.md\", \"reason\": \"价值=0.665 余值=0.770 新鲜度=0.553 可信度=0.800 成本=1.00 邻接新信号=无\"}, {\"id\": \"D3\", \"title\": \"资源自指与精确相消\", \"layer\": 1, \"status\": \"open\", \"eligible\": false, \"priority\": 0.54153333, \"current\": 0.65, \"remaining\": 0.75, \"freshness\": 0.55333333, \"effective_current\": 0.675, \"effective_remaining\": 0.75, \"confidence\": 0.8, \"cost\": 1, \"changed_neighbors\": [], \"neighbors\": [\"M1\", \"M4\"], \"artifact\": \"notes/0",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "paths",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.036,
+      "stdout": "{\"ok\": true, \"root\": \"/home/desk/projects/pnp-unprovability\", \"controller\": \"/home/desk/.local/share/pnp-research/releases/0.1.0/research.py\", \"graph\": \"/home/desk/projects/pnp-unprovability/research/graph.json\", \"state\": \"/home/desk/projects/pnp-unprovability/research/state.json\", \"resume\": \"/home/desk/projects/pnp-unprovability/docs/RESUME.md\", \"version\": \"0.1.0\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "paths",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0327,
+      "stdout": "{\"ok\": true, \"root\": \"/home/desk/projects/pnp-unprovability\", \"controller\": \"/home/desk/.local/share/pnp-research/releases/0.1.0/research.py\", \"graph\": \"/home/desk/projects/pnp-unprovability/research/graph.json\", \"state\": \"/home/desk/projects/pnp-unprovability/research/state.json\", \"resume\": \"/home/desk/projects/pnp-unprovability/docs/RESUME.md\", \"version\": \"0.1.0\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "init",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0452,
+      "stdout": "{\"ok\": true, \"seq\": 1, \"at\": \"2026-11-04T10:39:58+00:00\", \"round\": 1, \"reason\": \"initialization\", \"previous\": null, \"selected\": \"E1\", \"ranking\": [{\"id\": \"E1\", \"priority\": 1.18840476, \"reason\": \"价值=0.980 余值=0.870 新鲜度=0.651 可信度=0.950 成本=0.70 邻接新信号=无\"}, {\"id\": \"E2\", \"priority\": 0.98374479, \"reason\": \"价值=0.940 余值=0.805 新鲜度=0.618 可信度=0.950 成本=0.80 邻接新信号=无\"}, {\"id\": \"E5\", \"priority\": 0.88578704, \"reason\": \"价值=0.890 余值=0.900 新鲜度=0.618 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E14\", \"priority\": 0.83274537, \"reason\": \"价值=0.790 余值=0.885 新鲜度=0.618 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E3\", \"priority\": 0.80641667, \"reason\": \"价值=0.890 余值=0.825 新鲜度=0.586 可信度=0.900 成本=0.90 邻接新信号=无\"}, {\"id\": \"E9\", \"priority\": 0.73352315, \"reason\": \"价值=0.745 余值=0.730 新鲜度=0.521 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E11\", \"priority\": 0.69589242, \"reason\": \"价值=0.940 余值=0.974 新鲜度=0.683 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E6\", \"priority\": 0.6534697, \"reason\": \"价值=0.855 余值=0.945 新鲜度=0.651 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E10\", \"priority\": 0.6477, \"reason\": \"价值=0.770 余值=0.750 新鲜度=0.553 可信度=0.900 成本=1.00 邻接新信号=无\"}, {\"id\": \"E4\", \"priority\": 0.55009167, \"reason\": \"价值=0.730 余值=0.650 新鲜度=0.456 可信度=0.850 成本=1.00 邻接新信号=无\"}, {\"id\": \"E7\", \"priority\": 0.44644444, \"reason\": \"价值=0.690 余值=0.710 新鲜度=0.553 可信度=0.800 成本=1.20 邻接新信号=无\"}, {\"id\": \"E8\", \"priority\": 0.37945833, \"reason\": \"价值=0.705 余值=0.890 新鲜度=0.651 可信度=0.700 成本=1.40 邻接新信号=无\"}, {\"id\": \"E13\", \"priority\": 0.37877778, \"reason\": \"价值=0.795 余值=0.925 新鲜度=0.651 可信度=0.700 成本=1.50 邻接新信号=无\"}, {\"id\": \"E12\", \"priority\": 0.25763426, \"reason\": \"价值=0.800 余值=0.990 新鲜度=0.683 可信度=0.550 成本=1.80 邻接新信号=无\"}], \"details\": {}}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "snapshot",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.041,
+      "stdout": "{\"ok\": true, \"snapshot\": \"round-00001-f8ad7255.json\", \"round\": 1, \"sha256\": \"25eb48764701c083f5c66c618fa3470594620ba51ab5e538ce51366b37ff239d\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "update",
+        "E1",
+        "--status",
+        "exhausted",
+        "--current",
+        "0.01",
+        "--note",
+        "隔离耗尽重选实测",
+        "--evidence",
+        "evidence.txt",
+        "--worked",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0435,
+      "stdout": "{\"ok\": true, \"seq\": 2, \"at\": \"2026-11-04T10:39:58+00:00\", \"round\": 2, \"reason\": \"exhausted:E1\", \"previous\": \"E1\", \"selected\": \"E2\", \"ranking\": [{\"id\": \"E2\", \"priority\": 0.99166146, \"reason\": \"价值=0.940 余值=0.805 新鲜度=0.652 可信度=0.950 成本=0.80 邻接新信号=无\"}, {\"id\": \"E5\", \"priority\": 0.89282407, \"reason\": \"价值=0.890 余值=0.900 新鲜度=0.652 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E14\", \"priority\": 0.83978241, \"reason\": \"价值=0.790 余值=0.885 新鲜度=0.652 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E3\", \"priority\": 0.81308333, \"reason\": \"价值=0.890 余值=0.825 新鲜度=0.619 可信度=0.900 成本=0.90 邻接新信号=无\"}, {\"id\": \"E9\", \"priority\": 0.74056019, \"reason\": \"价值=0.745 余值=0.730 新鲜度=0.554 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E11\", \"priority\": 0.70104394, \"reason\": \"价值=0.940 余值=0.974 新鲜度=0.717 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E6\", \"priority\": 0.65862121, \"reason\": \"价值=0.855 余值=0.945 新鲜度=0.684 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E10\", \"priority\": 0.6537, \"reason\": \"价值=0.770 余值=0.750 新鲜度=0.587 可信度=0.900 成本=1.00 邻接新信号=无\"}, {\"id\": \"E4\", \"priority\": 0.55575833, \"reason\": \"价值=0.730 余值=0.650 新鲜度=0.489 可信度=0.850 成本=1.00 邻接新信号=无\"}, {\"id\": \"E7\", \"priority\": 0.45088889, \"reason\": \"价值=0.690 余值=0.710 新鲜度=0.587 可信度=0.800 成本=1.20 邻接新信号=无\"}, {\"id\": \"E8\", \"priority\": 0.38279167, \"reason\": \"价值=0.705 余值=0.890 新鲜度=0.684 可信度=0.700 成本=1.40 邻接新信号=无\"}, {\"id\": \"E13\", \"priority\": 0.38188889, \"reason\": \"价值=0.795 余值=0.925 新鲜度=0.684 可信度=0.700 成本=1.50 邻接新信号=无\"}, {\"id\": \"E12\", \"priority\": 0.2596713, \"reason\": \"价值=0.800 余值=0.990 新鲜度=0.717 可信度=0.550 成本=1.80 邻接新信号=无\"}], \"details\": {\"node\": \"E1\", \"changes\": {\"current\": 0.01, \"status\": \"exhausted\"}, \"note\": \"隔离耗尽重选实测\", \"evidence\": \"evidence.txt\", \"worked\": true, \"gain\": false}}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "refresh",
+        "--reason",
+        "context-resume",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.046,
+      "stdout": "{\"ok\": true, \"seq\": 3, \"at\": \"2026-11-04T10:39:58+00:00\", \"round\": 3, \"reason\": \"context-resume\", \"previous\": \"E2\", \"selected\": \"E2\", \"ranking\": [{\"id\": \"E2\", \"priority\": 0.99957812, \"reason\": \"价值=0.940 余值=0.805 新鲜度=0.685 可信度=0.950 成本=0.80 邻接新信号=无\"}, {\"id\": \"E5\", \"priority\": 0.89986111, \"reason\": \"价值=0.890 余值=0.900 新鲜度=0.685 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E14\", \"priority\": 0.84681944, \"reason\": \"价值=0.790 余值=0.885 新鲜度=0.685 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E3\", \"priority\": 0.81975, \"reason\": \"价值=0.890 余值=0.825 新鲜度=0.652 可信度=0.900 成本=0.90 邻接新信号=无\"}, {\"id\": \"E9\", \"priority\": 0.74759722, \"reason\": \"价值=0.745 余值=0.730 新鲜度=0.588 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E11\", \"priority\": 0.70619545, \"reason\": \"价值=0.940 余值=0.974 新鲜度=0.750 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E6\", \"priority\": 0.66377273, \"reason\": \"价值=0.855 余值=0.945 新鲜度=0.717 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E10\", \"priority\": 0.6597, \"reason\": \"价值=0.770 余值=0.750 新鲜度=0.620 可信度=0.900 成本=1.00 邻接新信号=无\"}, {\"id\": \"E4\", \"priority\": 0.561425, \"reason\": \"价值=0.730 余值=0.650 新鲜度=0.523 可信度=0.850 成本=1.00 邻接新信号=无\"}, {\"id\": \"E7\", \"priority\": 0.45533333, \"reason\": \"价值=0.690 余值=0.710 新鲜度=0.620 可信度=0.800 成本=1.20 邻接新信号=无\"}, {\"id\": \"E8\", \"priority\": 0.386125, \"reason\": \"价值=0.705 余值=0.890 新鲜度=0.717 可信度=0.700 成本=1.40 邻接新信号=无\"}, {\"id\": \"E13\", \"priority\": 0.385, \"reason\": \"价值=0.795 余值=0.925 新鲜度=0.717 可信度=0.700 成本=1.50 邻接新信号=无\"}, {\"id\": \"E12\", \"priority\": 0.26170833, \"reason\": \"价值=0.800 余值=0.990 新鲜度=0.750 可信度=0.550 成本=1.80 邻接新信号=无\"}], \"details\": {}}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "restore",
+        "round-00001-f8ad7255.json",
+        "--reason",
+        "recovery-drill",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0494,
+      "stdout": "{\"ok\": true, \"seq\": 4, \"at\": \"2026-11-04T10:39:58+00:00\", \"round\": 4, \"reason\": \"restore:recovery-drill\", \"previous\": \"E2\", \"selected\": \"E1\", \"ranking\": [{\"id\": \"E1\", \"priority\": 1.21554762, \"reason\": \"价值=0.980 余值=0.870 新鲜度=0.751 可信度=0.950 成本=0.70 邻接新信号=无\"}, {\"id\": \"E2\", \"priority\": 1.00749479, \"reason\": \"价值=0.940 余值=0.805 新鲜度=0.718 可信度=0.950 成本=0.80 邻接新信号=无\"}, {\"id\": \"E5\", \"priority\": 0.90689815, \"reason\": \"价值=0.890 余值=0.900 新鲜度=0.718 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E14\", \"priority\": 0.85385648, \"reason\": \"价值=0.790 余值=0.885 新鲜度=0.718 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E3\", \"priority\": 0.82641667, \"reason\": \"价值=0.890 余值=0.825 新鲜度=0.686 可信度=0.900 成本=0.90 邻接新信号=无\"}, {\"id\": \"E9\", \"priority\": 0.75463426, \"reason\": \"价值=0.745 余值=0.730 新鲜度=0.621 可信度=0.950 成本=0.90 邻接新信号=无\"}, {\"id\": \"E11\", \"priority\": 0.71134697, \"reason\": \"价值=0.940 余值=0.974 新鲜度=0.783 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E6\", \"priority\": 0.66892424, \"reason\": \"价值=0.855 余值=0.945 新鲜度=0.751 可信度=0.850 成本=1.10 邻接新信号=无\"}, {\"id\": \"E10\", \"priority\": 0.6657, \"reason\": \"价值=0.770 余值=0.750 新鲜度=0.653 可信度=0.900 成本=1.00 邻接新信号=无\"}, {\"id\": \"E4\", \"priority\": 0.56709167, \"reason\": \"价值=0.730 余值=0.650 新鲜度=0.556 可信度=0.850 成本=1.00 邻接新信号=无\"}, {\"id\": \"E7\", \"priority\": 0.45977778, \"reason\": \"价值=0.690 余值=0.710 新鲜度=0.653 可信度=0.800 成本=1.20 邻接新信号=无\"}, {\"id\": \"E8\", \"priority\": 0.38945833, \"reason\": \"价值=0.705 余值=0.890 新鲜度=0.751 可信度=0.700 成本=1.40 邻接新信号=无\"}, {\"id\": \"E13\", \"priority\": 0.38811111, \"reason\": \"价值=0.795 余值=0.925 新鲜度=0.751 可信度=0.700 成本=1.50 邻接新信号=无\"}, {\"id\": \"E12\", \"priority\": 0.26374537, \"reason\": \"价值=0.800 余值=0.990 新鲜度=0.783 可信度=0.550 成本=1.80 邻接新信号=无\"}], \"details\": {\"snapshot\": \"round-00001-f8ad7255.json\", \"restored_from_round\": 1}}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "check",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 0,
+      "seconds": 0.0383,
+      "stdout": "{\"ok\": true, \"valid\": true, \"layers\": 3, \"nodes\": 25, \"edges\": 31, \"round\": 4, \"mathematical_target\": \"UNRESOLVED\", \"warning\": \"只校验调度与证据完整性，不校验数学定理\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "update",
+        "DOES-NOT-EXIST",
+        "--note",
+        "故障验收",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 2,
+      "seconds": 0.0389,
+      "stdout": "{\"ok\": false, \"error\": \"未知节点 DOES-NOT-EXIST\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "command": [
+        "/home/desk/.local/bin/pnp-research",
+        "--root",
+        "/tmp/pnp acceptance 带空格 sab_i074",
+        "restore",
+        "../state.json",
+        "--reason",
+        "refuse-path-traversal",
+        "--json"
+      ],
+      "cwd": "/tmp",
+      "clean_environment": true,
+      "returncode": 2,
+      "seconds": 0.0331,
+      "stdout": "{\"ok\": false, \"error\": \"只接受快照文件名\"}\n",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "states": {
+    "mathematical_target": "UNRESOLVED",
+    "installed": true,
+    "configured": true,
+    "clean_shell_end_to_end": true,
+    "interactive_shell_discovery": true,
+    "machine_json_consumption": true,
+    "context_resume_protocol_tested": true,
+    "exhausted_reselection_tested": true,
+    "state_recovery_drill": true,
+    "version_rollback_drill": false,
+    "automatic_pi_compaction_hook": false
+  },
+  "not_applicable": {
+    "GUI": "纯CLI，无桌面配置变化",
+    "authentication": "不使用网络或凭据",
+    "system_reboot": "不安装服务或会话配置",
+    "old_release_rollback": "首次安装，无旧发布版本；另验状态恢复"
+  },
+  "passed": true
+}

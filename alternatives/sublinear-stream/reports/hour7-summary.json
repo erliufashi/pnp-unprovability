@@ -1,0 +1,44 @@
+{
+  "hour": 7,
+  "at": 1793833291.599155,
+  "status": "local_review_pass",
+  "proofs": [
+    "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+    "proof/PRUNING-COST-v2.md"
+  ],
+  "actual_probe_exit": 0,
+  "profile_costs": [
+    {
+      "profile": "toy-A",
+      "full_parameter_forests": 3996,
+      "pruned_parameter_forests": 752,
+      "certificate_json_bytes": 25146,
+      "compile_seconds": 0.007723839022219181
+    },
+    {
+      "profile": "toy-B",
+      "full_parameter_forests": 3996,
+      "pruned_parameter_forests": 776,
+      "certificate_json_bytes": 25503,
+      "compile_seconds": 0.006498381029814482
+    }
+  ],
+  "kernel_query_comparisons": 54212,
+  "policy_feed_comparisons": 2539,
+  "policy_rng_checks": 1551,
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "notes/HORIZON-HYBRID-CANDIDATE-v0.md",
+  "not_claimed": [
+    "minimal quotient",
+    "200B use",
+    "RSS/latency win",
+    "new user budget",
+    "new T3 scope"
+  ],
+  "bookkeeping_correction": "reports/hour7-bookkeeping-correction.json",
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour7-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour7.v0.submit-1.0dbd6797-ebbd-4a5e-8458-3ce238d9ebe1.receipt.json",
+    "sha256": "f582f7a2f62afbdac4aba8faa85a763392b1b883cf7a7a4cc87b31bdfb30dd5f"
+  }
+}

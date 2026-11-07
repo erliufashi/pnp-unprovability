@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/finite_budget_probe.py",
+    "--report",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/finite-budget-tests-v1.json"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-05T00:34:59.330009+00:00",
+  "ended": "2026-11-05T00:34:59.641693+00:00",
+  "stdout_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/finite-budget-v1.stdout.log",
+  "stderr_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/finite-budget-v1.stderr.log",
+  "source_sha256": "6aee9920d6a339929af206043c5e9b3f543a7fe3426c92183194f1cea9463abd"
+}

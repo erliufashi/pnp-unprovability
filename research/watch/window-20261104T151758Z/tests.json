@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "未到1小时无研究唤醒",
+      "passed": true
+    },
+    {
+      "check": "未到截止无暂停",
+      "passed": true
+    },
+    {
+      "check": "第1小时出现工作事件",
+      "passed": true
+    },
+    {
+      "check": "同槽输出稳定供monitor去重",
+      "passed": true
+    },
+    {
+      "check": "确认首小时",
+      "passed": true
+    },
+    {
+      "check": "已确认不重复首小时",
+      "passed": true
+    },
+    {
+      "check": "第2小时新事件",
+      "passed": true
+    },
+    {
+      "check": "第9小时仍可推进",
+      "passed": true
+    },
+    {
+      "check": "截止时hourly不抢暂停owner",
+      "passed": true
+    },
+    {
+      "check": "截止专属暂停事件",
+      "passed": true
+    },
+    {
+      "check": "截止重复探针事件不变",
+      "passed": true
+    },
+    {
+      "check": "拒绝提前暂停",
+      "passed": true
+    },
+    {
+      "check": "到期暂停成功",
+      "passed": true
+    },
+    {
+      "check": "第二次暂停不增加计数",
+      "passed": true
+    },
+    {
+      "check": "暂停后两个探针均静默",
+      "passed": true
+    },
+    {
+      "check": "真实state未被fixture暂停",
+      "passed": true
+    },
+    {
+      "check": "真实时钟hourly当前静默",
+      "passed": true
+    },
+    {
+      "check": "真实时钟deadline当前静默",
+      "passed": true
+    }
+  ],
+  "note": "时间门控/确认/一次性逻辑使用隔离fixture实测；真实截止尚未来临，不声称已经完成到点唤醒或暂停。"
+}

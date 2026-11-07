@@ -1,0 +1,1 @@
+{"nodes":[{"id":"C56","layer":3,"title":"随机访问存在性查询的同预算分离与输入获取边界","role":"不用免费长证书的强访问模型候选；审计子线性时钟能力代价","acceptance":"显式ND算法同time/workspace；det及随机probe下界；分开初始输入驻留与获取费用，禁止现实覆盖推断","artifact":"evidence/C56/immutable-artifact","seed":{"current":0.83,"remaining":0.85,"novelty":1,"confidence":0.9,"cost":0.8}}],"edges":[["C56","M22"],["C56","M23"]]}

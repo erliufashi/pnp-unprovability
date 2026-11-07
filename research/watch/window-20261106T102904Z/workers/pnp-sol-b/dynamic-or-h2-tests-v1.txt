@@ -1,0 +1,12 @@
+test_boolean_summary_failure (__main__.DynamicTests.test_boolean_summary_failure) ... ok
+test_bounded_summary_all_short_histories (__main__.DynamicTests.test_bounded_summary_all_short_histories) ... ok
+test_cold_cost_and_retained_data (__main__.DynamicTests.test_cold_cost_and_retained_data) ... ok
+test_exact_initial_equivalence_classes (__main__.DynamicTests.test_exact_initial_equivalence_classes) ... ok
+test_full_ones_counter_width (__main__.DynamicTests.test_full_ones_counter_width) ... ok
+test_raw_plus_counter_all_transitions (__main__.DynamicTests.test_raw_plus_counter_all_transitions) ... ok
+test_stale_rejected_before_mutation (__main__.DynamicTests.test_stale_rejected_before_mutation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.055s
+
+OK

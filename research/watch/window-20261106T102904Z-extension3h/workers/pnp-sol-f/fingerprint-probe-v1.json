@@ -1,0 +1,539 @@
+{
+  "capacity_cases": [
+    {
+      "K": 0,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 1,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 2,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 3,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 4,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 0,
+      "N": 2,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 1,
+      "N": 2,
+      "bad_seeds": 1,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 2,
+      "N": 2,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 0,
+      "N": 3,
+      "bad_seeds": 0,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 1,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 2,
+      "total_seeds": 2
+    },
+    {
+      "K": 0,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 1,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 2,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 3,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 4,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 0,
+      "N": 2,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 1,
+      "N": 2,
+      "bad_seeds": 1,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 2,
+      "N": 2,
+      "bad_seeds": 2,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 0,
+      "N": 3,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 1,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 0,
+      "N": 4,
+      "bad_seeds": 0,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 4,
+      "N": 4,
+      "bad_seeds": 3,
+      "p": 3,
+      "total_seeds": 3
+    },
+    {
+      "K": 0,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 1,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 2,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 3,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 4,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 0,
+      "N": 2,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 1,
+      "N": 2,
+      "bad_seeds": 1,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 2,
+      "N": 2,
+      "bad_seeds": 2,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "bad_seeds": 3,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "bad_seeds": 4,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 0,
+      "N": 3,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 1,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "bad_seeds": 4,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "bad_seeds": 5,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "bad_seeds": 5,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 0,
+      "N": 4,
+      "bad_seeds": 0,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "bad_seeds": 3,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "bad_seeds": 5,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "bad_seeds": 5,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 4,
+      "N": 4,
+      "bad_seeds": 5,
+      "p": 5,
+      "total_seeds": 5
+    },
+    {
+      "K": 0,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 1,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 2,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 3,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 4,
+      "N": 1,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 0,
+      "N": 2,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 1,
+      "N": 2,
+      "bad_seeds": 1,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 2,
+      "N": 2,
+      "bad_seeds": 2,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 3,
+      "N": 2,
+      "bad_seeds": 3,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 4,
+      "N": 2,
+      "bad_seeds": 4,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 0,
+      "N": 3,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 1,
+      "N": 3,
+      "bad_seeds": 2,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 2,
+      "N": 3,
+      "bad_seeds": 4,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 3,
+      "N": 3,
+      "bad_seeds": 6,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 4,
+      "N": 3,
+      "bad_seeds": 7,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 0,
+      "N": 4,
+      "bad_seeds": 0,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 1,
+      "N": 4,
+      "bad_seeds": 3,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 2,
+      "N": 4,
+      "bad_seeds": 6,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 3,
+      "N": 4,
+      "bad_seeds": 7,
+      "p": 7,
+      "total_seeds": 7
+    },
+    {
+      "K": 4,
+      "N": 4,
+      "bad_seeds": 7,
+      "p": 7,
+      "total_seeds": 7
+    }
+  ],
+  "counts": {
+    "dynamic_update_transitions": 67370,
+    "optimal_capacity_cases": 75,
+    "polynomials": 3699,
+    "raw_leak_attacks": 17,
+    "root_cover_constructions": 150
+  },
+  "ok": true,
+  "probe_version": 1,
+  "scope": "finite algebra/model audit, no physical side-channel assurance"
+}

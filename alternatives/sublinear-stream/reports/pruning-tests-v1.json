@@ -1,0 +1,376 @@
+{
+  "passed": true,
+  "scope": "frozen toy profile static certificates; not arbitrary 200B optimizer",
+  "readonly_certificates_unchanged": true,
+  "profile_costs": [
+    {
+      "profile": "toy-A",
+      "full_parameter_forests": 3996,
+      "pruned_parameter_forests": 752,
+      "certificate_json_bytes": 25146,
+      "compile_seconds": 0.007723839022219181
+    },
+    {
+      "profile": "toy-B",
+      "full_parameter_forests": 3996,
+      "pruned_parameter_forests": 776,
+      "certificate_json_bytes": 25503,
+      "compile_seconds": 0.006498381029814482
+    }
+  ],
+  "kernel_campaigns": [
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 6813,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 212,
+      "output_digest": "041c2f135d4f0b0a31c934c36a271383db30b7367798c2db17cdc8e215abeff6",
+      "passed": true
+    },
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 6813,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 212,
+      "output_digest": "041c2f135d4f0b0a31c934c36a271383db30b7367798c2db17cdc8e215abeff6",
+      "passed": true
+    },
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 6813,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 212,
+      "output_digest": "041c2f135d4f0b0a31c934c36a271383db30b7367798c2db17cdc8e215abeff6",
+      "passed": true
+    },
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 3785,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 116,
+      "output_digest": "3cbe11012ec80a23e4344c5d67dfde54a6d8468557713a90f66dfb61ed80e815",
+      "passed": true
+    },
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 6813,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 212,
+      "output_digest": "041c2f135d4f0b0a31c934c36a271383db30b7367798c2db17cdc8e215abeff6",
+      "passed": true
+    },
+    {
+      "prefix_cases": 241,
+      "query_comparisons": 2169,
+      "max_length": 2,
+      "alphabet_size": 15,
+      "parameter_forests": 140,
+      "output_digest": "9231aa56016490924cd3ccb771313bd0196753588d3e005d8df8095eafe000f0",
+      "passed": true
+    },
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 6813,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 212,
+      "output_digest": "041c2f135d4f0b0a31c934c36a271383db30b7367798c2db17cdc8e215abeff6",
+      "passed": true
+    },
+    {
+      "prefix_cases": 757,
+      "query_comparisons": 6813,
+      "max_length": 2,
+      "alphabet_size": 27,
+      "parameter_forests": 212,
+      "output_digest": "041c2f135d4f0b0a31c934c36a271383db30b7367798c2db17cdc8e215abeff6",
+      "passed": true
+    }
+  ],
+  "zero_key_merge_control": {
+    "prefix_cases": 820,
+    "query_comparisons": 7380,
+    "max_length": 3,
+    "alphabet_size": 9,
+    "parameter_forests": 4,
+    "output_digest": "f47db1a50998265a85f156e99d78a1347123b0b3876cf68818c7bfbcecb30f39",
+    "passed": true
+  },
+  "negative_controls": {
+    "same_sign_queries_not_equivalent": {
+      "history": [
+        [
+          -2,
+          -4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "q1_output": 0,
+      "q2_output": 4
+    },
+    "observed_query_default_zero_is_unsound": {
+      "observed_queries": [
+        0
+      ],
+      "query": 2,
+      "correct": 2,
+      "unsafe_default": 0
+    },
+    "inactive_D_outside_selected_Z_is_allowed": {
+      "q": 3,
+      "inactive_m": -4,
+      "counterfactual_z": 3,
+      "selected_Z_for_inactive_m": [
+        2,
+        4
+      ],
+      "actual_read_matches": true
+    },
+    "scope": "kernel product-domain controls, not measured trained-LM activations"
+  },
+  "ordinary_cases": 240,
+  "guard_cases": 2,
+  "EOS_control": {
+    "profile": "EOS-pruning-control-only",
+    "prompt_length": 1,
+    "stochastic": true,
+    "seed": 9,
+    "outputs": [
+      0
+    ],
+    "feed_step_comparisons": 1,
+    "random_state_checks": 2,
+    "trace_digest": "94e648f1234db2cfdbf88fafa02e710f95bb2a543f5e5d29fcb894b23aedb954",
+    "reference": {
+      "kv_numeric_words": 8,
+      "position": 1,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    "full_table": {
+      "allocated_word_slots": 7992,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 2,
+      "position": 1,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    "pruned": {
+      "allocated_word_slots": 1504,
+      "live_numeric_words": 752,
+      "parameter_forests": 752,
+      "max_level_span": 2,
+      "position": 1,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    "passed": true
+  },
+  "policy_feed_step_comparisons": 2539,
+  "policy_random_state_checks": 1551,
+  "long_cases": [
+    {
+      "profile": "toy-A",
+      "prompt_length": 128,
+      "stochastic": false,
+      "seed": 23,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_step_comparisons": 134,
+      "random_state_checks": 7,
+      "trace_digest": "a956c26b48babdba988e16fbbf9f7e15ec14f35ae46daa472e568280a471663d",
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "full_table": {
+        "allocated_word_slots": 31968,
+        "live_numeric_words": 15984,
+        "parameter_forests": 3996,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "pruned": {
+        "allocated_word_slots": 6016,
+        "live_numeric_words": 3008,
+        "parameter_forests": 752,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "prompt_length": 128,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_step_comparisons": 134,
+      "random_state_checks": 7,
+      "trace_digest": "2eec47f2ecf7b947feb311eea1b9e4b603845f9f0dcbceab50fe9c45474437b7",
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "full_table": {
+        "allocated_word_slots": 31968,
+        "live_numeric_words": 15984,
+        "parameter_forests": 3996,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "pruned": {
+        "allocated_word_slots": 6016,
+        "live_numeric_words": 3008,
+        "parameter_forests": 752,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "prompt_length": 128,
+      "stochastic": false,
+      "seed": 23,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_step_comparisons": 134,
+      "random_state_checks": 7,
+      "trace_digest": "0bb24bcc53b41af23c7377dbed6ab64c2e295031b00013315498ab5001f9dc8c",
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "full_table": {
+        "allocated_word_slots": 31968,
+        "live_numeric_words": 15984,
+        "parameter_forests": 3996,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "pruned": {
+        "allocated_word_slots": 6208,
+        "live_numeric_words": 3104,
+        "parameter_forests": 776,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "prompt_length": 128,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_step_comparisons": 134,
+      "random_state_checks": 7,
+      "trace_digest": "538def2206ba30a6b0e606816465673d1f361ed30e51090020a0f2b759297817",
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "full_table": {
+        "allocated_word_slots": 31968,
+        "live_numeric_words": 15984,
+        "parameter_forests": 3996,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "pruned": {
+        "allocated_word_slots": 6208,
+        "live_numeric_words": 3104,
+        "parameter_forests": 776,
+        "max_level_span": 8,
+        "position": 134,
+        "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+      },
+      "passed": true
+    }
+  ],
+  "ordinary_trace_digest": "c71ee5a83bd748fd05f4c0cb8a61c6aaed9441cbe5ad64fe5ca76c66ff91d3ca",
+  "retrieval_signatures": [
+    {
+      "d": 1,
+      "queries": 2,
+      "distinct_signatures": 2
+    },
+    {
+      "d": 2,
+      "queries": 4,
+      "distinct_signatures": 4
+    },
+    {
+      "d": 3,
+      "queries": 8,
+      "distinct_signatures": 8
+    },
+    {
+      "d": 4,
+      "queries": 16,
+      "distinct_signatures": 16
+    }
+  ],
+  "certificate_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/pruning-certificates-v1.json",
+  "certificate_sha256": "806711fbf0cda2921f0a40e6c7bbaa8af132ca4aa239b3a534c263bb41a3c85c",
+  "seconds": 9.858596513047814,
+  "source_sha256": "4dcecc483735b94fc68c2b3124bbcd9a99d4ea5aaea2a828977d0e4eaf494557",
+  "dependencies_sha256": {
+    "causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+    "prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+    "tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+    "neural_retrieval_probe.py": "2ae5e51e27ba9f43207156b78ead366b5422c0e004d9c17e0c77a8a56a228c07"
+  },
+  "not_claimed": [
+    "RSS/latency win",
+    "actual 200B use",
+    "minimal quotient",
+    "polynomial static-analysis cost in model size",
+    "new termination certificate"
+  ],
+  "metadata_note": "JSON contains proof closures and decimal word keys; runtime object uses integer keys. Bytes are serialized artifact size, not actual resident memory. Static data must be charged separately."
+}

@@ -1,0 +1,13 @@
+{
+  "at": "2026-11-05T09:22:00+08:00",
+  "scheduled_deadline": "2026-11-05T09:17:58+08:00",
+  "paused_at": "2026-11-05T09:19:24+08:00",
+  "pause_count": 1,
+  "report": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-final-v1.json",
+  "monitors_disarmed": true,
+  "main_standard_target": "UNRESOLVED",
+  "old_math_goal_closed": false,
+  "window_task_verification": "pass",
+  "receipt": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-review.receipt.json",
+  "acceptance": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-acceptance-v1.json"
+}

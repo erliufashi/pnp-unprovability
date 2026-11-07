@@ -1,0 +1,13 @@
+{
+  "note": "Preserved stray round-13 context-resume refresh triggered by a subagent reading legacy AGENTS.md at 2026-11-06T15:46:47Z; restored frozen round-12 T3-v1 baseline to match window-static-manifest-v1.sha256.",
+  "stray_event": {
+    "seq": 13,
+    "at": "2026-11-06T15:46:47+00:00",
+    "round": 13,
+    "reason": "context-resume",
+    "previous": null,
+    "selected": null,
+    "ranking": [],
+    "details": {}
+  }
+}

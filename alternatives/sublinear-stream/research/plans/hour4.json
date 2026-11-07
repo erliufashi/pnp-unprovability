@@ -1,0 +1,92 @@
+{
+  "revision": 4,
+  "hour": 4,
+  "backup_name": "hour3-to-hour4",
+  "reason": "new-frontier:causal-contract-and-lifting",
+  "planned_next": "E29",
+  "report": "reports/hour4-frontier-migration.json",
+  "nodes": [
+    {
+      "id": "M15",
+      "layer": 2,
+      "title": "操作契约与条件性因果提升",
+      "role": "以精确kernel接口为前提的通用提升工具；方向D6才与M14组合",
+      "acceptance": "明确reference增量语义/前缀稳定、条件性双归纳及成本/边界，不把kernel当外部oracle",
+      "artifact": "proof/CAUSAL-COMPOSITION-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.7,
+        "cost": 1.5
+      }
+    },
+    {
+      "id": "E29",
+      "layer": 3,
+      "title": "mask与前缀稳定的契约审计",
+      "role": "语义边界/反例，独立于组合存在证明",
+      "acceptance": "验证masked-reducer结构反例并给足够契约；不冒称真实GPU softmax反例",
+      "artifact": "proof/CAUSAL-CONTRACT-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.75
+      }
+    },
+    {
+      "id": "E30",
+      "layer": 3,
+      "title": "位置/层/头双归纳提升",
+      "role": "通用kernel接口条件下的分析证明",
+      "acceptance": "qkv生成、临时不同head计数、位置、采样、输出/预算均计费",
+      "artifact": "proof/CAUSAL-COMPOSITION-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.3
+      }
+    },
+    {
+      "id": "E31",
+      "layer": 3,
+      "title": "多层完整KV与森林逐步对照",
+      "role": "用冻结核fixture的实现sanity，不当作已证GPU依赖",
+      "acceptance": "小模型跨prompt/生成每步hidden/输出对照，资源及非实用常数显式",
+      "artifact": "reports/causal-model-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M15",
+      "D6"
+    ],
+    [
+      "E29",
+      "M15"
+    ],
+    [
+      "E30",
+      "M15"
+    ],
+    [
+      "E31",
+      "M15"
+    ]
+  ]
+}

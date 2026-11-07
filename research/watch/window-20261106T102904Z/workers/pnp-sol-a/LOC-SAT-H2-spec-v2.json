@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "E-argon-LOC-SAT-2",
+      "layer": 3,
+      "title": "小见证局部约束问题（Small-Witness 2-CSP/Subgraph）在亚线性工作空间 RATM/BRAM 下的同预算 D vs ND",
+      "role": "修复 E-chief-PPST-1 中 FLMV SAT 下界因标准 SAT 见证長 Θ(n) 无法放进 o(n^d) 非确定性工作空间而导致的 D/ND 预算失配",
+      "acceptance": "针对 E-chief-PPST-1 揭示的 FLMV 缺口（SAT 不在 DTISP[n^1.4, n^0.01]，但标准 SAT 猜测赋值需 Ω(n) 空间或免费长证书），构造见证大小仅为 k = O(1) 或 O(log n) 个字（完全装入 16w 寄存器或 O(log n) 空间）的局部约束/子图同构/k-SUM 变体，审计其在 F=O(n), M=O(sqrt(n)) BRAM 下的完整计费 ND 上界与多路分支程序 D 下界",
+      "artifact": "evidence/E-argon-LOC-SAT-2/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 0.95
+      }
+    }
+  ],
+  "edges": [
+    [
+      "E-argon-LOC-SAT-2",
+      "M22"
+    ],
+    [
+      "E-argon-LOC-SAT-2",
+      "M24"
+    ]
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "nodes": [
+    {
+      "id": "E-chief-PPST-1",
+      "layer": 3,
+      "title": "查证强常用能力下的已知同预算分离候选",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "读原始或可信完整源，精确列PPST线性时间/SAT time-space的机器、随机访问、证书、存储限制；不把Dtime层级冒P/NP分离",
+      "artifact": "evidence/E-chief-PPST-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "E-chief-cert-1",
+      "layer": 3,
+      "title": "只读证书与非确定性工作空间的预算对齐",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "核验logspace verifier与同空间ND机器不等同；能否把见证/外存/证书成本统一，不能免费证明带",
+      "artifact": "evidence/E-chief-cert-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E-chief-dom-1",
+      "layer": 3,
+      "title": "资源封闭参考系统的能力包含候选",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "为任意已声明有界普通计算/工具系统给资源向量模拟及局限；区分对所有受界实现的保证与现实任务总体质量，不需虚构实测",
+      "artifact": "evidence/E-chief-dom-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E-chief-compose-1",
+      "layer": 3,
+      "title": "组合能力保全：自适应调用与平均误差陷阱",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "给计费组合闭包和条件/统一误差定理；构造工具bench平均误差小而实际自适应流程全错的可检验反例",
+      "artifact": "evidence/E-chief-compose-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "E-chief-PPST-1",
+      "M22"
+    ],
+    [
+      "E-chief-cert-1",
+      "M22"
+    ],
+    [
+      "E-chief-dom-1",
+      "M23"
+    ],
+    [
+      "E-chief-compose-1",
+      "M21"
+    ],
+    [
+      "E-chief-compose-1",
+      "M22"
+    ]
+  ]
+}

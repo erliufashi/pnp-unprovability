@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour7",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 14,
+  "checks": [
+    {
+      "criterion": "proof/SELECTED-PARAMETER-PRUNING-v1.md给证书条件、投影/签名共用正确性、empty处理，明确selected z范围不等于counterfactual D全范围；toy静态域从全部有限code输入过近似，非样本推断，max/flag闭包条件明确。",
+      "verdict": "pass",
+      "evidence": "读取 proof/SELECTED-PARAMETER-PRUNING-v1.md:7-11（Q/K域、精确score word签名及安全充分条件）；:15-21（M/Z selected条件、counterfactual范围、empty与域外处理）；:23-31（投影/签名共享正确性）；:35-45（全部27个有限组合、F9/position闭包、max/LOW/flag闭包）；:49-51（counterfactual D=3超出selected Z仍可安全）。"
+    },
+    {
+      "criterion": "reports/pruning-tests-v1.json及实际执行记录保存退出0，完整KV/完整表/特化kernel或策略逐步对照、static K/metadata成本、至少两个不安全剪枝负控制；proof/PRUNING-COST-v1.md不声称最优/所有模型/实际200B性能，未满足预算如实记录。有限试验不替代一般证明。",
+      "verdict": "pass",
+      "evidence": "读取 reports/pruning-execution-v1.json:2-15（passed=true、returncode=0、source_sha256）；读取 reports/pruning-tests-v1.json:2-18（toy-A/B完整3996→752/776、证书bytes与编译时间）；grep reports/pruning-tests-v1.json 命中 :149-173、:175-176、:191-324（KV/完整表/特化逐步feed与RNG对照）；读取 :95-137（zero-key控制及三个负控制，其中同号与观察query默认0为两个不安全规则反例，另含inactive-D边界）；读取 proof/PRUNING-COST-v1.md:15-32、:34-52（K/word、metadata、成本、非RSS/非200B/非最优/预算不冒称、一般证明与有限结果分离）。"
+    },
+    {
+      "criterion": "reports/preservation-hour7.json证明原35/T3及前6小时已认证产物字节不变。本地DAG按结果/剩余问题刷新，不修改旧终止标准或把零key控制例当人类baseline。只读验收检查已有报告/源码即可，不要求重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/preservation-hour7.json:2-53（baseline含research/termination.json、T3 receipt及hour1-hour6认证产物哈希）；grep并读取 :922-974（passed=true、readback哈希与baseline对应一致，termination及hour6 receipt仍同值）；读取 reports/hour7-summary.json:2-38（actual exit 0、old_35_and_prior_proofs_unchanged=true、next_unproved与not_claimed）；grep/read research/state.json 命中 M18/E38/E39/E40 当前status=done、remaining=0.0、证据路径与剩余问题说明；读取 research/history.jsonl:63-74（按结果刷新、D6/D7剩余问题、bookkeeping correction保留原事件并恢复v1字节）；读取 proof/PRUNING-COST-v1.md:40 与 history.jsonl:70（zero-key仅为控制、不作为human baseline）。"
+    }
+  ],
+  "findings": [],
+  "note": "按v0三条标准只读核对；未重跑写入实验。关键JSON报告与执行记录已通过读取检查，回执本身按指定格式写入。"
+}

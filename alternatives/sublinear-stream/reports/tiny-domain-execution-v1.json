@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/tiny_query_summary.py",
+    "--report",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/tiny-domain-tests-v1.json"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-04T17:31:57.844711+00:00",
+  "ended": "2026-11-04T17:32:03.438213+00:00",
+  "returncode": 0,
+  "stdout_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/tiny-domain-v1.stdout.log",
+  "stderr_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/tiny-domain-v1.stderr.log",
+  "source_sha256": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9"
+}

@@ -1,0 +1,70 @@
+{
+  "window_state": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/state.json",
+  "deadline_epoch": 1793995200.0,
+  "actors": {
+    "pnp-chief": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief"
+    },
+    "pnp-sol-a": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-a"
+    },
+    "pnp-sol-b": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-b"
+    },
+    "pnp-sol-c": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-c"
+    },
+    "pnp-argon": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon"
+    },
+    "pnp-sol-d": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d"
+    },
+    "pnp-sol-e": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-e"
+    },
+    "pnp-sol-f": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-f"
+    },
+    "astra-a": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-a"
+    },
+    "astra-b": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-b"
+    },
+    "astra-c": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-c"
+    },
+    "astra-d": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-d"
+    },
+    "astra-e": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-e"
+    },
+    "astra-f": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-f"
+    },
+    "astra-argon": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-argon"
+    }
+  },
+  "research_writers": [
+    "pnp-chief",
+    "pnp-sol-a",
+    "pnp-sol-b",
+    "pnp-sol-c",
+    "pnp-sol-d",
+    "pnp-sol-e",
+    "pnp-sol-f",
+    "astra-a",
+    "astra-b",
+    "astra-c",
+    "astra-d",
+    "astra-e",
+    "astra-f",
+    "astra-argon"
+  ],
+  "version": 1,
+  "active_campaign": "campaign-astra-0400",
+  "campaign_authorization_entry": "294191e3"
+}

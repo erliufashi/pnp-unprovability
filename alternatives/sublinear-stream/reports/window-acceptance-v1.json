@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "window_id": "window-20261104T151758Z",
+  "task_id": "pnp-10h-window",
+  "window_task_complete": true,
+  "formal_verdict": "pass",
+  "official_receipt": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-10h-window.v0.submit-1.465968d0-7d58-4448-87d1-4597b884531e.receipt.json",
+  "receipt_copy": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-review.receipt.json",
+  "receipt_sha256": "51775be8455b066b172cf0d5252299649503680f943bfb287f8f1eff364478bf",
+  "final_report_sha256": "9e5564c5d080da629b79efa51d6942b25ee0060f58e9be5ba19fd03b22ae92d5",
+  "static_manifest_rechecked": {
+    "files": 104,
+    "all_match": true,
+    "method": "direct SHA256 equality, locale-independent"
+  },
+  "archive_attempt1_record": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-archive-attempt1.json",
+  "phase": "paused",
+  "pause_count": 1,
+  "main_standard_math_goal_complete": false,
+  "old_math_goal_not_submitted_or_closed": true,
+  "auto_resume": false,
+  "recorded_at": "2026-11-05T09:32:34+08:00"
+}

@@ -1,0 +1,96 @@
+{
+  "revision": 9,
+  "hour": 9,
+  "backup_name": "hour8-to-hour9",
+  "reason": "new-frontier:numeric-state-finite-index",
+  "planned_next": "E44",
+  "report": "reports/hour9-frontier-migration.json",
+  "nodes": [
+    {
+      "id": "M20",
+      "layer": 2,
+      "title": "数值state预算的有限分离",
+      "role": "把未付Big-O常数变成显式阈值",
+      "acceptance": "有限U_m及全部state计费下的D_s/ND_s，见证阈值与context关系清楚，非标准P/NP",
+      "artifact": "proof/FINITE-BUDGET-SEPARATION-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E44",
+      "layer": 3,
+      "title": "固定预算collision与ND规范",
+      "role": "exact分离/寄存器计费",
+      "acceptance": "m>s必有det错误；给public-m协议、PC/cursor/scratch/RNG边界与ND≤8b+64条件",
+      "artifact": "proof/FINITE-BUDGET-SEPARATION-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.85
+      }
+    },
+    {
+      "id": "E45",
+      "layer": 3,
+      "title": "有限预算随机下界",
+      "role": "自含entropy/精确安全系数",
+      "acceptance": "平均error≤1/3时s≥(1−h2)m，整数不等式证c>1/16，不用浮点作证明",
+      "artifact": "proof/FINITE-BUDGET-RANDOM-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E46",
+      "layer": 3,
+      "title": "有限协议与context阈值账本",
+      "role": "ND有限sanity/数值scope",
+      "acceptance": "小m全输入/late-query/ND分支验证、预算条件及within-C/外域区分，不声称Python RSS或human",
+      "artifact": "reports/finite-budget-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.05
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M20",
+      "D6"
+    ],
+    [
+      "M20",
+      "D7"
+    ],
+    [
+      "E44",
+      "M20"
+    ],
+    [
+      "E45",
+      "M20"
+    ],
+    [
+      "E46",
+      "M20"
+    ]
+  ]
+}

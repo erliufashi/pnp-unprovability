@@ -1,0 +1,21 @@
+{
+  "E52-resource-envelope-v1.md": "bd0cdd139db14e9f4504ecc7ff8646a1ede030b35c6c9310e1960895b8909eab",
+  "E51-portfolio-evidence-v1.md": "a50d80b30627a450b509e516df3edb6146def0127e549ff42667036b2175e15d",
+  "E53-standard-SAT-bridge-v1.md": "2a2fe64bfea2fc9b5203a432d15c38dae0af5ca8076c5931d777134cbadd28ee",
+  "A56-spec-v1.json": "3b150a0be1777f49277131390f9a57baf676f7ccfba579f04f0b425bfe6691ed",
+  "A56-distribution-transfer-v1.md": "3ad1bd2f05fc691b6e4a34948fa70345ed2392b5b5a079f8671fe1248fc68ef5",
+  "bounded_vm_v1.py": "a6361e8f0f9299d80b8861b91b70fe236181d852541ab7ed6027a82b81282a41",
+  "bounded-vm-self-test-v1.json": "4f7731068ea31311aa6f4836610a49640b7383ba222cb554afc5b55975485c51",
+  "E-chief-dom-1-native-reference-v1.md": "1388c00ed1ec9cc2e5ffcb16bf915afc47dcb9177862091821b9bd5135f7be4f",
+  "A57-spec-v1.json": "eeeeefa04c139fe2d1171c12dd6628b4ac0a2c7fb324143247e37a3ab6b1a701",
+  "paid_certificate_or_v1.py": "1782425ca5571791295a0944b5001b727af41afaf8048faf3b15801ccd730bfa",
+  "paid-certificate-or-test-v1.json": "2b0d12cda7396196f271bfc792bb2b9b6b152165d3cc0b2b1cca9c9dcd8618c5",
+  "bounded_vm_nd_v1.py": "c8ded75264b622c6e67dc921bd6cea3fe7ec6dba73886762e8232e43a6f4c23c",
+  "A57-paid-OR-separation-v1.md": "c06631756405738ffadd6b9a51053470f0b88297495654e04c6082c88006c673",
+  "check_paid_or_boundaries_v1.py": "15ea3ea5c9b897513ebbec290617ffd157eef68d0bbbcc71ba1e7be474f8f4d7",
+  "paid-or-boundary-test-v1.json": "989a61933fbc64c3304fe7d955ad23e11b62eade0bea95a60e89ccbb0e9100e6",
+  "sol-a-v2-resume-checkpoint.md": "45007732b0be91bb9742969f23e6ba03d06e09b8d50de4797ea11a585032a653",
+  "__pycache__/bounded_vm_v1.cpython-313.pyc": "14b15ac0af7c81cc2449304467f89c3503bc7fc1a04b294d4d7ac3ccf08fa7f7",
+  "__pycache__/bounded_vm_nd_v1.cpython-313.pyc": "e5023cd516bc41757f4a2aca19569d28d8e12c05c8203a83c9fcd6f6981ef281",
+  "__pycache__/paid_certificate_or_v1.cpython-313.pyc": "589fe7fd54a1bedc01916d5b675ccc1474c02218ad0882bcb8a90a9978e78053"
+}

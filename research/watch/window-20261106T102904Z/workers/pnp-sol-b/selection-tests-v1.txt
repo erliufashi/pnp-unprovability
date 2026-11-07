@@ -1,0 +1,9 @@
+test_adaptive_memorization (__main__.SelectionTests.test_adaptive_memorization) ... ok
+test_nonprefix_fixed_width_prior (__main__.SelectionTests.test_nonprefix_fixed_width_prior) ... ok
+test_prior_penalty (__main__.SelectionTests.test_prior_penalty) ... ok
+test_uniform_bound_exact_finite (__main__.SelectionTests.test_uniform_bound_exact_finite) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+OK

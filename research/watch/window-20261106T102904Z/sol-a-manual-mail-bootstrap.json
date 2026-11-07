@@ -1,0 +1,9 @@
+{
+  "failed_run": "3a6b5c3a-5f02-4346-ba68-a7db0e37b43b",
+  "terminal_observed": true,
+  "failure": "same startup mail auto-trigger vs managed prompt race as Argon",
+  "private_only": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-a/.pi/settings.json",
+  "profile_model_tools_unchanged": true,
+  "expected_sequence": "configure_watch paused -> private enabled true -> claim own identity -> manual inbox/room per node",
+  "not_yet_validated": true
+}

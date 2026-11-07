@@ -1,0 +1,47 @@
+{
+  "status": "pass",
+  "checks": [
+    "sum:0",
+    "sum:1",
+    "sum:2",
+    "sum:25",
+    "dot:0",
+    "dot:1",
+    "dot:2",
+    "dot:15",
+    "native-identical-envelope",
+    "one-less-fuel-fails",
+    "code-not-free",
+    "data-not-free",
+    "data-paid",
+    "external-memory-reread",
+    "memory-bound",
+    "output-bound",
+    "word-data-bound",
+    "bad-register-traps",
+    "exhaustive-256-modular-sums"
+  ],
+  "check_count": 19,
+  "coverage_claim": false,
+  "example_trace": {
+    "status": "halt",
+    "output": [
+      10
+    ],
+    "stats": {
+      "steps": 30,
+      "description_bytes": 190,
+      "memory_words": 8,
+      "register_words": 16,
+      "init_write_bits": 384,
+      "input_reads": 4,
+      "data_reads": 0,
+      "memory_reads": 0,
+      "memory_writes": 0,
+      "output_words": 1,
+      "code_fetch_bytes": 357,
+      "bit_charge": 6696
+    },
+    "code_sha256": "cbbd1bc9c2d1708da05f18d0d384bfafe39d574c109c48d91b5cfaad306e86b4"
+  }
+}

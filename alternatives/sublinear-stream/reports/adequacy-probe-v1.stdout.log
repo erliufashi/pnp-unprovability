@@ -1,0 +1,1 @@
+{"passed": true, "exact_sequence_cases": 10, "softmax_sanity_cases": 2268, "allocated_crossover": 6494, "peak_live_crossover": 5994, "instant_live_first_fit": 511, "report": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/adequacy-probe-tests-v1.json"}

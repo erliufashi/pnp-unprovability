@@ -1,0 +1,49 @@
+{
+  "status": "research semantic/cell-accounting only",
+  "initial_state_bounds": [
+    {
+      "N": 8,
+      "U": 0,
+      "classes": 2,
+      "ceil_log2_classes": 1
+    },
+    {
+      "N": 8,
+      "U": 1,
+      "classes": 10,
+      "ceil_log2_classes": 4
+    },
+    {
+      "N": 8,
+      "U": 2,
+      "classes": 38,
+      "ceil_log2_classes": 6
+    },
+    {
+      "N": 8,
+      "U": 4,
+      "classes": 164,
+      "ceil_log2_classes": 8
+    },
+    {
+      "N": 8,
+      "U": 7,
+      "classes": 256,
+      "ceil_log2_classes": 8
+    }
+  ],
+  "final_or": false,
+  "ledger": {
+    "input_reads": 64,
+    "raw_reads": 32,
+    "raw_writes": 160,
+    "counter_reads": 133,
+    "counter_writes": 133,
+    "queries": 1,
+    "updates": 32,
+    "rejected_updates": 0
+  },
+  "persistent_payload_bytes": 9,
+  "version": 32,
+  "metadata_host_overhead": "not measured; not zero"
+}

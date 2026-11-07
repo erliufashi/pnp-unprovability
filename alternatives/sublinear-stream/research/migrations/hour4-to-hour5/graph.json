@@ -1,0 +1,338 @@
+{
+  "schema": 1,
+  "scope": "10h-window exploration, not added to T3 certificate",
+  "reward_multiplier": 0.25,
+  "nodes": [
+    {
+      "id": "D6",
+      "layer": 1,
+      "title": "子线性工作空间的LLM代理推广",
+      "role": "联合资源边界与逐位语义，不修改T3证书",
+      "acceptance": "给限定的一般化及可推进缺口",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M11",
+      "layer": 2,
+      "title": "增长空间包络工具",
+      "role": "只做渐近资源及统一模拟条件",
+      "acceptance": "log n≤f=o(n)下INDEX分离成立，明确输入协议",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M12",
+      "layer": 2,
+      "title": "无重结合attention调度",
+      "role": "只做存储活跃性及数值不变",
+      "acceptance": "纯行局部DAG的O(C)调度，不冒称所有内核",
+      "artifact": "proof/ATTENTION-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E21",
+      "layer": 3,
+      "title": "次线性INDEX推广",
+      "role": "下界转移",
+      "acceptance": "逐量词证明对O(f)常数并集仍分离",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.75,
+        "novelty": 0.95,
+        "confidence": 0.95,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "E22",
+      "layer": 3,
+      "title": "动态上下文profile核算",
+      "role": "覆盖前提与协议",
+      "acceptance": "全部激活/计数/输出反馈计入，指出已知n条件",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E23",
+      "layer": 3,
+      "title": "逐行原DAG调度证明",
+      "role": "编译器存储调度而非代数化简",
+      "acceptance": "同一primitive/归约树逐位相同，峰值O(Cd)",
+      "artifact": "proof/ATTENTION-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E24",
+      "layer": 3,
+      "title": "数值反例与原型峰值",
+      "role": "反驳错误相等并有限实测",
+      "acceptance": "逐位对照、重结合反例、峰值测量口径明确",
+      "artifact": "reports/hour1-tests.json",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "M13",
+      "layer": 2,
+      "title": "有限query/归一化历史摘要",
+      "role": "新的append-only状态压缩工具，非行缓冲调度",
+      "acceptance": "给出左折叠摘要归纳证明或反例，明确模型规模成本及未覆盖情况",
+      "artifact": "proof/KERNEL-SUMMARY-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.7,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "E25",
+      "layer": 3,
+      "title": "小有限域逐前缀摘要核验",
+      "role": "先找反例与检查counterfactual错误处理",
+      "acceptance": "字面完整历史与摘要在每个小前缀/每个query匹配或给最小反例；不是float32全域穷举",
+      "artifact": "reports/tiny-domain-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E26",
+      "layer": 3,
+      "title": "左折叠有限摘要的形式归纳",
+      "role": "分析证明与模型规模成本，独立于有限实验",
+      "acceptance": "给明确有限域/纯映射/append-only前提、精确等式及边界；未证部分明确",
+      "artifact": "proof/KERNEL-SUMMARY-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "M14",
+      "layer": 2,
+      "title": "前缀兼容树的参数森林",
+      "role": "只处理明确树形/初值，不把左折叠当任意归约",
+      "acceptance": "块不变量与右嵌套查询证明及限定的有限核验，模型成本显式",
+      "artifact": "proof/PREFIX-FOREST-v1.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E27",
+      "layer": 3,
+      "title": "森林块不变量与精确树证明",
+      "role": "形式结构证明，含初值真实叶子",
+      "acceptance": "不假定结合律，明确B树及O(K log t)存储/时间界",
+      "artifact": "proof/PREFIX-FOREST-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E28",
+      "layer": 3,
+      "title": "树森林逐前缀反例/匹配实验",
+      "role": "实现与负控制，区分reference树/左折叠/padding",
+      "acceptance": "字面B与forest逐前缀匹配、非结合负控制、峰值levels，实际退出日志",
+      "artifact": "reports/prefix-forest-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "M15",
+      "layer": 2,
+      "title": "操作契约与条件性因果提升",
+      "role": "以精确kernel接口为前提的通用提升工具；方向D6才与M14组合",
+      "acceptance": "明确reference增量语义/前缀稳定、条件性双归纳及成本/边界，不把kernel当外部oracle",
+      "artifact": "proof/CAUSAL-COMPOSITION-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.7,
+        "cost": 1.5
+      }
+    },
+    {
+      "id": "E29",
+      "layer": 3,
+      "title": "mask与前缀稳定的契约审计",
+      "role": "语义边界/反例，独立于组合存在证明",
+      "acceptance": "验证masked-reducer结构反例并给足够契约；不冒称真实GPU softmax反例",
+      "artifact": "proof/CAUSAL-CONTRACT-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.75
+      }
+    },
+    {
+      "id": "E30",
+      "layer": 3,
+      "title": "位置/层/头双归纳提升",
+      "role": "通用kernel接口条件下的分析证明",
+      "acceptance": "qkv生成、临时不同head计数、位置、采样、输出/预算均计费",
+      "artifact": "proof/CAUSAL-COMPOSITION-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.3
+      }
+    },
+    {
+      "id": "E31",
+      "layer": 3,
+      "title": "多层完整KV与森林逐步对照",
+      "role": "用冻结核fixture的实现sanity，不当作已证GPU依赖",
+      "acceptance": "小模型跨prompt/生成每步hidden/输出对照，资源及非实用常数显式",
+      "artifact": "reports/causal-model-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M11",
+      "D6"
+    ],
+    [
+      "M12",
+      "D6"
+    ],
+    [
+      "E21",
+      "M11"
+    ],
+    [
+      "E22",
+      "M11"
+    ],
+    [
+      "E23",
+      "M12"
+    ],
+    [
+      "E24",
+      "M12"
+    ],
+    [
+      "M13",
+      "D6"
+    ],
+    [
+      "E25",
+      "M13"
+    ],
+    [
+      "E26",
+      "M13"
+    ],
+    [
+      "M14",
+      "D6"
+    ],
+    [
+      "E27",
+      "M14"
+    ],
+    [
+      "E28",
+      "M14"
+    ],
+    [
+      "M15",
+      "D6"
+    ],
+    [
+      "E29",
+      "M15"
+    ],
+    [
+      "E30",
+      "M15"
+    ],
+    [
+      "E31",
+      "M15"
+    ]
+  ],
+  "revision": 4,
+  "planned_checkpoint": 4
+}

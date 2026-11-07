@@ -1,0 +1,25 @@
+{
+  "nodes": [
+    {
+      "id": "E-chief-OPAQUE-1",
+      "layer": 3,
+      "title": "计费opaque比较输入下的强CPU分离及换问题边界",
+      "role": "候选：不禁重读/全扫描/普通透明计算，但必须披露输入访问类型；不直接当现实覆盖或标准P/NP",
+      "acceptance": "证明或反驳CMP-only private key的collision需要ceil(log2(n!))确定性查询、ND猜两索引一次查询，完整计猜测/状态/查询/代码；验证全扫描基础能力仍可用。必须展示暴露raw key/预处理泄漏会破坏证明，标明查询/输入模型而非普通明文RAM问题，不能据此自动触发T3v2",
+      "artifact": "evidence/E-chief-OPAQUE-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "E-chief-OPAQUE-1",
+      "M22"
+    ]
+  ]
+}

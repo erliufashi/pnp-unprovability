@@ -1,0 +1,48 @@
+{
+  "status": "pass",
+  "scope": "finite sanity only",
+  "rows": [
+    {
+      "n": 1,
+      "negative_leaves": 1,
+      "kraft": "1",
+      "mean": "0",
+      "all_assignments_checked": 1
+    },
+    {
+      "n": 2,
+      "negative_leaves": 2,
+      "kraft": "1",
+      "mean": "1",
+      "all_assignments_checked": 4
+    },
+    {
+      "n": 3,
+      "negative_leaves": 6,
+      "kraft": "1",
+      "mean": "8/3",
+      "all_assignments_checked": 27
+    },
+    {
+      "n": 4,
+      "negative_leaves": 24,
+      "kraft": "1",
+      "mean": "59/12",
+      "all_assignments_checked": 256
+    },
+    {
+      "n": 5,
+      "negative_leaves": 120,
+      "kraft": "1",
+      "mean": "463/60",
+      "all_assignments_checked": 0
+    },
+    {
+      "n": 6,
+      "negative_leaves": 720,
+      "kraft": "1",
+      "mean": "221/20",
+      "all_assignments_checked": 0
+    }
+  ]
+}

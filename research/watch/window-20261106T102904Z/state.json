@@ -1,0 +1,49 @@
+{
+  "schema": 1,
+  "window_id": "window-20261106T102904Z",
+  "task_id": "pnp-7h-20261106",
+  "timezone": "Asia/Shanghai",
+  "start_epoch": 1793960944.3940156,
+  "deadline_epoch": 1793986144.3940156,
+  "start_local": "2026-11-06T18:29:04+08:00",
+  "deadline_local": "2026-11-07T01:29:04+08:00",
+  "duration_seconds": 25200,
+  "interval_seconds": 3600,
+  "max_checkpoint": 6,
+  "last_ack_hour": 1,
+  "phase": "running",
+  "pause_count": 0,
+  "state_path": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/state.json",
+  "monitor_ids": [
+    "pnp-hourly-7h-20261106",
+    "pnp-deadline-7h-20261106"
+  ],
+  "log": [
+    {
+      "action": "checkpoint",
+      "hour": 0,
+      "at": 1793967219.2540321,
+      "note": "初始批次延迟归档：原生宿主兼容失败保留并固定真实Chord peer修复；4模型实际启动/mail握手；chief E47条件定义完成，root正式v2，三Sol自主节点交回。Argon空final未算完成，保留partial并同模型恢复。未宣称现实覆盖或新分离。",
+      "not_acknowledged_earlier": []
+    },
+    {
+      "action": "checkpoint",
+      "hour": 1,
+      "at": 1793970646.1433425,
+      "note": "h1延迟归档：chief E47/自适应组合条件定理已局部独立通过，15625有理对实际exit0；root已v2。三Sol两轮同权自主节点，Argon空final与startup竞争失败留痕，私有手动mail修复后H1真正交回；建议的模型/bit/概率错误已转待证审计叶，不当已证新T3。",
+      "not_acknowledged_earlier": []
+    }
+  ],
+  "research_root": "/home/desk/projects/pnp-unprovability/alternatives/practical-core",
+  "user_authorizations": [
+    {
+      "entry_id": "a073d93b",
+      "quote": "恢复启动，本次推进7个小时"
+    },
+    {
+      "entry_id": "42ce7dcd",
+      "quote": "200B的定义不准，优化一下定义。定义的重点是收缩算法空间的同时，保证这个算法空间足够强到解决绝大部分现实问题。"
+    }
+  ],
+  "note": "新7h授权覆盖AGENTS中针对旧10h窗口的时长引用；不重置旧窗口。当前优先修订现实覆盖定义，不凭参数量认定能力。"
+}

@@ -1,0 +1,17 @@
+{
+  "run": "942bbf13-c432-4f2e-8e3a-75b64dabd0c9",
+  "agent": "pnp-autonomous",
+  "requested_model": "gateway_responses/gpt-6.1-sol:max",
+  "thinking": "max",
+  "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d",
+  "extension_deadline": "2026-11-07T04:29:04+08:00",
+  "requested_nonchief_researcher_count": 5,
+  "existing_team": [
+    "pnp-sol-a",
+    "pnp-sol-b",
+    "pnp-sol-c",
+    "pnp-argon"
+  ],
+  "new": "pnp-sol-d",
+  "not_yet_research_complete": true
+}

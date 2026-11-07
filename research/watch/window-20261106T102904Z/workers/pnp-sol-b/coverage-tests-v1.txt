@@ -1,0 +1,12 @@
+test_enumerated_vertices (__main__.BoundsTest.test_enumerated_vertices) ... ok
+test_example (__main__.BoundsTest.test_example) ... ok
+test_infeasible (__main__.BoundsTest.test_infeasible) ... ok
+test_no_data (__main__.BoundsTest.test_no_data) ... ok
+test_sample_requirement (__main__.BoundsTest.test_sample_requirement) ... ok
+test_transfer (__main__.BoundsTest.test_transfer) ... ok
+test_unknown (__main__.BoundsTest.test_unknown) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.001s
+
+OK

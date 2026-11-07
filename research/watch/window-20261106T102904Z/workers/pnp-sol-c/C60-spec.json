@@ -1,0 +1,1 @@
+{"nodes":[{"id":"C60","layer":3,"title":"完整状态边界转录的自含编码器下界与整数常数修补","role":"C59发现Lemma52文字缺口后的新证明，不依赖原文错误计数","acceptance":"全证明hST>=δN²/18432于明确binary sequential model；处理最后短interval/变长transcript/输出坐标/小参数；保持非D/ND与非现实覆盖","artifact":"evidence/C60/immutable-artifact","seed":{"current":0.86,"remaining":0.9,"novelty":1,"confidence":0.85,"cost":1.1}}],"edges":[["C60","M22"],["C60","M23"]]}

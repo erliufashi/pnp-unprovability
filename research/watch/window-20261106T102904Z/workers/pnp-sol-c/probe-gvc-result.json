@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "checks": [
+    "correlated marginals do not amplify",
+    "conditional hazards multiply without identical rates",
+    "complete hidden-bit and equality-query universes",
+    "index vs full-array entropy units",
+    "soundness union-bound arithmetic"
+  ],
+  "complete_universe_parameter_cases": 44,
+  "correlated_success": "1/4",
+  "independent_success": "175/256",
+  "conditional_failure": "9/128",
+  "risk_lower_bound": "169/200",
+  "real_task_hazard_estimated": false
+}

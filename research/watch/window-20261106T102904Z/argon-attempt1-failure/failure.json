@@ -1,0 +1,15 @@
+{
+  "run_id": "2a3c8ffd-9eda-4262-8599-f0dc630e7b56",
+  "model": "iksvip/gemini-4-argon:high",
+  "result": "failed: empty final output and required file-only output absent",
+  "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon",
+  "partial_files": {
+    "argon_probe_v1.py": "4dfdf43be53b57ab4fc5db23ca7f6c7e7db09ff0046c3d2f0059bfc225328bdb",
+    "proposed-nodes-round1.json": "487f1012645a08dda4e909bdde04d8f048d2a734a81b7c6a36877c1b57267b15",
+    "argon-probe-v1.json": "70c16480d5a6d673f6363045abc4037f3291f0e020bbaad1c6da32cc132041fc",
+    "round1-audit-v1.md": "18ef9474333be76eaafa91c65d6c05df10cbb746eb12db72326d705f22a9f074"
+  },
+  "repo_branch_ref": "isolated non-git workdir; no central board mutation authority",
+  "execution_mode_changed": false,
+  "first_audit_complete": false
+}

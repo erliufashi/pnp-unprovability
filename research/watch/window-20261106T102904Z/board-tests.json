@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "isolated_root": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/board-test-qpofvi8q",
+  "concurrent_claims_unique": 4,
+  "idempotent_repeat": true,
+  "CAS_one_winner_three_stale": true,
+  "core_graph_state_evidence_valid": true,
+  "production_board_unchanged_round": 1,
+  "source_sha256": "4f5eebba256d633bac6386b94904c0bfb309b6b7f465c136b811ee3ea4a62332",
+  "scope": "transaction tests, not mathematical proof"
+}

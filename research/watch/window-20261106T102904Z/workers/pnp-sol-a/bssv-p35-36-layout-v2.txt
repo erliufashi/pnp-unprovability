@@ -1,0 +1,117 @@
+occurring in earlier sets. For T 2 G, let w(T ) be the number of Sj that intersect it. Since each Sj 2 F ,
+ 1 P w(T )  4p, so at most half of the T 2 G have w(T ) > 8p. Let G0 be the set of T 2 G with
+jGj T
+w(T )  8p. Thus jG0 j  jGj=2.
+    We now upper bound the number of elements in G0 and thus G. An element T of G0 can be described
+by giving a subset J  [p℄ of (1 8)p indices such that T \ Sj = ; for all j 2 J and then specifying
+T as an m-subset of the elements outside these subsets. By the claim, any collection of (1 8)p ofthe
+sets has a total of m(1 8)p  N=9 elements since   24  1 . Therefore jGj  2jG0 j  2 p 8N=9 <
+                                                                                         8p m
+21+H2 (8)N=(3m) (8=9)m Nm and thus (R)  23+H2 (8)N=(3m) (8=9)m .
+Theorem 6.23. There is a constant > 0 such that any randomized [n2 ℄-way branching program com-
+               ℄n ! f0; 1g in time T and size 2S with probability of error at most (T=n) (T=n)2 re-
+puting ED : [n2p
+quires T = (n log(n=S )= log log(n=S )). Furthermore, any randomized [n2 ℄-way branching program
+computingpED : [n2 ℄n ! f0; 1g in time T and size 2S with probability of error at most S=n requires
+T = (n log(n=S ) log log(n=S )).
+Proof. By Proposition 2.1, it sufﬁces to prove the lower bound for deterministic branching programs that
+approximate ED within error .
+    Choose n to be a sufﬁciently large integer. We will apply the second part of Corollary 5.4 and to this
+                                                                                                 2
+end, we assume without loss of generality that k  8 and deﬁne for q1 = 2 40 k 8 , and r = dq1 5k e. There
+                                                                   2
+is a constant > 0 such that for all positive   (k 2) (k 2) and k  8, H2 (8)  16 log2 1 
+ 1        32k2 and 4k  1 . Fix such a and assume that   (k 2) (k 2)2 .
+16 (32k)          1=e  24
+   Let B be a deterministic branching program of length at p
+                                                           most (k 2)n and size 2S that approximates
+                                            0
+ED within . We will show that for some > 0, k          0  log(n=S )= log log(n=S ). If n < r2 this is
+                           2
+immediate, so assume n > r .
+   Applying Corollary 5.4(ii) and the fact that ED is 1 for least a 1=e fraction of all inputs in [n2 ℄ and
+                                                                                                    1=2
+1=e  > 1=4, we obtain a balanced rectangle R with m = m(R)  q12k2 n=2 and (R)  2 Sr q1 m 5
+                                           4k  1 of inputs in R by our assumption on . Applying
+such that ED is 0 for at most a fraction (1=e )  24
+                                                                 H2 (8) 2                              2
+Lemma 6.20, we have that (R)  8(8=9)m=2 maxf1; (8=9)m=2 2 3 n =m g. Now n2 =m  4mq1 4k 
+             2              2
+4m(240 k8 )4k = 4m(32k)32k so
+                                       H2 (8)                    4H (8)      2
+                          (8=9)m=2 2     3       n2 =m
+                                                      2 m=12+ 23 m(32k)32k
+                                                                                 2
+                                                      2 m3 (1=4 4H2 (8)(32k)32k )
+                                                      1
+since H2 (8)  16  1 (32k) 32k2 . Therefore (R)  8(8=9)m=2  23 m=12 . Combining the upper and
+                                                                   1=2
+lower bounds on (R) and simplifying we get 2Sr  2m=12 q1 m 8 , which, for n sufﬁciently large and
+k satisfying the restrictions above, is at least 2m=13 . From this we deduce S  13mr  r 1 q12k2 n=26 which
+                     2                                                                          0
+is at least 0 n=k 1 k for some
+                            p 0 ; 1 independent of n and k . It follows that for some constant > 0 and
+sufﬁciently large n, k  0 log(n=S )= log log(n=S ).
+                                                                2
+     Also observe that our conditions on  hold for  = r 1 q 2k =26 which is our lower bound on S=n and
+                                                              1
+from this the second part of the theorem follows.
+
+Corollary 6.24. For any Æ  0 there is a constant Æ such that for n sufﬁciently large any randomized RAM
+
+
+                                                         35
+                                                                        p
+algorithm for element distinctness on inputs in [n2 ℄ taking at most Æ n    log n= log log n time and having at
+most n Æ error requires at least n1 Æ space.
+
+
+Hamming Closeness
+
+Lemma 6.25. If (R; A1 ; A2 ) is an n-variate embedded rectangle over [N ℄ with jA1 j = jA2 j = m such that
+               1 fraction of x 2 R have HAM (x) = 1 then
+at most an  < 24
+                                                                                 1
+                       (R)  8(36N )m=2 maxf1; (N =36)m=2 23H2 (8)N                 =m g:
+
+Proof. As in the proof of Lemma 6.20 but replacing the condition ED (x) = 0 with HAM (x) = 1 we ﬁnd
+two collections of m-subsets of [N ℄, F and G, such that jF j; jGj  (R)=4 N    m and for each T 2 F at most
+a 4 fraction of T 0 2 G have the property that there exist t 2 T and t0 2 T 0 such that H (t; t0 )  log2 N .
+    Let d = N =3 where the value of = ( ) is given by Proposition 6.16. By Proposition 6.22, if
+  (R) > 8(36N )m=2 > 8(4(d 1)=d2 )m=2 then F contains p = dN=(dm)e sets S1 ; : : : ; Sp such that
+each set Sj has at most m=2 elements occurring in Si for i < j .
+    As in the proof of Lemma 6.20, prune G to obtain a set G0 with jG0 j  jGj=2 such that each element
+T 0 2 G is -close to at most 8p of S1 ; : : : ; Sp . We can describe a set T 0 in G0 by naming the (1 8)p
+sets Si from which it is -far and then specifying each element in T 0 from among the elements that are -far
+from these sets. The (1 8)p sets together contain at least mp=3  N=(3d) = N 1 elements of [N ℄ and
+so by Proposition 6.16 at most N 1 elements of [N ℄ are -far from these sets. Therefore
+                                                                                      
+                                                N1
+                    jGj  2jG0j  2 8pp         m
+                                                          21+3H2 (8)N 1 =m N       m   N
+                                                                                         m
+and thus   (R)  8N     m 23H2 (8)N 1   =m from which the lemma follows.
+
+    Although the parameters in this lemma make it appear stronger than Lemma 6.20, the value of N for
+which we will need to use it is much larger than in the case of element distinctness and we will only be able
+to obtain lower bounds for much smaller error. It is conceivable that a much stronger result holds since (1)
+the collection of sets S1 ; : : : ; Sp in Proposition 6.22 was chosen to maximize the unions of subcollections
+rather than to maximize the number of elements that are -close to these subcollections, and (2) no use was
+made of the property that each set in F and G must only contain elements that are -far from each other.
+
+Theorem 6.26. Let 0 < < 1=2 and  2=(1 H2 ( )). Any randomized [n ℄-way branching program
+computing HAM : [n ℄n ! f0; 1g in time T and size 2S with probability of error at most n2 requires
+T = (n log( n log n
+               S )).
+
+Proof. By Proposition 2.1, it sufﬁces to prove the lower bound for deterministic branching programs that
+approximate HAM within error  = n2 .
+     Choose n to be a sufﬁciently large integer. Let k  4 and let B be a deterministic branching program of
+length at most (k 2)n and size 2S approximates HAM within . Therefore the branching program B 0 ,
+set to be B with the labels of its two sink nodes swapped, approximates :HAM within .
+    We will show that for some 0 > 0, k  0 log((n log n)=S ). Let = ( ) > 0 be the constant
+from Proposition 6.16. If k  ( log2 n)=32 then we are done so assume without loss of generality
+that 2k < n =32 . Let r = 2k+6 k 2 and apply Corollary 5.2(ii) to B 0 to obtain a balanced rectangle R
+
+                                                      36
+

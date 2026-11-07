@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "scope": "new local branch only, not original35/T3",
+  "administrative_only_rounds": [
+    69,
+    71,
+    72
+  ],
+  "editorial_not_new_theorem_round": 70,
+  "genuine_new_candidate_round": 73,
+  "raw_events_retained": true,
+  "last_work_round_restored": {
+    "E39": {
+      "before": 68,
+      "after": 63
+    },
+    "M18": {
+      "before": 70,
+      "after": 65
+    },
+    "D6": {
+      "before": 71,
+      "after": 66
+    }
+  },
+  "versioned_alias": {
+    "original_event": 70,
+    "old_recorded_path": "proof/PRUNING-COST-v1.md",
+    "sha256": "e2233caa66365bfb37188d968ef6f405fd722352ee68382a7e93ff001d5d97de",
+    "current_path": "proof/PRUNING-COST-v2.md"
+  },
+  "reason": "重复管理记录不算新科学进展；已被引用的v1恢复原字节，澄清版另存v2；没有删除原始事件或实验。",
+  "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/corrections/hour7-bookkeeping-before",
+  "before_state_sha256": "238a2f1beac74bc6c95f3b75c9794937b3b42356cdb9b722c43a39ffd7c904a8",
+  "after_state_sha256": "b2fb1f7ab56a43e822c01c8a7d290f23d2614d08f9cca003ba7b8c8d98d2efa0",
+  "source_sha256": "65c9c9e523b9226c28c14304cba99d9497fd9a45f2711b82e338abc2f6a2ec1e",
+  "rollback": "备份用于审计/人工恢复；不得直接覆盖以抹掉后续历史。逆向调整须新建correction事件并保留两份证据。"
+}

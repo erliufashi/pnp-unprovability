@@ -1,0 +1,1 @@
+{"nodes":[{"id":"B56","layer":3,"title":"动态聚合索引的未来更新能力与完整状态下界","role":"IDX的非重复后继：静态OR一bit摘要不能免费保留任意更新能力","acceptance":"自含证明有界更新U所需状态数，给保留raw-data的可执行count维护与真实计费；不借动态接口冒原静态任务分离","artifact":"evidence/B56/immutable-artifact","seed":{"current":0.9,"remaining":0.9,"novelty":1,"confidence":0.95,"cost":0.8}}],"edges":[["B56","M23"],["B56","M22"]]}

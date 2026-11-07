@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/causal_contract_check.py"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-04T19:31:11.271525+00:00",
+  "ended": "2026-11-04T19:31:11.299594+00:00",
+  "returncode": 0,
+  "passed": true,
+  "source_sha256": "acc04e968c6ba96c75823c981b1768de8299cf583fd8ca1d10052587ad4e95f3"
+}

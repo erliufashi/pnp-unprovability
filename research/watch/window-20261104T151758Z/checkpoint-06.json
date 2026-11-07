@@ -1,0 +1,12 @@
+{
+  "hour": 6,
+  "at": 1793829172.3944862,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour6-review.receipt.json",
+  "actual_probe_exit": 0,
+  "equality_pairs": 5460,
+  "exhaustive_layout_comparisons": 4240,
+  "random_layout_comparisons": 384,
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "M18 profile-specific static certified pruning",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

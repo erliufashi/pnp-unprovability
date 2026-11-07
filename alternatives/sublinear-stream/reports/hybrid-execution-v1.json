@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "returncode": 0,
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/horizon_hybrid_probe.py",
+    "--report",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hybrid-tests-v1.json"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-04T23:36:16.475226+00:00",
+  "ended": "2026-11-04T23:36:24.725944+00:00",
+  "stdout_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hybrid-v1.stdout.log",
+  "stderr_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hybrid-v1.stderr.log",
+  "source_sha256": "8409da2a378e5d55f843ea08bb698852b5fa11d26334adc35a1e5186274b4798",
+  "frozen_dependencies": {
+    "causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+    "prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+    "tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+    "pruned_query_probe.py": "4dcecc483735b94fc68c2b3124bbcd9a99d4ea5aaea2a828977d0e4eaf494557"
+  }
+}

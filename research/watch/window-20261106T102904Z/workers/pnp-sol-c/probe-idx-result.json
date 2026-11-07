@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "documents": 128,
+  "query_terms": 138,
+  "exact_scan_equivalence": true,
+  "build": {
+    "token_reads": 600,
+    "posting_id_writes": 480,
+    "serialized_index_bytes": 3635
+  },
+  "all_query_returned_ids": 480,
+  "stale_index_negative_control": true,
+  "rebuild": {
+    "token_reads": 601,
+    "posting_id_writes": 481,
+    "serialized_index_bytes": 3652
+  },
+  "computable_build_can_leak_labels": true,
+  "local_permitted_view_noninterference": true,
+  "cold_vs_amortized_negative_control": true,
+  "python_worst_case_runtime_or_physical_ram_claim": false,
+  "realistic_coverage": false
+}

@@ -1,0 +1,1 @@
+{"nodes":[{"id":"C61","layer":3,"title":"边界转录下界的随机编码推广与随机游标成本","role":"新推导而非把det文献直接套随机：固定seed后完整未来状态与成功子集计数","acceptance":"证明均匀输入whole-output正确>=2/3随机编码器的h(S+logT)T下界，列output length及fresh coins条件，非现实分布","artifact":"evidence/C61/immutable-artifact","seed":{"current":0.84,"remaining":0.85,"novelty":1,"confidence":0.82,"cost":0.9}}],"edges":[["C61","M22"]]}

@@ -1,0 +1,33 @@
+{
+  "phase": "paused",
+  "pause_count": 1,
+  "paused_at": "2026-11-05T09:19:24+08:00",
+  "scheduled_deadline": "2026-11-05T09:17:58+08:00",
+  "ack_delay_seconds": 86.28901529312134,
+  "last_ack_hour": 9,
+  "post_pause_real_clock_probes": {
+    "hourly": {
+      "exit_code": 0,
+      "stdout_empty": true
+    },
+    "deadline": {
+      "exit_code": 0,
+      "stdout_empty": true
+    }
+  },
+  "owned_monitors": [
+    {
+      "id": "pnp-hourly-10h",
+      "armed": false,
+      "intervalSec": 3600
+    },
+    {
+      "id": "pnp-deadline-10h",
+      "armed": false,
+      "intervalSec": 60
+    }
+  ],
+  "monitor_status_source": "two disarm tool receipts and subsequent active_watch status, both off; other presets not modified",
+  "background_owner_state": "no pending child/experiment, all 9 consumed terminal experiment results",
+  "not_a_cross_session_claim": true
+}

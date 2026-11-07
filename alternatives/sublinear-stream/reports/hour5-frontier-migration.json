@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "before_nodes": 17,
+  "after_nodes": 22,
+  "old_node_parameters_preserved": true,
+  "old_descriptors_preserved": true,
+  "old_history_preserved": true,
+  "event": {
+    "seq": 37,
+    "at": "2026-11-04T20:20:51+00:00",
+    "round": 37,
+    "reason": "new-frontier:quality-resource-adequacy",
+    "previous": null,
+    "selected": null,
+    "ranking": [],
+    "details": {
+      "added": [
+        "D7",
+        "M16",
+        "E32",
+        "E33",
+        "E34"
+      ],
+      "planned_next": "E32",
+      "scheduled_for_hour": 5,
+      "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour4-to-hour5",
+      "freshness_age_initialized_at_admission": true
+    }
+  },
+  "planned_next": "E32",
+  "hour": 5
+}

@@ -1,0 +1,976 @@
+{
+  "schema": 1,
+  "scope": "current user-authorized realistic-core revision research, not a new success certificate",
+  "nodes": [
+    {
+      "id": "D8",
+      "layer": 1,
+      "title": "受限而能力保全的现实任务算法空间",
+      "role": "替代参数量代理，不宣布覆盖已证",
+      "acceptance": "结构/预算/参考能力/真实分布及分离分别验收",
+      "artifact": "evidence/D8/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 1
+      },
+      "reward_multiplier": 0.25
+    },
+    {
+      "id": "D9",
+      "layer": 1,
+      "title": "标准P/NP不可证性的非循环桥",
+      "role": "保留较高目标，旧数据只读",
+      "acceptance": "明确标准命题/理论与未决桥，不用代理分离偷换",
+      "artifact": "evidence/D9/immutable-artifact",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.35,
+        "cost": 3
+      },
+      "reward_multiplier": 1
+    },
+    {
+      "id": "M21",
+      "layer": 2,
+      "title": "现实覆盖与统一能力保全契约",
+      "role": "分布与策略/组合算法的类型工具",
+      "acceptance": "可证模拟和真实覆盖证书分开，无答案selector",
+      "artifact": "evidence/M21/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M22",
+      "layer": 2,
+      "title": "实践能力与分离模型兼容性",
+      "role": "找可收缩约束而不禁常用能力",
+      "acceptance": "输入/工具/存储真实计费及旧下界不当继承",
+      "artifact": "evidence/M22/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M23",
+      "layer": 2,
+      "title": "现实资源与外部证据工具",
+      "role": "数值预算和参考portfolio",
+      "acceptance": "不把BigO/固定H/参数量当真实能力",
+      "artifact": "evidence/M23/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M24",
+      "layer": 2,
+      "title": "标准SAT增长桥审计",
+      "role": "有限meta义务，不重复自指包装",
+      "acceptance": "给确切新推导/反例或明确剩余缺口",
+      "artifact": "evidence/M24/immutable-artifact",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.35,
+        "cost": 3
+      }
+    },
+    {
+      "id": "E47",
+      "layer": 3,
+      "title": "单一统一策略/portfolio路由与量词",
+      "role": "排除按实例选答案的oracle",
+      "acceptance": "给能力保全定义及具体反例/可核对引理",
+      "artifact": "evidence/E47/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.95,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "E48",
+      "layer": 3,
+      "title": "现实任务分布与分层覆盖证据",
+      "role": "统计口径/外推不确定性",
+      "acceptance": "给可验证覆盖下界，未知项不设零",
+      "artifact": "evidence/E48/immutable-artifact",
+      "seed": {
+        "current": 0.94,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E49",
+      "layer": 3,
+      "title": "重读/外存/工具能力与旧INDEX",
+      "role": "能力底线与下界假设反例",
+      "acceptance": "证明旧单遍证书何时失效，不偷改新模型",
+      "artifact": "evidence/E49/immutable-artifact",
+      "seed": {
+        "current": 0.92,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.85
+      }
+    },
+    {
+      "id": "E50",
+      "layer": 3,
+      "title": "强现实模型的可分离性候选",
+      "role": "独立模型/原始下界来源",
+      "acceptance": "列匹配模型、成本及未决义务而非强行宣称分离",
+      "artifact": "evidence/E50/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.15
+      }
+    },
+    {
+      "id": "E51",
+      "layer": 3,
+      "title": "多领域参考解法组合与证据目录",
+      "role": "真实广度而非参数数目",
+      "acceptance": "可复核来源/能力界，不能有限bench冒现实全集",
+      "artifact": "evidence/E51/immutable-artifact",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E52",
+      "layer": 3,
+      "title": "数值资源包络与非空洞性",
+      "role": "冻结预算/代码/输入尺度",
+      "acceptance": "现实能力不能靠未付常数或外部oracle隐藏",
+      "artifact": "evidence/E52/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E53",
+      "layer": 3,
+      "title": "标准SAT增长桥的新一轮压力测试",
+      "role": "实际非循环新推导或明确失败",
+      "acceptance": "标准T1/T2保留UNRESOLVED直到完整证明",
+      "artifact": "evidence/E53/immutable-artifact",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.35,
+        "cost": 3
+      }
+    },
+    {
+      "id": "B54",
+      "layer": 3,
+      "title": "自适应选策略的覆盖乐观偏差与描述长度证书",
+      "role": "算法空间收缩的统计意义和现实能力验收防泄漏",
+      "acceptance": "给有限类/前缀描述类统一下界、事后selector反例；不将统计复杂度当计算分离",
+      "artifact": "evidence/B54/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "C55",
+      "layer": 3,
+      "title": "付费工具统一编译与固定资源包络的严格收缩",
+      "role": "E50后继：证明工具闭包和层级定理兼容条件",
+      "acceptance": "给完整计费编译引理、固定指数与多项式并集区别、现实覆盖缺失输入；不冒称新覆盖",
+      "artifact": "evidence/C55/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "A56",
+      "layer": 3,
+      "title": "现实覆盖的分布漂移与未覆盖质量界",
+      "role": "有限benchmark到现实分布的可迁移条件与不可识别反例",
+      "acceptance": "给TV迁移界与未观测任务质量反例；区分统计误差和分布错配；不声称现实覆盖",
+      "artifact": "evidence/A56/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "E-chief-PPST-1",
+      "layer": 3,
+      "title": "查证强常用能力下的已知同预算分离候选",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "读原始或可信完整源，精确列PPST线性时间/SAT time-space的机器、随机访问、证书、存储限制；不把Dtime层级冒P/NP分离",
+      "artifact": "evidence/E-chief-PPST-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "E-chief-cert-1",
+      "layer": 3,
+      "title": "只读证书与非确定性工作空间的预算对齐",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "核验logspace verifier与同空间ND机器不等同；能否把见证/外存/证书成本统一，不能免费证明带",
+      "artifact": "evidence/E-chief-cert-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E-chief-dom-1",
+      "layer": 3,
+      "title": "资源封闭参考系统的能力包含候选",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "为任意已声明有界普通计算/工具系统给资源向量模拟及局限；区分对所有受界实现的保证与现实任务总体质量，不需虚构实测",
+      "artifact": "evidence/E-chief-dom-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E-chief-compose-1",
+      "layer": 3,
+      "title": "组合能力保全：自适应调用与平均误差陷阱",
+      "role": "不依赖未提供实测数据的模型设计/证明义务；失败同样留证",
+      "acceptance": "给计费组合闭包和条件/统一误差定理；构造工具bench平均误差小而实际自适应流程全错的可检验反例",
+      "artifact": "evidence/E-chief-compose-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1
+      }
+    },
+    {
+      "id": "C56",
+      "layer": 3,
+      "title": "随机访问存在性查询的同预算分离与输入获取边界",
+      "role": "不用免费长证书的强访问模型候选；审计子线性时钟能力代价",
+      "acceptance": "显式ND算法同time/workspace；det及随机probe下界；分开初始输入驻留与获取费用，禁止现实覆盖推断",
+      "artifact": "evidence/C56/immutable-artifact",
+      "seed": {
+        "current": 0.83,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "A57",
+      "layer": 3,
+      "title": "付费地址证书的BRAM精确分离与强reference不兼容诊断",
+      "role": "对已执行BRAM给同预算D/ND实例与下界，不将存在性见证当现实求解器",
+      "acceptance": "证书生成/存储/读取收费；证明OR下界及随机化界，核原生全输入reference会破坏该候选的预算；不称toy现实覆盖",
+      "artifact": "evidence/A57/immutable-artifact",
+      "seed": {
+        "current": 0.86,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "C57",
+      "layer": 3,
+      "title": "双只进证书头的共享一致性是否恢复NP",
+      "role": "证书访问契约压力测试：每头read-once不等于全局read-once",
+      "acceptance": "给two-head one-way logspace verifier的tableau构造及资源界，区分NL未知严格性与NP包含，不偷ND workspace",
+      "artifact": "evidence/C57/immutable-artifact",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 0.75
+      }
+    },
+    {
+      "id": "C58",
+      "layer": 3,
+      "title": "A57收费ND_OR独立复现与物理/抽象资源范围核对",
+      "role": "应同权研究员request核验代码与公式，不重复OR定理计数",
+      "acceptance": "独立提取源码复测大尺寸全部地址；列host preflight/fuel/init计费边界；不给全局覆盖验收",
+      "artifact": "evidence/C58/immutable-artifact",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "B55",
+      "layer": 3,
+      "title": "付费随机访问OR的显式同数值预算见证与适用域",
+      "role": "允许重读/大workspace/普通工具，检查固定预算分离能否有明确小见证",
+      "acceptance": "构造计费ND地址见证，证明D及随机算法query下界；不把sublinear-profile见证冒现实广覆盖",
+      "artifact": "evidence/B55/immutable-artifact",
+      "seed": {
+        "current": 0.82,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.95,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "C59",
+      "layer": 3,
+      "title": "CCC2024编码器随机访问必要性的原文模型/下界核验",
+      "role": "独立来源支持能力底线，防把强多头顺序模型误作RAM；非PPST重复",
+      "acceptance": "核原文Theorem1/2、Definition6及完整lower-bound节；列full-state/output-order假设与原文proof文字缺口；不冒D/ND同预算分离",
+      "artifact": "evidence/C59/immutable-artifact",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "C60",
+      "layer": 3,
+      "title": "完整状态边界转录的自含编码器下界与整数常数修补",
+      "role": "C59发现Lemma52文字缺口后的新证明，不依赖原文错误计数",
+      "acceptance": "全证明hST>=δN²/18432于明确binary sequential model；处理最后短interval/变长transcript/输出坐标/小参数；保持非D/ND与非现实覆盖",
+      "artifact": "evidence/C60/immutable-artifact",
+      "seed": {
+        "current": 0.86,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "C61",
+      "layer": 3,
+      "title": "边界转录下界的随机编码推广与随机游标成本",
+      "role": "新推导而非把det文献直接套随机：固定seed后完整未来状态与成功子集计数",
+      "acceptance": "证明均匀输入whole-output正确>=2/3随机编码器的h(S+logT)T下界，列output length及fresh coins条件，非现实分布",
+      "artifact": "evidence/C61/immutable-artifact",
+      "seed": {
+        "current": 0.84,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.82,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E-argon-FNS-audit1",
+      "layer": 3,
+      "title": "允许全扫描后的BRAM分离候选审计",
+      "role": "Argon H1发散建议，经chief模型/单位纠错后作为待证问题；可证明或反驳",
+      "acceptance": "完整计16w寄存器及数组/地址/外存；不可把随机访问总步数当K单调遍。给匹配模型的ND上界与有出处/自含下界，或明确候选反例/不适用",
+      "artifact": "evidence/E-argon-FNS-audit1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.7,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "E-argon-GVC-audit1",
+      "layer": 3,
+      "title": "验证重试与交互反馈：条件成功和信息单位",
+      "role": "Argon H1发散建议，经chief模型/单位纠错后作为待证问题；可证明或反驳",
+      "acceptance": "给条件概率下的放大、实际live空间和反馈容量；K个1-bit只给Kbit而非log m轮恢复m-bit；边际相关重试负控制与可执行核验",
+      "artifact": "evidence/E-argon-GVC-audit1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E-argon-IDX-audit1",
+      "layer": 3,
+      "title": "计费可复用索引及Build数据独立性",
+      "role": "Argon H1发散建议，经chief模型/单位纠错后作为待证问题；可证明或反驳",
+      "acceptance": "两阶段prep/query/index账本和可运行检索底线；可计算Build不自动排标签泄漏，数值预算和分母均付费，非现实覆盖已证",
+      "artifact": "evidence/E-argon-IDX-audit1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E-chief-OPAQUE-1",
+      "layer": 3,
+      "title": "计费opaque比较输入下的强CPU分离及换问题边界",
+      "role": "候选：不禁重读/全扫描/普通透明计算，但必须披露输入访问类型；不直接当现实覆盖或标准P/NP",
+      "acceptance": "证明或反驳CMP-only private key的collision需要ceil(log2(n!))确定性查询、ND猜两索引一次查询，完整计猜测/状态/查询/代码；验证全扫描基础能力仍可用。必须展示暴露raw key/预处理泄漏会破坏证明，标明查询/输入模型而非普通明文RAM问题，不能据此自动触发T3v2",
+      "artifact": "evidence/E-chief-OPAQUE-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "C62",
+      "layer": 3,
+      "title": "FULLSCAN NON-ED候选的显式巨大有限维度与完整状态账本",
+      "role": "FNS新缺口：从BSSV Cor5.4(i)提取有限参数，不偷用渐近隐常数",
+      "acceptance": "明确k/q/r/D/E与n=2^E；完整BRAM状态含16w/array/PC/fuel/output；精确整数验证所有Cor条件与S上界矛盾；不可当现实规模",
+      "artifact": "evidence/C62/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "B56",
+      "layer": 3,
+      "title": "动态聚合索引的未来更新能力与完整状态下界",
+      "role": "IDX的非重复后继：静态OR一bit摘要不能免费保留任意更新能力",
+      "acceptance": "自含证明有界更新U所需状态数，给保留raw-data的可执行count维护与真实计费；不借动态接口冒原静态任务分离",
+      "artifact": "evidence/B56/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.95,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "B57",
+      "layer": 3,
+      "title": "随机容错动态聚合摘要的逐bit解码容量下界",
+      "role": "B56后继：随机常数错误不是任意更新能力的免费压缩",
+      "acceptance": "自含熵证明b>=N(1-h2(epsilon))，明确逐历史保证/无raw条件，区别全串恢复和单bit解码",
+      "artifact": "evidence/B57/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "E-argon-RAND-ED-2",
+      "layer": 3,
+      "title": "全扫描 COLLISION 候选的随机化 BPP_BRAM 边界审计：BSSV Thm6.23 误差条件与指纹哈希反例",
+      "role": "补齐 E-argon-FNS-audit1 / C62 仅处理确定性 BSSV Thm6.13、尚未解决 1/3 有界错误随机化求解器是否被排除的缺口",
+      "acceptance": "核验 BSSV 原文 §6.2 Theorem 6.23 / Corollary 6.24 对随机化 Element Distinctness 的精确误差假设（双边误差 <= 2^-Omega(log^2 n) 或成功概率上界），证明或反驳在 F=32n+512, M=floor(sqrt(n)) 下常数 1/3 误差随机化 BRAM 是否存在碰撞检测算法（含随机哈希/分桶碰撞反例或随机化分支程序下界转移），不冒称已解决 BPP_BRAM 分离",
+      "artifact": "evidence/E-argon-RAND-ED-2/immutable-artifact",
+      "seed": {
+        "current": 0.91,
+        "remaining": 0.92,
+        "novelty": 1.0,
+        "confidence": 0.88,
+        "cost": 1.0
+      }
+    },
+    {
+      "id": "E-argon-LOC-SAT-2",
+      "layer": 3,
+      "title": "小见证局部约束问题（Small-Witness 2-CSP/Subgraph）在亚线性工作空间 RATM/BRAM 下的同预算 D vs ND",
+      "role": "修复 E-chief-PPST-1 中 FLMV SAT 下界因标准 SAT 见证長 Θ(n) 无法放进 o(n^d) 非确定性工作空间而导致的 D/ND 预算失配",
+      "acceptance": "针对 E-chief-PPST-1 揭示的 FLMV 缺口（SAT 不在 DTISP[n^1.4, n^0.01]，但标准 SAT 猜测赋值需 Ω(n) 空间或免费长证书），构造见证大小仅为 k = O(1) 或 O(log n) 个字（完全装入 16w 寄存器或 O(log n) 空间）的局部约束/子图同构/k-SUM 变体，审计其在 F=O(n), M=O(sqrt(n)) BRAM 下的完整计费 ND 上界与多路分支程序 D 下界",
+      "artifact": "evidence/E-argon-LOC-SAT-2/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 0.95
+      }
+    },
+    {
+      "id": "D-GVC-BATCH-1",
+      "layer": 3,
+      "title": "有界候选批验证的一bit反馈精确容量曲线",
+      "role": "GVC非重复后继：在等值验证与任意二分查询之间给出紧致插值，区分候选批大小与反馈bit",
+      "acceptance": "自含证明K轮、每批至多L候选的最优恢复容量1+sum_{j<K}min(L,2^j)，给非均匀先验和可执行穷举，明确隐藏对象而非已知输入计算下界",
+      "artifact": "evidence/D-GVC-BATCH-1/immutable-artifact",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.5
+      }
+    },
+    {
+      "id": "E-chief-RAND-BRAM-1",
+      "layer": 3,
+      "title": "全扫描BRAM碰撞的常数错误边界与反算法审计",
+      "role": "在已允许SUM/全输入读取的共同Γ内，单独审计1/3错误随机算法与确定性BP下界，禁止把强错误门槛当BPP结论",
+      "acceptance": "给同一输入/访问/状态/fuel/代码模型下的具体随机算法、对抗负控制或可适用的常数错误下界；若来源条件不足则严格反驳迁移，不把失败包装为分离；完整计16w寄存器、数组、随机带、初始化和扫描",
+      "artifact": "evidence/E-chief-RAND-BRAM-1/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.78,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "D-GVC-STATE-1",
+      "layer": 3,
+      "title": "跨调用隐状态与批反馈容量的可组合上界",
+      "role": "GVC-BATCH后继：审计跨调用持久状态、序列化和迁移成本，防止把隐状态当免费反馈",
+      "acceptance": "给q-bit持久状态、K轮L批验证的恢复容量上界；明确state write/read/serialization成本与隐藏答案独立性，构造隐状态泄漏负控并有穷举核验",
+      "artifact": "evidence/D-GVC-STATE-1/immutable-artifact",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "B58",
+      "layer": 3,
+      "title": "全扫描与动态更新下的存储阈值逃逸审计",
+      "role": "强reference能力保全与同Γ分离兼容性的具体反例",
+      "acceptance": "给同一明文输入/计费模型下SUM、动态聚合、碰撞检测的可执行阈值；证明M>=N时BRAM分离候选被直接寻址算法击穿；不冒称M=o(N)现实能力充分",
+      "artifact": "evidence/B58/immutable-artifact",
+      "seed": {
+        "current": 0.91,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "A-H3-YAO-PROMISE-1",
+      "layer": 3,
+      "title": "Yao碰撞候选分布的公开多重集与固定种子源码漏洞",
+      "role": "构造同fullscan BRAM反算法，分清distributional下界和有界源码随机带的合法转换",
+      "acceptance": "给显式Γ内字节码反驳permutation-vs-single-replacement hard distribution；全计16w/初始化/获取/源码，明确不解一般ED；写出合法BP版Yao待证引理",
+      "artifact": "evidence/A-H3-YAO-PROMISE-1/immutable-artifact",
+      "seed": {
+        "current": 0.94,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "E-CLOSURE-ADVICE-1",
+      "layer": 3,
+      "title": "描述预算的有类型闭包与联合辅助信息泄漏",
+      "role": "IDX许可视图后的非重复缺口：固定描述球的无开销闭包不可能，单组件独立不保证联合独立",
+      "acceptance": "自含证明有限描述类在常量/配对闭包下的不可能性与有预算编译修复；构造XOR联合泄漏，给条件猜测概率与代码选择位预算；穷举负控且不冒现实覆盖",
+      "artifact": "evidence/E-CLOSURE-ADVICE-1/immutable-artifact",
+      "seed": {
+        "current": 0.93,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.92,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "D-GVC-COST-1",
+      "layer": 3,
+      "title": "验证成本加权的Generate-and-Verify闭包与批容量反例",
+      "role": "审计批验证容量迁移到真实资源闭包：验证器成本、候选序列化、拒绝/接受不对称及多轮状态均纳入预算；寻找忽略验证成本导致的严格反例",
+      "acceptance": "给出明确成本账本与闭包定义；证明或反驳在总时间/峰值空间/线通信受限时批容量曲线可否直接迁移；至少一个严格反例或条件不变式，明确不等现实覆盖或P/NP结论",
+      "artifact": "evidence/D-GVC-COST-1/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.88,
+        "novelty": 1,
+        "confidence": 0.82,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "F-DYN-FP-1",
+      "layer": 3,
+      "title": "隐藏种子动态指纹的自适应Boolean反馈首错界与raw泄漏反例",
+      "role": "精确刻画固定隐藏随机种子的动态Fp向量零检验接口；与公开种子、原始残值输出区分",
+      "acceptance": "证明K次自适应Boolean零检验的首错概率至多min(1,K(N-1)/p)，构造匹配根覆盖策略；给公开种子与raw残值两坐标伪造及穷举实验；完整标记输入、更新、持久状态、随机性与重建成本，不推出现实覆盖或一般ED下界",
+      "artifact": "evidence/F-DYN-FP-1/immutable-artifact",
+      "seed": {
+        "current": 0.86,
+        "remaining": 0.85,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.6
+      }
+    },
+    {
+      "id": "C63",
+      "layer": 3,
+      "title": "Opaque比较协议的Las Vegas期望下界与Monte Carlo量词边界",
+      "role": "把确定性opaque叶计数迁移到零错误随机算法，严格区分平均与逐输入及随机游标",
+      "acceptance": "自含Kraft/熵证明max输入期望CMP≥log2(n!)；说明几乎处处固定随机带与有限输入交；不得推出bounded-error；小规模有理Kraft验证",
+      "artifact": "evidence/C63/immutable-artifact",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 0.5
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M21",
+      "D8"
+    ],
+    [
+      "M22",
+      "D8"
+    ],
+    [
+      "M23",
+      "D8"
+    ],
+    [
+      "M24",
+      "D9"
+    ],
+    [
+      "E47",
+      "M21"
+    ],
+    [
+      "E48",
+      "M21"
+    ],
+    [
+      "E49",
+      "M22"
+    ],
+    [
+      "E50",
+      "M22"
+    ],
+    [
+      "E51",
+      "M23"
+    ],
+    [
+      "E52",
+      "M23"
+    ],
+    [
+      "E53",
+      "M24"
+    ],
+    [
+      "B54",
+      "M21"
+    ],
+    [
+      "B54",
+      "M23"
+    ],
+    [
+      "C55",
+      "M22"
+    ],
+    [
+      "C55",
+      "M23"
+    ],
+    [
+      "A56",
+      "M21"
+    ],
+    [
+      "E-chief-PPST-1",
+      "M22"
+    ],
+    [
+      "E-chief-cert-1",
+      "M22"
+    ],
+    [
+      "E-chief-dom-1",
+      "M23"
+    ],
+    [
+      "E-chief-compose-1",
+      "M21"
+    ],
+    [
+      "E-chief-compose-1",
+      "M22"
+    ],
+    [
+      "C56",
+      "M22"
+    ],
+    [
+      "C56",
+      "M23"
+    ],
+    [
+      "A57",
+      "M22"
+    ],
+    [
+      "C57",
+      "M22"
+    ],
+    [
+      "C58",
+      "M22"
+    ],
+    [
+      "C58",
+      "M23"
+    ],
+    [
+      "B55",
+      "M22"
+    ],
+    [
+      "C59",
+      "M22"
+    ],
+    [
+      "C59",
+      "M23"
+    ],
+    [
+      "C60",
+      "M22"
+    ],
+    [
+      "C60",
+      "M23"
+    ],
+    [
+      "C61",
+      "M22"
+    ],
+    [
+      "E-argon-FNS-audit1",
+      "M22"
+    ],
+    [
+      "E-argon-FNS-audit1",
+      "M23"
+    ],
+    [
+      "E-argon-GVC-audit1",
+      "M21"
+    ],
+    [
+      "E-argon-GVC-audit1",
+      "M22"
+    ],
+    [
+      "E-argon-IDX-audit1",
+      "M22"
+    ],
+    [
+      "E-argon-IDX-audit1",
+      "M23"
+    ],
+    [
+      "E-chief-OPAQUE-1",
+      "M22"
+    ],
+    [
+      "C62",
+      "M22"
+    ],
+    [
+      "C62",
+      "M23"
+    ],
+    [
+      "B56",
+      "M23"
+    ],
+    [
+      "B56",
+      "M22"
+    ],
+    [
+      "B57",
+      "M22"
+    ],
+    [
+      "B57",
+      "M23"
+    ],
+    [
+      "E-argon-RAND-ED-2",
+      "M22"
+    ],
+    [
+      "E-argon-RAND-ED-2",
+      "M23"
+    ],
+    [
+      "E-argon-LOC-SAT-2",
+      "M22"
+    ],
+    [
+      "E-argon-LOC-SAT-2",
+      "M24"
+    ],
+    [
+      "D-GVC-BATCH-1",
+      "M21"
+    ],
+    [
+      "D-GVC-BATCH-1",
+      "M22"
+    ],
+    [
+      "E-chief-RAND-BRAM-1",
+      "M22"
+    ],
+    [
+      "E-chief-RAND-BRAM-1",
+      "M23"
+    ],
+    [
+      "D-GVC-STATE-1",
+      "M21"
+    ],
+    [
+      "D-GVC-STATE-1",
+      "M23"
+    ],
+    [
+      "B58",
+      "M22"
+    ],
+    [
+      "B58",
+      "M23"
+    ],
+    [
+      "A-H3-YAO-PROMISE-1",
+      "M22"
+    ],
+    [
+      "A-H3-YAO-PROMISE-1",
+      "M23"
+    ],
+    [
+      "E-CLOSURE-ADVICE-1",
+      "M21"
+    ],
+    [
+      "E-CLOSURE-ADVICE-1",
+      "M22"
+    ],
+    [
+      "E-CLOSURE-ADVICE-1",
+      "M23"
+    ],
+    [
+      "D-GVC-COST-1",
+      "M22"
+    ],
+    [
+      "D-GVC-COST-1",
+      "M23"
+    ],
+    [
+      "F-DYN-FP-1",
+      "M22"
+    ],
+    [
+      "F-DYN-FP-1",
+      "M23"
+    ],
+    [
+      "C63",
+      "M22"
+    ],
+    [
+      "C63",
+      "M23"
+    ]
+  ]
+}

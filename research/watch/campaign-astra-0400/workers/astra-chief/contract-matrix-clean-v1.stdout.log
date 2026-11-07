@@ -1,0 +1,1 @@
+{"passed": true, "required_terms": 18, "missing": [], "invalid_comparison_rules": 1, "source_sha256": "99725673240c21e3634b15d3e0a232bcbb1c3437767a71368d47bf58a0e21e8b", "scope": "contract type-check, not mathematical proof or reality coverage"}

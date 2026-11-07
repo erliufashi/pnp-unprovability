@@ -1,0 +1,691 @@
+                                                  ON DETERMINISM VERSUS NON-DETERMINISM
+                                                          AND RELATED PROBLEMS
+
+
+                                                           (Preliminary Version)
+
+
+
+    Wolfgang J. Paul                  Nicholas Pippenger         Endre Szemeredi            William T. Trotter
+IBM Research Laboratory            IBM Research Laboratory University of South Carolina University of South Carolina
+   San Jose, CA 95193                 San Jose, CA 95193       Columbia, SC 29208           Columbia, SC 29208
+
+
+
+ABSTRACT:     We    show     that,    for    multi-tape     Turing           deterministic Turing machines (that                receive      their
+                                                                                                                                          2
+machines, non-deterministic             linear     time    is   more         input on their work tape) require                 time    Q(n )       to
+
+powerful than deterministic linear time.                   We   also         recognize non-palindromes of length n (it is easy to
+
+discuss the prospects for extending this result to                           see that time        O(n    log   n)    is. sufficient          for     a
+
+more general Turing machines.                                                non-deterministic machine).
+
+
+
+                                                                                Among subsequent attempts to extend this result
+1. Introduction
+                                                                             to multi-tape Turing          machines,     we     may note           two
+
+                                                                             results of Kannan. The first (Kannan [9]) shows that
+     Our main result in this paper states that,                  for
+                                                                             non-deterministic           two-tape     machines         are     more
+multi-tape     Turing        machines,        non-deterministic
+                                                                             powerful than deterministic one-tape machines (both
+linear time is       more     powerful       than deterministic
+                                                                             machines receive their input on a read-only                     input
+linear time. More specifically, we show that there
+                                                                             tape).     The     second     (Kannan      [10])     shows        that
+is     a    language        recognized       by      a     two-tape
+                                                                             non-deterministic          multi-tape machines            are     more
+non-deterministic Turing machine in linear time, but
+                                                                             powerful than deterministic multi-tape machines with
+not    recognized      by    any     multi-tape     deterministic
+                                                                             an additional space bound              (growing    strictly more
+Turing machine in linear time (both machines receive
+                                                                             slowly than their time bound). In                 both    of    these
+their input on a read-only input tape). This result
+                                                                             results,     the    deterministic machines               suffer        an
+ (which will be proved in Section 4 below) shows not
+                                                                             additional handicap, and it is not clear that this
+only that non-determinism adds power, but that this
+                                                                             handicap alone does not account for                 the    observed
+additional power cannot be compensated for by any
+                                                                             difference in power.
+number of additional tapes.
+
+                                                                                We should also note a paper of Paul and Reischuk
+      The   first      evidence       that     non-deterministic
+                                                                             [15], which proved a result similar to ours on the
+ time-bounded Turing machines are more powerful than
+                                                                             assumption of a certain graph-theoretic hypothesis.
+ deterministic      time-bounded Turing             machines     was
+                                                                             This     hypothesis     was    subseq~ent1y        disproved           by
+ provided by Hennie [6], who showed                 that   one-tape
+
+
+
+                                                                       429
+0272-5428/83/0000/0429$01.00 © 1983 IEEE
+Schnitger [18,19], but the present paper owes both                                      Analogously, the simulation of Dymond and Tompa [3],
+
+its overall strategy and many 9f its tactics to the                                     as well as the simualtion of               the     present        paper,
+
+paper of Paul and Reischuk [15].                                                        involves    a     certain    "two-person            pebble        game" .
+
+                                                                                        Additionally, in the present paper we must exploit
+
+   The overall strategy may be described briefly as                                     certain constraints satisfied              by the         computation
+
+follows.     If    deterministic                 linear     time     equals             graphs of deterministic multi-tape Turing machines.
+
+non-deterministic linear time,                     then deterministic                   These constraiI;lts imply a "segregator theorem" for
+
+linear time       equals          alternating        linear       time      for         thes'e graphs, which is proved in Section 2.
+
+machines making a bounded number of alternations. By
+
+a padding argument,                this     implication extends             to           2. ~ Segregator Theorem
+non-linear time bounds. This much is as in Paul and
+
+Reischuk [15]. The key to the proof is a simulation                                         In     this    section we        lay    the     graph-theoretic
+(which will be given                in    Section 3)        whereby         any          foundation for our simulation.
+language    recognized             by a          deterministic       Turing
+
+machine in non-linear time is recognized faster by
+                                                                                            Let H(N) denote the class of directed graphs with
+an alternating          Turing       machine        making        just    four
+                                                                                         vertices {I, ... , N} in which every                   edge      (i,     j)
+alternations. As             in    Paul     and     Reischuk        [15],     a
+                                                                                         satisfies i<j (so that these graphs are acyclic). We
+diagonalization completes the proof.
+                                                                                         shall say that two edges (i, j) and (i', j') ~ if
+
+                                                                                         i<i'<j<j'. Let H (N) denote the subclass                      of       H(N)
+                                                                                                         1
+   The     simulation         mentioned            above     shows        that
+                                                                                         comprising those graphs in which every vertex has at
+alternating time with                four        alternations       is    more
+                                                                                         most. one immediate        predecessor           and   at most one
+powerful    than        deterministic             time.    This     may      be
+                                                                                         immediate successor, and            in    which        no two edges
+compared with previous results by Paul, Prauss and
+                                                                                         cross.    Let     Hr(N)    denote    the        subclass      of       H(N)
+Reischuk [14] and by Dymond and Tompa [3]                           showing              comprising those graphs that can be expressed as the
+that alternating time (with no bound on the number                                       union of r graphs belonging to                  H (N).     The     class
+                                                                                                                                          1
+of alternations) is more powerful than deterministic                                    Hr(N) is essentially the             class        of multi-pushdown
+time, and by Hopcroft, Paul and Valiant [7] showing                                      graphs defined by Pippenger [17].
+that deterministic                space     is    more     powerful       than
+
+dete~inistic time.                                                                          A set J of vertices of a graph G in H(N) will be
+
+                                                                                         called an M-segregator for G if every vertex in G-J
+   The simulation of Hopcroft, Paul and Valiant [7]                                     has at      most    M predecessors           in    G-J.      (The name
+involves a certain                "pebble        game"    played on the                  "segregator", coined in analogy to "separator", was
+vertices    of     an        acyclic         directed        graph        that          suggested by Michael Sipser.) Our main                     result         in
+represents (at a certain level of abstraction) the                                      this section shows that, for each fixed r, graphs in
+computation       of     a    deterministic              Turing    machine.             Hr (N) have M-segregators J with M=o(N) and IJI=o(N).
+
+
+
+                                                                                  430
+The proof uses depth-reduction                techni~ues     due    to             Define       d O=1    and,    for          1S1Sk,         d1=exP2 rl og2
+
+Erdos, Graham and Szemeredi [4] and to Valiant [22].                            (N/~,k-l)"        Then conditions (1), (2) and (3)                             are
+
+                                                                                immediate. To verify (4), observe that
+
+     Define Iog(O) x=x and, for t~l,               10g(1)      x=10g2                eXPk rN/d,,+1' S eXPk (2N/d t + 1 )
+108(1-1) x. Define                                                                                        S eXPk (2ek ,k-t-l)
+                                                                                                                         2
+               10g* x = min {l: 10g(1) x S I}.                                                               ek,k_t/ k
+                                                                                                                     2
+                                                                                                          S 2N/d k
+                                                                                                                 t
+Theorem ~ . .!: Let G be a graph in H (N) with N~16.                                                      S rN/df, 1 1k.
+                                     r
+There is a set J of at most 15rN/10g* N vertices of G                           This completes the proof. 0
+
+such that every vertex of G-J has at most 6N/log* N
+
+predecessors in G-J.                                                            Proof of Theorem ~.1: Let k and dO' ... , <1t be as in
+
+                                                                                Lemma    2.2.     We    shall    construct           a       sequence           of
+
+     For the proof we shall need the following lemma.                           partitions PO' ... , P of the vertices of G.                                   For
+                                                                                                      k
+Lemma ~.~: For            every    integer    ~16,     there    exist           oStSk,   we      construct      P1   by           taking             blocks     of
+
+integers ~2 and dO' ... , <1t such that                                         consecutive vertices of G, with each block except
+
+                                                                                possibly the last containing d . vertices, and with
+                                                                                                                              t
+                                                                                the last block          containing       at       most       d        vertices.
+                                                                                                                                                 t
+                                                                                Clearly, Po is the discrete partition and                                     Pl +
+                                                                                                                                                                     1
+                                                                                is coarser than P t for OStSk-1.
+
+
+
+                                                                                   Associate with each edge (i, j) of G the coarsest
+
+                                                                                of the partitions PO' ... , P - such that i and j
+                                                                                                             k 1
+      (4) For OSlSk-1,                                                          appear in different blocks. Since there are at most
+
+                     eXPk rN/d 1+1' S rN/da'/k·,
+                                          If.
+                                                                                rN edges, there must be a partition P
+                                                                                                                                         t
+                                                                                                                                             with oStSk-l
+
+and                                                                             that has at most rN/k edges associated with it. Let A
+
+                                                                                denote the set of vertices i such that some edge (i,
+
+      (5) ~(log* N)/3.                                                          j) is associated with Pl' Then IAISrN/k.
+
+Proof: For           ~2      and   1S1Sk-l,   define     e k ,o=l   and
+
+e           =exP     (2+2e     8). Define exp(O) x=x and,           for            Construct a graph G* by collapsing each block X
+    k,t+1       k        k ,If.
+ t~l,       expel)    x=exP 2      expel-I)   x.   Straightforward              of Pt into a single "node" X* and by putting an "arc"
+
+ estimates show that
+                                                                                from node X* to node Y* whenever G-A   '
+                                                                                                                   conta1ns an e dge
+                               <     (k+21) 1
+                          ek,l - exp          ·                                 from a vertex in block X to a vertex in block Y. The
+ Thus if we choose k=r(log* N)/3', then condition (5)
+                                                                                graph G* has
+ is satisfied and
+                                                                                                           N*
+                                       S e k ,k-1 S N.
+                                                                                nodes.
+
+
+
+                                                                          431
+   Every edge (i, j) of G-A either has i and j in the                         Let B* denote the set of bad nodes        in   *
+                                                                                                                             G.   Then
+
+same block of P
+                  t
+                      (and thus gives rise to no arc of                       IB* IS2rN*/k.
+G*) or has i and j in different blocks of Pfl,+1. Since
+
+there are just                                                                   Let B denote the set of vertices of G in blocks X
+
+                                                                              of P for which the node X* belongs to B* Since each
+                                                                                  I
+block of Pfl,+l' the longest directed path in G* has                          block of Pi. contains at most dfl, vertices, and since
+
+length at most M* -1.
+                                                                              d"N*S2N, we have IBIS4rN/k.
+
+
+   Let G be the union of G , ... , G in H1 (N). For
+                                  1            r
+                                                                                  Since every node of G*-B* has at most k immediate
+1SsSr we may construct G * in the obvious way, and G*
+                        s
+                                                                              predecessors and since every directed path in G* has
+is the union of G1* ' ... , Gr *
+                                                                              length at most M* -1, every node in G* -B* has at most
+
+                                                                                                   eXP     M* S N*jk
+   For each node X* of G* , let Ds(X* )                 denote   the                                   k
+                                                                              predecessors in·G* -B * .
+number of immediate predecessors of X* in Gs *                    We
+
+claim
+                                                                                  Let J be the union of A and B. Then
+                        *     *
+                      I X Ds(X ) S 2N* ·
+                                                                                              IJI S 5rN/k S 15rN/log* N.
+To see this, observe that if X*            is      an     immediate
+                                                                               If a vertex in block X of Pfl, is a predecessor of a
+predecessor of Y* and Z* in G * with Y*<Z * , then X*
+                             s                                                vertex in block Y of P" in G-J, then X* must be a
+ is the first immediate predecessor of Y* . For. if W
+                                                    *                         predecessor of Y* in G* -B* . Since each block of Pi
+were an immediate predecessor of Y*                in     G*     with
+                                                           s                   contains at most d" vertices, every vertex of G-J
+W**
+ <X , then the arcs (W* , Y* ) and (X* , Z* ) in Gs *                         has at ,most
+would cross. The edges of G that give rise to these
+                           s                                                                  diN* /k ~ 2N/k S 6N/log* N
+ arcs would also cross, contradicting the fact that                           predecessors in G-J. a
+G belongs to H (N). Thus, distinct nodes                    of G *
+ s            1                                                    s
+have disjoint sets of immediate predecessors (except                              A set J will be called an M-separator for G if
+possibly for their first immediate predecessors). It                           every component of G-J (ignoring the directions of
+ follows that                                                                  the edges) contains at most M vertices.        Separator
+
+                                                                               theorems are known for trees (see Lewis, Stearns and
+which proves the claim, since the sum has N* terms.                            Hartmanis [11]) and for ;planar graphs (see Lipton
+
+                                                                               and Tarjan [12]).    Pippenge~    [17] conjectured that,
+    Let   D(X*)   denote    the       number       of     immediate
+                                                                               for each fixed r, graphs in Hr(N) have M-separators
+predecessors of X* in G* . Then
+                                                                               J with M=o(N) and IJI=o(N). As indicated in        [17],
+       I X* D(X* ) S I1SsSr I X* Ds(X* ) S 2rN* ·                              this would have numerous computational consequences.
+Let us say that a node X* in G* is "bad" if D(X* »k.
+
+
+
+
+                                                                        432
+The present paper is founded on the fact that, for                                           shall say that M is- block-respecting if, during each
+
+the     purpose                 of       separating        (or       segregating)            se~ent     of its computation, each head of M visits
+
+determinism           from            non-determinism,           a      segregator           one and only one block.
+
+theorem serves as well as a separator theorem.
+                                                                                             Le..a ~ . .!: A language ree:ognized in time            f       by    a
+
+3. A Simulation                                                                              machine in AO, t is also recognized in time f by a
+
+                                                                                             block-respecting machine in A
+                                                                                                                          0,1+1·
+      In this section we shall show how computations by                                      Proof: See Hopcroft, Paul and Valiant [7].0
+
+deterministic multi-tape                         Turing       machines      can be
+
+accelerated                by         alternating         multi-tape        Turing                 Let M be a    block-respecting machine in A ' For
+                                                                                                                                                         O
+machines making just four alternations.                                                      every input x of length n, let G(M, x) be the graph
+
+                                                                                             with vertices {I, .. ', a(n)} (corresponding to the
+
+      Let     AD     denote              the     class     of        deterministic           se~nts     of the computation of M) with an edge (i,
+
+multi-tape Turing machines, and let A t denote the                                           i+l) for each ISiSa(n)-l and with an edge                   (i,      j)
+                                     O,
+subclass           having            1    work    tapes.       (Henceforth       all         whenever, in the computation of M on input x, some
+
+machines receive their input on a read-only                                    input         block on some work tape is visited during segment i
+
+tape.)        Let      I             (respectively,                                          and    revisited    during   segment   j,   without             being
+                            k
+corresponding class of                         alternating machines            that          revisited during any intermediate segment.
+start in an existential (respectively, a universal)
+
+state and change quantification at most k-1 times,                                           Lemma 3.2: If M is a         block-respecting machine                in
+
+and     let        I k ,1        (respectively,          nk,t)        denote     the         ~o
+                                                                                                  , l' then for every input x of length n, G(M, x)
+subclass having t work tapes.                                                                belongs to H21+1 (a(n»).
+
+                                                                                             Proof: The edges of G(M, x) of the form                 (i,       i+1)
+      Let f be          a        time-constructable              funtion.      If Q          clearly form a graph in HI(a(n)). For each of the!
+denotes a class of                       machines,       we     shall    let   Q(f)          work tapes, revisits of blocks may be partitioned
+denote the class of languages recognized by machines                                         into two     classes:   revisits    from    the        right         and
+in Q in time fen) on inputs of length n.                                                     revisits from the left. The revisits              in    each          of
+
+      Let f be a time-constructable function and                                 let         these classes also give rise to a graph in HI (a(n» ·
+
+
+
+machine in A running in time f. Let the computation
+            O
+ofM on an input x of length n be partitioned into                                                  We are now ready to prove the main result of this
+
+ "segments" each comprising ben)                              consecutive      steps         section.
+
+ (except possibly the last, which comprises at most
+
+ ben) steps). Let the tapes of M be partitioned into                                         Theorem ~.~: For every time-constructable                   f     with
+
+ "blocks" each comprising ben) contiguous cells. We                                           f(n)~n   log* n,
+
+
+
+                                                                                       433
+                                                                                        Phase 4: M universally selects a vertex i in the
+                  AO(f) S I (f/log* f).                                                           2
+                           4
+                                                                                  union of I and {j}. It deterministically checks the
+Proof of Theorem 1.1: Let MO be a machine in AO,t
+                                                                                  consistency of all guesses relating to i with those
+that recognizes L in time f. Let a(n)=rf(n)1/31 and
+                                                                                  relating to immediate predecessors of i, with the
+b(n)=rf(n)2/31.        By     Lemma     3.1,      there        is
+                                                                                  transition function for M and with the input x. If
+block-respecting machine HI             in     AO,t+1    that       also                                   1
+                                                                                  any of these checks fails, it rejects; otherwise it
+recognizes L in time f. We shall construct a machine
+                                                                                  accepts.
+M in I that recognizes L in time f/log
+ 2    4
+                                                          * f.       Let
+
+e(n)=r15(2t+3)a(n)/log* a(n)'. On input x of length
+                                                                                        It is   routin~   to verify, using          Lemma     3.2     and
+n, M deterministically computes fen), a(n),                         ben)
+    2
+                                                                                  Theorem 2.1, that M runs in               time     f/10g*        f . and
+and e(n).   It    then       proceeds    in      four    phases       as                             2
+                                                                                  recognizes L. 0
+follows.
+
+
+
+   Phase 1: M eX1stentially guesses the positions P                                ~.    Consequences for Determinism versus
+             2
+of each of the t+2 heads of M' at the outset of each                               Non-Determinism
+
+of the a(n) segments. From P, it deterministically
+
+computes the computation graph G. It existentially                                       In this section we show how the              simulation of
+
+guesses a set J of at most e(n) vertices in G. It                                  Theorem 3.3 implies that non-deterministic                       linear
+
+existentially     guesses        the     computation           of     M            time is more       powerful       than deterministic             linear
+                                                                        1
+(internal      states,         head      movements,           initial              time.
+
+inscriptions      of        blocks      visited         and         final
+
+inscriptions of blocks visited)                for   each of the                         We shall need the folowing "collapsing" lemma.
+
+segments corresponding to the last vertex k in Gand
+
+to vertices in J. It deterministically checks that                                 Lemma ~.!: If          I (n)=A (n)       (or,    equivalently,        if
+                                                                                                           1     O
+the computation for the last segment                    includes       an                                           for     every     k      and      every
+
+accepting state. If this check fails, it                      rejects;             time-constructable f,            Ik(f)=AO(f)       (and therefore
+
+otherwise it proceeds to Phase 2.                                                  Hk(f)=AO(f»).
+                                                                                   Proo~:       (See Paul and Reischuk [15]            for    details.)
+   Phase 2: M universally selects a vertex j in the
+             2
+union of J and {k}. It deterministically computes                                  From the hypothesis, a straightforward induction on
+
+                                                                                    k yields I (n)=n (n)=AO(n). The conclusion follows
+the set I of predecessors of j in G-J. If there are                                           k     k
+                                                                                    by a padding ~argument.. 0
+more that e(n) vertices in I, it rejects; otherwise
+
+it proceeds to Phase 3.
+                                                                                         We shall also       need     the    following       "hierarchy"
+
+   Phase 3: M existentially guesses the computation                                 lemma.
+             2
+of M for each of the time segments corresponding to
+    1
+                                                                                                           For      every      ~1,          and       every
+vertices in I.
+
+
+
+                                                                            434
+time-constructable f and g with f(n)=w(g(n)), then                                 5. Related Problems
+
+
+
+non-empty.                                                                               In       this   section      we     shall     reconsider       the
+
+Proof: (See Paul and Reischuk [15] for details.) By                                graph-theoretic foundation of                   our work,    exposing
+
+the tape: reduction theorem of Book,                     Greibach     and          some of its limitations and examining .the prospects
+
+Wegbreit     [1],       I 1 (g)=I ,2(g)          (and,     by    taking            for transcending these limitations. To do this                       we
+                                 1
+complements,        n (g)=ll1, 2 (g)).        A       straightforward              shall use the two-person pebble game, introduced by
+                     1
+induction     on    k    shows    that       Ik(g)=I k , 2(g)         (and         Tompa [20] (see also Dymond and Tampa [3]). We shall
+
+therefore llk(g)=nk ,2(g)). A machine in nk ,3 running                             give only hints of proofs.
+
+in time f can diagonalize over all machines in I ,2
+                                                k
+running in time g. The resulting                      language   is     in               As its name suggests, the two-person pebble game
+
+                                                                                   is played between two players, called the Challenger
+
+                                                                                   and the Pebbler, on              the     vertices    of an acyclic
+
+    \Ie are now ready to prove our main result.                                    directed graph. The Challenger begins by placing his
+
+                                                                                   token, called the challenge, on some vertex of the
+
+Theorem 4. 3 :                                                                     graph. The Pebbler responds by placing some of· his
+
+                          AO(n)<I 1 ,2(n).                                         tokens, called pebbles, on some set of vertices of
+
+Proof: By     the       tape   reduction         theorem     of Book,              the graph. In each succeeding round, the Challenger
+
+Greibach and Wegbreit [1], Ao(n)SI 1 (n)=I 1 ,2(n), so                             may leave the challenge where it is or may move it to
+
+it will suffice          to    show   that       the     inclusion      is         a vertex pebbled by the Pebbler in the immediately
+
+strict. To do       this,        we   assume          A (n)=I (n)      and         preceding round. If all the immediate predecessors ..
+                                                       O     1
+derive 8 contradiction.                                                            of the challenged vertex are pebbled, the Pebbler
+
+                                                                                   wins. Otherwise, he continues by placing pebbles on
+    By Lemma 4.1, this assumption implies IT 4 (n log*
+                                                                                   another set of vertices of the graph. We say that the
+n)=A (n log* n). By Theorem 3.3, A (n 10gn)SI
+                                        *
+                                              4 (n),
+     O                                            O
+                                                                                   Pebbler wins in R rounds and time T if he has                         a
+and so H (n log*          n)SI (n).       But     this     contradicts
+        4                     4
+                                                                                   strategy that ensures that he wins after making at
+Lemma 4.2. 0
+                                                                                   most R moves and placing a total of T pebbl~s on the
+
+                                                                                   graph.
+    The argument of this section can be elaborated to
+
+show somewhat more than we have done. If Q is a class
+                                                                                      Theorem 2.1 ensures that for any graph in Hr(N),
+of machines and f is time-constructable, let Q(o(f))
+                                                                                   the    Pebbler        can    win    in    two     rounds    and   time
+denote the union of Q(g) over all time-constructable
+                                                                                   T=O(N/log* N). Let Hr(N) denote the subclass of H(N)
+g   with     g(n)=o(£(n)).        Then    1: ,2(n)-A o(0«n
+                                             1                        log*
+                                                                                   comprising those graphs in which every vertex has at
+n)I/4)) is non-empty.
+                                                                                   most       r     immediate      predecessors       and at     most     r
+
+                                                                                   immediate successors. Schnitger [18,19]                     has   shown
+
+
+
+                                                                             435
+      2                                                                           The results of Sections 3 and 4 were restricted
+that H (N) ~ontains "grates" (a notion introduced by
+                                                                               to multi-tape Turing machines because the                 Theorem
+Valiant [22]). These are graphs G for           which,         for
+                                                                               2. 1 was restricted to graphs in H (N). In the case of
+every set J of vertices of G, either IJI=Q(N) or G-J                                                             r
+            2                                                                  time versus space, the result of Hopcroft, Paul and
+contains Q(N ) pairs      (i,   j)   for    which    i    is     a
+                                                                               Valiant [7] for multi!"'tape Turing machines have been
+predecessor of j in G-J (and         thus    contains      some
+                                                                               extended to multi-dimensional            and tree-structured
+vertex with Q(N) predecessors        in G-J).       For    such
+                                                                               tapes (see Paul and       Reischuk        [13]    and Pippenger
+graphs the Pebble~ can win in two rounds only in time
+                                                                               [16). This extension was facilitated by the                    fact
+T=Q(N). Let us consider to what extent the factor
+                                                                               that general      N-vertex      graphs     can    be one·-person
+    *
+"1og N" ·1n Theorem 2.1 might be replaced by a larger
+                                                                               pebbled in space S=O(N/log N). It                seems   natural,
+factor. We shall show that it can be increased at
+                                                                               therefore,   to       inquire     about      the     time-rounds
+most to "log N".
+                                                                               trade-off for the two-person pebble game on general
+Theorem ~.!: For every N, there is a graph G in H3 (N)
+                                                                               graphs. We     have    three     results     bearing     on this
+such that, for every set J of vertices of G, either
+                                                                               matter.
+IJI=Q(N/log N) or some vertex in G-J has Q(N/log N)
+
+predecessors in G-J.
+                                                                               Proposition ~.~: For any graph in                Hr(N)   and    any
+
+                                                                               2SRSN., the Pebbler can win in R rounds                  and time
+   This theorem is proved by constructing a variant
+                                                                               T=O(rN/log R) .
+of the "Fast Fourier Transform" graph in H (N). For
+                                                    3
+                                                  2
+some M=Q(N/log N), G has M inputs, M outputs and M
+                                                                                  This proposition       is     proved     by    modifying the
+paths joining inputs to outputs. Furthermore, each
+                                                                               strategy of Dymond and Tompa [3] to take account of
+vertex lies on OeM) of these paths.            Thus,      unless
+                                                                               the allowed number of rounds.
+ I J I=Q (M) ,G-J contains an output with Q(M) inputs as
+predecessors.
+                                                                               Proposition ~.!: For every N and every 1SRSN, there
+
+                                                                               is a graph in H2 (N) for which the Pebb\er can win in
+    A more illuminating proof of Theorem 5.1 can be
+ obtained from the following theorem.
+                                                                               R rounds only in time T=n(NjR).
+
+
+                                                                                  This proposition is          proved     by a construction
+ Theorem ~.~: For every N, there is a graph G in H3 (N)
+
+ such that, for some      M=Q(N/log    N),    G contains             a         involving grates [18,19] and expanding graphs [5].
+
+ hom~omorphic image of every graph in H2 (N) .
+                                                                                  We conjecture that the upper bound of Proposition
+
+    This   theorem   is   proved      by     constructing            a         5.3 is tight and that the lower bound of Proposition
+
+ universal graph (in the sense of Valiant [21])                  in            5.4 can be sharpened to meet it. To this end we offer
+
+ H (N). Applying the theorem to grates yields Theorem                          the following result.
+  3
+
+ 5.1.
+
+
+                                                                         436
+Proposition 5.5: For every N and every ISRSN, there                           ... ) .   Unless    results        with        this     stronger
+                  2                                                           quantification hold, the possibility of results such
+is a graph in H (N) for which the Pebbler can win in
+
+R rounds only in time T=Q(N/log (R log N)).                                   as those in Section     4     cannot      be   excluded.    This
+
+                                                                              raises the question of whether there are "uniformly
+
+     This result is prove by means of a simulation of                         hard" graphs for the        two-person pebble game,           or
+
+the two-person pebble game by the one-person pebble                           whether there are only graphs that are hard for                 a
+
+game, together with the time-space trade-off for the                          particular number of rounds. Even for the one-person
+
+one-person pebble game due to Lengauer and Tarjan                             pebble game, the analogous question (whether there
+
+[10]. When log R = Q(log log N), this lower bound                             are only graphs that        are   hard     for    a particular
+
+matches the upper bound of Proposition                  5.3.     Thus         amount of space) remains          open    (see Lengauer       and
+
+only the case of few rounds remains.                                          Tarjan [10]).
+
+
+                                                                              ~.   References
+     It may seem at first glance that these                 results
+                                                                              [1]   R. V. Book, S. A. G.reibach and B. Wegbreit,
+rule out any possibility of extending the results of                          "Time and Tape Bounded Turing Acceptors and AFL's",
+                                                                              J. Camp. and Sys. Sci., 4 (1970) 606-621.
+Sections 2-4 to more general machine models. Careful
+                                                                              [2J   A. K. Chandra, D.             C.    Kazen       and L.   J.
+consideration     reveals,       however,        that     such      a         Stockmeyer, "Alternation",          J.     ACM,        28  (1981)
+                                                                              114-133.
+pessimistic conclusion is unwarranted.
+                                                                              [3]   P. Dymond and M.      Tompa, "Speedups of
+                                                                              Deterministic Machines by Synchronous Parallel
+                                                                              Machines", STOC, 15 (1983).
+     Firstly,     even         Turing       machines            with
+                                                                              [4 ]   P. Erd~s, R. L. Graham and E. Szemeredi, "On
+multi-dimensional and tree-structured tapes                    impose         Sparse Graphs with Dense Long Paths",. Comp. and
+                                                                              Math. with Appl., 1 (1975) 365-369.
+constraints      on    the      graphs      underlying         their
+                                                                              [5]      o. Gabber and Z. Galil,          "Explicit
+computations. We have shown that computation graphs                           Constructions of Linear-Sized Superconcentrators" ,
+                                                                              J. Camp. and 8ys. Sci., 22 (1981)407-420.
+of Turing machines with one-dimensional tapes cannot
+                                                                              [6]   F . C. Hennie, "One-Tape, Of f - Line Tur ing
+be     linear-sized      grates,      but     the       case       of         Machine Computations", Info. and Contr., 8 (1965)
+                                                                              553-578.
+two-dimensions is      open.     Expoliting         these weaker
+                                                                              [7]    J. E. Hopcroft, W. J. Paul and L. G. Valiant,
+constraints may be difficult, however:               it is known              "On Time versus Space" ~ J. ACM, 24 (1977) 332-337.
+that the computation graphs of Turing machines with                           [8]      R.     Kannan,   "Towards   Separarting
+                                                                              Non-Deterministic Time from Deterministic Time",
+two-dimensional        tapes       can      be      linear-sized              FOCS, 22 (1981) 335-343.
+superconcentrators       (see    Gabber     and     Galil       [5]),         [9]  R. Kannan, "Alternation and the Power                     of
+                                                                              Non-Determinism", STOC, 15 (1983) 344-346.
+though the case of one dimensional tapes is open.
+                                                                              [10] T. Lengauer and R. E. Tarjan, "Asymptotically
+                                                                              Tight Bounds on Time-Space Trade-Offs in a Pebble
+                                                                              Game", J. ACM, 29 (1982) 1087-1130.
+     Secondly,   the   order     of   the     quantifiers          in
+                                                                              [11]   P. M. Lewis, R. E. Stearns and J. Hartmanis,
+Proposot ions 5.4 and 5.5 (... for every                 R,     there         "Memory Bounds for the Recognition of Context-Free
+                                                                              and Context-Sensitive Languages", FOCS, 6 (1965)
+exists 4 graph ... ) is not as strong as it might be                          191-202.
+
+(. .. tbere exists a graph such that, for                 every R             [12]      R. J. Lipton and R. E. Tarjan, "A Separator
+
+
+
+                                                                        437
+Theorem for Planar Graphs", SIAM J. Appl. Math., 36
+(1979) 177-189.
+
+[13]    W. Paul and R. Reischuk,    "On Time versus
+Space, II", J. Compo and Sys.       Sci., 22 (1981)
+312-327.
+
+[14]   W. J. Paul, E. J. Prauss and R. Reischuk, "On
+Alternation", Acta Inf., 14 (1980) 243-255.
+
+[15]   W. J. Paul and R. Reischtik, "On Alternation,
+II", Acta Inform., 14 (1980) 391-403.
+
+[16]   N. Pippenger,    "Probabilistic   Simulations",
+STOC 14 (1982) 17-26.
+
+[17]   N. Pippenger, "Advances in Pebbling", ICALP 9
+(1982) 407-417.
+
+[18]    G. Schnitger, "A Family of Graphs with
+Expensive Depth-Reduction", Theor. Compo Sci., 18
+(1982) 89-93.
+
+[19]    G. Schnitger,     "On Depth-Reduction      and
+Grates", 'fheor. Comp. Sci., to appear ~
+
+[20]   M. Tompa, "A Pebble       Game    That   Models
+Alternation", in preparation.
+
+[21]   L. G. Valiant, "Universal Circuits", STOC, 8
+(1976) 196-203.
+
+[22]  L. G. Valiant, "Graph-Theoretic Arguments in
+Low-Level Complexity", MFCS 6 (1977).
+
+
+
+
+                                                         438
+

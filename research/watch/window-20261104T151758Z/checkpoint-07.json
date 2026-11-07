@@ -1,0 +1,17 @@
+{
+  "hour": 7,
+  "at": 1793834005.2767112,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour7-review.receipt.json",
+  "actual_probe_exit": 0,
+  "kernel_comparisons": 54212,
+  "policy_feeds": 2539,
+  "RNG_checks": 1551,
+  "pruned_K": [
+    752,
+    776
+  ],
+  "bookkeeping_correction": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour7-bookkeeping-correction.json",
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "M19 fixed-H hybrid/nonvacuity",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

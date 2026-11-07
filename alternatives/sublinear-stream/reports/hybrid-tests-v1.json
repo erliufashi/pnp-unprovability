@@ -1,0 +1,3635 @@
+{
+  "passed": true,
+  "scope": "fixed-H word/profile conditional construction, not actual 200B",
+  "ordinary_cases": 420,
+  "pruned_cases": 12,
+  "boundary_cases": 12,
+  "total_cases": 480,
+  "feed_comparisons": 4448,
+  "RNG_checks": 2915,
+  "native_prefix_checks": 1763,
+  "rebuilds": 355,
+  "rebuild_Read_checks": 12664,
+  "competitive_component_checks": 682,
+  "ordinary_digest": "cc20ebad27a4278b27ae2390d093d25309b38fe4d81ebe9e52b9c9ca1bce6601",
+  "ordinary_sample_cases": [
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 0,
+      "prompt_length": 1,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "097f77b65b92ebb8dc70a3578e91f9e8473a42227749580d82f6d350a137eff7",
+      "transition": {
+        "boundary": 0,
+        "backend": "full",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 3996,
+        "simultaneously_held_cache_words": 3996,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "full",
+        "current_cache_words": 15984,
+        "cache_component_peak": 15984,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 0,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        -2,
+        2,
+        2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "d3b9122e427ae41e257c647ba530c8e3496a810944eb339f8392314219107686",
+      "transition": {
+        "boundary": 0,
+        "backend": "full",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 3996,
+        "simultaneously_held_cache_words": 3996,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "full",
+        "current_cache_words": 15984,
+        "cache_component_peak": 15984,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 0,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        2,
+        -2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "a157094e0a6c326637d00a45ff3ded56bfb45a329c7f741b82e997f47263aa29",
+      "transition": {
+        "boundary": 0,
+        "backend": "full",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 3996,
+        "simultaneously_held_cache_words": 3996,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "full",
+        "current_cache_words": 15984,
+        "cache_component_peak": 15984,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    }
+  ],
+  "boundary_records": [
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 1,
+      "prompt_length": 1,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 1,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "529560ae78c32bd505978035f897befceaf03705f277b985820f02dc830b07e0",
+      "transition": null,
+      "hybrid": {
+        "position": 1,
+        "mode": "native",
+        "current_cache_words": 8,
+        "cache_component_peak": 8,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 8,
+        "position": 1,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 1,
+      "prompt_length": 2,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 2,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "3d43f57231485eaca8969b6c1c3452db2fcf7bacd4b5667308dc7b03a2fa4eb9",
+      "transition": {
+        "boundary": 1,
+        "backend": "full",
+        "internal_records_replayed": 4,
+        "native_words_at_boundary": 8,
+        "compressed_slots_at_boundary": 7992,
+        "simultaneously_held_cache_words": 8000,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 2,
+        "mode": "full",
+        "current_cache_words": 7992,
+        "cache_component_peak": 8000,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 16,
+        "position": 2,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 3,
+      "prompt_length": 3,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 3,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "a78d78ca7ab21e4dc551140047dc6a8d0fbe426a1e40405d3b459c2767794eaa",
+      "transition": null,
+      "hybrid": {
+        "position": 3,
+        "mode": "native",
+        "current_cache_words": 24,
+        "cache_component_peak": 24,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 24,
+        "position": 3,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 3,
+      "prompt_length": 4,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 4,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "814727f1e6fae2e696026cf9c485fe33260503b24d9f767fa1462ef08b370de7",
+      "transition": {
+        "boundary": 3,
+        "backend": "full",
+        "internal_records_replayed": 12,
+        "native_words_at_boundary": 24,
+        "compressed_slots_at_boundary": 11988,
+        "simultaneously_held_cache_words": 12012,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 4,
+        "mode": "full",
+        "current_cache_words": 11988,
+        "cache_component_peak": 12012,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 32,
+        "position": 4,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 6,
+      "prompt_length": 6,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 6,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 6,
+      "competitive_component_checks": 0,
+      "trace_digest": "e96a59e1c8e62e874300e971ad3f10ceb613b13338e315ef47073330b15d1988",
+      "transition": null,
+      "hybrid": {
+        "position": 6,
+        "mode": "native",
+        "current_cache_words": 48,
+        "cache_component_peak": 48,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 48,
+        "position": 6,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 6,
+      "prompt_length": 7,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 6,
+      "competitive_component_checks": 0,
+      "trace_digest": "f76fa6490fc056ac4f3022357fd90401e73ef60475fa5d28fdf5d343c4bfc92c",
+      "transition": {
+        "boundary": 6,
+        "backend": "full",
+        "internal_records_replayed": 24,
+        "native_words_at_boundary": 48,
+        "compressed_slots_at_boundary": 11988,
+        "simultaneously_held_cache_words": 12036,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            7
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "full",
+        "current_cache_words": 15984,
+        "cache_component_peak": 15984,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 1,
+      "prompt_length": 1,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 1,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "a92ac1097e43193901411a65afa671d89a53be2e176ef6a3b7082642c4aafc18",
+      "transition": null,
+      "hybrid": {
+        "position": 1,
+        "mode": "native",
+        "current_cache_words": 8,
+        "cache_component_peak": 8,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 8,
+        "position": 1,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 1,
+      "prompt_length": 2,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 2,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "dcc001980d3602f7f6070f5aa23577ff14b815aea2ac7fc5a535555155cefbad",
+      "transition": {
+        "boundary": 1,
+        "backend": "full",
+        "internal_records_replayed": 4,
+        "native_words_at_boundary": 8,
+        "compressed_slots_at_boundary": 7992,
+        "simultaneously_held_cache_words": 8000,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 2,
+        "mode": "full",
+        "current_cache_words": 7992,
+        "cache_component_peak": 8000,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 16,
+        "position": 2,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 3,
+      "prompt_length": 3,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 3,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "f85f12150814321eb0a9af81df06f9ae7f387eaf57a6badd93c5553ad3de2558",
+      "transition": null,
+      "hybrid": {
+        "position": 3,
+        "mode": "native",
+        "current_cache_words": 24,
+        "cache_component_peak": 24,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 24,
+        "position": 3,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 3,
+      "prompt_length": 4,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 4,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "aa7e49e2186c1f1f0f939eac7dcc1516fcfbc6d6d6bb435a229270895d3cdbea",
+      "transition": {
+        "boundary": 3,
+        "backend": "full",
+        "internal_records_replayed": 12,
+        "native_words_at_boundary": 24,
+        "compressed_slots_at_boundary": 11988,
+        "simultaneously_held_cache_words": 12012,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 4,
+        "mode": "full",
+        "current_cache_words": 11988,
+        "cache_component_peak": 12012,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 32,
+        "position": 4,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 6,
+      "prompt_length": 6,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 6,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 6,
+      "competitive_component_checks": 0,
+      "trace_digest": "191c80d7bc1c7ef91b19d106b3020bfb94a3b03e48fde1af4eb23fa5c5d5c247",
+      "transition": null,
+      "hybrid": {
+        "position": 6,
+        "mode": "native",
+        "current_cache_words": 48,
+        "cache_component_peak": 48,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 48,
+        "position": 6,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 6,
+      "prompt_length": 7,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 1,
+      "native_prefix_checks": 6,
+      "competitive_component_checks": 0,
+      "trace_digest": "4c2cc74aa0fff38d1628140125964b7f1422e5230e9e60ca6a2ce08ab4b91926",
+      "transition": {
+        "boundary": 6,
+        "backend": "full",
+        "internal_records_replayed": 24,
+        "native_words_at_boundary": 48,
+        "compressed_slots_at_boundary": 11988,
+        "simultaneously_held_cache_words": 12036,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            7
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "full",
+        "current_cache_words": 15984,
+        "cache_component_peak": 15984,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    }
+  ],
+  "guards": [
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 0,
+      "prompt_length": 0,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -99
+      ],
+      "feed_comparisons": 0,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 2,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transition": null,
+      "hybrid": {
+        "position": 0,
+        "mode": "native",
+        "current_cache_words": 0,
+        "cache_component_peak": 0,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 0,
+        "position": 0,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 0,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -99
+      ],
+      "feed_comparisons": 1,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 2,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "529560ae78c32bd505978035f897befceaf03705f277b985820f02dc830b07e0",
+      "transition": {
+        "boundary": 0,
+        "backend": "full",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 3996,
+        "simultaneously_held_cache_words": 3996,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 1,
+        "mode": "full",
+        "current_cache_words": 7992,
+        "cache_component_peak": 7992,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 8,
+        "position": 1,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 3,
+      "prompt_length": 0,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -99
+      ],
+      "feed_comparisons": 0,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 2,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "transition": null,
+      "hybrid": {
+        "position": 0,
+        "mode": "native",
+        "current_cache_words": 0,
+        "cache_component_peak": 0,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 0,
+        "position": 0,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 3,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -99
+      ],
+      "feed_comparisons": 1,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 2,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "529560ae78c32bd505978035f897befceaf03705f277b985820f02dc830b07e0",
+      "transition": null,
+      "hybrid": {
+        "position": 1,
+        "mode": "native",
+        "current_cache_words": 8,
+        "cache_component_peak": 8,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 8,
+        "position": 1,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    }
+  ],
+  "EOS_control": {
+    "profile": "EOS-hybrid-control-only",
+    "backend": "full",
+    "H": 3,
+    "prompt_length": 1,
+    "stochastic": true,
+    "seed": 9,
+    "outputs": [
+      0
+    ],
+    "feed_comparisons": 1,
+    "feedback_feed_comparisons": 0,
+    "RNG_checks": 2,
+    "native_prefix_checks": 1,
+    "competitive_component_checks": 0,
+    "trace_digest": "94e648f1234db2cfdbf88fafa02e710f95bb2a543f5e5d29fcb894b23aedb954",
+    "transition": null,
+    "hybrid": {
+      "position": 1,
+      "mode": "native",
+      "current_cache_words": 8,
+      "cache_component_peak": 8,
+      "parameter_forests": 0,
+      "metadata_serialized_bytes": 0,
+      "scope": "numeric cache component ledger, not RSS/whole-process budget"
+    },
+    "reference": {
+      "kv_numeric_words": 8,
+      "position": 1,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    "passed": true
+  },
+  "long_cases": [
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 16,
+      "prompt_length": 128,
+      "stochastic": false,
+      "seed": 23,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 134,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 16,
+      "competitive_component_checks": 0,
+      "trace_digest": "a956c26b48babdba988e16fbbf9f7e15ec14f35ae46daa472e568280a471663d",
+      "transition": {
+        "boundary": 16,
+        "backend": "full",
+        "internal_records_replayed": 64,
+        "native_words_at_boundary": 128,
+        "compressed_slots_at_boundary": 19980,
+        "simultaneously_held_cache_words": 20108,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            17,
+            17
+          ],
+          [
+            17,
+            17
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 134,
+        "mode": "full",
+        "current_cache_words": 31968,
+        "cache_component_peak": 31968,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "full",
+      "H": 16,
+      "prompt_length": 128,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 134,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 16,
+      "competitive_component_checks": 0,
+      "trace_digest": "2eec47f2ecf7b947feb311eea1b9e4b603845f9f0dcbceab50fe9c45474437b7",
+      "transition": {
+        "boundary": 16,
+        "backend": "full",
+        "internal_records_replayed": 64,
+        "native_words_at_boundary": 128,
+        "compressed_slots_at_boundary": 19980,
+        "simultaneously_held_cache_words": 20108,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            17,
+            17
+          ],
+          [
+            17,
+            17
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 134,
+        "mode": "full",
+        "current_cache_words": 31968,
+        "cache_component_peak": 31968,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 16,
+      "prompt_length": 128,
+      "stochastic": false,
+      "seed": 23,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 134,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 16,
+      "competitive_component_checks": 0,
+      "trace_digest": "0bb24bcc53b41af23c7377dbed6ab64c2e295031b00013315498ab5001f9dc8c",
+      "transition": {
+        "boundary": 16,
+        "backend": "full",
+        "internal_records_replayed": 64,
+        "native_words_at_boundary": 128,
+        "compressed_slots_at_boundary": 19980,
+        "simultaneously_held_cache_words": 20108,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            17,
+            17
+          ],
+          [
+            17,
+            17
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 134,
+        "mode": "full",
+        "current_cache_words": 31968,
+        "cache_component_peak": 31968,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "full",
+      "H": 16,
+      "prompt_length": 128,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 134,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 16,
+      "competitive_component_checks": 0,
+      "trace_digest": "538def2206ba30a6b0e606816465673d1f361ed30e51090020a0f2b759297817",
+      "transition": {
+        "boundary": 16,
+        "backend": "full",
+        "internal_records_replayed": 64,
+        "native_words_at_boundary": 128,
+        "compressed_slots_at_boundary": 19980,
+        "simultaneously_held_cache_words": 20108,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            17,
+            17
+          ],
+          [
+            17,
+            17
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 134,
+        "mode": "full",
+        "current_cache_words": 31968,
+        "cache_component_peak": 31968,
+        "parameter_forests": 3996,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 1072,
+        "position": 134,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    }
+  ],
+  "pruned_case_records": [
+    {
+      "profile": "toy-A",
+      "backend": "pruned",
+      "H": 0,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "e687ee99c652201b98b353ab8a15989721413a08a9ee4ca987d37e1088cbe671",
+      "transition": {
+        "boundary": 0,
+        "backend": "pruned",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 752,
+        "simultaneously_held_cache_words": 752,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "pruned",
+        "current_cache_words": 3008,
+        "cache_component_peak": 3008,
+        "parameter_forests": 752,
+        "metadata_serialized_bytes": 25146,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "pruned",
+      "H": 0,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 9,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "56594662a518ae0dc4434866e8768a1ae87cc2795526559261cbb816220ced0d",
+      "transition": {
+        "boundary": 0,
+        "backend": "pruned",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 752,
+        "simultaneously_held_cache_words": 752,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 9,
+        "mode": "pruned",
+        "current_cache_words": 3008,
+        "cache_component_peak": 3008,
+        "parameter_forests": 752,
+        "metadata_serialized_bytes": 25146,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 72,
+        "position": 9,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "pruned",
+      "H": 1,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "e687ee99c652201b98b353ab8a15989721413a08a9ee4ca987d37e1088cbe671",
+      "transition": {
+        "boundary": 1,
+        "backend": "pruned",
+        "internal_records_replayed": 4,
+        "native_words_at_boundary": 8,
+        "compressed_slots_at_boundary": 1504,
+        "simultaneously_held_cache_words": 1512,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "pruned",
+        "current_cache_words": 3008,
+        "cache_component_peak": 3008,
+        "parameter_forests": 752,
+        "metadata_serialized_bytes": 25146,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "pruned",
+      "H": 1,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 9,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "56594662a518ae0dc4434866e8768a1ae87cc2795526559261cbb816220ced0d",
+      "transition": {
+        "boundary": 1,
+        "backend": "pruned",
+        "internal_records_replayed": 4,
+        "native_words_at_boundary": 8,
+        "compressed_slots_at_boundary": 1504,
+        "simultaneously_held_cache_words": 1512,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 9,
+        "mode": "pruned",
+        "current_cache_words": 3008,
+        "cache_component_peak": 3008,
+        "parameter_forests": 752,
+        "metadata_serialized_bytes": 25147,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 72,
+        "position": 9,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "pruned",
+      "H": 3,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "e687ee99c652201b98b353ab8a15989721413a08a9ee4ca987d37e1088cbe671",
+      "transition": {
+        "boundary": 3,
+        "backend": "pruned",
+        "internal_records_replayed": 12,
+        "native_words_at_boundary": 24,
+        "compressed_slots_at_boundary": 2256,
+        "simultaneously_held_cache_words": 2280,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "pruned",
+        "current_cache_words": 3008,
+        "cache_component_peak": 3008,
+        "parameter_forests": 752,
+        "metadata_serialized_bytes": 25146,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-A",
+      "backend": "pruned",
+      "H": 3,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 9,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "56594662a518ae0dc4434866e8768a1ae87cc2795526559261cbb816220ced0d",
+      "transition": {
+        "boundary": 3,
+        "backend": "pruned",
+        "internal_records_replayed": 12,
+        "native_words_at_boundary": 24,
+        "compressed_slots_at_boundary": 2256,
+        "simultaneously_held_cache_words": 2280,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 9,
+        "mode": "pruned",
+        "current_cache_words": 3008,
+        "cache_component_peak": 3008,
+        "parameter_forests": 752,
+        "metadata_serialized_bytes": 25147,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 72,
+        "position": 9,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "pruned",
+      "H": 0,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "4f7361364ebf07f5ebd376aabd487d921fe836213d7c1e84a628cc9d5dc268cd",
+      "transition": {
+        "boundary": 0,
+        "backend": "pruned",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 776,
+        "simultaneously_held_cache_words": 776,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "pruned",
+        "current_cache_words": 3104,
+        "cache_component_peak": 3104,
+        "parameter_forests": 776,
+        "metadata_serialized_bytes": 25502,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "pruned",
+      "H": 0,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 9,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 0,
+      "competitive_component_checks": 0,
+      "trace_digest": "2c9d1e81ea156176c830049e48cdb9c93859e03b604c5504d32b3e7f4a7d37c7",
+      "transition": {
+        "boundary": 0,
+        "backend": "pruned",
+        "internal_records_replayed": 0,
+        "native_words_at_boundary": 0,
+        "compressed_slots_at_boundary": 776,
+        "simultaneously_held_cache_words": 776,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 9,
+        "mode": "pruned",
+        "current_cache_words": 3104,
+        "cache_component_peak": 3104,
+        "parameter_forests": 776,
+        "metadata_serialized_bytes": 25503,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 72,
+        "position": 9,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "pruned",
+      "H": 1,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "4f7361364ebf07f5ebd376aabd487d921fe836213d7c1e84a628cc9d5dc268cd",
+      "transition": {
+        "boundary": 1,
+        "backend": "pruned",
+        "internal_records_replayed": 4,
+        "native_words_at_boundary": 8,
+        "compressed_slots_at_boundary": 1552,
+        "simultaneously_held_cache_words": 1560,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "pruned",
+        "current_cache_words": 3104,
+        "cache_component_peak": 3104,
+        "parameter_forests": 776,
+        "metadata_serialized_bytes": 25503,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "pruned",
+      "H": 1,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 9,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 1,
+      "competitive_component_checks": 0,
+      "trace_digest": "2c9d1e81ea156176c830049e48cdb9c93859e03b604c5504d32b3e7f4a7d37c7",
+      "transition": {
+        "boundary": 1,
+        "backend": "pruned",
+        "internal_records_replayed": 4,
+        "native_words_at_boundary": 8,
+        "compressed_slots_at_boundary": 1552,
+        "simultaneously_held_cache_words": 1560,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            2,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 9,
+        "mode": "pruned",
+        "current_cache_words": 3104,
+        "cache_component_peak": 3104,
+        "parameter_forests": 776,
+        "metadata_serialized_bytes": 25503,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 72,
+        "position": 9,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "pruned",
+      "H": 3,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "4f7361364ebf07f5ebd376aabd487d921fe836213d7c1e84a628cc9d5dc268cd",
+      "transition": {
+        "boundary": 3,
+        "backend": "pruned",
+        "internal_records_replayed": 12,
+        "native_words_at_boundary": 24,
+        "compressed_slots_at_boundary": 2328,
+        "simultaneously_held_cache_words": 2352,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 7,
+        "mode": "pruned",
+        "current_cache_words": 3104,
+        "cache_component_peak": 3104,
+        "parameter_forests": 776,
+        "metadata_serialized_bytes": 25503,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "toy-B",
+      "backend": "pruned",
+      "H": 3,
+      "prompt_length": 3,
+      "stochastic": true,
+      "seed": 23,
+      "outputs": [
+        2,
+        2,
+        2,
+        -2,
+        2,
+        2
+      ],
+      "feed_comparisons": 9,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 3,
+      "competitive_component_checks": 0,
+      "trace_digest": "2c9d1e81ea156176c830049e48cdb9c93859e03b604c5504d32b3e7f4a7d37c7",
+      "transition": {
+        "boundary": 3,
+        "backend": "pruned",
+        "internal_records_replayed": 12,
+        "native_words_at_boundary": 24,
+        "compressed_slots_at_boundary": 2328,
+        "simultaneously_held_cache_words": 2352,
+        "read_checks_at_rebuild": 36,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            4,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 9,
+        "mode": "pruned",
+        "current_cache_words": 3104,
+        "cache_component_peak": 3104,
+        "parameter_forests": 776,
+        "metadata_serialized_bytes": 25502,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 72,
+        "position": 9,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    }
+  ],
+  "zero_key_control": [
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 1,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 7,
+      "competitive_component_checks": 7,
+      "trace_digest": "25f47e7af26f98a81396fd1532090634cfe1f2a627413ab63a3001b9378b58db",
+      "transition": null,
+      "hybrid": {
+        "position": 7,
+        "mode": "native",
+        "current_cache_words": 56,
+        "cache_component_peak": 56,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        -2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 7,
+      "competitive_component_checks": 7,
+      "trace_digest": "488d8da7ff5c5e0509428244f676d774a531e7a6ffc52c7a1bc3acf64e29b9e5",
+      "transition": null,
+      "hybrid": {
+        "position": 7,
+        "mode": "native",
+        "current_cache_words": 56,
+        "cache_component_peak": 56,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 1,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 7,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 7,
+      "competitive_component_checks": 7,
+      "trace_digest": "220d2cc53d0dc9cfd2aff0d6a0759b62f020684cd2cfe30883cc60d226c5368f",
+      "transition": null,
+      "hybrid": {
+        "position": 7,
+        "mode": "native",
+        "current_cache_words": 56,
+        "cache_component_peak": 56,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 56,
+        "position": 7,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 7,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 13,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 13,
+      "trace_digest": "11b03b53d3c8db1ad0f6743c9fa3df71e0d758331cd51cfbfddd9e5fdaa12e08",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 13,
+        "mode": "pruned",
+        "current_cache_words": 64,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 104,
+        "position": 13,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 7,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        0
+      ],
+      "feed_comparisons": 8,
+      "feedback_feed_comparisons": 1,
+      "RNG_checks": 3,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 8,
+      "trace_digest": "9f441805551a3dec0932f3d485e1a61a5b61ee9541355c009194f284aeb81019",
+      "transition": null,
+      "hybrid": {
+        "position": 8,
+        "mode": "native",
+        "current_cache_words": 64,
+        "cache_component_peak": 64,
+        "parameter_forests": 0,
+        "metadata_serialized_bytes": 0,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 64,
+        "position": 8,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 7,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 13,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 13,
+      "trace_digest": "9ced6c32847d78f629648d735340ec425a77714e5597504f079bab1c8224b1c6",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 13,
+        "mode": "pruned",
+        "current_cache_words": 64,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 104,
+        "position": 13,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 8,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 14,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 14,
+      "trace_digest": "4b43c0356b09957eff098997e3c4606d9a3f5a5eac1955ae28f193030ec35cb9",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 14,
+        "mode": "pruned",
+        "current_cache_words": 64,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 112,
+        "position": 14,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 8,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        -2,
+        0
+      ],
+      "feed_comparisons": 10,
+      "feedback_feed_comparisons": 2,
+      "RNG_checks": 4,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 10,
+      "trace_digest": "324919fa459b95a421c6f690aeff2a6511152d83303eb5530557c0a25f4b7754",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 10,
+        "mode": "pruned",
+        "current_cache_words": 64,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 80,
+        "position": 10,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 8,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 14,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 14,
+      "trace_digest": "1093dba7e8d1a3530abac5229485a4a936085d133525cbfb7f07318d3246c2ce",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 14,
+        "mode": "pruned",
+        "current_cache_words": 64,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 112,
+        "position": 14,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 9,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 15,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 15,
+      "trace_digest": "aee101f1cd6f27daef5c29fa7306a40f7290c2ac7eabe9476f4281c38e3ddd54",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 15,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 120,
+        "position": 15,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 9,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        -2
+      ],
+      "feed_comparisons": 15,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 15,
+      "trace_digest": "f81ba70550ce1f5c59d5dc7f2424e985bde3cbf2642761b364a59d78f3863d84",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 15,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 120,
+        "position": 15,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 9,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 15,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 15,
+      "trace_digest": "4275dd5d58fa673a8e78cf0398bc5d83ba17c313fd87ff32ec29141cb9b9a6a7",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 15,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 120,
+        "position": 15,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 15,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "feed_comparisons": 21,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 21,
+      "trace_digest": "dc0a39453fd7d7e9e56eb55b9cb10aebc01b22c31996e216948fd6d686c83485",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 21,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 168,
+        "position": 21,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 15,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        -2
+      ],
+      "feed_comparisons": 21,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 21,
+      "trace_digest": "3bbcf3d8d316360b4b3743b3dc0d1d82d730f2562a7409ac328b653d86ab1544",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 21,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2799,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 168,
+        "position": 21,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 15,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        2,
+        2,
+        -2,
+        -2,
+        2,
+        -2
+      ],
+      "feed_comparisons": 21,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 21,
+      "trace_digest": "cc3a22ec9e994486664caddf7bd22dc9800959e86f363d19df0bfb3b80a1621f",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 21,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2799,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 168,
+        "position": 21,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 16,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "feed_comparisons": 22,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 22,
+      "trace_digest": "b52b21d1c8e759012e1fd2afa463daf75241e63db0500867bf570dfdc18a0b6f",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 22,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 176,
+        "position": 22,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 16,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        0
+      ],
+      "feed_comparisons": 17,
+      "feedback_feed_comparisons": 1,
+      "RNG_checks": 3,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 17,
+      "trace_digest": "4c1237fbea4d5ceb9d539acd2bb0d61a4d50c879398912657a6dbf5dee9135a8",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 17,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 136,
+        "position": 17,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 16,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 22,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 22,
+      "trace_digest": "e622fd01b7359c4e8527b35447f78c5b1af80696f333159e4e738ecdfe117d8f",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 22,
+        "mode": "pruned",
+        "current_cache_words": 80,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 176,
+        "position": 22,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 31,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "feed_comparisons": 37,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 37,
+      "trace_digest": "f07fd0cbb604b3068e2d21ed203c449763e18eae6388cc993e3ddebaa7f1424a",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 37,
+        "mode": "pruned",
+        "current_cache_words": 96,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 296,
+        "position": 37,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 31,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        -2
+      ],
+      "feed_comparisons": 37,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 37,
+      "trace_digest": "82f27c7f4d7a4128986d6b35d0dd7ff399a6ca569fd97f0fa6b4c2b41d74f4b3",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 37,
+        "mode": "pruned",
+        "current_cache_words": 96,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 296,
+        "position": 37,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 31,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        0
+      ],
+      "feed_comparisons": 31,
+      "feedback_feed_comparisons": 0,
+      "RNG_checks": 2,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 31,
+      "trace_digest": "84576476d1fa70b65f90a759d140ab46e85c83c036bb31b2dfbdd5682f4e54da",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 31,
+        "mode": "pruned",
+        "current_cache_words": 96,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 248,
+        "position": 31,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 32,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 38,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 38,
+      "trace_digest": "142cf24b1335937c4672d3344382052aff8eb9583a777b6418e18a83e13af2e9",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 38,
+        "mode": "pruned",
+        "current_cache_words": 96,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 304,
+        "position": 38,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 32,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        -2,
+        0
+      ],
+      "feed_comparisons": 34,
+      "feedback_feed_comparisons": 2,
+      "RNG_checks": 4,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 34,
+      "trace_digest": "909d9a4b2eaa23cd5940d90682ac25394c91df72772427ecabd221861e6b4342",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 34,
+        "mode": "pruned",
+        "current_cache_words": 96,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 272,
+        "position": 34,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 32,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 38,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 38,
+      "trace_digest": "2cc2bd377a28bc28461bc4748c2966f8a954476612a6c788d5659bbb2b7a9aee",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 38,
+        "mode": "pruned",
+        "current_cache_words": 96,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 304,
+        "position": 38,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 64,
+      "stochastic": false,
+      "seed": 0,
+      "outputs": [
+        -2,
+        -2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 70,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 70,
+      "trace_digest": "942c56d1083fc02e0f421f6e88b8f152401f7542161ba6f581bbc94bbceb82f0",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 70,
+        "mode": "pruned",
+        "current_cache_words": 112,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2800,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 560,
+        "position": 70,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 64,
+      "stochastic": true,
+      "seed": 0,
+      "outputs": [
+        2,
+        0
+      ],
+      "feed_comparisons": 65,
+      "feedback_feed_comparisons": 1,
+      "RNG_checks": 3,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 65,
+      "trace_digest": "789dd829f6f57b9cf04e930ff0dd85b46c652334f57ceca47b627fdafc46d132",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 65,
+        "mode": "pruned",
+        "current_cache_words": 112,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2799,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 520,
+        "position": 65,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    },
+    {
+      "profile": "zero-key-competitive-control-only",
+      "backend": "pruned",
+      "H": 8,
+      "prompt_length": 64,
+      "stochastic": true,
+      "seed": 7,
+      "outputs": [
+        -2,
+        2,
+        -2,
+        -2,
+        -2,
+        -2
+      ],
+      "feed_comparisons": 70,
+      "feedback_feed_comparisons": 6,
+      "RNG_checks": 7,
+      "native_prefix_checks": 8,
+      "competitive_component_checks": 70,
+      "trace_digest": "f4e81dd74e450bc4d79a153b33b670ba341204465009569ca4f22fcca39bf3ae",
+      "transition": {
+        "boundary": 8,
+        "backend": "pruned",
+        "internal_records_replayed": 32,
+        "native_words_at_boundary": 64,
+        "compressed_slots_at_boundary": 64,
+        "simultaneously_held_cache_words": 128,
+        "read_checks_at_rebuild": 32,
+        "RNG_untouched": true,
+        "head_counts": [
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            9
+          ]
+        ],
+        "input_or_output_reread": false,
+        "scope": "cache components only; compile scratch/code/metadata/control excluded"
+      },
+      "hybrid": {
+        "position": 70,
+        "mode": "pruned",
+        "current_cache_words": 112,
+        "cache_component_peak": 128,
+        "parameter_forests": 16,
+        "metadata_serialized_bytes": 2801,
+        "scope": "numeric cache component ledger, not RSS/whole-process budget"
+      },
+      "reference": {
+        "kv_numeric_words": 560,
+        "position": 70,
+        "scope": "KV numeric entries only; program/PRNG/control excluded"
+      },
+      "passed": true
+    }
+  ],
+  "permanent_crossover_certificates": [
+    {
+      "K": 3996,
+      "rate": 8,
+      "permanent_H": 6494,
+      "first_fully_good_L": 14,
+      "intervals": [
+        {
+          "L": 1,
+          "lo": 0,
+          "hi": 0,
+          "last_bad_if_any": 0
+        },
+        {
+          "L": 2,
+          "lo": 1,
+          "hi": 2,
+          "last_bad_if_any": 2
+        },
+        {
+          "L": 3,
+          "lo": 3,
+          "hi": 6,
+          "last_bad_if_any": 6
+        },
+        {
+          "L": 4,
+          "lo": 7,
+          "hi": 14,
+          "last_bad_if_any": 14
+        },
+        {
+          "L": 5,
+          "lo": 15,
+          "hi": 30,
+          "last_bad_if_any": 30
+        },
+        {
+          "L": 6,
+          "lo": 31,
+          "hi": 62,
+          "last_bad_if_any": 62
+        },
+        {
+          "L": 7,
+          "lo": 63,
+          "hi": 126,
+          "last_bad_if_any": 126
+        },
+        {
+          "L": 8,
+          "lo": 127,
+          "hi": 254,
+          "last_bad_if_any": 254
+        },
+        {
+          "L": 9,
+          "lo": 255,
+          "hi": 510,
+          "last_bad_if_any": 510
+        },
+        {
+          "L": 10,
+          "lo": 511,
+          "hi": 1022,
+          "last_bad_if_any": 1022
+        },
+        {
+          "L": 11,
+          "lo": 1023,
+          "hi": 2046,
+          "last_bad_if_any": 2046
+        },
+        {
+          "L": 12,
+          "lo": 2047,
+          "hi": 4094,
+          "last_bad_if_any": 4094
+        },
+        {
+          "L": 13,
+          "lo": 4095,
+          "hi": 8190,
+          "last_bad_if_any": 6493
+        },
+        {
+          "L": 14,
+          "lo": 8191,
+          "hi": 16382,
+          "last_bad_if_any": null
+        }
+      ],
+      "future_proof": "a*next_lo=2*a*lo+a >=2*K*L+a >=K*(L+1)",
+      "scope": "allocated cache components only; no time/RSS/readonly guarantee"
+    },
+    {
+      "K": 752,
+      "rate": 8,
+      "permanent_H": 1034,
+      "first_fully_good_L": 12,
+      "intervals": [
+        {
+          "L": 1,
+          "lo": 0,
+          "hi": 0,
+          "last_bad_if_any": 0
+        },
+        {
+          "L": 2,
+          "lo": 1,
+          "hi": 2,
+          "last_bad_if_any": 2
+        },
+        {
+          "L": 3,
+          "lo": 3,
+          "hi": 6,
+          "last_bad_if_any": 6
+        },
+        {
+          "L": 4,
+          "lo": 7,
+          "hi": 14,
+          "last_bad_if_any": 14
+        },
+        {
+          "L": 5,
+          "lo": 15,
+          "hi": 30,
+          "last_bad_if_any": 30
+        },
+        {
+          "L": 6,
+          "lo": 31,
+          "hi": 62,
+          "last_bad_if_any": 62
+        },
+        {
+          "L": 7,
+          "lo": 63,
+          "hi": 126,
+          "last_bad_if_any": 126
+        },
+        {
+          "L": 8,
+          "lo": 127,
+          "hi": 254,
+          "last_bad_if_any": 254
+        },
+        {
+          "L": 9,
+          "lo": 255,
+          "hi": 510,
+          "last_bad_if_any": 510
+        },
+        {
+          "L": 10,
+          "lo": 511,
+          "hi": 1022,
+          "last_bad_if_any": 939
+        },
+        {
+          "L": 11,
+          "lo": 1023,
+          "hi": 2046,
+          "last_bad_if_any": 1033
+        },
+        {
+          "L": 12,
+          "lo": 2047,
+          "hi": 4094,
+          "last_bad_if_any": null
+        }
+      ],
+      "future_proof": "a*next_lo=2*a*lo+a >=2*K*L+a >=K*(L+1)",
+      "scope": "allocated cache components only; no time/RSS/readonly guarantee"
+    },
+    {
+      "K": 776,
+      "rate": 8,
+      "permanent_H": 1067,
+      "first_fully_good_L": 12,
+      "intervals": [
+        {
+          "L": 1,
+          "lo": 0,
+          "hi": 0,
+          "last_bad_if_any": 0
+        },
+        {
+          "L": 2,
+          "lo": 1,
+          "hi": 2,
+          "last_bad_if_any": 2
+        },
+        {
+          "L": 3,
+          "lo": 3,
+          "hi": 6,
+          "last_bad_if_any": 6
+        },
+        {
+          "L": 4,
+          "lo": 7,
+          "hi": 14,
+          "last_bad_if_any": 14
+        },
+        {
+          "L": 5,
+          "lo": 15,
+          "hi": 30,
+          "last_bad_if_any": 30
+        },
+        {
+          "L": 6,
+          "lo": 31,
+          "hi": 62,
+          "last_bad_if_any": 62
+        },
+        {
+          "L": 7,
+          "lo": 63,
+          "hi": 126,
+          "last_bad_if_any": 126
+        },
+        {
+          "L": 8,
+          "lo": 127,
+          "hi": 254,
+          "last_bad_if_any": 254
+        },
+        {
+          "L": 9,
+          "lo": 255,
+          "hi": 510,
+          "last_bad_if_any": 510
+        },
+        {
+          "L": 10,
+          "lo": 511,
+          "hi": 1022,
+          "last_bad_if_any": 969
+        },
+        {
+          "L": 11,
+          "lo": 1023,
+          "hi": 2046,
+          "last_bad_if_any": 1066
+        },
+        {
+          "L": 12,
+          "lo": 2047,
+          "hi": 4094,
+          "last_bad_if_any": null
+        }
+      ],
+      "future_proof": "a*next_lo=2*a*lo+a >=2*K*L+a >=K*(L+1)",
+      "scope": "allocated cache components only; no time/RSS/readonly guarantee"
+    },
+    {
+      "K": 16,
+      "rate": 8,
+      "permanent_H": 8,
+      "first_fully_good_L": 5,
+      "intervals": [
+        {
+          "L": 1,
+          "lo": 0,
+          "hi": 0,
+          "last_bad_if_any": 0
+        },
+        {
+          "L": 2,
+          "lo": 1,
+          "hi": 2,
+          "last_bad_if_any": 2
+        },
+        {
+          "L": 3,
+          "lo": 3,
+          "hi": 6,
+          "last_bad_if_any": 5
+        },
+        {
+          "L": 4,
+          "lo": 7,
+          "hi": 14,
+          "last_bad_if_any": 7
+        },
+        {
+          "L": 5,
+          "lo": 15,
+          "hi": 30,
+          "last_bad_if_any": null
+        }
+      ],
+      "future_proof": "a*next_lo=2*a*lo+a >=2*K*L+a >=K*(L+1)",
+      "scope": "allocated cache components only; no time/RSS/readonly guarantee"
+    }
+  ],
+  "memory_caveat": "Before H no mutable forest; after small test H it can still exceed native. Overlap ledger counts old+new caches, not compiler scratch, code, readonly, Python or total RSS.",
+  "test_caveat": "All-query replay checks are passive diagnostics, never supply corrections. Production stream default has no observer; solver retains no output history.",
+  "seconds": 8.162566323997453,
+  "source_sha256": "8409da2a378e5d55f843ea08bb698852b5fa11d26334adc35a1e5186274b4798",
+  "frozen_dependencies": {
+    "causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+    "prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+    "tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+    "pruned_query_probe.py": "4dcecc483735b94fc68c2b3124bbcd9a99d4ea5aaea2a828977d0e4eaf494557"
+  },
+  "not_claimed": [
+    "actual 200B/human adequacy",
+    "2x full device",
+    "wallclock competitive",
+    "uniform model/H constants",
+    "new T3 scope"
+  ]
+}

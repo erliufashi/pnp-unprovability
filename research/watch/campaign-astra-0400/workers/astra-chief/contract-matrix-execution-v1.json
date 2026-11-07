@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "verify_contract_matrix.py"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-chief",
+  "env_allowlist": {
+    "HOME": "/home/desk",
+    "PATH": "/run/current-system/sw/bin:/usr/bin:/bin",
+    "LC_ALL": "C.UTF-8"
+  },
+  "actual_exit": 0,
+  "source_sha256": "4a489de180de5bca3325d41679adf48a6b6abecf3789bdbacf504143b6aba0f5",
+  "input_source_sha256": "99725673240c21e3634b15d3e0a232bcbb1c3437767a71368d47bf58a0e21e8b",
+  "report_sha256": "e3d2d7a7a52f3c8e51f2a91b5d9c4219cba50941f25b5fa7a10ac65e78d59acd",
+  "stdout_sha256": "2202b265d4e388460406fc771e8ab483830d2f660f6d29c7fea3494c650d5968",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "at": "2026-11-06T17:10:46.422988+00:00",
+  "input_source_path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-chief/CONTRACT-MATRIX-v1.md",
+  "published_copy_path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-chief/CONTRACT-MATRIX-v1-published.md",
+  "published_copy_sha256": "e390ae806665f9cab226de034c9295c83dbbd049f6c25b7ef43b4438b2828486",
+  "note": "Corrected execution provenance: script reads CONTRACT-MATRIX-v1.md; published copy is separate evidence artifact."
+}

@@ -1,0 +1,424 @@
+{
+  "passed": true,
+  "exact_sequence_cases": [
+    {
+      "input_context": 0,
+      "horizon": 1,
+      "states": 3,
+      "sequence_TV": "1/16",
+      "coupling_bound": "1/16",
+      "sum_bound": "1/16",
+      "reference_parity_risk": "1/2",
+      "approximate_parity_risk": "7/16",
+      "passed": true
+    },
+    {
+      "input_context": 0,
+      "horizon": 2,
+      "states": 7,
+      "sequence_TV": "1/16",
+      "coupling_bound": "31/256",
+      "sum_bound": "1/8",
+      "reference_parity_risk": "1/2",
+      "approximate_parity_risk": "63/128",
+      "passed": true
+    },
+    {
+      "input_context": 0,
+      "horizon": 3,
+      "states": 15,
+      "sequence_TV": "177/2048",
+      "coupling_bound": "721/4096",
+      "sum_bound": "3/16",
+      "reference_parity_risk": "1/2",
+      "approximate_parity_risk": "511/1024",
+      "passed": true
+    },
+    {
+      "input_context": 0,
+      "horizon": 4,
+      "states": 31,
+      "sequence_TV": "6013/65536",
+      "coupling_bound": "14911/65536",
+      "sum_bound": "1/4",
+      "reference_parity_risk": "1/2",
+      "approximate_parity_risk": "4095/8192",
+      "passed": true
+    },
+    {
+      "input_context": 0,
+      "horizon": 5,
+      "states": 63,
+      "sequence_TV": "52877/524288",
+      "coupling_bound": "289201/1048576",
+      "sum_bound": "5/16",
+      "reference_parity_risk": "1/2",
+      "approximate_parity_risk": "32767/65536",
+      "passed": true
+    },
+    {
+      "input_context": 1,
+      "horizon": 1,
+      "states": 3,
+      "sequence_TV": "1/16",
+      "coupling_bound": "1/16",
+      "sum_bound": "1/16",
+      "reference_parity_risk": "5/8",
+      "approximate_parity_risk": "11/16",
+      "passed": true
+    },
+    {
+      "input_context": 1,
+      "horizon": 2,
+      "states": 7,
+      "sequence_TV": "19/256",
+      "coupling_bound": "31/256",
+      "sum_bound": "1/8",
+      "reference_parity_risk": "5/8",
+      "approximate_parity_risk": "83/128",
+      "passed": true
+    },
+    {
+      "input_context": 1,
+      "horizon": 3,
+      "states": 15,
+      "sequence_TV": "45/512",
+      "coupling_bound": "721/4096",
+      "sum_bound": "3/16",
+      "reference_parity_risk": "5/8",
+      "approximate_parity_risk": "659/1024",
+      "passed": true
+    },
+    {
+      "input_context": 1,
+      "horizon": 4,
+      "states": 31,
+      "sequence_TV": "6109/65536",
+      "coupling_bound": "14911/65536",
+      "sum_bound": "1/4",
+      "reference_parity_risk": "5/8",
+      "approximate_parity_risk": "5267/8192",
+      "passed": true
+    },
+    {
+      "input_context": 1,
+      "horizon": 5,
+      "states": 63,
+      "sequence_TV": "52499/524288",
+      "coupling_bound": "289201/1048576",
+      "sum_bound": "5/16",
+      "reference_parity_risk": "5/8",
+      "approximate_parity_risk": "42131/65536",
+      "passed": true
+    }
+  ],
+  "logit_controls": {
+    "greedy_no_margin_counterexample": {
+      "eta": "1/1048576",
+      "reference_choice": 0,
+      "perturbed_choice": 1,
+      "output_TV": 1
+    },
+    "safe_margin_cases": 24,
+    "softmax_float_sanity_cases": 2268,
+    "softmax_max_excess_with_tolerance": 5.551115123125783e-17,
+    "tight_examples": [
+      {
+        "eta": 0.1,
+        "temperature": 1.0,
+        "TV": 0.049958374957880025,
+        "bound": 0.04995837495787998
+      },
+      {
+        "eta": 0.5,
+        "temperature": 1.0,
+        "TV": 0.24491866240370913,
+        "bound": 0.24491866240370913
+      },
+      {
+        "eta": 0.5,
+        "temperature": 0.5,
+        "TV": 0.4621171572600098,
+        "bound": 0.46211715726000974
+      }
+    ],
+    "scope": "exact rational margin controls; floating softmax sanity, not a proof/actual sampling-kernel error certificate"
+  },
+  "resource_ledger": {
+    "position": 134,
+    "reference_KV_word_peak": 1072,
+    "compiled_allocated_word_peak": 31968,
+    "compiled_current_live_words": 15984,
+    "compiled_post_feed_peak_live_words": 27972,
+    "allocated_over_reference_component_ratio": 29.82089552238806,
+    "parameter_forests": 3996,
+    "reference_words_per_position": 8,
+    "crossover_allocated": {
+      "first_fit": 6494,
+      "permanent_from": 6494,
+      "fully_fitting_level_base": 14,
+      "inductive_base_t": 8191,
+      "intervals": [
+        {
+          "level": 1,
+          "start": 0,
+          "end": 0,
+          "required_t": 500,
+          "first_fit_here": null,
+          "last_failure_here": 0
+        },
+        {
+          "level": 2,
+          "start": 1,
+          "end": 2,
+          "required_t": 999,
+          "first_fit_here": null,
+          "last_failure_here": 2
+        },
+        {
+          "level": 3,
+          "start": 3,
+          "end": 6,
+          "required_t": 1499,
+          "first_fit_here": null,
+          "last_failure_here": 6
+        },
+        {
+          "level": 4,
+          "start": 7,
+          "end": 14,
+          "required_t": 1998,
+          "first_fit_here": null,
+          "last_failure_here": 14
+        },
+        {
+          "level": 5,
+          "start": 15,
+          "end": 30,
+          "required_t": 2498,
+          "first_fit_here": null,
+          "last_failure_here": 30
+        },
+        {
+          "level": 6,
+          "start": 31,
+          "end": 62,
+          "required_t": 2997,
+          "first_fit_here": null,
+          "last_failure_here": 62
+        },
+        {
+          "level": 7,
+          "start": 63,
+          "end": 126,
+          "required_t": 3497,
+          "first_fit_here": null,
+          "last_failure_here": 126
+        },
+        {
+          "level": 8,
+          "start": 127,
+          "end": 254,
+          "required_t": 3996,
+          "first_fit_here": null,
+          "last_failure_here": 254
+        },
+        {
+          "level": 9,
+          "start": 255,
+          "end": 510,
+          "required_t": 4496,
+          "first_fit_here": null,
+          "last_failure_here": 510
+        },
+        {
+          "level": 10,
+          "start": 511,
+          "end": 1022,
+          "required_t": 4995,
+          "first_fit_here": null,
+          "last_failure_here": 1022
+        },
+        {
+          "level": 11,
+          "start": 1023,
+          "end": 2046,
+          "required_t": 5495,
+          "first_fit_here": null,
+          "last_failure_here": 2046
+        },
+        {
+          "level": 12,
+          "start": 2047,
+          "end": 4094,
+          "required_t": 5994,
+          "first_fit_here": null,
+          "last_failure_here": 4094
+        },
+        {
+          "level": 13,
+          "start": 4095,
+          "end": 8190,
+          "required_t": 6494,
+          "first_fit_here": 6494,
+          "last_failure_here": 6493
+        },
+        {
+          "level": 14,
+          "start": 8191,
+          "end": 16382,
+          "required_t": 6993,
+          "first_fit_here": 8191,
+          "last_failure_here": null
+        }
+      ],
+      "proof_basis": "interval arithmetic plus low_next=2*low+c, not finite scan alone"
+    },
+    "crossover_peak_live": {
+      "first_fit": 5994,
+      "permanent_from": 5994,
+      "fully_fitting_level_base": 13,
+      "inductive_base_t": 8190,
+      "intervals": [
+        {
+          "level": 1,
+          "start": 0,
+          "end": 1,
+          "required_t": 500,
+          "first_fit_here": null,
+          "last_failure_here": 1
+        },
+        {
+          "level": 2,
+          "start": 2,
+          "end": 5,
+          "required_t": 999,
+          "first_fit_here": null,
+          "last_failure_here": 5
+        },
+        {
+          "level": 3,
+          "start": 6,
+          "end": 13,
+          "required_t": 1499,
+          "first_fit_here": null,
+          "last_failure_here": 13
+        },
+        {
+          "level": 4,
+          "start": 14,
+          "end": 29,
+          "required_t": 1998,
+          "first_fit_here": null,
+          "last_failure_here": 29
+        },
+        {
+          "level": 5,
+          "start": 30,
+          "end": 61,
+          "required_t": 2498,
+          "first_fit_here": null,
+          "last_failure_here": 61
+        },
+        {
+          "level": 6,
+          "start": 62,
+          "end": 125,
+          "required_t": 2997,
+          "first_fit_here": null,
+          "last_failure_here": 125
+        },
+        {
+          "level": 7,
+          "start": 126,
+          "end": 253,
+          "required_t": 3497,
+          "first_fit_here": null,
+          "last_failure_here": 253
+        },
+        {
+          "level": 8,
+          "start": 254,
+          "end": 509,
+          "required_t": 3996,
+          "first_fit_here": null,
+          "last_failure_here": 509
+        },
+        {
+          "level": 9,
+          "start": 510,
+          "end": 1021,
+          "required_t": 4496,
+          "first_fit_here": null,
+          "last_failure_here": 1021
+        },
+        {
+          "level": 10,
+          "start": 1022,
+          "end": 2045,
+          "required_t": 4995,
+          "first_fit_here": null,
+          "last_failure_here": 2045
+        },
+        {
+          "level": 11,
+          "start": 2046,
+          "end": 4093,
+          "required_t": 5495,
+          "first_fit_here": null,
+          "last_failure_here": 4093
+        },
+        {
+          "level": 12,
+          "start": 4094,
+          "end": 8189,
+          "required_t": 5994,
+          "first_fit_here": 5994,
+          "last_failure_here": 5993
+        },
+        {
+          "level": 13,
+          "start": 8190,
+          "end": 16381,
+          "required_t": 6494,
+          "first_fit_here": 8190,
+          "last_failure_here": null
+        }
+      ],
+      "proof_basis": "interval arithmetic plus low_next=2*low+c, not finite scan alone"
+    },
+    "crossover_instant_live": {
+      "first_fit": 511,
+      "permanent_from": 5119,
+      "failure_immediately_after_first_fit": true,
+      "proof_basis": "finite check below analytically certified allocated threshold; live<=allocated above it"
+    },
+    "budget_counterexample": {
+      "numeric_cache_component_budget_words": 2048,
+      "reference_status": "OK",
+      "compiled_status": "BUDGET_FAIL",
+      "functional_outputs_equal": true,
+      "resource_status_TV": 1,
+      "reference_resource_failure_loss": 0,
+      "compiled_resource_failure_loss": 1,
+      "illustrative_not_user_adopted": true,
+      "hypothetical_component_observer": true,
+      "actually_forced_OS_failure": false
+    },
+    "measurement_scope": "post-feed logical numeric cache snapshots; not RSS/device total, excludes readonly weights/program, PRNG/control and transient scratch",
+    "analytical_scope": "packed logical KV versus level table; not all layouts/compilers"
+  },
+  "resource_trace_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/adequacy-resource-trace-v1.json",
+  "resource_trace_sha256": "922ea9727d4630385e3374a8d861dd6cb60fd3550421fe11b16008cae6fd035e",
+  "seconds": 0.49623955483548343,
+  "source_sha256": "49cb75c073165d540d2667acd46e08cb2585148f9f83e0dcf19fdcdc2d513881",
+  "frozen_model_sha256": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+  "not_claimed": [
+    "human accuracy estimates",
+    "real 200B performance",
+    "user acceptance of numeric budgets",
+    "all compiler lower bound",
+    "hardware/API resource equivalence"
+  ],
+  "loss_caveat": "TV-maximizing event is a post-hoc mathematical witness, not a preregistered performance benchmark."
+}

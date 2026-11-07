@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": "R57",
+      "layer": 3,
+      "title": "验证-搜索不对称性：重读/外存模型下的 P_R vs NP_R 候选与归约开销",
+      "role": "修补 E50/C55 仅给出 DTIME 层级分离而未触及验证-搜索间隙的盲区",
+      "acceptance": "给出重读/付费外存包络 R 下 P_R 与 NP_R 的精确定义，证明多查询流式连接/有界 K-通行证通信下界或验证器采样不对称定理，并明确其与标准 P≠NP 的桥接缺口",
+      "artifact": "evidence/R57/immutable-artifact",
+      "seed": {
+        "current": 0.92,
+        "remaining": 0.92,
+        "novelty": 1.0,
+        "confidence": 0.88,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "R58",
+      "layer": 3,
+      "title": "交互式验证闭环与有状态多轮测试工具的信息通道计费",
+      "role": "补齐 E49/E52/C55 忽略环境自适应反馈（编译器/测试器/REPL）作为隐式记忆与修剪通道的盲区",
+      "acceptance": "证明 k 轮自适应环境反馈对切状态熵界的修正引理，给出 Generate-and-Verify（pass@k 遇验证停机）的精确时间/成功律转移公式与 oracle 逃逸反例",
+      "artifact": "evidence/R58/immutable-artifact",
+      "seed": {
+        "current": 0.91,
+        "remaining": 0.9,
+        "novelty": 1.0,
+        "confidence": 0.9,
+        "cost": 0.85
+      }
+    },
+    {
+      "id": "R59",
+      "layer": 3,
+      "title": "亚线性检索索引（RAG/倒排/B树）的摊销建表与单次查询预算分解",
+      "role": "打破 E50/C55 全扫描 Ω(m) 下界与现实大语料 O(log N) 检索能力之间的表面矛盾",
+      "acceptance": "建立两阶段（语料预处理建索引 D_idx vs 在线单查询 O(polylog N) 探针）资源合同，证明摊销/预索引模型下的能力保全条件及动态更新下界",
+      "artifact": "evidence/R59/immutable-artifact",
+      "seed": {
+        "current": 0.89,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.88,
+        "cost": 0.85
+      }
+    },
+    {
+      "id": "R60",
+      "layer": 3,
+      "title": "序贯自适应抽样（Anytime 置信序列）与本机真实锚点微基准协议",
+      "role": "消除 E48/E51/A56 因缺全量现实总体而下界恒为 0 的停滞，修复固定样本量停止规则漏洞",
+      "acceptance": "推导时间一致（Time-Uniform）任务合格覆盖下界，并设计仅用本机标准库/现有工具的 3 类确定性微基准（文件检索/AST重构/约束核验）以实测非空资源包络 Γ_0",
+      "artifact": "evidence/R60/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.9,
+        "cost": 0.8
+      }
+    }
+  ],
+  "edges": [
+    ["R57", "M22"],
+    ["R57", "M24"],
+    ["R58", "M22"],
+    ["R58", "M23"],
+    ["R59", "M22"],
+    ["R59", "M23"],
+    ["R60", "M21"],
+    ["R60", "M23"]
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "window_id": "campaign-astra-0400",
+  "task_id": "pnp-astra-0400",
+  "state_path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/state.json",
+  "instructions": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/README.md",
+  "deadline_local": "2026-11-07T04:00:00+08:00",
+  "phase": "paused",
+  "monitor_ids": [
+    "pnp-astra-hourly-0400",
+    "pnp-astra-deadline-0400"
+  ],
+  "research_root": "/home/desk/projects/pnp-unprovability/alternatives/practical-core",
+  "work_phase": "campaign-astra-0400-paused-after-final-stop",
+  "last_completed_hour": 3,
+  "planned_next": "capability-preserving practical algorithm class definition; old proxy not new coverage",
+  "previous_window": "/home/desk/projects/pnp-unprovability/research/watch/window-20261104T151758Z",
+  "current_user_definition_revision": "42ce7dcd",
+  "auto_resume_after_deadline": false,
+  "session_scope": "monitors exist only in current Pi session; closing Pi is not guaranteed research continuity",
+  "note": "新用户明确恢复7h，旧10h仍paused/verified不改；未取得新能力覆盖/分离证书前不把旧T3当当前新目标通过。",
+  "research_resume_command": "/run/current-system/sw/bin/python3 /home/desk/projects/pnp-unprovability/alternatives/practical-core/tools/board_v1.py refresh --actor pnp-chief --op <unique-resume-id> --note context-resume",
+  "research_authority": "three Sol researchers and chief all self-select/create/adjust via atomic board CLI; no per-node chief approval",
+  "hourly_actions": [
+    "read state and check absolute deadline",
+    "inspect all node progress/leases and mail",
+    "request or resume iksvip Argon high for hourly divergent audit and new nodes",
+    "each researcher self-selects next node; chief also researches and resolves conflicts"
+  ],
+  "current_contract": "/home/desk/projects/pnp-unprovability/alternatives/practical-core/research/current-contract-v2.json",
+  "current_goal_spec_revision": 2,
+  "legacy_T3_v1_not_current_success": true,
+  "team": {
+    "workflow_id": "4088a868-5b5b-475b-9df2-0202f57e977e",
+    "mission_id": "17d87d66-e7da-46bb-afb0-3f9b74617899",
+    "initial_child_runs": {
+      "pnp-sol-a": "886e7c0d-e452-46c5-9484-66efb0571b84",
+      "pnp-sol-b": "d4e8b644-bd27-40df-b584-be52d6bcd7c1",
+      "pnp-sol-c": "6ad870ab-0a7d-40c6-ab66-47fd26e41038",
+      "pnp-argon": "2a3c8ffd-9eda-4262-8599-f0dc630e7b56"
+    },
+    "first_actual_mail_handshakes": true,
+    "note": "A/B/C first bounded passes completed; resume only with new actionable nodes; Argon first review active. Preserve latest revival run ids for deadline stop.",
+    "latest_child_runs": {
+      "pnp-sol-a": "b167ac2f-69b3-4953-b61d-aef841583b47",
+      "pnp-sol-b": "8a15caf2-81e9-41b8-a0ec-8eaa2a0f29ba",
+      "pnp-sol-c": "a5943ab0-c608-4a0e-a666-bd25c3f5aa3f",
+      "pnp-argon": "7252c2ea-931b-4da0-acc9-fbbe2d709a08",
+      "pnp-sol-d": "09c3b5dc-5a37-4cba-b7fc-4352fea70a86"
+    },
+    "first_pass_terminal": {
+      "three_sol": "complete with concrete results/blockers",
+      "argon": "failed empty final; partial local audit preserved"
+    },
+    "hour1_continuation": "four exact retained sessions resumed with new actionable model nodes; same model/tool contracts",
+    "startup_evidence": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/native-runtime-startup-v1.json",
+    "argon_retry_evidence": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/argon-attempt1-failure/failure.json",
+    "argon_failed_revivals": [
+      "05fadeb8-0753-4ec0-9aa0-325e953d7748"
+    ],
+    "argon_bootstrap_repair": "only private config temporarily disables startup auto-mail; child must persist paused watch then reenable, pending actual validation",
+    "argon_H1_return": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/ARGON-H1-RETURN.md",
+    "argon_bootstrap_validated": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/argon-bootstrap-validated-v1.json",
+    "manual_mail_bootstrap": "Argon validated H1/H2; Sol A H2 same startup race captured and private bootstrap requested; B/C asked to persist paused auto-watch while live, manual read per node",
+    "hour2_argon_return": "workers/pnp-argon/ARGON-H2-RETURN-v1.md",
+    "target_nonchief_researchers": 5,
+    "sol-d_initial_return": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d/INITIAL-EXTENSION-RETURN.md",
+    "active_nonchief_count": 5,
+    "h3_started_at": "2026-11-06T23:24:00+08:00"
+  },
+  "deadline_team_stop": "At absolute cutoff inspect/stop only team.latest_child_runs exact IDs; resume timers do not authorize extension beyond original epoch.",
+  "ordinary_background_consumed": {
+    "b0785dc18": "repair completed and ordinary clean Node import verified; not new research"
+  },
+  "last_definition_review": "/home/desk/projects/pnp-unprovability/alternatives/practical-core/reviews/definition-initial.receipt.json",
+  "owned_background_tasks": {
+    "b0785dc18": "repair actual completed",
+    "b5a208c1d": "composition actual exit0; consumed"
+  },
+  "deadline_long_call_freeze_local": "2026-11-07T01:10:00+08:00",
+  "no_runtime_deadline_extension": "Retained resumes never authorize time beyond original deadline; main must stop exact latest IDs at cutoff.",
+  "extension_window": {
+    "window_id": "window-20261106T102904Z-extension3h",
+    "state_path": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/state.json",
+    "deadline_local": "2026-11-07T04:29:04+08:00",
+    "deadline_epoch": 1793996944.3940156,
+    "monitor_ids": [
+      "pnp-hourly-3h-extension-20261107",
+      "pnp-deadline-3h-extension-20261107"
+    ],
+    "task_id": "pnp-3h-extension-20261107",
+    "tests": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/tests.json",
+    "fifth_researcher": "pnp-sol-d",
+    "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d",
+    "model": "gateway_responses/gpt-6.1-sol:max",
+    "thinking": "max",
+    "bootstrap_private_config": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d/.pi/settings.json",
+    "transition": "At parent deadline pause old window once, then activate extension state/monitors; no deadline reset.",
+    "fifth_researcher_run": "942bbf13-c432-4f2e-8e3a-75b64dabd0c9",
+    "fifth_researcher_started_at": "2026-11-06T22:19:32+08:00",
+    "fifth_researcher_actual_model_requested": "gateway_responses/gpt-6.1-sol:max",
+    "fifth_researcher_cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d",
+    "fifth_researcher_status": "completed_initial_return_in_parent_window",
+    "fifth_researcher_output": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d/INITIAL-EXTENSION-RETURN.md",
+    "fifth_researcher_output_sha256": "4df4635530b0d5f30b3fd46e5bfa8b88c285928f85292ae5905200103321073c",
+    "fifth_researcher_result": "D-GVC-BATCH-1 proved-candidate/done, 510+512 exhaustive decision-tree checks, not T3-v2/real coverage"
+  },
+  "chief_research": {
+    "last_node": "E-chief-OPAQUE-1",
+    "last_artifact": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/OPAQUE-v2.md",
+    "last_evidence": "evidence/E-chief-OPAQUE-1/a7d9b4a87fcf727b22fceaa1cad0b651311757a9040591102b990a03d9a3f8e2.md",
+    "local_validation": {
+      "probe": "opaque-tests-v2.json",
+      "actual_exit": 0,
+      "source_sha256": "564cac527462454d350d94c4e1156e4f0225317c18fb123bec93e472170e2595",
+      "review": "pnp-chief-opaque-v2 passed on second valid JSON receipt",
+      "recorded_at": "2026-11-06T23:22:46+08:00"
+    },
+    "classification": "conditional protocol lemma; not transparent RAM, T3v2, reality coverage, or standard P/NP"
+  },
+  "current_campaign": "campaign-astra-0400",
+  "current_campaign_state": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/state.json",
+  "current_campaign_contract": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/README.md",
+  "old_windows_superseded_preserved": [
+    "window-20261104T151758Z",
+    "window-20261106T102904Z",
+    "window-20261106T102904Z-extension3h"
+  ],
+  "old_monitor_ids_disarmed": [
+    "pnp-hourly-7h-20261106",
+    "pnp-deadline-7h-20261106",
+    "pnp-hourly-3h-extension-20261107",
+    "pnp-deadline-3h-extension-20261107"
+  ],
+  "campaign_monitor_ids": [
+    "pnp-astra-hourly-0400",
+    "pnp-astra-deadline-0400"
+  ],
+  "campaign_researchers": 7,
+  "campaign_model": "gateway_responses/gpt-6-astra:max",
+  "campaign_final_deadline": "2026-11-07T04:00:00+08:00",
+  "campaign_started_at": "2026-11-07T00:00:35+08:00",
+  "campaign_astra_results": {
+    "astra-a": {
+      "path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-a/RETURN-H1.md",
+      "sha256": "5f6ee1b8371bbed3bd914567690d47470a6f14859c1a4fe35d6f68f91f4ef29f",
+      "status": "completed"
+    },
+    "astra-argon": {
+      "path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-argon/RETURN-H1.md",
+      "sha256": "70266ff8607407fc68e8cdb23a67524a911716b472b263e928a11c7ee2da13b9",
+      "status": "completed"
+    },
+    "astra-e": {
+      "path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-e/RETURN-H1.md",
+      "sha256": "45cf3751e17fe3f06b0e0098f416a20a76919390d417984ce81bfd91d1aa4619",
+      "status": "completed",
+      "summary": "ASTRA-E-PARITY-INDEX-1 proved-candidate static reusable-index capability frontier"
+    },
+    "astra-d": {
+      "path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-d/RETURN-H1.md",
+      "sha256": "3592c64137566bdfdd5849472e6959dbe2048c43702ae14f3deba412cb89a8bf",
+      "status": "completed"
+    },
+    "astra-f": {
+      "path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-f/RETURN-H1.md",
+      "sha256": "821eec7c4b303e593fe6d99d8c1344c7e89015ad2a5b9c66a69079bd59b22232",
+      "status": "completed",
+      "classification": "bounded blocker: opaque response alphabet must be charged"
+    },
+    "astra-c": {
+      "path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-c/RETURN-H1.md",
+      "sha256": "af4d4a99a990168a8b9a7b98c89eb030478059b9b2f15360b31c9bd87ac0f3a9",
+      "status": "completed"
+    }
+  },
+  "campaign_astra_active_runs": {
+    "astra-b": "7e89b827-ad14-44c3-a9eb-ce319c0fcfb7",
+    "astra-c": "486b3378-b372-475b-a736-8b8665805215",
+    "astra-d": "2cce61ae-92c4-4e2d-bffc-6e39b222d277",
+    "astra-e": "62109706-c782-410c-a5ec-2f2466fde602",
+    "astra-f": "c5b6e441-ca33-4657-965e-10aa6480efe5"
+  },
+  "campaign_astra_status": "paused_final_verified_with_corrected_run_attestation",
+  "campaign_astra_final_report": {
+    "json": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/campaign-final-v1.json",
+    "md": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/campaign-final-v1.md",
+    "sha256": "f16f7b3833d3cf7a82882663fc3ea30429090d1d44b9e7e29bc9032a47ceb6f5"
+  },
+  "current_campaign_phase": "paused_final_verified",
+  "campaign_final_pause": true,
+  "campaign_astra_run_attestation": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/campaign-run-attestation-v1.json",
+  "campaign_astra_corrected_a_run": "99ca0055-93ec-4386-9e1c-dd298f6c66ea",
+  "superseded_active_snapshot": "/home/desk/projects/pnp-unprovability/research/watch/ACTIVE-before-campaign-astra-0400.json",
+  "superseded_old_window": {
+    "window_id": "window-20261106T102904Z",
+    "task_id": "pnp-7h-20261106",
+    "state_path": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/state.json",
+    "deadline_local": "2026-11-07T01:29:04+08:00",
+    "phase": "running",
+    "monitor_ids": [
+      "pnp-hourly-7h-20261106",
+      "pnp-deadline-7h-20261106"
+    ],
+    "work_phase": "campaign-astra-0400-running",
+    "last_completed_hour": 1
+  },
+  "current_campaign_final_report": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/campaign-final-v2.json",
+  "active_campaign_pointer": "campaign-astra-0400/state.json",
+  "supersession_reason": "user 294191e3 explicitly replaced old researcher roster/model/deadline with Astra max and 04:00 stop; old window remains historical",
+  "campaign_astra_handoff_evidence": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/campaign-handoff-evidence-v1.json",
+  "campaign_final_verification": "campaign-handoff-evidence-v1 plus corrected run attestation; no active fleet and state paused"
+}

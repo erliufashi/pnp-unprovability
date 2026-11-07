@@ -1,0 +1,120 @@
+{
+  "schema": 1,
+  "window_id": "window-20261104T151758Z",
+  "prepared_at": "2026-11-05T09:22:00+08:00",
+  "state": "paused_once_at_original_deadline",
+  "deadline": "2026-11-05T09:17:58+08:00",
+  "pause_count": 1,
+  "deadline_fired": true,
+  "window_task_complete": false,
+  "main_standard_target": "UNRESOLVED",
+  "main_goal_complete": false,
+  "original_T3": "qualified closed-profile proxy unchanged, not empirical human adequacy",
+  "hours": [
+    {
+      "hour": 1,
+      "claim": "给声明tree/word契约的attention行调度及空间包络；36组逐位相同小例，非全GPU/API等价。",
+      "status": "local_review_pass",
+      "summary": "reports/hour1-summary.json",
+      "summary_sha256": "ece11677df0fc3153debd662af2b148a581f88c8b038ca24668937d738b5facd",
+      "review": "reports/hour1-review.receipt.json",
+      "review_sha256": "294cda095daef14838de9e704581fb720c4e3ed438a30b27b3837df01f215803"
+    },
+    {
+      "hour": 2,
+      "claim": "有限query、固定m/z的left-fold摘要；76680小域prefix/query对照，模型常数指数明确。",
+      "status": "local_review_pass",
+      "summary": "reports/hour2-summary.json",
+      "summary_sha256": "b44d42849d3e2de1afbbccf8b73c4b9b3bf87eb9c3dd57f13496879fe279b133",
+      "review": "reports/hour2-review.receipt.json",
+      "review_sha256": "226ac4e0a7e7d0414bf21566285f16c6ee752ffdea4b924a4efba4edfb4b5d0c"
+    },
+    {
+      "hour": 3,
+      "claim": "兼容前缀B树的dyadic参数森林；33333通用/76680 kernel对照，非任意归约树。",
+      "status": "local_review_pass",
+      "summary": "reports/hour3-summary.json",
+      "summary_sha256": "80793bf985c878b108ab76d38fd745a156cdc3dff8f3776cdbff4d09ce84263b",
+      "review": "reports/hour3-review.receipt.json",
+      "review_sha256": "9371efc46a11604352472b1195af41d4aaabe06b6eb80c2b0d0e244aa5f4fdf6"
+    },
+    {
+      "hour": 4,
+      "claim": "在纯word/因果契约下条件性组合到多层增量policy；2层2头有限probe，非真实200B。",
+      "status": "local_review_pass",
+      "summary": "reports/hour4-summary.json",
+      "summary_sha256": "15b321c100cb227cc9d8d7ad973e23e25edd89bea122eebce91d2b135f1289f9",
+      "review": "reports/hour4-review.receipt.json",
+      "review_sha256": "2e56457d8c3fb75fc161df786c3602a5366d3cb4cb85e04c83c1e6468e0e7aa8"
+    },
+    {
+      "hour": 5,
+      "claim": "功能/渐近/预算/human分层，精确风险转移与资源账本；实际human和物理预算未验。",
+      "status": "local_review_pass",
+      "summary": "reports/hour5-summary.json",
+      "summary_sha256": "6e8eb52304c548ec79864d2c6c8245524895865bcf54f520ff603c3090cca264",
+      "review": "reports/hour5-review.receipt.json",
+      "review_sha256": "78aeb8960ce1f86f4c6fc6e42228d5de06531bf61d90ff2c66d1e191ca26badf"
+    },
+    {
+      "hour": 6,
+      "claim": "紧凑ReLU-score检索族及包含控制/RNG的参数化state下界；不是对实际单一π的否定。",
+      "status": "local_review_pass",
+      "summary": "reports/hour6-summary.json",
+      "summary_sha256": "d6ea5bf23cd3140aa704ea15c1f4f0fc6c60e01c6613cedec557cc066e80d010",
+      "review": "reports/hour6-review.receipt.json",
+      "review_sha256": "91824ebfbbf483bdd5e312b154537f293dae09d34ae4120f196f84d0a4746cbe"
+    },
+    {
+      "hour": 7,
+      "claim": "selected m/z静态证书特化；3996数值森林降752/776，p134仍大于原KV，metadata另计。",
+      "status": "local_review_pass",
+      "summary": "reports/hour7-summary.json",
+      "summary_sha256": "4c6fd9548653d954b3b6bb88691201ab1a4c1b4ecb6b3aa8a12ccf4978319759",
+      "review": "reports/hour7-review.receipt.json",
+      "review_sha256": "f582f7a2f62afbdac4aba8faa85a763392b1b883cf7a7a4cc87b31bdfb30dd5f"
+    },
+    {
+      "hour": 8,
+      "claim": "固定H懒重建保word/RNG及有限horizon非空洞性审计；2×只是条件性cache子界。",
+      "status": "local_review_pass",
+      "summary": "reports/hour8-summary.json",
+      "summary_sha256": "98f9336c200871d7c30c87bcd622a3a804cc6d8b6556d8a370c9bc7810d9047a",
+      "review": "reports/hour8-review.receipt.json",
+      "review_sha256": "45d24cd53d781d4cc6cc9a69b618da34c74043fb6f0698e70308cf64e1d3067b"
+    },
+    {
+      "hour": 9,
+      "claim": "固定数值state的有限U_m分离/随机阈值；948协议cases、131344小prefix映射，非物理RAM或标准P/NP。",
+      "status": "local_review_pass",
+      "summary": "reports/hour9-summary.json",
+      "summary_sha256": "e0ae58c2786e4ae1a3fe9c0883e562664a21030c1e9a05ac9674229adb44f4df",
+      "review": "reports/hour9-review.receipt.json",
+      "review_sha256": "daca10e4fb8e66fce32e94eb0684a56fdc0e35bee0f777f4f8ec7837e43db3b3"
+    }
+  ],
+  "new_graph": {
+    "nodes": 38,
+    "edges": 41,
+    "round": 99
+  },
+  "preservation": {
+    "original35_and_prior_artifacts_unchanged": true,
+    "protected_file_count": 67,
+    "current_branch_evidence_hashes_valid": true
+  },
+  "review_caveat": "Independent read-only model criterion reviews, not a proof-assistant certificate. Finite tests do not prove general theorems.",
+  "failures_preserved": [
+    "hour4/8/9 first malformed JSON receipts not pass; valid second receipts used",
+    "hour7 administrative duplicates reclassified, old v1 bytes restored and v2 retained; not new scientific progress"
+  ],
+  "remaining": [
+    "No ZFC unprovability proof for either standard P=NP or P≠NP. SAT-specific noncircular growth bridge still missing.",
+    "No specified/measured actual 200B word/API profile, task distribution, state/context or physical resource certification.",
+    "Logical/word/cache component bounds do not certify RSS, wallclock or human-task adequacy."
+  ],
+  "next_action": "administrative window verification only; no new research or automatic renewal",
+  "paused_at": "2026-11-05T09:19:24+08:00",
+  "window_task_state_at_report_creation": "ready_for_independent_verification; subsequent official receipt is separate",
+  "pause_checks": "reports/window-pause-checks-v1.json"
+}

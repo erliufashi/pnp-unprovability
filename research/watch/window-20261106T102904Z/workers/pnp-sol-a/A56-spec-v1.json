@@ -1,0 +1,1 @@
+{"nodes":[{"id":"A56","layer":3,"title":"现实覆盖的分布漂移与未覆盖质量界","role":"有限benchmark到现实分布的可迁移条件与不可识别反例","acceptance":"给TV迁移界与未观测任务质量反例；区分统计误差和分布错配；不声称现实覆盖","artifact":"evidence/A56/immutable-artifact","seed":{"current":0.9,"remaining":0.9,"novelty":1,"confidence":0.9,"cost":0.7}}],"edges":[["A56","M21"]]}

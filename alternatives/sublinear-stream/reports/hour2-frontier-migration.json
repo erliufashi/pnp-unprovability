@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "old_nodes_parameters_preserved": true,
+  "old_history_preserved": true,
+  "before_nodes": 7,
+  "after_nodes": 10,
+  "before_digest": "80a8162117888919966f4c6cc57a41828ce84a9cf5b01b719ae54de9c164094f",
+  "after_digest": "92bfa5ce1815c895c0cbf27895449a355f83310442c05dc3be50f23224943819",
+  "event": {
+    "seq": 10,
+    "at": "2026-11-04T16:57:04+00:00",
+    "round": 10,
+    "reason": "new-frontier:finite-query-summary",
+    "previous": null,
+    "selected": null,
+    "ranking": [],
+    "details": {
+      "added": [
+        "M13",
+        "E25",
+        "E26"
+      ],
+      "planned_next": "E25",
+      "scheduled_for_hour": 2,
+      "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour1-to-hour2"
+    }
+  },
+  "scheduled_target": "E25",
+  "note": "只演进新研究命名空间，不修改旧35节点或T3证书；新候选未认证。"
+}

@@ -1,0 +1,14 @@
+{
+  "hour": 8,
+  "at": 1793836524.861622,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour8-review.receipt.json",
+  "incomplete_attempt_1_preserved": true,
+  "actual_probe_exit": 0,
+  "cases": 480,
+  "feed_comparisons": 4448,
+  "RNG_checks": 2915,
+  "rebuilds": 355,
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "M20 finite numeric budget/INDEX",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

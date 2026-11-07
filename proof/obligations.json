@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "target_theory": "ZFC",
+  "target_status": "UNRESOLVED",
+  "selected_side": null,
+  "obligations": [
+    {
+      "id": "O1",
+      "critical": true,
+      "statement": "明确选定E或¬E中的一侧，不以一致性推出的平凡析取冒充",
+      "status": "open",
+      "evidence": [
+        "notes/03-arithmetic-v1.md"
+      ],
+      "note": "局部审计/工具存在，但主目标关键义务未关闭"
+    },
+    {
+      "id": "O2",
+      "critical": true,
+      "statement": "给出非循环桥接，将新工具的局部结论传递到所选标准命题的ZFC不可证性",
+      "status": "open",
+      "evidence": [
+        "notes/02-reflection-v1.md",
+        "notes/05-models-v1.md",
+        "notes/07-frontier-v1.md"
+      ],
+      "note": "局部审计/工具存在，但主目标关键义务未关闭"
+    },
+    {
+      "id": "O3",
+      "critical": true,
+      "statement": "审计元理论假设，不能把目标或其等价相对一致性直接作为前提",
+      "status": "open",
+      "evidence": [
+        "notes/03-arithmetic-v1.md",
+        "notes/06-growth-v1.md",
+        "notes/07-frontier-v1.md"
+      ],
+      "note": "局部审计/工具存在，但主目标关键义务未关闭"
+    },
+    {
+      "id": "O4",
+      "critical": true,
+      "statement": "若使用资源机制，证明固定统一多项式界且保持标准P/NP语义；否则解释不使用",
+      "status": "open",
+      "evidence": [
+        "notes/04-resources-v1.md"
+      ],
+      "note": "局部审计/工具存在，但主目标关键义务未关闭"
+    },
+    {
+      "id": "O5",
+      "critical": true,
+      "statement": "完整主证明与所有关键引理通过独立逐条核对",
+      "status": "open",
+      "evidence": [
+        "reviews/INDEX.md"
+      ],
+      "note": "局部审计/工具存在，但主目标关键义务未关闭"
+    }
+  ],
+  "investigatory_side": "not-E (P!=NP), not a proved final selection"
+}

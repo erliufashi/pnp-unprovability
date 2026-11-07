@@ -1,0 +1,69 @@
+{
+  "hour": 4,
+  "at": 1793822678.6279619,
+  "status": "local_review_pass",
+  "proofs": [
+    "proof/CAUSAL-CONTRACT-v1.md",
+    "proof/CAUSAL-COMPOSITION-v1.md",
+    "proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md"
+  ],
+  "actual_probe_exit": 0,
+  "native_task": "b5b93fcc5",
+  "totals": {
+    "ordinary_cases": 240,
+    "guard_cases": 2,
+    "EOS_control_cases": 1,
+    "long_cases": 4,
+    "feed_step_trace_comparisons": 2539,
+    "per_head_phase_count_checks": 10156,
+    "random_state_checks": 1551,
+    "distinct_hidden_word_codes": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "distinct_output_patterns": 24,
+    "ordinary_cases_with_EOS": 60
+  },
+  "long_example_storage": {
+    "reference": {
+      "kv_numeric_words": 1072,
+      "position": 134,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    "compiled": {
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 134,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    }
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "not_claimed": [
+    "arbitrary LM/GPU",
+    "batch equivalence",
+    "200B empirical/human coverage",
+    "practical cost superiority",
+    "T3 certificate expansion"
+  ],
+  "next_unproved": "notes/APPROX-ADEQUACY-CANDIDATE-v0.md",
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour4-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour4.v0.submit-2.84c7ede4-dfaa-4686-9300-526b4286405a.receipt.json",
+    "sha256": "2e56457d8c3fb75fc161df786c3602a5366d3cb4cb85e04c83c1e6468e0e7aa8"
+  },
+  "prior_uncompleted_review": {
+    "kind": "unparseable JSON, not counted as pass",
+    "raw_copy": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour4-review-attempt1.raw.txt",
+    "sha256": "1cf7d0c4f77e8c35621395be4f923351aae36b834ee027240df814c84465b7d1",
+    "parse_error": "Expecting ',' delimiter: line 21 column 3 (char 3147)"
+  }
+}

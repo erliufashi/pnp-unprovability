@@ -1,0 +1,1 @@
+{"fixed_width_ledger_cases": 128, "interleaved_optimal_tree_cases": 384, "limits": "finite hidden-object interface, no computational or empirical coverage claim", "negative_control": "q=1 work cell, m additional reads, L=0: full recovery; q alone is not cumulative leakage", "ok": true, "one_bit_environment_full_recoveries": 2046}

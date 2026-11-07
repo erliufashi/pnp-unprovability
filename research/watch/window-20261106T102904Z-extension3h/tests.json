@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "prestart silent",
+      "passed": true
+    },
+    {
+      "name": "predeadline silent",
+      "passed": true
+    },
+    {
+      "name": "hour1",
+      "passed": true
+    },
+    {
+      "name": "hour2",
+      "passed": true
+    },
+    {
+      "name": "deadline",
+      "passed": true
+    }
+  ],
+  "kind": "isolated extension clock test, not actual future delivery",
+  "watch_sha256": "e40ba2136f24ff5349331c6b745c0a0d204de1da397a4a9ca95394741733e90f"
+}

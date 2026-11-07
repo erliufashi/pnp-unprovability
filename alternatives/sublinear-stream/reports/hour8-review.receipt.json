@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour8",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 14,
+  "checks": [
+    {
+      "criterion": "1. proof/NONVACUITY-v1.md区分固定H、∀H∃B_H/单一统一常数、截断覆盖与全域精确编译；不把外域分离见证解释为人类域内难题，不自动更改旧T3。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/sublinear-stream/proof/NONVACUITY-v1.md:7,15-16,23-27,31-41；文档明确固定H与统一常数的量词差异、截断与全域κ的区别、外域见证不推出人类域内难题，并写明不修改旧T3。"
+    },
+    {
+      "criterion": "2. proof/HORIZON-HYBRID-v1.md给只用内部KV重建κ的精化论证，保持逻辑位置/隐藏/随机状态，不重读原输入/重播采样；固定π/H的小空间与时间量词成立，懒初始化、同时持有新旧cache的峰值/readonly/scratch边界明确。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/sublinear-stream/proof/HORIZON-HYBRID-v1.md:7-21,25-35,39-49；文档逐项给出内部KV按序Push、控制/位置/RNG不变、不重跑forward或采样、不二读输入输出、固定π/H的空间时间量词及old+new峰值和scratch/readonly/整设备排除项。交叉读取 tools/horizon_hybrid_probe.py:40-75，实际实现将内部history重建为cache后置空旧history并断言控制/RNG不变。"
+    },
+    {
+      "criterion": "3. reports/hybrid-tests-v1.json及实际退出记录核对多个H/两toy profile逐步word及RNG，含未到H的EOS/恰H/跨prompt或反馈的切换；reports/preservation-hour8.json证原35/T3/前7小时认证产物不变，DAG与剩余问题刷新。有限sanity不替代一般证明，不声称RSS/实际200B/全设备预算优势。只读验收核对既有数据，不重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/hybrid-tests-v1.json:2,17-18,194,445,694,849,882,1830,3318,3618-3628：480 cases、multiple H、toy-A/toy-B、逐feed/RNG/native-prefix、guards、EOS_control、long_cases、zero-key control、永久交叉点和old+new/非RSS caveat均在报告中；读取 reports/hour8-summary.json:5,12-22 与 reports/hybrid-v1.stdout.log:1，实际退出为0且计数一致；读取 reports/hybrid-execution-v1.json:2-15，passed=true/returncode=0；读取 reports/preservation-hour8.json:3-62,931-932，baseline/readback SHA、passed=true并保全原35及前7小时文件；读取 reports/hour8-frontier-migration.json:2-30，DAG由30到34节点并加入M19/E41/E42/E43、planned_next=E43。"
+    }
+  ],
+  "findings": [],
+  "note": "仅核对既有文档、报告、退出记录和SHA保全数据，未重跑实验或写入实验产物。报告和证明明确有限sanity不替代一般证明，也未宣称实际200B、人类adequacy、RSS/整设备、wallclock或统一model/H常数优势；P/NP仍未由这些产物解决。"
+}

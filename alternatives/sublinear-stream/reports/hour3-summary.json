@@ -1,0 +1,29 @@
+{
+  "hour": 3,
+  "at": 1793817921.2951806,
+  "status": "local_review_pass",
+  "proof": "proof/PREFIX-FOREST-v1.md",
+  "actual_probe_exit": 0,
+  "generic_prefix_comparisons": 33333,
+  "kernel_query_comparisons": 76680,
+  "final_shape": {
+    "seed_inclusive_count": 513,
+    "level_span": 10,
+    "active_blocks": 2,
+    "allocated_word_slots": 9990,
+    "live_numeric_words": 1998,
+    "merges": 510489
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "not_claimed": [
+    "arbitrary GPU reduction",
+    "multi-layer coverage",
+    "practical 200B compiler"
+  ],
+  "next_unproved": "notes/CAUSAL-COMPOSITION-CANDIDATE-v0.md",
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour3-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour3.v0.submit-1.da09ac39-0549-4b6c-934d-6a8b703dff3a.receipt.json",
+    "sha256": "9371efc46a11604352472b1195af41d4aaabe06b6eb80c2b0d0e244aa5f4fdf6"
+  }
+}

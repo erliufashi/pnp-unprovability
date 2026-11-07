@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-07T23:24:52+08:00",
+  "clean_env": {
+    "HOME": "/home/desk",
+    "PATH": "/run/current-system/sw/bin:/home/desk/.local/bin:/usr/bin:/bin",
+    "LC_ALL": "C.UTF-8"
+  },
+  "unittest_37_passed": true,
+  "branch_checks": {
+    "main": {
+      "ok": true,
+      "valid": true,
+      "layers": 3,
+      "nodes": 25,
+      "edges": 32,
+      "round": 27,
+      "mathematical_target": "UNRESOLVED",
+      "warning": "只校验调度与证据完整性，不校验数学定理"
+    },
+    "closed_llm": {
+      "ok": true,
+      "valid": true,
+      "layers": 3,
+      "nodes": 10,
+      "edges": 11,
+      "round": 12,
+      "mathematical_target": "UNRESOLVED",
+      "warning": "只校验调度与证据完整性，不校验数学定理"
+    },
+    "sublinear_stream": {
+      "ok": true,
+      "valid": true,
+      "layers": 3,
+      "nodes": 38,
+      "edges": 41,
+      "round": 99,
+      "mathematical_target": "UNRESOLVED",
+      "warning": "只校验调度与证据完整性，不校验数学定理"
+    },
+    "practical_core": {
+      "ok": true,
+      "nodes": 54,
+      "edges": 88,
+      "round": 95,
+      "authoritative": "shared-board.json"
+    }
+  },
+  "original_16_baseline_sha256_all_match": true,
+  "window10h_104_static_manifest_all_match": true,
+  "wrapup_docs_sha256": {
+    "README.md": "e3ed1ef89673f61f089b260ee6cb184b18cdb5fea11a152d518a06b009de6cde",
+    "docs/FINAL-WRAPUP-REPORT.md": "b551d18ec07d4589b45f3a00dd9a178b2bd329a871c63dcdbd3fc13e4b2a53a7",
+    "docs/OPERATIONS.md": "69c599762e4e4edd9ffabc6aa693cf75c635e409eb0269415ef194f9d21f4842",
+    "research/termination-v2.json": "1db2d8ee9c0f515da81f6cf2ee367630e40ca16cdcb48a11d751730a72cb5049",
+    "alternatives/practical-core/README.md": "b403568c93eb40d458c2050c1c375c1d53e92bc551e0e4ba56dbe1f28e4455ea",
+    "alternatives/practical-core/CONTRACT-v2.md": "3ca36d1d61dbd55ee45416eb3a2c9f0dae9491a66c14fac6db7ec08e14caf55b",
+    "alternatives/practical-core/TASK-SPACE-v2.md": "f07f19475b5bb7472fe742d12e4d59fa812582f533ec88a7ea96bbc74354d78c",
+    "alternatives/practical-core/coverage-spec.json": "958b0539380f34f38ab60d2c2176d51ac5ef9a2f5875944322acecbb056ee983",
+    "reports/final-wrapup-summary.json": "b62340c708686a2bcf110ae49f4cb543ae1d7d8d12f35738c91496a0bd733030",
+    "reports/wrapup-cli-acceptance.json": "ca756db1ea9c45949af1bc2894cd72194109d28cd2c9fe04486a73faf963cb72"
+  },
+  "unittest_38_passed": true
+}

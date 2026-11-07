@@ -1,0 +1,133 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "U": 8,
+      "w": 3,
+      "N": 4,
+      "M_addr_words": 3,
+      "F_formula": 13,
+      "raw_static_exact": true
+    },
+    {
+      "U": 8,
+      "w": 3,
+      "N": 8,
+      "M_addr_words": 3,
+      "F_formula": 25,
+      "raw_static_exact": true
+    },
+    {
+      "U": 8,
+      "w": 3,
+      "N": 16,
+      "M_addr_words": 3,
+      "F_formula": 49,
+      "raw_static_exact": true
+    },
+    {
+      "U": 16,
+      "w": 4,
+      "N": 8,
+      "M_addr_words": 4,
+      "F_formula": 25,
+      "raw_static_exact": true
+    },
+    {
+      "U": 16,
+      "w": 4,
+      "N": 16,
+      "M_addr_words": 4,
+      "F_formula": 49,
+      "raw_static_exact": true
+    },
+    {
+      "U": 16,
+      "w": 4,
+      "N": 32,
+      "M_addr_words": 4,
+      "F_formula": 97,
+      "raw_static_exact": true
+    },
+    {
+      "U": 256,
+      "w": 8,
+      "N": 128,
+      "M_addr_words": 32,
+      "F_formula": 385,
+      "raw_static_exact": true
+    },
+    {
+      "U": 256,
+      "w": 8,
+      "N": 256,
+      "M_addr_words": 32,
+      "F_formula": 769,
+      "raw_static_exact": true
+    },
+    {
+      "U": 256,
+      "w": 8,
+      "N": 512,
+      "M_addr_words": 32,
+      "F_formula": 1537,
+      "raw_static_exact": true
+    },
+    {
+      "U": 65536,
+      "w": 16,
+      "N": 32768,
+      "M_addr_words": 4096,
+      "F_formula": 98305,
+      "raw_static_exact": true
+    },
+    {
+      "U": 65536,
+      "w": 16,
+      "N": 65536,
+      "M_addr_words": 4096,
+      "F_formula": 196609,
+      "raw_static_exact": true
+    },
+    {
+      "U": 65536,
+      "w": 16,
+      "N": 131072,
+      "M_addr_words": 4096,
+      "F_formula": 393217,
+      "raw_static_exact": true
+    },
+    {
+      "U": 1048576,
+      "w": 20,
+      "N": 524288,
+      "M_addr_words": 52429,
+      "F_formula": 1572865,
+      "raw_static_exact": true
+    },
+    {
+      "U": 1048576,
+      "w": 20,
+      "N": 1048576,
+      "M_addr_words": 52429,
+      "F_formula": 3145729,
+      "raw_static_exact": true
+    },
+    {
+      "U": 1048576,
+      "w": 20,
+      "N": 2097152,
+      "M_addr_words": 52429,
+      "F_formula": 6291457,
+      "raw_static_exact": true
+    }
+  ],
+  "formula": "F=I+N(r+c+u)+O(1), M=ceil(U/w)+control",
+  "scope": "transparent raw static collision; not opaque/dynamic/random lower bound",
+  "source_sha256": "15603d3772403ed381edb2b80d9f6a8a372268b9438beb171a8a33e7c12ceb75",
+  "probe_source_sha256": "5f700b91aef24b4a81ba859cb75dcdc34aafc24d3abaabb47c06a9ac5955a3cd",
+  "document_sha256": "15603d3772403ed381edb2b80d9f6a8a372268b9438beb171a8a33e7c12ceb75",
+  "execution_record_sha256_before_rewrite": "5b8ec46a017ea0ac9ab325f344e70513750225adfe059359a0344a99926dec64",
+  "execution_record_path": "cutoff-execution-v1.json",
+  "evidence_hash_policy": "one-way: report does not hash execution record; execution record hashes report"
+}

@@ -1,0 +1,1 @@
+{"nodes":[{"id":"C58","layer":3,"title":"A57收费ND_OR独立复现与物理/抽象资源范围核对","role":"应同权研究员request核验代码与公式，不重复OR定理计数","acceptance":"独立提取源码复测大尺寸全部地址；列host preflight/fuel/init计费边界；不给全局覆盖验收","artifact":"evidence/C58/immutable-artifact","seed":{"current":0.8,"remaining":0.8,"novelty":1,"confidence":0.9,"cost":0.7}}],"edges":[["C58","M22"],["C58","M23"]]}

@@ -1,0 +1,41 @@
+{
+  "verified_at": 1793805929.819654,
+  "start": "2026-11-04T23:17:58+08:00",
+  "deadline": "2026-11-05T09:17:58+08:00",
+  "timezone": "Asia/Shanghai",
+  "hourly": {
+    "id": "pnp-hourly-10h",
+    "armed": true,
+    "interval_seconds": 3600,
+    "delivery": "steer"
+  },
+  "deadline_guard": {
+    "id": "pnp-deadline-10h",
+    "armed": true,
+    "interval_seconds": 60,
+    "delivery": "steer",
+    "only_pause_owner": true
+  },
+  "status_evidence": "active_watch_control status实际返回：monitors=6 (2 armed)，上述两项ARMED，其余preset off",
+  "time_gate_tests": "tests.json,18 checks passed",
+  "actual_deadline_fired": true,
+  "scope": "current session only; no cross-session agent promise",
+  "actual_hourly_wakes_acknowledged": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "actual_pause_count": 1,
+  "owned_monitors_disarmed": true,
+  "pause_checks": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-pause-checks-v1.json",
+  "chat_report_emitted_once": true,
+  "chat_report_record": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-chat-report-v1.json",
+  "window_independent_verification": "pass",
+  "window_review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-review.receipt.json"
+}

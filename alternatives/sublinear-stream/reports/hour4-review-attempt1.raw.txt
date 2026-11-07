@@ -1,0 +1,24 @@
+{
+  "goal_id": "pnp-hour4",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 18,
+  "checks": [
+    {
+      "criterion": "1. proof/CAUSAL-CONTRACT-v1.md精确定义mask、增量冻结与操作prefix-stability，给结构反例和实际小域核验；不冒称已测真实GPU softmax。proof/CAUSAL-COMPOSITION-v1.md给有类型的kernel接口前提和token/层/头双归纳，计费qkv/位置生成、各head临时不同计数、随机采样、单遍输入/只写输出及多项式生成预算。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/sublinear-stream/proof/CAUSAL-CONTRACT-v1.md:1-46：区分mask、跨shape操作prefix-stability和冻结增量reference，给出非结合masked-reducer的4→0反例、严格单位元与不是真实GPU softmax的限定；读取 reports/causal-contract-tests-v1.json:1-34 与 reports/causal-contract-execution-v1.json:1-12：passed=true、original_code=4、recomputed_code=0、zero_is_strict_identity=true、future_content_exposed=false、returncode=0。读取 proof/CAUSAL-COMPOSITION-v1.md:1-87：有类型Init/Push/Read/R接口、token/层/头归纳、qkv/位置计费、逐head计数、采样/RNG、EOF后只写输出、反馈、D(n)和多项式时间/空间预算；读取 proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md:1-27：补充前缀峰值包络、采样/控制log空间及toy槽位常数限制。"
+    },
+    {
+      "criterion": "2. reports/causal-model-tests-v1.json及执行记录保存实际退出0，多层多头在prompt/生成中的每步hidden、qkv/attention、输出与随机状态对照及非空多样性；对编译/参考存储口径诚实，不隐藏巨大模型常数或把测试harness输出历史算免费工作带。有限模型测试非真实200B或一般证明。",
+      "verdict": "pass",
+      "evidence": "读取 reports/causal-model-execution-v1.json:1-15 与 reports/causal-model-native-exit-v1.json:1-6：执行记录returncode=0，原生任务status=completed、exit_code=0，并固定source/kernel/word SHA。读取 reports/causal-model-tests-v1.json:1-115：scope为2个finite toy profile、2层2头非真实LLM，totals含240 ordinary、2 guard、1 EOS、4 long、2539 feed trace、10156 per-head checks、1551 random-state checks、9种hidden code和24种output pattern。读取 tools/causal_model_probe.py:56-79、147-183：每次feed记录q/k/v、attention output、layer hidden前后和各head阶段计数；paired_case逐步断言两侧trace相等、RNG state相等并记录random_state_checks/output/trace digest。读取 tools/causal_model_probe.py:80-110、185-225：固定4-bit有界采样、EOS/反馈、EOF后输出、observer仅被动测试工具；报告明确reference/compiled存储口径不含程序/PRNG/control，compiled可能大于KV且非RSS，并明确非真实200B、非任意GPU/一般证明。"
+    },
+    {
+      "criterion": "3. reports/preservation-hour4.json验证原35节点、T3证书及hour1/2/3已验收证明/实验字节不变。限定增量append-only参考族，不由kernel自动覆盖任意LM/任意GPU/API；本地DAG按结果和未解点刷新，原终止证书不扩大。独立只读验收核对现有报告/源码即可，不要求重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/preservation-hour4.json:1-32：baseline列出research/graph.json、state/history、research/termination.json、reviews/pnp-t3-submit-2.receipt.json及hour1/2/3证明、报告、执行记录SHA；读取同文件:900-931：passed=true且readback逐项保留相同SHA。实际执行sha256sum交叉核对同一组当前文件，输出与baseline/readback一致（包括原研究图/state/history、termination、T3 receipt及hour1/2/3认证产物）。读取 research/state.json:317-402：M15/E29/E30/E31均status=done并分别绑定CAUSAL proof/report；读取 research/state.json:1024-1033、1146-1277及 research/history.jsonl:28-36：hour4新增节点/结果、E29/E30/E31/M15完成记录、D6仍保留未完成的后续状态、M15资源限定和下一阶段未解点均被刷新。读取 reports/hour4-summary.json:1-58：old_35_and_prior_proofs_unchanged=true，not_claimed列出arbitrary LM/GPU、batch equivalence、200B、practical superiority、T3 expansion，next_unproved为APPROX-ADEQUACY-CANDIDATE-v0。读取 proof/CAUSAL-CONTRACT-v1.md:34-46、proof/CAUSAL-COMPOSITION-v1.md:1-8、76-87：明确append-only/冻结reference及不覆盖任意LM/GPU、batch或T3；读取 preservation-hour4.json 的T3/历史artifact哈希与当前sha256sum结果核对原终止证书未扩大。"
+  ],
+  "findings": [],
+  "note": "仅做独立只读核对，未重跑会写入报告的实验。证据来自实际读取的文件行段、grep命中和sha256sum交叉核对；有限toy对照按产物自身限定，不被解释为真实GPU/200B实测或一般证明。"
+}

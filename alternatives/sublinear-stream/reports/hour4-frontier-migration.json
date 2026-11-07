@@ -1,0 +1,38 @@
+{
+  "passed": true,
+  "before_nodes": 13,
+  "after_nodes": 17,
+  "old_node_parameters_preserved": true,
+  "old_descriptors_preserved": true,
+  "old_history_preserved": true,
+  "event": {
+    "seq": 26,
+    "at": "2026-11-04T18:54:37+00:00",
+    "round": 26,
+    "reason": "new-frontier:causal-contract-and-lifting",
+    "previous": null,
+    "selected": null,
+    "ranking": [],
+    "details": {
+      "added": [
+        "M15",
+        "E29",
+        "E30",
+        "E31"
+      ],
+      "planned_next": "E29",
+      "scheduled_for_hour": 4,
+      "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour3-to-hour4",
+      "freshness_age_initialized_at_admission": true
+    }
+  },
+  "planned_next": "E29",
+  "hour": 4,
+  "dry_structural_test": {
+    "passed": true,
+    "copy_of_research_three_files": true,
+    "not_full_artifact_retest": true,
+    "duplicate_rejected": true,
+    "freshness_origin_checked": true
+  }
+}

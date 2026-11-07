@@ -1,0 +1,53 @@
+{
+  "window_id": "window-20261104T151758Z",
+  "task_id": "pnp-10h-window",
+  "state_path": "/home/desk/projects/pnp-unprovability/research/watch/window-20261104T151758Z/state.json",
+  "instructions": "/home/desk/projects/pnp-unprovability/research/watch/window-20261104T151758Z/README.md",
+  "deadline_local": "2026-11-05T09:17:58+08:00",
+  "phase": "paused",
+  "monitor_ids": [
+    "pnp-hourly-10h",
+    "pnp-deadline-10h"
+  ],
+  "note": "用户新授权的有限继续窗口优先于T3的可停止建议；不修改原证书或旧节点，不承诺唤醒间持续占用算力。",
+  "research_root": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "research_resume_command": "pnp-research --root /home/desk/projects/pnp-unprovability/alternatives/sublinear-stream refresh --reason context-resume --json",
+  "work_phase": "paused_window_verified",
+  "next_candidate": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/notes/FINITE-BUDGET-CANDIDATE-v0.md",
+  "last_completed_hour": 9,
+  "planned_next": null,
+  "last_review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour9-review.receipt.json",
+  "experiment_results_consumed": {
+    "bec0515b8": "native exit0",
+    "b3a96fdec": "actual probe returncode0 in execution record",
+    "bc82f0d29": "actual probe returncode0 in execution record",
+    "b5b93fcc5": "native exit0 and actual execution record",
+    "b0af2cd73": "actual probe returncode0 in execution record",
+    "be0573b92": "actual probe returncode0 in execution record",
+    "b029c488c": "actual probe returncode0 in execution record",
+    "b8f2a205d": "actual probe returncode0 in execution record",
+    "b91c40bbf": "actual probe returncode0 in execution record"
+  },
+  "research_batches_closed_at": "2026-11-05T08:47:14+08:00",
+  "no_new_math_before_pause": true,
+  "post_window_frontier": "standard SAT-growth bridge remains unproved; actual profile/budget/context/human calibration absent",
+  "prepared_report": {
+    "human": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-prepause-v1.md",
+    "machine": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-prepause-v1.json",
+    "state": "not yet the final pause report"
+  },
+  "deadline_action_plan": "Read state/clock first; no new math. ack-pause once; disarm only pnp-hourly-10h and pnp-deadline-10h; create actual paused report; report once in chat; submit only pnp-10h-window. Keep original math goal/frontier unresolved. No auto-renew.",
+  "pause_count": 1,
+  "paused_at": "2026-11-05T09:19:24+08:00",
+  "auto_resume": false,
+  "final_report": {
+    "human": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-final-v1.md",
+    "machine": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-final-v1.json"
+  },
+  "monitor_shutdown_confirmed": true,
+  "chat_report_emitted_once": true,
+  "chat_report_record": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-chat-report-v1.json",
+  "window_task_verdict": "pass",
+  "window_acceptance": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-acceptance-v1.json",
+  "window_review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/window-review.receipt.json"
+}

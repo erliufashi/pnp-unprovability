@@ -1,0 +1,1 @@
+{"nodes":[{"id":"B57","layer":3,"title":"随机容错动态聚合摘要的逐bit解码容量下界","role":"B56后继：随机常数错误不是任意更新能力的免费压缩","acceptance":"自含熵证明b>=N(1-h2(epsilon))，明确逐历史保证/无raw条件，区别全串恢复和单bit解码","artifact":"evidence/B57/immutable-artifact","seed":{"current":0.88,"remaining":0.85,"novelty":1,"confidence":0.9,"cost":0.8}}],"edges":[["B57","M22"],["B57","M23"]]}

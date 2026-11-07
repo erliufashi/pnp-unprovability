@@ -1,0 +1,1091 @@
+{
+  "passed": true,
+  "scope": "bounded finite-state U_m; no standard P/NP/physical/human claim",
+  "ND_protocol": {
+    "tasks": 948,
+    "valid_tasks": 642,
+    "invalid_query_guard_tasks": 306,
+    "branches": 7368,
+    "logical_transitions_checked": 105328,
+    "malformed_branches": 70,
+    "rows": [
+      {
+        "m": 1,
+        "b": 1,
+        "tasks": 4,
+        "branches": 8,
+        "declared_state_bits": 72,
+        "largest_observed_encoding_bits": 16
+      },
+      {
+        "m": 2,
+        "b": 2,
+        "tasks": 16,
+        "branches": 64,
+        "declared_state_bits": 80,
+        "largest_observed_encoding_bits": 24
+      },
+      {
+        "m": 3,
+        "b": 2,
+        "tasks": 32,
+        "branches": 128,
+        "declared_state_bits": 80,
+        "largest_observed_encoding_bits": 24
+      },
+      {
+        "m": 4,
+        "b": 3,
+        "tasks": 128,
+        "branches": 1024,
+        "declared_state_bits": 88,
+        "largest_observed_encoding_bits": 32
+      },
+      {
+        "m": 5,
+        "b": 3,
+        "tasks": 256,
+        "branches": 2048,
+        "declared_state_bits": 88,
+        "largest_observed_encoding_bits": 32
+      },
+      {
+        "m": 6,
+        "b": 3,
+        "tasks": 512,
+        "branches": 4096,
+        "declared_state_bits": 88,
+        "largest_observed_encoding_bits": 32
+      }
+    ],
+    "digest": "6dda2088db1d55b602cc1c00573e0f917cbac9b195af07914edd2686942c57b5",
+    "passed": true
+  },
+  "deterministic_encoders": {
+    "rows": [
+      {
+        "m": 2,
+        "s": 1,
+        "all_prefix_maps_checked": 16,
+        "example_collision": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "m": 3,
+        "s": 1,
+        "all_prefix_maps_checked": 256,
+        "example_collision": [
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "m": 3,
+        "s": 2,
+        "all_prefix_maps_checked": 65536,
+        "example_collision": [
+          0,
+          1,
+          2,
+          0
+        ]
+      },
+      {
+        "m": 4,
+        "s": 1,
+        "all_prefix_maps_checked": 65536,
+        "example_collision": [
+          0,
+          1,
+          3,
+          0
+        ]
+      }
+    ],
+    "total_prefix_maps": 131344,
+    "digest": "36e21acd20f25e996c53142f3f1e64f842ba61d5695a545c89cf09a25fb07434",
+    "passed": true,
+    "scope": "all functions only at listed small (m,s); general theorem remains pigeonhole proof"
+  },
+  "thresholds": {
+    "budgets": [
+      {
+        "s_retained_bits": 64,
+        "exact": {
+          "m_payload_bits": 65,
+          "query_bits": 7,
+          "protocol_data_bits": 72,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 120,
+          "ND_same_budget_certificate": false,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        },
+        "random_safe_gamma_1_3": {
+          "m_payload_bits": 1025,
+          "query_bits": 11,
+          "protocol_data_bits": 1036,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 152,
+          "ND_same_budget_certificate": false,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        }
+      },
+      {
+        "s_retained_bits": 128,
+        "exact": {
+          "m_payload_bits": 129,
+          "query_bits": 8,
+          "protocol_data_bits": 137,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 128,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        },
+        "random_safe_gamma_1_3": {
+          "m_payload_bits": 2049,
+          "query_bits": 12,
+          "protocol_data_bits": 2061,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 160,
+          "ND_same_budget_certificate": false,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": false
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": false
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        }
+      },
+      {
+        "s_retained_bits": 256,
+        "exact": {
+          "m_payload_bits": 257,
+          "query_bits": 9,
+          "protocol_data_bits": 266,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 136,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        },
+        "random_safe_gamma_1_3": {
+          "m_payload_bits": 4097,
+          "query_bits": 13,
+          "protocol_data_bits": 4110,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 168,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        }
+      },
+      {
+        "s_retained_bits": 1024,
+        "exact": {
+          "m_payload_bits": 1025,
+          "query_bits": 11,
+          "protocol_data_bits": 1036,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 152,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        },
+        "random_safe_gamma_1_3": {
+          "m_payload_bits": 16385,
+          "query_bits": 15,
+          "protocol_data_bits": 16400,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 184,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": true,
+              "separation_in_payload_range": true
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": true,
+              "separation_with_data_fit": true
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        }
+      },
+      {
+        "s_retained_bits": 1048576,
+        "exact": {
+          "m_payload_bits": 1048577,
+          "query_bits": 21,
+          "protocol_data_bits": 1048598,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 232,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        },
+        "random_safe_gamma_1_3": {
+          "m_payload_bits": 16777217,
+          "query_bits": 25,
+          "protocol_data_bits": 16777242,
+          "EOF": "separate protocol sentinel, not included in data-bit count",
+          "ND_declared_bits": 264,
+          "ND_same_budget_certificate": true,
+          "payload_range_results": [
+            {
+              "C_payload_bits": 128,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 129,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 136,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 137,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 256,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 4096,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 65536,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            },
+            {
+              "C_payload_bits": 1048576,
+              "m_within_C": false,
+              "separation_in_payload_range": false
+            }
+          ],
+          "wire_capacity_results": [
+            {
+              "C_data_bit_symbols": 128,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 129,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 136,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 137,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 256,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 4096,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 65536,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            },
+            {
+              "C_data_bit_symbols": 1048576,
+              "full_protocol_data_fit": false,
+              "separation_with_data_fit": false
+            }
+          ],
+          "warning_if_not_fit": "failure of this sufficient certificate is not a proof of easiness or ND impossibility"
+        }
+      }
+    ],
+    "exact_integer_coefficient_certificate": {
+      "power3": "79766443076872509863361",
+      "power2": "151115727451828646838272",
+      "strict_less": true,
+      "consequence": "1-h2(1/3)>1/16; m=16s+1 is rigorous"
+    },
+    "floating_diagnostic_only": {
+      "c_approx": 0.08170416594551067,
+      "inverse_approx": 12.23927799063404
+    },
+    "state_units": "logical retained configuration bits; not measured RAM",
+    "context_units": "payload range C_x differs from full data-bit capacity C_wire; query b and transport framing must be paid, neither is real model tokens"
+  },
+  "protocol": "m payload bits, b=ceil(log2(m+1)) late query bits, EOF; public m fixed before x/j",
+  "model": "8 b-bit registers plus 64 control bits, all retained logical state encoded; static bounded-word transitions",
+  "invalid_extension": "may reject on first extra symbol after m+b bits; valid U_m answers wait for EOF",
+  "host_caveat": "Python iterators, nondeterministic path enumeration, digest/state audit and expected payload are passive simulation harness, not declared device RAM or writable answer aids.",
+  "seconds": 0.28411475708708167,
+  "source_sha256": "6aee9920d6a339929af206043c5e9b3f543a7fe3426c92183194f1cea9463abd",
+  "not_claimed": [
+    "minimal ND budget",
+    "exact finite witnesses at actual 200B context",
+    "real RAM capacity",
+    "human adequacy",
+    "standard P/NP",
+    "changed T3"
+  ]
+}

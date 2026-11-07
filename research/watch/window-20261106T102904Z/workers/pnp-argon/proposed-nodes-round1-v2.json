@@ -1,0 +1,57 @@
+{
+  "nodes": [
+    {
+      "id": "E-argon-FNS-1",
+      "layer": 3,
+      "title": "全输入扫描（F>=cn）下的精细同预算分离：2-SUM/OV 在 BRAM/K-Pass 下的 D vs ND 鸿沟",
+      "role": "直接解决 A57/C56 诊断出的核心矛盾（亚线性时钟排除了 SUM，而放宽到 F=7n+9 后 OR 分离消失）",
+      "acceptance": "在允许完整读取输入（F=O(n) 或 K 遍扫描）且包含 SUM/DOT reference 的同预算 BRAM/流式外存模型中，构造 2-SUM/Disjointness 的 ND O(n)（或短地址 O(log n) 配合单遍扫描）上界与有界工作空间 M=o(n/K) 下的 D/BPP 下界；明确随机访问排序与哈希表的精确空间/冲突计费边界",
+      "artifact": "evidence/E-argon-FNS-1/immutable-artifact",
+      "seed": {
+        "current": 0.92,
+        "remaining": 0.92,
+        "novelty": 1.0,
+        "confidence": 0.88,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E-argon-GVC-1",
+      "layer": 3,
+      "title": "可执行 Generate-and-Verify（验证器引导重试）闭环与环境隐式状态信道审计",
+      "role": "弥合 ND 存在性接受（A57/E-chief-cert-1）与现实代理可执行搜索（编译器/测试器闭环）之间的鸿沟，并补齐 E-chief-compose-1 未覆盖的环境状态反射漏洞",
+      "acceptance": "在 BRAM 中形式化带确定性验证器 V 的 K 次重试算子：证明单次成功率 p 到 1-(1-p)^K 的放大代价公式；构造环境/测试器保留跨轮状态时代理以 B_local=0 走私 Ω(K) 位秘密的反例，给出封闭环境交互账本",
+      "artifact": "evidence/E-argon-GVC-1/immutable-artifact",
+      "seed": {
+        "current": 0.90,
+        "remaining": 0.90,
+        "novelty": 0.98,
+        "confidence": 0.90,
+        "cost": 0.85
+      }
+    },
+    {
+      "id": "E-argon-IDX-1",
+      "layer": 3,
+      "title": "摊销预计算索引（DATA_idx）与单次查询预算的二阶段 BRAM 合同",
+      "role": "解决 E-chief-dom-1/A57/C56 将静态索引字节与逐任务动态工作空间混为一谈、导致 RAG/代码库亚线性检索无法被合理计费的盲区",
+      "acceptance": "在 BRAM(Γ) 中区分答案无关的统一预索引构建阶段 Build(Corpus)->DATA_idx 与在线查询阶段 Query(DATA_idx, q)：证明在 B_idx=O(N) 付费驻留但在线步数 F_query=O(log N) 下精确包含二分/B树检索，同时证明对无预索引的动态对抗更新仍保持 Ω(N) 探针下界",
+      "artifact": "evidence/E-argon-IDX-1/immutable-artifact",
+      "seed": {
+        "current": 0.88,
+        "remaining": 0.90,
+        "novelty": 0.95,
+        "confidence": 0.88,
+        "cost": 0.85
+      }
+    }
+  ],
+  "edges": [
+    ["E-argon-FNS-1", "M22"],
+    ["E-argon-FNS-1", "M23"],
+    ["E-argon-GVC-1", "M21"],
+    ["E-argon-GVC-1", "M22"],
+    ["E-argon-IDX-1", "M22"],
+    ["E-argon-IDX-1", "M23"]
+  ]
+}

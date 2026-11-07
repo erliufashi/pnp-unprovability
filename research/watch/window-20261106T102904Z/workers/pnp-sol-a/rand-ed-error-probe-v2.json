@@ -1,0 +1,136 @@
+{
+  "status": "pass",
+  "amplification_checks": 43,
+  "sample_subset_checks": 154,
+  "first_threshold": "a^(-gamma*a^2), a=T/n",
+  "linear_profile_neg_log_threshold_per_gamma": 3548.91356446692,
+  "majority_rows": [
+    {
+      "repeats": 1,
+      "majority_error": 0.3333333333333333,
+      "neg_log_threshold_gamma1": 3548.91356446692,
+      "neg_log_all_wrong": 1.0986122886681098
+    },
+    {
+      "repeats": 3,
+      "majority_error": 0.25925925925925924,
+      "neg_log_threshold_gamma1": 42065.03293256758,
+      "neg_log_all_wrong": 3.295836866004329
+    },
+    {
+      "repeats": 5,
+      "majority_error": 0.20987654320987653,
+      "neg_log_threshold_gamma1": 129924.44966998596,
+      "neg_log_all_wrong": 5.493061443340549
+    },
+    {
+      "repeats": 7,
+      "majority_error": 0.17329675354366714,
+      "neg_log_threshold_gamma1": 271534.75229787844,
+      "neg_log_all_wrong": 7.690286020676768
+    },
+    {
+      "repeats": 9,
+      "majority_error": 0.14484580602550423,
+      "neg_log_threshold_gamma1": 469708.59406439593,
+      "neg_log_all_wrong": 9.887510598012987
+    },
+    {
+      "repeats": 11,
+      "majority_error": 0.12208504801097393,
+      "neg_log_threshold_gamma1": 726527.3571813066,
+      "neg_log_all_wrong": 12.084735175349207
+    },
+    {
+      "repeats": 13,
+      "majority_error": 0.10353924518431962,
+      "neg_log_threshold_gamma1": 1043646.2683997732,
+      "neg_log_all_wrong": 14.281959752685427
+    },
+    {
+      "repeats": 15,
+      "majority_error": 0.08823159840676366,
+      "neg_log_threshold_gamma1": 1422440.3183390063,
+      "neg_log_all_wrong": 16.479184330021646
+    },
+    {
+      "repeats": 17,
+      "majority_error": 0.07547522609213371,
+      "neg_log_threshold_gamma1": 1864085.84431756,
+      "neg_log_all_wrong": 18.676408907357867
+    },
+    {
+      "repeats": 19,
+      "majority_error": 0.06476617279096288,
+      "neg_log_threshold_gamma1": 2369610.887567141,
+      "neg_log_all_wrong": 20.873633484694086
+    },
+    {
+      "repeats": 21,
+      "majority_error": 0.055722972225529736,
+      "neg_log_threshold_gamma1": 2939928.502446806,
+      "neg_log_all_wrong": 23.070858062030304
+    },
+    {
+      "repeats": 23,
+      "majority_error": 0.048049953563950094,
+      "neg_log_threshold_gamma1": 3575859.950394958,
+      "neg_log_all_wrong": 25.268082639366526
+    },
+    {
+      "repeats": 25,
+      "majority_error": 0.04151367840778967,
+      "neg_log_threshold_gamma1": 4278151.5057074735,
+      "neg_log_all_wrong": 27.465307216702744
+    },
+    {
+      "repeats": 27,
+      "majority_error": 0.03592711844525938,
+      "neg_log_threshold_gamma1": 5047487.025621152,
+      "neg_log_all_wrong": 29.662531794038966
+    },
+    {
+      "repeats": 29,
+      "majority_error": 0.03113863847737628,
+      "neg_log_threshold_gamma1": 5884497.599767751,
+      "neg_log_all_wrong": 31.859756371375184
+    },
+    {
+      "repeats": 31,
+      "majority_error": 0.027024092727195248,
+      "neg_log_threshold_gamma1": 6789769.11984718,
+      "neg_log_all_wrong": 34.056980948711406
+    },
+    {
+      "repeats": 33,
+      "majority_error": 0.023481011664539357,
+      "neg_log_threshold_gamma1": 7763848.327767961,
+      "neg_log_all_wrong": 36.25420552604762
+    },
+    {
+      "repeats": 35,
+      "majority_error": 0.020424235845777412,
+      "neg_log_threshold_gamma1": 8807247.724804297,
+      "neg_log_all_wrong": 38.45143010338384
+    },
+    {
+      "repeats": 37,
+      "majority_error": 0.017782577730797954,
+      "neg_log_threshold_gamma1": 9920449.611102995,
+      "neg_log_all_wrong": 40.648654680720064
+    },
+    {
+      "repeats": 39,
+      "majority_error": 0.015496230356429767,
+      "neg_log_threshold_gamma1": 11103909.449647695,
+      "neg_log_all_wrong": 42.84587925805628
+    },
+    {
+      "repeats": 41,
+      "majority_error": 0.013514729298644005,
+      "neg_log_threshold_gamma1": 12358058.697457952,
+      "neg_log_all_wrong": 45.0431038353925
+    }
+  ],
+  "not_a_BPP_separation_certificate": true
+}

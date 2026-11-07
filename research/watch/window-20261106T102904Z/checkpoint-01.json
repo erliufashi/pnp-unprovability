@@ -1,0 +1,18 @@
+{
+  "hour": 1,
+  "recorded_at": "2026-11-06T21:10:46+08:00",
+  "definition_local_review": "pass",
+  "receipt": "/home/desk/projects/pnp-unprovability/alternatives/practical-core/reviews/definition-initial.receipt.json",
+  "main_nodes": [
+    "E47",
+    "E-chief-compose-1"
+  ],
+  "composition_exact_pairs": 15625,
+  "actual_exit": 0,
+  "Argon_H1_actual_return": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/ARGON-H1-RETURN.md",
+  "Argon_first_failures_preserved": 2,
+  "proposals": "3 proposals corrected into audit questions, not counted as theorems",
+  "goal_revision": 2,
+  "new_T3_success": false,
+  "deadline_unchanged": "2026-11-07T01:29:04+08:00"
+}

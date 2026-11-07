@@ -1,0 +1,80 @@
+{
+  "schema": 2,
+  "user_authorizations": {
+    "definition_revision": "42ce7dcd",
+    "stage_wrapup": "9dd0011e"
+  },
+  "phase": "stage_wrapup_archived",
+  "current_goal_stop": false,
+  "branches": {
+    "main": {
+      "path": ".",
+      "weight": 1.0,
+      "targets": [
+        "T1",
+        "T2"
+      ]
+    },
+    "closed-llm": {
+      "path": "alternatives/closed-llm",
+      "weight": 0.25,
+      "targets": [
+        "T3_v1"
+      ],
+      "historical_only": true
+    },
+    "sublinear-stream": {
+      "path": "alternatives/sublinear-stream",
+      "weight": 0.25,
+      "targets": [
+        "T3_v1_sublinear_exploration"
+      ],
+      "historical_only": true
+    },
+    "practical-core": {
+      "path": "alternatives/practical-core",
+      "weight": 0.25,
+      "targets": [
+        "T3_v2"
+      ],
+      "historical_only": false
+    }
+  },
+  "terminals": {
+    "T1": {
+      "title": "ZFC不能证明标准P=NP",
+      "weight": 1.0,
+      "status": "unresolved",
+      "counts_for_current_goal": true
+    },
+    "T2": {
+      "title": "ZFC不能证明标准P≠NP",
+      "weight": 1.0,
+      "status": "unresolved",
+      "counts_for_current_goal": true
+    },
+    "T3_v1": {
+      "title": "历史代理：封闭单遍有限状态空间分离与200B代理模拟",
+      "weight": 0.25,
+      "status": "historical_conditional_proxy",
+      "counts_for_current_goal": false,
+      "note": "历史局部证书有效，但因禁用重读且以参数量代替现实能力，不满足42ce7dcd修订后的T3-v2目标"
+    },
+    "T3_v2": {
+      "title": "能力保全受限算法空间的同预算严格分离与现实大多数问题覆盖",
+      "weight": 0.25,
+      "status": "unresolved",
+      "counts_for_current_goal": true,
+      "contract_files": [
+        "alternatives/practical-core/CONTRACT-v2.md",
+        "alternatives/practical-core/TASK-SPACE-v2.md",
+        "alternatives/practical-core/coverage-spec.json"
+      ],
+      "unresolved_gaps": [
+        "全扫描明文BRAM下COLLISION的显式分离维度n0=2^3315164不具现实可行性",
+        "常数错误率epsilon=1/3随机化全扫描BRAM下界尚未闭合",
+        "外部冻结强参考系统B_*与预注册现实任务总体抽样实测尚未开展（当前已认证经验覆盖率下界为0）"
+      ]
+    }
+  }
+}

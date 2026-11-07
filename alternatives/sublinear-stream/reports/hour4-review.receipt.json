@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour4",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 18,
+  "checks": [
+    {
+      "criterion": "proof/CAUSAL-CONTRACT-v1.md精确定义mask、增量冻结与操作prefix-stability，给结构反例和实际小域核验；不冒称已测真实GPU softmax。proof/CAUSAL-COMPOSITION-v1.md给有类型的kernel接口前提和token/层/头双归纳，计费qkv/位置生成、各head临时不同计数、随机采样、单遍输入/只写输出及多项式生成预算。",
+      "verdict": "pass",
+      "evidence": "以下路径以 /home/desk/projects/pnp-unprovability/alternatives/sublinear-stream 为基准。检索 grep -nE 'mask|prefix|反例|GPU|freeze|冻结|shape' proof/CAUSAL-CONTRACT-v1.md | cut -c1-300 | head -20 命中7-11行定义。读取该文件13-46行：clip加法全长改括号给4→0，追加叶均为0，明确非真实GPU/softmax实测，规定不可变KV与增量reference。读取 reports/causal-contract-tests-v1.json:1-35 和 causal-contract-execution-v1.json:1-12，实际小域结果4→0、严格单位元、returncode=0。读取 proof/CAUSAL-COMPOSITION-v1.md:5-50、61-87，并检索 'kernel|归纳|head|采样|随机|预算|单遍|输出|qkv'：有限字母表及Init/Push/Read精化关系、push后read、位置/层/头不变量和暂时不同计数明确；53-59行检索命中同随机位耦合、停止与多项式预算。读取 proof/CAUSAL-RESOURCE-QUALIFICATIONS-v1.md:1-27：S(t)为前缀峰值包络，采样/控制另需log空间，模型常数和TM成本不省略。"
+    },
+    {
+      "criterion": "reports/causal-model-tests-v1.json及执行记录保存实际退出0，多层多头在prompt/生成中的每步hidden、qkv/attention、输出与随机状态对照及非空多样性；对编译/参考存储口径诚实，不隐藏巨大模型常数或把测试harness输出历史算免费工作带。有限模型测试非真实200B或一般证明。",
+      "verdict": "pass",
+      "evidence": "读取 reports/causal-model-tests-v1.json:1-140、9670-9720：两个2层2头profile，240普通+2guard+1EOS+4长例，2539逐步trace、10156临时头计数、1551随机状态检查；hidden覆盖-4..4，24种输出模式；长例KV1072对allocated31968/live15984，明示非RSS、程序/PRNG/控制另计。读取 reports/causal-model-execution-v1.json:1-18、causal-model-native-exit-v1.json:1-4：returncode/exit_code=0；读取 causal-model-v1.stdout.log:1，计数一致，wc -c causal-model-v1.*log 显示stderr为0字节。sha256sum tools/causal_model_probe.py tools/prefix_query_forest.py tools/tiny_query_summary.py tools/causal_contract_check.py 分别得到8d3cd6fd…、214019dc…、6c3ada18…、acc04e96…，与执行记录一致。读取 tools/causal_model_probe.py:35-110、111-210：feed记录各头q/k/v/output和各层hidden，paired_case逐次assert audit_a==audit_b、输出/停止一致及rng.getstate一致，覆盖prompt及feedback；observer和outputs只由被动测试持有。读取 tools/prefix_query_forest.py:75-130：完整KV literal_kernel独立计算scores/归约，TreeCache按参数森林append/query，不偷用完整历史。proof/CAUSAL-COMPOSITION-v1.md:69-87及报告末尾明确巨大模型系数、非实际200B/任意GPU认证、有限对照不替代证明。"
+    },
+    {
+      "criterion": "reports/preservation-hour4.json验证原35节点、T3证书及hour1/2/3已验收证明/实验字节不变。限定增量append-only参考族，不由kernel自动覆盖任意LM/任意GPU/API；本地DAG按结果和未解点刷新，原终止证书不扩大。独立只读验收核对现有报告/源码即可，不要求重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/preservation-hour4.json:1-44、891-943，baseline/readback列出原主研究、closed-llm、T3终止/验收文件和前三小时证明/实验/验收摘要，900行passed=true。实际执行 cd /home/desk/projects/pnp-unprovability && sed -n '4,30p' alternatives/sublinear-stream/reports/preservation-hour4.json | awk -F '\"' '{print $4 \"  \" $2}' | sha256sum -c，27项全部成功；再以sed -n '31,31p'同法检查hour3-review.receipt.json成功，共28项。对 research/graph.json 和 alternatives/closed-llm/research/graph.json 执行 awk '/\"id\":/ {n++} END {print n}' 得25和10，合计35，且两图摘要均成功。读取 research/termination.json:41-44、49-52、60-63，T3仍为proved_conditional_proxy、qualified_closed_LLM_proxy，stop_rule要求匹配独立回执。检索本地research/graph.json中M15/E29/E30/E31，读取 research/state.json:317-428：四节点done并挂当前证明/报告证据，M15补明峰值包络与采样空间。读取 notes/NEXT-v4.md:1-13，并检索 notes/APPROX-ADEQUACY-CANDIDATE-v0.md 的'未证|不.*证明|候选|未完成|状态'：新D7/M16/E32-34仅为候选，未认证/未证明项目单列，不改旧终止证书。proof/CAUSAL-CONTRACT-v1.md:28-46及CAUSAL-COMPOSITION-v1.md:73-87明确限定增量append-only、精确kernel条件，不自动覆盖batch/任意LM/GPU/OOM/墙钟/API。"
+    }
+  ],
+  "findings": [],
+  "note": "仅按v0验收，未重跑或写入任何实验，未修改旧回执。checks_run按18项实质核对计：标准1五项（定义、反例、小域执行、接口归纳、资源限定）；标准2七项（配置汇总、执行记录、日志、源码摘要、逐步比较源码、双实现路径、存储及范围）；标准3六项（preservation清单、27项摘要、hour3摘要、35节点计数、DAG刷新、终止及候选边界）。只读环境拒绝通用python执行，jq未安装；可用json_pp已对现有execution JSON执行只读解析，后续同法解析本回执。查验期间一次diff确认新本地DAG与hour3迁移备份不同，这是预期新增节点，不是旧35节点发生变化。历史失败回执未覆盖。"
+}

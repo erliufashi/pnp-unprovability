@@ -1,0 +1,33 @@
+{
+  "hour": 5,
+  "at": 1793826391.6942904,
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour5-review.receipt.json",
+  "actual_probe_exit": 0,
+  "exact_sequence_cases": 10,
+  "softmax_float_sanity_cases": 2268,
+  "resource_crossovers": {
+    "crossover_allocated": {
+      "first_fit": 6494,
+      "permanent_from": 6494,
+      "fully_fitting_level_base": 14,
+      "inductive_base_t": 8191,
+      "proof_basis": "interval arithmetic plus low_next=2*low+c, not finite scan alone"
+    },
+    "crossover_peak_live": {
+      "first_fit": 5994,
+      "permanent_from": 5994,
+      "fully_fitting_level_base": 13,
+      "inductive_base_t": 8190,
+      "proof_basis": "interval arithmetic plus low_next=2*low+c, not finite scan alone"
+    },
+    "crossover_instant_live": {
+      "first_fit": 511,
+      "permanent_from": 5119,
+      "failure_immediately_after_first_fit": true,
+      "proof_basis": "finite check below analytically certified allocated threshold; live<=allocated above it"
+    }
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "M17 compact neural retrieval family state lower bound",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00"
+}

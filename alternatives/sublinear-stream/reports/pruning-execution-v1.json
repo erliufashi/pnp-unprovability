@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/pruned_query_probe.py",
+    "--report",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/pruning-tests-v1.json"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-04T22:42:07.816101+00:00",
+  "ended": "2026-11-04T22:42:17.757700+00:00",
+  "returncode": 0,
+  "stdout_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/pruning-v1.stdout.log",
+  "stderr_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/pruning-v1.stderr.log",
+  "source_sha256": "4dcecc483735b94fc68c2b3124bbcd9a99d4ea5aaea2a828977d0e4eaf494557",
+  "frozen_dependencies": {
+    "causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+    "prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+    "tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+    "neural_retrieval_probe.py": "2ae5e51e27ba9f43207156b78ead366b5422c0e004d9c17e0c77a8a56a228c07"
+  }
+}

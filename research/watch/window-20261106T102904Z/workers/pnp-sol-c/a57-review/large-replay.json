@@ -1,0 +1,20 @@
+{
+  "status": "pass",
+  "cases": 11520,
+  "n": [
+    128,
+    129,
+    254,
+    255,
+    256,
+    1024
+  ],
+  "all_w_bit_addresses": true,
+  "patterns": [
+    "zero",
+    "first_singleton",
+    "last_singleton"
+  ],
+  "fuel_formula_exact_on_valid_j": true,
+  "bit_charge_bound": true
+}

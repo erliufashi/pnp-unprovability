@@ -1,0 +1,18 @@
+{
+  "same_model_and_session": true,
+  "successful_run": "80322a25-aefd-4589-910b-985d134bbfa4",
+  "actual_return": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/ARGON-H1-RETURN.md",
+  "return_sha256": "f37621862bd72d69f4d217423285916178ebe716d1884c5d4c8612963eab5a4c",
+  "private_enabled": true,
+  "persisted_watch": {
+    "agentId": "pnp-argon",
+    "watchOverrides": {
+      "mode": "paused",
+      "delivery": "followUp",
+      "pollIntervalMs": 60000
+    }
+  },
+  "manual_mail_read_and_notice_reported": true,
+  "not_a_claim_all_proposals_correct": true,
+  "chief_disposition": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/ARGON-H1-DISPOSITION-v1.md"
+}

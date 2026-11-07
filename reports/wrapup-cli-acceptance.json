@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-07T23:07:08+08:00",
+  "clean_shell_env": {
+    "HOME": "/home/desk",
+    "PATH": "/run/current-system/sw/bin:/home/desk/.local/bin:/usr/bin:/bin",
+    "LC_ALL": "C.UTF-8"
+  },
+  "test_cwd": "/tmp",
+  "unittest_count": 38,
+  "release_0_3_0": {
+    "version": "0.3.0",
+    "files_sha256": {
+      "hub.py": "026d701567f502a65fd77625952ec650fd42fc3e28dd59b980682f6c4af75490",
+      "research.py": "13298120fb40ef2101e3c7a90d98ac6d4f33df194a16daa0889b6ae9c35c0cb8"
+    },
+    "legacy_engine": "0.1.0 unchanged",
+    "previous_release": "0.2.0 unchanged",
+    "interpreter": "/run/current-system/sw/bin/python3",
+    "dependencies": "Python stdlib, Linux fcntl",
+    "owner": "pnp-research single writer",
+    "rollback": "ln -sfn /home/desk/.local/share/pnp-research/releases/0.2.0 /home/desk/.local/share/pnp-research/current"
+  },
+  "rollback_drill_030_020_030": [
+    "0.3.0",
+    "0.2.0",
+    "0.3.0"
+  ],
+  "mission_status_readback": {
+    "current_contract_version": 2,
+    "phase": "stage_wrapup_archived",
+    "current_goal_stop": false,
+    "t3_v1_historical_only": true,
+    "t3_v2_status": "unresolved",
+    "standard_targets_unresolved": true,
+    "status_summary_zh": "T1/T2与T3-v2当前均未解决（UNRESOLVED）；早期T3-v1仅保留封闭单遍有限代理历史效力，不构成现实能力覆盖。"
+  },
+  "practical_check_readback": {
+    "ok": true,
+    "valid": true,
+    "layers": 3,
+    "nodes": 54,
+    "edges": 88,
+    "round": 95,
+    "mathematical_target": "UNRESOLVED",
+    "warning": "只校验调度与证据完整性，不校验数学定理"
+  },
+  "legacy_preservation_check": {
+    "files_unchanged": true,
+    "scores_unchanged": true,
+    "changed": [],
+    "passed": true
+  },
+  "gui_and_network_auth_applicable": false
+}

@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "E-argon-FNS-audit1",
+      "layer": 3,
+      "title": "允许全扫描后的BRAM分离候选审计",
+      "role": "Argon H1发散建议，经chief模型/单位纠错后作为待证问题；可证明或反驳",
+      "acceptance": "完整计16w寄存器及数组/地址/外存；不可把随机访问总步数当K单调遍。给匹配模型的ND上界与有出处/自含下界，或明确候选反例/不适用",
+      "artifact": "evidence/E-argon-FNS-audit1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.7,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "E-argon-GVC-audit1",
+      "layer": 3,
+      "title": "验证重试与交互反馈：条件成功和信息单位",
+      "role": "Argon H1发散建议，经chief模型/单位纠错后作为待证问题；可证明或反驳",
+      "acceptance": "给条件概率下的放大、实际live空间和反馈容量；K个1-bit只给Kbit而非log m轮恢复m-bit；边际相关重试负控制与可执行核验",
+      "artifact": "evidence/E-argon-GVC-audit1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E-argon-IDX-audit1",
+      "layer": 3,
+      "title": "计费可复用索引及Build数据独立性",
+      "role": "Argon H1发散建议，经chief模型/单位纠错后作为待证问题；可证明或反驳",
+      "acceptance": "两阶段prep/query/index账本和可运行检索底线；可计算Build不自动排标签泄漏，数值预算和分母均付费，非现实覆盖已证",
+      "artifact": "evidence/E-argon-IDX-audit1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "E-argon-FNS-audit1",
+      "M22"
+    ],
+    [
+      "E-argon-FNS-audit1",
+      "M23"
+    ],
+    [
+      "E-argon-GVC-audit1",
+      "M21"
+    ],
+    [
+      "E-argon-GVC-audit1",
+      "M22"
+    ],
+    [
+      "E-argon-IDX-audit1",
+      "M22"
+    ],
+    [
+      "E-argon-IDX-audit1",
+      "M23"
+    ]
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "scope": "specific B-tree, toy finite word kernel; not arbitrary GPU reduction",
+  "reference_tree": "seed is leaf0; split by largest power of two strictly less than length; combine old-left/new-right",
+  "generic_forests": {
+    "saturating_add": {
+      "prefix_cases": 11111,
+      "alphabet_size": 10,
+      "max_append_length": 4,
+      "max_allocated_level_span": 3,
+      "max_active_blocks": 2,
+      "output_digest": "82d65410d1e1c6185034c81c295a4fd8c0736750e02fda91b94632c8be238bfc",
+      "passed": true
+    },
+    "saturating_sub": {
+      "prefix_cases": 11111,
+      "alphabet_size": 10,
+      "max_append_length": 4,
+      "max_allocated_level_span": 3,
+      "max_active_blocks": 2,
+      "output_digest": "da14dea6a654721232d129a8b19495d097ebd06ac87eb94c527bd7c5aa74fcd7",
+      "passed": true
+    },
+    "max_with_error": {
+      "prefix_cases": 11111,
+      "alphabet_size": 10,
+      "max_append_length": 4,
+      "max_allocated_level_span": 3,
+      "max_active_blocks": 2,
+      "output_digest": "4362592fcf49da168d4475b60a38ebab30c3d8f3fef93fca508d7d7918b3e942",
+      "passed": true
+    }
+  },
+  "kernel_campaigns": [
+    {
+      "name": "full KV grid through length 2",
+      "alphabet_size": 81,
+      "max_append_length": 2,
+      "prefix_cases": 6643,
+      "query_comparisons": 59787,
+      "max_allocated_level_span": 2,
+      "max_active_blocks": 2,
+      "output_digest": "f5d99b02d22f5c261f98c582c6c3dfcf6bc7885ecacf139e1a307333adb6d793",
+      "passed": true
+    },
+    {
+      "name": "4 extreme records through length 5",
+      "alphabet_size": 4,
+      "max_append_length": 5,
+      "prefix_cases": 1365,
+      "query_comparisons": 12285,
+      "max_allocated_level_span": 3,
+      "max_active_blocks": 2,
+      "output_digest": "7064666206d44815023bcd202fb0d74a95c61cf8b96e71d7de6bfada6cedc86e",
+      "passed": true
+    }
+  ],
+  "long_stream": {
+    "length": 512,
+    "query_comparisons": 4608,
+    "final_shape": {
+      "seed_inclusive_count": 513,
+      "level_span": 10,
+      "active_blocks": 2,
+      "allocated_word_slots": 9990,
+      "live_numeric_words": 1998,
+      "merges": 510489
+    },
+    "max_allocated_level_span": 10,
+    "max_active_blocks": 9,
+    "passed": true
+  },
+  "negative_controls": {
+    "seed_omission_rebalances_nonassociative_tree": {
+      "with_seed_code": 4,
+      "without_seed_code": 0
+    },
+    "left_fold_is_not_this_tree": {
+      "history": [
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          -4
+        ]
+      ],
+      "q": 0,
+      "tree_code": 4,
+      "left_fold_code": 2
+    },
+    "zero_padding_not_primitive_bit_identity": {
+      "without_padding_hex": "80000000",
+      "with_padding_hex": "00000000",
+      "scope": "primitive signed-zero example, not a universal full-attention failure"
+    }
+  },
+  "parameter_forests": 999,
+  "seconds": 8.311176769901067,
+  "source_sha256": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+  "toy_primitives_sha256": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+  "harness_note": "Reference/DFS hold histories and clones. TreeCache stores only level arrays and shared count. Word-slot counts are not process RSS.",
+  "not_claimed": [
+    "all GPU balanced trees",
+    "actual IEEE32/GPU/200B model equivalence",
+    "polynomial model-size constants",
+    "full API or multi-layer coverage"
+  ]
+}

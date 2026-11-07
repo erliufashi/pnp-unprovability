@@ -1,0 +1,13 @@
+{
+  "scope": "finite implementation check, not all-m proof or physical RAM claim",
+  "m_range": [
+    1,
+    12
+  ],
+  "cases": 90114,
+  "passed": true,
+  "sequential_postquery_payload_reads": "j+1",
+  "random_access_postquery_payload_reads": 1,
+  "external_log_logical_payload_bits": "m",
+  "probe_external_log_host_bytes": "m"
+}

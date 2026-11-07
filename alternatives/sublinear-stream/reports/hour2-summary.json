@@ -1,0 +1,21 @@
+{
+  "hour": 2,
+  "at": 1793814268.5866268,
+  "status": "local_review_pass",
+  "proof": "proof/KERNEL-SUMMARY-v1.md",
+  "actual_probe_exit": 0,
+  "execution_record": "reports/tiny-domain-execution-v1.json",
+  "prefix_query_comparisons": 76680,
+  "toy_numeric_cache_words": 999,
+  "source_sha256": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+  "left_fold_theorem_claimed": true,
+  "full_LLM_or_GPU_claimed": false,
+  "model_cost_exponential_explicit": true,
+  "old_35_and_hour1_proofs_unchanged": true,
+  "next_unproved": "notes/PREFIX-TREE-CANDIDATE-v0.md",
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour2-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour2.v0.submit-1.a5c58a6d-a3f4-4f5d-aecc-18f717e2c067.receipt.json",
+    "sha256": "226ac4e0a7e7d0414bf21566285f16c6ee752ffdea4b924a4efba4edfb4b5d0c"
+  }
+}

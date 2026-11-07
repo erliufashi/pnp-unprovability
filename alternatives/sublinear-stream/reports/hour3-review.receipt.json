@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour3",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 26,
+  "checks": [
+    {
+      "criterion": "proof/PREFIX-FOREST-v1.md精确定义B树、seed叶子、块/共享shape不变量、append和右嵌套查询，证明不依赖结合律；给参数森林对参考kernel的精确m/z选择论证、分清allocated levels/live blocks，显式模型规模指数因子与标准bit/TM成本边界。",
+      "verdict": "pass",
+      "evidence": "读取 proof/PREFIX-FOREST-v1.md:7-23：定义B_⋆、严格小于长度的最大2幂、真实seed叶、二进制连续块、old-left/new-right append及右嵌套root；读取 :28-43：M/D/A参数森林、m/z根选择与逐位参考kernel论证且明确不要求结合律；读取 :45-63：K、共享shape、allocated层数、popcount live blocks、O(K b log(t+2))位空间、标准TM额外开销及K约为r·2^(b(d+2))的模型指数因子；读取 :67-78：左折叠/删seed/padding负控制、仅最大幂前缀树族及非GPU/非完整API范围。检索式 grep -n 'B_|seed|二进制|共享|allocated|live|K=|TM|指数|左折叠|padding|有限|query|append' proof/PREFIX-FOREST-v1.md 命中上述各段。"
+    },
+    {
+      "criterion": "reports/prefix-forest-tests-v1.json及实际执行记录保存测试退出码0、字面树与forest逐前缀对照、非结合/错误字母案例、缓存存储计数和左折叠/seed/padding负控制。有限原型不冒充IEEE全域、GPU或真实LLM实测；只读核对读取报告/源码即可，不要求重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/prefix-forest-execution-v1.json:2-17：passed=true、returncode=0、stdout/stderr路径及源码/玩具primitive SHA；读取 reports/prefix-forest-tests-v1.json:2-71：3组通用饱和加/减/max-with-error、两组kernel逐前缀query比较及512步长流，包含allocated_word_slots=9990、live_numeric_words=1998、merges=510489；读取 :73-116：seed omission、left fold、signed-zero padding负控制、有限toy scope与not_claimed范围。读取 tools/prefix_query_forest.py:1-232：reference_tree、Forest/TreeCache、逐前缀断言、storage/merge断言和负控制实现；读取 tools/tiny_query_summary.py:17-19、39-60：有限字母表含ERR及非结合primitive。读取 reports/prefix-forest-v1.stdout.log:1：实际输出33333通用前缀、76680 kernel query比较、parameter_forests=999、final_level_span=10。检索式 grep -n 'returncode|stdout|stderr|passed|negative_controls|query_comparisons|allocated|live|merges|not_claimed' reports/prefix-forest*.json 与 grep -n 'ERR|WORDS|def add|def sub|def maximum' tools/tiny_query_summary.py 均命中。"
+    },
+    {
+      "criterion": "reports/preservation-hour3.json证明原35节点、T3证书和hour1/2已认证证明/实验产物字节不变；本地DAG按新结果调整目标，明确该树族不是所有balanced/GPU归约，完整多层因果组合及API协议仍需独立义务，不自动扩大终止证书。",
+      "verdict": "pass",
+      "evidence": "读取 reports/preservation-hour3.json:2-26：baseline列出main/closed-llm研究图、T3 termination/receipt及hour1/2证明、报告、执行记录的SHA；读取 :895-920：passed=true且readback SHA逐项复现baseline。实际执行 sha256sum 对同一组文件交叉核对，输出与baseline/readback一致（包括 research/graph.json、research/state.json、research/history.jsonl、research/termination.json、reviews/pnp-t3-submit-2.receipt.json、hour1/2认证产物）。读取 research/graph.json:159-195、206-253：M14/E27/E28及其proof/report artifact和依赖边；读取 research/state.json:243-299、832-884：三节点done、M14下挂E27/E28及新结果记录。读取 README.md:3-3、38-38，以及 notes/NEXT-v3.md:3-9、CAUSAL-OBLIGATIONS-v0.md:3-13、CAUSAL-COMPOSITION-CANDIDATE-v0.md:3-31：明确不是任意GPU/balanced reduction，完整prefix-stability、多层组合、API协议是独立未证义务，且不提高T3 scope。检索式 grep -n 'M14|E27|E28|CAUSAL|NEXT-v3|T3|GPU|balanced|终止|API|因果|prefix-stability' 对 research/state.json、README.md、notes/*.md 命中这些限制。"
+    }
+  ],
+  "findings": [],
+  "note": "只读核对完成，未重跑会写报告的实验；退出码依据保存的execution记录并与stdout及源码/primitive SHA交叉核对。保存回执外未修改任何工作区产物或历史回执。"
+}

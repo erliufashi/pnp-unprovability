@@ -1,0 +1,71 @@
+{
+  "status": "pass",
+  "xor_cases": [
+    {
+      "m": 1,
+      "rows": 4,
+      "single_guess": "1/2",
+      "joint_guess": "1"
+    },
+    {
+      "m": 2,
+      "rows": 16,
+      "single_guess": "1/4",
+      "joint_guess": "1"
+    },
+    {
+      "m": 3,
+      "rows": 64,
+      "single_guess": "1/8",
+      "joint_guess": "1"
+    },
+    {
+      "m": 4,
+      "rows": 256,
+      "single_guess": "1/16",
+      "joint_guess": "1"
+    },
+    {
+      "m": 5,
+      "rows": 1024,
+      "single_guess": "1/32",
+      "joint_guess": "1"
+    },
+    {
+      "m": 6,
+      "rows": 4096,
+      "single_guess": "1/64",
+      "joint_guess": "1"
+    },
+    {
+      "m": 7,
+      "rows": 16384,
+      "single_guess": "1/128",
+      "joint_guess": "1"
+    },
+    {
+      "m": 8,
+      "rows": 65536,
+      "single_guess": "1/256",
+      "joint_guess": "1"
+    }
+  ],
+  "capacity_exhaustive_maps": 860,
+  "tight_code_selection_cases": 44,
+  "finite_closure_cases": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "safe_kernel_rows": 16,
+  "limits": "finite controls only; no implementation compiler, physical budget or real coverage certification"
+}

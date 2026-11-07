@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "branches": {
+    "main": {
+      "path": ".",
+      "weight": 1.0,
+      "targets": [
+        "T1",
+        "T2"
+      ]
+    },
+    "closed-llm": {
+      "path": "alternatives/closed-llm",
+      "weight": 0.25,
+      "targets": [
+        "T3"
+      ]
+    }
+  },
+  "terminals": {
+    "T1": {
+      "title": "ZFC不能证明标准P=NP",
+      "weight": 1.0,
+      "status": "unresolved",
+      "required_goal": "pnp-t1-proof",
+      "certificate": null,
+      "conditions": [
+        "固定ZFC与标准P/NP，明确指定侧的完整不可证性证明"
+      ]
+    },
+    "T2": {
+      "title": "ZFC不能证明标准P≠NP",
+      "weight": 1.0,
+      "status": "unresolved",
+      "required_goal": "pnp-t2-proof",
+      "certificate": null,
+      "conditions": [
+        "固定ZFC与标准P/NP，明确指定侧的完整不可证性证明"
+      ]
+    },
+    "T3": {
+      "title": "受限单遍logspace分离及封闭200B代理覆盖",
+      "weight": 0.25,
+      "status": "proved_conditional_proxy",
+      "required_goal": "pnp-t3",
+      "certificate": {
+        "path": "/home/desk/projects/pnp-unprovability/reviews/pnp-t3-submit-2.receipt.json",
+        "original_path": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-t3.v0.submit-2.4db8633e-525f-4173-a446-ea3e04c24155.receipt.json",
+        "sha256": "d575e0d4927a2991b7cf9506a5197d88b9c24cec56cfff4aaeb7f8e65d8d56ff",
+        "verified_goal": "pnp-t3",
+        "scope": "qualified_closed_LLM_proxy"
+      },
+      "conditions": [
+        "单遍输入，无回读输入/外部工作带",
+        "有限精度、固定有限上下文与内部存储",
+        "固定有限输出及运行预算；随机源不携带外部计算结果",
+        "覆盖的是满足profile的LLM策略，不是实证人类等价",
+        "INDEX是该受限模型的分离见证，仍属于标准P"
+      ]
+    }
+  },
+  "stop_rule": "T1 OR T2 OR T3, only with matching independent pass receipt",
+  "not_claimed": [
+    "standard P vs NP separation",
+    "unconditional human-task coverage",
+    "coverage of unbounded-context LLMs"
+  ]
+}

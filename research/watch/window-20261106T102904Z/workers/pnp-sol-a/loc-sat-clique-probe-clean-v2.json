@@ -1,0 +1,13 @@
+{
+  "status": "pass",
+  "formula_counts": {
+    "2-variables": 8420,
+    "3-variables": 3192
+  },
+  "total_formulas": 11612,
+  "graph_vertices": "3m",
+  "explicit_adjacency_cells": "9m^2",
+  "required_clique_size": "m, not a fixed constant",
+  "claimed_SAT_or_clique_lower_bound": false,
+  "claimed_reality_coverage": false
+}

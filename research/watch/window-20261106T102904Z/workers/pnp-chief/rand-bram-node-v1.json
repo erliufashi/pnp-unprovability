@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "E-chief-RAND-BRAM-1",
+      "layer": 3,
+      "title": "全扫描BRAM碰撞的常数错误边界与反算法审计",
+      "role": "在已允许SUM/全输入读取的共同Γ内，单独审计1/3错误随机算法与确定性BP下界，禁止把强错误门槛当BPP结论",
+      "acceptance": "给同一输入/访问/状态/fuel/代码模型下的具体随机算法、对抗负控制或可适用的常数错误下界；若来源条件不足则严格反驳迁移，不把失败包装为分离；完整计16w寄存器、数组、随机带、初始化和扫描",
+      "artifact": "evidence/E-chief-RAND-BRAM-1/immutable-artifact",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.78,
+        "cost": 1.2
+      }
+    }
+  ],
+  "edges": [
+    [
+      "E-chief-RAND-BRAM-1",
+      "M22"
+    ],
+    [
+      "E-chief-RAND-BRAM-1",
+      "M23"
+    ]
+  ]
+}

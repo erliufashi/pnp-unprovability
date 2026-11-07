@@ -1,0 +1,18 @@
+{
+  "failed_run": "05fadeb8-0753-4ec0-9aa0-325e953d7748",
+  "failure": "Agent already processing before managed revival prompt",
+  "observed_terminal": true,
+  "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon",
+  "preexisting_files_preserved": {
+    "argon_probe_v1.py": "4dfdf43be53b57ab4fc5db23ca7f6c7e7db09ff0046c3d2f0059bfc225328bdb",
+    "proposed-nodes-round1.json": "487f1012645a08dda4e909bdde04d8f048d2a734a81b7c6a36877c1b57267b15",
+    "argon-probe-v1.json": "70c16480d5a6d673f6363045abc4037f3291f0e020bbaad1c6da32cc132041fc",
+    "round1-audit-v1.md": "18ef9474333be76eaafa91c65d6c05df10cbb746eb12db72326d705f22a9f074"
+  },
+  "hypothesis": "mail session_start restores identity and immediately triggerTurns on pending room messages, racing managed session.prompt",
+  "bootstrap_config": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon/.pi/settings.json",
+  "scope": "only Argon private cwd, no global mail/SDK/plugin modification",
+  "profile_copy_identical_sha256": "a5d97aeead8009ba2f99d575a5c5dfc0b9bd898167075dca86cd6b55ad644da1",
+  "next_public_API_steps": "child persists configure_watch mode=paused; restores enabled=true in own config; claims own identity and manually reads mail. Paused watcher retains heartbeat but no auto prompt turn. Then next retained resume should avoid startup race.",
+  "not_yet_validated": true
+}

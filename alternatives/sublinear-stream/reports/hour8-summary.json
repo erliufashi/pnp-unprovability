@@ -1,0 +1,47 @@
+{
+  "hour": 8,
+  "at": 1793835770.0061255,
+  "status": "local_review_pass",
+  "actual_probe_exit": 0,
+  "proofs": [
+    "proof/NONVACUITY-v1.md",
+    "proof/HORIZON-HYBRID-v1.md",
+    "proof/HYBRID-RESOURCE-AUDIT-v1.md"
+  ],
+  "totals": {
+    "total_cases": 480,
+    "feed_comparisons": 4448,
+    "RNG_checks": 2915,
+    "native_prefix_checks": 1763,
+    "rebuilds": 355,
+    "rebuild_Read_checks": 12664,
+    "competitive_component_checks": 682
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "notes/FINITE-BUDGET-CANDIDATE-v0.md",
+  "not_claimed": [
+    "actual 200B/human adequacy",
+    "2x full device",
+    "wallclock competitive",
+    "uniform model/H constants",
+    "new T3 scope"
+  ],
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour8-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour8.v0.submit-2.d5a93a49-cc9c-4ba7-a5b9-8c5202634bbd.receipt.json",
+    "sha256": "45d24cd53d781d4cc6cc9a69b618da34c74043fb6f0698e70308cf64e1d3067b"
+  },
+  "review_attempts": [
+    {
+      "attempt": 1,
+      "status": "incomplete_invalid_JSON_not_pass",
+      "raw": "reports/hour8-review-attempt1.raw.txt",
+      "error": "unescaped quote: line20 col783 char2496"
+    },
+    {
+      "attempt": 2,
+      "status": "pass",
+      "receipt": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour8-review.receipt.json"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/adequacy_probe.py",
+    "--report",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/adequacy-probe-tests-v1.json"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-04T20:41:04.157777+00:00",
+  "ended": "2026-11-04T20:41:04.687910+00:00",
+  "returncode": 0,
+  "stdout_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/adequacy-probe-v1.stdout.log",
+  "stderr_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/adequacy-probe-v1.stderr.log",
+  "source_sha256": "49cb75c073165d540d2667acd46e08cb2585148f9f83e0dcf19fdcdc2d513881",
+  "frozen_dependencies": {
+    "causal_model_probe.py": "8d3cd6fdf52daf92fddeda1d4bfa3bf0a34ad0bd8484562727d6c0256b71a6a1",
+    "prefix_query_forest.py": "214019dc5446088d9d40376b931365d46d9aaa803ed1656af268f7fddc165506",
+    "tiny_query_summary.py": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9"
+  },
+  "frozen_hour4_report_sha256": "7effb087f9f6552cb02b4f0bb420d3828faf9745ee7c681b8be75499a248d300"
+}

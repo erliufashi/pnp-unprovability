@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "workflowRunId": "681a9cbf-fb72-4610-ad35-a68066490673",
+  "state": "complete",
+  "createdAt": 1793963780420,
+  "entries": {
+    "sol-a": {
+      "key": "sol-a",
+      "requestedContext": "fresh",
+      "resolvedContext": "fresh",
+      "continuation": {
+        "runIds": []
+      },
+      "resumability": {
+        "state": "not-resumable",
+        "reason": "child produced no run id"
+      }
+    },
+    "sol-b": {
+      "key": "sol-b",
+      "requestedContext": "fresh",
+      "resolvedContext": "fresh",
+      "continuation": {
+        "runIds": []
+      },
+      "resumability": {
+        "state": "not-resumable",
+        "reason": "child produced no run id"
+      }
+    },
+    "sol-c": {
+      "key": "sol-c",
+      "requestedContext": "fresh",
+      "resolvedContext": "fresh",
+      "continuation": {
+        "runIds": []
+      },
+      "resumability": {
+        "state": "not-resumable",
+        "reason": "child produced no run id"
+      }
+    },
+    "argon": {
+      "key": "argon",
+      "requestedContext": "fresh",
+      "resolvedContext": "fresh",
+      "continuation": {
+        "runIds": []
+      },
+      "resumability": {
+        "state": "not-resumable",
+        "reason": "child produced no run id"
+      }
+    }
+  },
+  "argsDigest": "2a5c608cbbef74a754d3fc5a006a69bf3a7a85170a33cd79b65cc52cd30a8f31",
+  "workflowChildren": {
+    "version": 1,
+    "parentToolCallId": "call_x2nUWBDVi6OVNnmZlie75RN2|fc_00cc4af9e0757a2e016aedb6f881d087d0bb6a1ed221aa7149",
+    "workflowRunId": "681a9cbf-fb72-4610-ad35-a68066490673",
+    "inventoryComplete": true,
+    "workflowState": "completed",
+    "children": [
+      {
+        "childId": "sol-a",
+        "state": "failed"
+      },
+      {
+        "childId": "sol-b",
+        "state": "failed"
+      },
+      {
+        "childId": "sol-c",
+        "state": "failed"
+      },
+      {
+        "childId": "argon",
+        "state": "failed"
+      }
+    ]
+  }
+}

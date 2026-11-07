@@ -1,0 +1,1 @@
+{"nodes":[{"id":"B54","layer":3,"title":"自适应选策略的覆盖乐观偏差与描述长度证书","role":"算法空间收缩的统计意义和现实能力验收防泄漏","acceptance":"给有限类/前缀描述类统一下界、事后selector反例；不将统计复杂度当计算分离","artifact":"evidence/B54/immutable-artifact","seed":{"current":0.88,"remaining":0.9,"novelty":1,"confidence":0.9,"cost":0.8}}],"edges":[["B54","M21"],["B54","M23"]]}

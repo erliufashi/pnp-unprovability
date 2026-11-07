@@ -1,0 +1,1 @@
+{"nodes":[{"id":"A57","layer":3,"title":"付费地址证书的BRAM精确分离与强reference不兼容诊断","role":"对已执行BRAM给同预算D/ND实例与下界，不将存在性见证当现实求解器","acceptance":"证书生成/存储/读取收费；证明OR下界及随机化界，核原生全输入reference会破坏该候选的预算；不称toy现实覆盖","artifact":"evidence/A57/immutable-artifact","seed":{"current":0.86,"remaining":0.9,"novelty":1,"confidence":0.9,"cost":0.7}}],"edges":[["A57","M22"]]}

@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "scope": "finite toy word domain, NOT IEEE32/real LLM",
+  "domain": {
+    "numeric_codes": [
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "code_meaning": "a/2",
+    "error_word": "ERR",
+    "number_queries": 9,
+    "number_words": 10,
+    "number_cache_words": 999,
+    "raw_word_encoding_bits": 4
+  },
+  "campaigns": [
+    {
+      "name": "full KV grid, all prefixes through length 2",
+      "alphabet_size": 81,
+      "max_history_length": 2,
+      "prefix_cases": 6643,
+      "query_comparisons": 59787,
+      "prefixes_with_isolated_counterfactual_errors": 6642,
+      "cache_cells": 999,
+      "output_digest": "f5d99b02d22f5c261f98c582c6c3dfcf6bc7885ecacf139e1a307333adb6d793",
+      "passed": true
+    },
+    {
+      "name": "4 extreme records, all prefixes through length 5",
+      "alphabet_size": 4,
+      "max_history_length": 5,
+      "prefix_cases": 1365,
+      "query_comparisons": 12285,
+      "prefixes_with_isolated_counterfactual_errors": 1364,
+      "cache_cells": 999,
+      "output_digest": "5bab5b3c8c46b530d1bb9ca4a15e6cf2c04608e1df87f0270eb4cc1bc4d4593e",
+      "passed": true
+    }
+  ],
+  "long_stream": {
+    "length": 512,
+    "all_prefix_query_comparisons": 4608,
+    "cache_cells_initial_and_final": 999,
+    "output_digest": "27b63e6eff921cac8ecdd1555209010e5efb62e6bef06953a3008bf6d505f000",
+    "passed": true
+  },
+  "negative_controls": {
+    "histogram_forgets_nonassociative_order": {
+      "same_record_multiset": true,
+      "history_a": [
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          -4
+        ]
+      ],
+      "history_b": [
+        [
+          -2,
+          -4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ],
+        [
+          -2,
+          4
+        ]
+      ],
+      "output_a_code": 2,
+      "output_b_code": 4
+    },
+    "running_denominator_is_not_final_denominator": {
+      "history": [
+        [
+          -2,
+          -4
+        ],
+        [
+          -2,
+          4
+        ]
+      ],
+      "correct_code": 0,
+      "naive_online_code": -2
+    }
+  },
+  "seconds": 5.565613859100267,
+  "source_sha256": "6c3ada188c198cf34a4cd65ca2567e0e117994320c143de2eba50f4bbf03f5d9",
+  "harness_note": "Literal reference/DFS retain histories and clones for testing; Cache itself stores no input history. Constant table is exponential in general model word width/dimension."
+}

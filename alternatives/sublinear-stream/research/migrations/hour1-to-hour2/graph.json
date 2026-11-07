@@ -1,0 +1,138 @@
+{
+  "schema": 1,
+  "scope": "10h-window exploration, not added to T3 certificate",
+  "reward_multiplier": 0.25,
+  "nodes": [
+    {
+      "id": "D6",
+      "layer": 1,
+      "title": "子线性工作空间的LLM代理推广",
+      "role": "联合资源边界与逐位语义，不修改T3证书",
+      "acceptance": "给限定的一般化及可推进缺口",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M11",
+      "layer": 2,
+      "title": "增长空间包络工具",
+      "role": "只做渐近资源及统一模拟条件",
+      "acceptance": "log n≤f=o(n)下INDEX分离成立，明确输入协议",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M12",
+      "layer": 2,
+      "title": "无重结合attention调度",
+      "role": "只做存储活跃性及数值不变",
+      "acceptance": "纯行局部DAG的O(C)调度，不冒称所有内核",
+      "artifact": "proof/ATTENTION-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E21",
+      "layer": 3,
+      "title": "次线性INDEX推广",
+      "role": "下界转移",
+      "acceptance": "逐量词证明对O(f)常数并集仍分离",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.75,
+        "novelty": 0.95,
+        "confidence": 0.95,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "E22",
+      "layer": 3,
+      "title": "动态上下文profile核算",
+      "role": "覆盖前提与协议",
+      "acceptance": "全部激活/计数/输出反馈计入，指出已知n条件",
+      "artifact": "proof/ENVELOPE-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E23",
+      "layer": 3,
+      "title": "逐行原DAG调度证明",
+      "role": "编译器存储调度而非代数化简",
+      "acceptance": "同一primitive/归约树逐位相同，峰值O(Cd)",
+      "artifact": "proof/ATTENTION-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E24",
+      "layer": 3,
+      "title": "数值反例与原型峰值",
+      "role": "反驳错误相等并有限实测",
+      "acceptance": "逐位对照、重结合反例、峰值测量口径明确",
+      "artifact": "reports/hour1-tests.json",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.85,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1.2
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M11",
+      "D6"
+    ],
+    [
+      "M12",
+      "D6"
+    ],
+    [
+      "E21",
+      "M11"
+    ],
+    [
+      "E22",
+      "M11"
+    ],
+    [
+      "E23",
+      "M12"
+    ],
+    [
+      "E24",
+      "M12"
+    ]
+  ]
+}

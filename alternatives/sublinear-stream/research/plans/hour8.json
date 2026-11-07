@@ -1,0 +1,96 @@
+{
+  "revision": 8,
+  "hour": 8,
+  "backup_name": "hour7-to-hour8",
+  "reason": "new-frontier:fixed-horizon-rebuild-and-nonvacuity",
+  "planned_next": "E43",
+  "report": "reports/hour8-frontier-migration.json",
+  "nodes": [
+    {
+      "id": "M19",
+      "layer": 2,
+      "title": "固定horizon混合与非空洞性",
+      "role": "避免小范围预付巨表并审计常数量词",
+      "acceptance": "稳定token边界用内部KV重建κ、保控制/RNG；固定H渐近口径与任务域含义明确",
+      "artifact": "proof/HORIZON-HYBRID-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E41",
+      "layer": 3,
+      "title": "native到κ重建精化",
+      "role": "接口/空间量词证明",
+      "acceptance": "H独立输入；复用内部KV不回读输入、不重放采样、懒初始化与峰值常数明确",
+      "artifact": "proof/HORIZON-HYBRID-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E42",
+      "layer": 3,
+      "title": "跨prompt/生成切换对照",
+      "role": "重建实现/RNG与资源sanity",
+      "acceptance": "多个H和两toy profile逐步对照，含EOS前不触发、head同步与释放原KV；不冒称RSS",
+      "artifact": "reports/hybrid-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E43",
+      "layer": 3,
+      "title": "有限horizon非空洞性审计",
+      "role": "任务/常数/分离见证量词",
+      "acceptance": "区分∀H∃算法、单一统一常数、截断覆盖与全域编译；不自动改T3，不从外域witness推人类任务难题",
+      "artifact": "proof/NONVACUITY-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.75
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M19",
+      "D6"
+    ],
+    [
+      "M19",
+      "D7"
+    ],
+    [
+      "E41",
+      "M19"
+    ],
+    [
+      "E42",
+      "M19"
+    ],
+    [
+      "E43",
+      "M19"
+    ]
+  ]
+}

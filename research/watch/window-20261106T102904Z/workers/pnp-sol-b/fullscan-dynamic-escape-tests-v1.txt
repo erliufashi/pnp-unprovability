@@ -1,0 +1,9 @@
+test_domain_capacity_threshold (__main__.EscapeTests.test_domain_capacity_threshold) ... ok
+test_dynamic_update (__main__.EscapeTests.test_dynamic_update) ... ok
+test_fns_profile_not_escaped (__main__.EscapeTests.test_fns_profile_not_escaped) ... ok
+test_sum_and_collision_same_fullscan_envelope (__main__.EscapeTests.test_sum_and_collision_same_fullscan_envelope) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK

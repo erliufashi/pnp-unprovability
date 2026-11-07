@@ -1,0 +1,11 @@
+test_direct_trace_cost_not_language_lower_bound (__main__.ProbeTests.test_direct_trace_cost_not_language_lower_bound) ... ok
+test_exact_exponent (__main__.ProbeTests.test_exact_exponent) ... ok
+test_numeric_envelope_does_not_inherit_witness (__main__.ProbeTests.test_numeric_envelope_does_not_inherit_witness) ... ok
+test_phi_boundary (__main__.ProbeTests.test_phi_boundary) ... ok
+test_random_access_transfer_rejected (__main__.ProbeTests.test_random_access_transfer_rejected) ... ok
+test_structural_passport (__main__.ProbeTests.test_structural_passport) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.001s
+
+OK

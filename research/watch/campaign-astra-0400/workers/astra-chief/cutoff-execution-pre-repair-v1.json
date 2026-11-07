@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "env",
+    "-i",
+    "HOME=/home/desk",
+    "PATH=/run/current-system/sw/bin:/usr/bin:/bin",
+    "LC_ALL=C.UTF-8",
+    "/run/current-system/sw/bin/python3",
+    "probe_cutoff_v1.py"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-chief",
+  "env_allowlist": {
+    "HOME": "/home/desk",
+    "PATH": "/run/current-system/sw/bin:/usr/bin:/bin",
+    "LC_ALL": "C.UTF-8"
+  },
+  "actual_exit": 0,
+  "probe_source_sha256": "5f700b91aef24b4a81ba859cb75dcdc34aafc24d3abaabb47c06a9ac5955a3cd",
+  "document_sha256": "15603d3772403ed381edb2b80d9f6a8a372268b9438beb171a8a33e7c12ceb75",
+  "report_sha256": "1b5894ee705f0db4b04d291e751cbd291138f6f015de7f8af489531c4a88f699",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "note": "v1 evidence record regenerated to close exact acceptance fields; prior sparse record preserved as v2/old history.",
+  "evidence_hash_policy": "one-way: execution hashes report, report does not hash execution"
+}

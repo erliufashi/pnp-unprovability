@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "predeadline silent",
+      "passed": true
+    },
+    {
+      "name": "04:00 owner",
+      "passed": true
+    }
+  ],
+  "state_sha256": "039fd9a132a7c9d4427d665cb6452cbffeaf52786c0096dc8d01f1d6066010ee"
+}

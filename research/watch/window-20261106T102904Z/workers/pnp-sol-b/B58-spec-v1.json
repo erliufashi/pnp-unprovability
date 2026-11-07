@@ -1,0 +1,1 @@
+{"nodes":[{"id":"B58","layer":3,"title":"全扫描与动态更新下的存储阈值逃逸审计","role":"强reference能力保全与同Γ分离兼容性的具体反例","acceptance":"给同一明文输入/计费模型下SUM、动态聚合、碰撞检测的可执行阈值；证明M>=N时BRAM分离候选被直接寻址算法击穿；不冒称M=o(N)现实能力充分","artifact":"evidence/B58/immutable-artifact","seed":{"current":0.91,"remaining":0.85,"novelty":1,"confidence":0.9,"cost":0.7}}],"edges":[["B58","M22"],["B58","M23"]]}

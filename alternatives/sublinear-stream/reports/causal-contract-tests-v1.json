@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "word_codes": [
+    -4,
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "original_leaves": [
+    0,
+    4,
+    4,
+    -4
+  ],
+  "masked_extended_leaves": [
+    0,
+    4,
+    4,
+    -4,
+    0,
+    0
+  ],
+  "original_code": 4,
+  "recomputed_code": 0,
+  "zero_is_strict_identity": true,
+  "future_content_exposed": false,
+  "changed_feature": "global-length-dependent parentheses",
+  "scope": "generic masked reduction; not measured softmax/GPU/200B",
+  "source_sha256": "acc04e968c6ba96c75823c981b1768de8299cf583fd8ca1d10052587ad4e95f3"
+}

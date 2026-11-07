@@ -1,0 +1,110 @@
+{
+  "passed": true,
+  "at": "2026-11-04T15:06:29+00:00",
+  "official_receipt": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-t3.v0.submit-2.4db8633e-525f-4173-a446-ea3e04c24155.receipt.json",
+  "durable_receipt_copy": "/home/desk/projects/pnp-unprovability/reviews/pnp-t3-submit-2.receipt.json",
+  "sha256": "d575e0d4927a2991b7cf9506a5197d88b9c24cec56cfff4aaeb7f8e65d8d56ff",
+  "goal_id": "pnp-t3",
+  "verdict": "pass",
+  "check_count": 5,
+  "checks": [
+    {
+      "criterion": "1. A/proof/MAIN.md完整定义单遍logspace多项式模型、INDEX和非法输入规则，证明INDEX∈NP_M且INDEX∉P_M；A/proof/RANDOMIZED.md明确定义逐输入错误率≤1/3和随机存储计数，并完整证明Ω(n)空间下界。不以固定状态预算或有限实验替代渐近证明。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/closed-llm/proof/MAIN.md 第6-14、16-22、24-32、34-47行：定义单向只读输入、所有输入相关状态计入空间、O(log(n+2))工作位与多项式时间，定义INDEX及非法输入拒绝，给出NP_M验证器和2^m前缀配置区分证明。读取 alternatives/closed-llm/proof/RANDOMIZED.md 第3-39行：定义每个合法输入正确概率≥2/3、随机状态/随机带计入，给出条件熵链式证明 s(n)≥(1-h2(1/3))m=Ω(n)。读取 proof/SCOPE.md 第39行及 tests/extension_acceptance.json 第约100行的有限INDEX测试说明，明确测试只是sanity、数学结论依赖全称证明。"
+    },
+    {
+      "criterion": "2. A/proof/LLM-SIMULATION.md给任意明示封闭profile的参考LLM可计算统一模拟及空间/时间界；A/TASK-SPACE.md定义任务、分布或最坏情况、损失/成功阈值和输出协议，并证明模拟保持这些指标。有限上下文/精度/存储/运行条件逐条明示；参数200B不独自推出人类覆盖，无限KV/可回读输出不属于该定理，经验人类近似与未测事项单列。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/closed-llm/proof/LLM-SIMULATION.md 第7-18、23-41、44-57行：逐项规定有限精度、固定上下文C、固定可变存储S、输出/运行预算D/τ、随机状态、无工具/无限日志，并给出profile到A_π的逐步模拟、Space=S+O(log n)、Time=O(n)+K_π及逐输入输出分布/损失保持；明确200B不单独蕴含条件并排除无限KV/可回读输出。读取 alternatives/closed-llm/TASK-SPACE.md 第3-42行：定义X/Y、接口、损失、分布μ或逐输入最坏情况、阈值ε、资源与输出编码，证明任务集合指标转移，并将H(ν,δ)与人类经验假设、真实200B部署和墙钟性能列为未验证。"
+    },
+    {
+      "criterion": "3. A/research/{graph.json,state.json,history.jsonl}存在，pnp-research alt check --json输出ok=true,valid=true,layers=3；依赖只3→2、2→1，每节点有职责/验收/产物。R/research/termination.json保留T1/T2权重1并新增T3权重0.25；pnp-research mission priorities --json输出每候选raw_priority、weight、weighted_priority，后者为前两者乘积。",
+      "verdict": "pass",
+      "evidence": "读取 alternatives/closed-llm/research/graph.json、state.json、history.jsonl，三文件均存在；graph.json 第3-147行显示10节点均有role、acceptance、artifact，边集合只有E→M、M→D的相邻层依赖。实际执行并读取 `/home/desk/projects/pnp-unprovability` 下 `pnp-research alt check --json`，输出 `ok=true, valid=true, layers=3`。读取 research/termination.json 第1-54行，main/T1/T2权重均1.0、closed-llm/T3权重0.25。读取 extension-acceptance.json 第约120-140行的mission priorities输出及独立回执，显示候选均有raw_priority、weight、weighted_priority；README/CLI实现的输出字段与数值相乘关系一致。"
+    },
+    {
+      "criterion": "4. 在R执行python3 -m unittest discover -s tests -v及python3 tests/extension_acceptance.py均退出0。后者报告R/reports/extension-acceptance.json必须passed=true，记录真实命令/退出码及规定的环境、snapshot/restore、版本切换、refresh后旧三文件SHA256和旧score_graph逐字段不变断言；R/reports/extension-preservation.json保存本次扩展前基线与结束读回。",
+      "verdict": "pass",
+      "evidence": "读取 reports/independent-tests.json 第2-33行：run_id=20261104T145639796016，真实argv分别为 `python3 -m unittest discover -s tests -v` 与 `python3 tests/extension_acceptance.py`，cwd均为R，started/ended均有记录且returncode均0，passed=true，并保存stdout/stderr日志路径。读取 extension-acceptance.json 第1-20行及第388行：第一命令returncode=0、passed=true，最终报告passed=true；第315-390行的commands/assertions记录旧check、alt check、snapshot/restore、`0.2.0→0.1.0→0.2.0`、context-resume/exhaustion、`original_bytes_unchanged`、`original_scores_unchanged`、`legacy_preservation`均为true。读取 extension-preservation.json 第4-7、约645-647行，存在扩展前baseline且结束readback中files_unchanged=true、scores_unchanged=true、changed=[]、passed=true。"
+    },
+    {
+      "criterion": "5. R/research/termination.json在本goal提交时T1/T2均unresolved、T3为pending_review且没有伪造pass证书；pnp-research mission status --json输出stop=false并列出新模型适用条件及原标准目标未解。所有有限INDEX验证测试标为sanity check而非证明助手形式化；README和扩展操作文档说明新入口、回退、隔离恢复和旧节点保留。",
+      "verdict": "pass",
+      "evidence": "读取 research/termination.json 第20-54行：T1/T2 status=unresolved、T3 status=pending_review、certificate=null。实际执行并读取 `pnp-research mission status --json`，输出stop=false、T1/T2/T3适用conditions、standard_targets_unresolved=true且verified均false。读取 extension-acceptance.json 第约360-390行，qualified_certificate_not_yet_activated=true；读取 proof/SCOPE.md 第39行和 docs/EXTENSION-T3.md 第63-67行，明确有限Python/INDEX测试不是渐近证明助手、独立测试回执与边界。读取 README.md 第5-30行及 docs/EXTENSION-T3.md 第17-51行，确认新入口、alt隔离、snapshot/restore、版本回退、旧状态保留和旧节点不变说明。"
+    }
+  ],
+  "changed_fields": [
+    "terminals.T3.status",
+    "terminals.T3.certificate"
+  ],
+  "T1_T2_records_unchanged": true,
+  "legacy_preservation": {
+    "files_unchanged": true,
+    "scores_unchanged": true,
+    "changed": [],
+    "passed": true
+  },
+  "mission_status": {
+    "stop": true,
+    "met": [
+      "T3"
+    ],
+    "terminals": {
+      "T1": {
+        "title": "ZFC不能证明标准P=NP",
+        "weight": 1.0,
+        "status": "unresolved",
+        "required_goal": "pnp-t1-proof",
+        "certificate": null,
+        "conditions": [
+          "固定ZFC与标准P/NP，明确指定侧的完整不可证性证明"
+        ]
+      },
+      "T2": {
+        "title": "ZFC不能证明标准P≠NP",
+        "weight": 1.0,
+        "status": "unresolved",
+        "required_goal": "pnp-t2-proof",
+        "certificate": null,
+        "conditions": [
+          "固定ZFC与标准P/NP，明确指定侧的完整不可证性证明"
+        ]
+      },
+      "T3": {
+        "title": "受限单遍logspace分离及封闭200B代理覆盖",
+        "weight": 0.25,
+        "status": "proved_conditional_proxy",
+        "required_goal": "pnp-t3",
+        "certificate": {
+          "path": "/home/desk/projects/pnp-unprovability/reviews/pnp-t3-submit-2.receipt.json",
+          "original_path": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-t3.v0.submit-2.4db8633e-525f-4173-a446-ea3e04c24155.receipt.json",
+          "sha256": "d575e0d4927a2991b7cf9506a5197d88b9c24cec56cfff4aaeb7f8e65d8d56ff",
+          "verified_goal": "pnp-t3",
+          "scope": "qualified_closed_LLM_proxy"
+        },
+        "conditions": [
+          "单遍输入，无回读输入/外部工作带",
+          "有限精度、固定有限上下文与内部存储",
+          "固定有限输出及运行预算；随机源不携带外部计算结果",
+          "覆盖的是满足profile的LLM策略，不是实证人类等价",
+          "INDEX是该受限模型的分离见证，仍属于标准P"
+        ]
+      }
+    },
+    "verified": {
+      "T1": false,
+      "T2": false,
+      "T3": true
+    },
+    "standard_targets_unresolved": true,
+    "stop_scope": "qualified_closed_LLM_proxy",
+    "human_equivalence_empirically_verified": false,
+    "no_background_proof_job": true
+  },
+  "not_claimed": [
+    "standard P vs NP resolved",
+    "human equivalence measured",
+    "unbounded-context LLM coverage"
+  ]
+}

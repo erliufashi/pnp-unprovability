@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-definition7h-initial",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 20,
+  "checks": [
+    {
+      "criterion": "chief的E47-capability-contract-v1.md及不可变共享证据明确结构/资源限制、单一可执行路由而非按答案选程序；覆盖Hoeffding/分布转移/耦合/执行与评测差分开，不把未知质量/参数量或有限bench当已验证现实保证。",
+      "verdict": "pass",
+      "evidence": "以项目根 /home/desk/projects/pnp-unprovability 为基准：research/watch/window-20261106T102904Z/workers/pnp-chief/E47-capability-contract-v1.md:5-27 明确架构无关资源包络、计费工具、冻结B_*与统一编译及错误量词反例；:39-55 分列Hoeffding、Δ、ε、β、ξ及选择修正；:57-67 明确有限bench与未知义务不构成现实保证。实际cmp原件与 alternatives/practical-core/evidence/E47/f2c15c5a142bb81cebd968a2d6fba9321578ac49881627a8ef5930b495e3258e.md 无差异；initial-definition-review-v1.sha256的sha256sum -c对这两项均成功。alternatives/practical-core/research/shared-board.json:730-746 登记done状态及内容寻址副本SHA；该共享文件内容已由cmp与SHA对照核实。"
+    },
+    {
+      "criterion": "COMPOSITION-v1.md给条件于可达历史的自适应耦合界、参考平均/统一product界和计费组合闭包；合法边界路由反例不靠真值oracle。composition-tests-v1.json及实际退出记录有精确有理kernel核验，有限sanity不替一般证明。",
+      "verdict": "pass",
+      "evidence": "research/watch/window-20261106T102904Z/workers/pnp-chief/COMPOSITION-v1.md:5-10 为预算分级闭包、累计时间及同时live总状态；:14-28 为共同可达历史kernel、未来相关状态/接口精化、逐步最大耦合及ΣE_ref ε_i和1−Π(1−ε_i)界；:32-38 给公开q=m−1路由将1/m放大为1的非oracle反例；:40-47 明确有限核验非一般证明/现实测评。probe_composition_v1.py:1-18 用Fraction和六重五点网格枚举并assert三个界，:20-26 给五个边界路由控制；composition-tests-v1.json:2-4,6-33 记录passed、15625及五个控制，composition-execution-v1.json:1 为actual_exit=0；stdout.log:1与报告一致，stderr.log经wc -c为0。实际sha256sum源码为5657ef7a2fad30ab79f6ffa5e9f4299b8f25400d47304006d7d66090468e3a26，与报告:33匹配。实际cmp原件与 alternatives/practical-core/evidence/E-chief-compose-1/704461048dc87a16c3c4c8b9993271fb186cf8a5c562478870bb041e6d4127e5.md 无差异，冻结SHA校验两者成功；shared-board.json:1018,1034-1035,2501-2504 可核对共享发布及chief actor。"
+    },
+    {
+      "criterion": "正式人类goal v2修订与current-contract-v2.json一致，旧T3-v1仅历史，新现实覆盖和新分离保持未验。main节点成果和原104文件保全可核对；仅局部标准通过，不关闭主数学goal。只读核现有报告，不重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "goal运行目录 /home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c 下 pnp-research.工单.md:4,6,16,20-24 为active、v2及新旧目标边界；amendments/pnp-research/9f97eb8b-c13b-4f7a-b1a8-54f04db55b41/decision.json:5-6,36-42 和 result.json:5-6 为accepted且排除独立并发范围。alternatives/practical-core/research/current-contract-v2.json:2-20 为同一goal版本/修订路径，T1/T2与T3_v2 UNRESOLVED、T3_v1 historical、current_success=false，缺项包括现实覆盖和新模型严格分离。research/watch/window-20261106T102904Z/initial-definition-review-snapshot-v1.json:2-4 明确仅局部；实际sha256sum -c initial-definition-review-v1.sha256全部8项成功；对 alternatives/sublinear-stream/reports/window-static-manifest-v1.sha256 实际只读SHA校验统计104项、0失败；该清单:100-102和 preservation-baseline.json:104-106 包含main research/graph.json、history.jsonl、state.json。proof/MAIN.md:15-18 保留未有标准不可证性证明及局部成果；proof/obligations.json:4,11,21,33,45,55 保留UNRESOLVED/open。本次只读检查已有源码、报告与哈希，没有执行实验脚本。"
+    }
+  ],
+  "findings": [],
+  "note": "证据中项目相对路径均相对于 /home/desk/projects/pnp-unprovability。checks_run按20项实质核对计：E47正文、组合正文、测试源码、测试JSON、退出记录、当前contract、正式修订记录、正式工单、局部snapshot、保全baseline、冻结8项SHA、原104项SHA、源码SHA、E47副本cmp、组合副本cmp、stdout、stderr、共享发布board、MAIN、obligations；不计目录定位和JSON格式验证。首次误查项目根obligations.json未命中，随后find定位proof/obligations.json并实际检索确认，未据空搜索作缺失判断。只验收定义基础局部目标，不验收完整T3-v2，不改旧回执，不关闭主数学goal。精确有理数核验指kernel枚举；五个rare-query控制中脚本使用的1/m均为二进制可精确表示值，报告按有理数字符串记录。"
+}

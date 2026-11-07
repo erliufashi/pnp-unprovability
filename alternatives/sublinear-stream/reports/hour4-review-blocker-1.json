@@ -1,0 +1,8 @@
+{
+  "kind": "goal verification infrastructure/schema failure",
+  "tool_state": "not_completed",
+  "receipt": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour4.v0.submit-1.7fc385ee-ca18-4c41-86de-8db17be6d4ce.receipt.json",
+  "counted_as_pass": false,
+  "sha256": "1cf7d0c4f77e8c35621395be4f923351aae36b834ee027240df814c84465b7d1",
+  "parse_error": "Expecting ',' delimiter: line 21 column 3 (char 3147)"
+}

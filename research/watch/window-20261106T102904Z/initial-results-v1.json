@@ -1,0 +1,10 @@
+{
+  "at": "2026-11-06T20:13:39+08:00",
+  "chief_node": "E47",
+  "chief_artifact": "evidence/E47/f2c15c5a142bb81cebd968a2d6fba9321578ac49881627a8ef5930b495e3258e.md",
+  "formal_goal_revision": 2,
+  "researchers_first_pass": "three completed; no full-real-coverage certificate",
+  "argon_first_pass": "failed final output, partial research retained, same-route revival requested",
+  "initial_ack_timing": "late setup after native compatibility failure; not claimed to have completed in first hour",
+  "new_T3_success": false
+}

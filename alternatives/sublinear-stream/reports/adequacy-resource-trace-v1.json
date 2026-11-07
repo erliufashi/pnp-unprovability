@@ -1,0 +1,2016 @@
+{
+  "reference": [
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 8,
+      "position": 1,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 16,
+      "position": 2,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 24,
+      "position": 3,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 32,
+      "position": 4,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 40,
+      "position": 5,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 48,
+      "position": 6,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 56,
+      "position": 7,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 64,
+      "position": 8,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 72,
+      "position": 9,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 80,
+      "position": 10,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 88,
+      "position": 11,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 96,
+      "position": 12,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 104,
+      "position": 13,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 112,
+      "position": 14,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 120,
+      "position": 15,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 128,
+      "position": 16,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 136,
+      "position": 17,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 144,
+      "position": 18,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 152,
+      "position": 19,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 160,
+      "position": 20,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 168,
+      "position": 21,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 176,
+      "position": 22,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 184,
+      "position": 23,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 192,
+      "position": 24,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 200,
+      "position": 25,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 208,
+      "position": 26,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 216,
+      "position": 27,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 224,
+      "position": 28,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 232,
+      "position": 29,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 240,
+      "position": 30,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 248,
+      "position": 31,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 256,
+      "position": 32,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 264,
+      "position": 33,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 272,
+      "position": 34,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 280,
+      "position": 35,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 288,
+      "position": 36,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 296,
+      "position": 37,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 304,
+      "position": 38,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 312,
+      "position": 39,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 320,
+      "position": 40,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 328,
+      "position": 41,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 336,
+      "position": 42,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 344,
+      "position": 43,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 352,
+      "position": 44,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 360,
+      "position": 45,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 368,
+      "position": 46,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 376,
+      "position": 47,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 384,
+      "position": 48,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 392,
+      "position": 49,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 400,
+      "position": 50,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 408,
+      "position": 51,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 416,
+      "position": 52,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 424,
+      "position": 53,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 432,
+      "position": 54,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 440,
+      "position": 55,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 448,
+      "position": 56,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 456,
+      "position": 57,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 464,
+      "position": 58,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 472,
+      "position": 59,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 480,
+      "position": 60,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 488,
+      "position": 61,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 496,
+      "position": 62,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 504,
+      "position": 63,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 512,
+      "position": 64,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 520,
+      "position": 65,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 528,
+      "position": 66,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 536,
+      "position": 67,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 544,
+      "position": 68,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 552,
+      "position": 69,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 560,
+      "position": 70,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 568,
+      "position": 71,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 576,
+      "position": 72,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 584,
+      "position": 73,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 592,
+      "position": 74,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 600,
+      "position": 75,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 608,
+      "position": 76,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 616,
+      "position": 77,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 624,
+      "position": 78,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 632,
+      "position": 79,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 640,
+      "position": 80,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 648,
+      "position": 81,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 656,
+      "position": 82,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 664,
+      "position": 83,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 672,
+      "position": 84,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 680,
+      "position": 85,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 688,
+      "position": 86,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 696,
+      "position": 87,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 704,
+      "position": 88,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 712,
+      "position": 89,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 720,
+      "position": 90,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 728,
+      "position": 91,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 736,
+      "position": 92,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 744,
+      "position": 93,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 752,
+      "position": 94,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 760,
+      "position": 95,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 768,
+      "position": 96,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 776,
+      "position": 97,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 784,
+      "position": 98,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 792,
+      "position": 99,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 800,
+      "position": 100,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 808,
+      "position": 101,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 816,
+      "position": 102,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 824,
+      "position": 103,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 832,
+      "position": 104,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 840,
+      "position": 105,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 848,
+      "position": 106,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 856,
+      "position": 107,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 864,
+      "position": 108,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 872,
+      "position": 109,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 880,
+      "position": 110,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 888,
+      "position": 111,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 896,
+      "position": 112,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 904,
+      "position": 113,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 912,
+      "position": 114,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 920,
+      "position": 115,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 928,
+      "position": 116,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 936,
+      "position": 117,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 944,
+      "position": 118,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 952,
+      "position": 119,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 960,
+      "position": 120,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 968,
+      "position": 121,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 976,
+      "position": 122,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 984,
+      "position": 123,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 992,
+      "position": 124,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 1000,
+      "position": 125,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 1008,
+      "position": 126,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 1016,
+      "position": 127,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "prompt",
+      "kv_numeric_words": 1024,
+      "position": 128,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "feedback",
+      "kv_numeric_words": 1032,
+      "position": 129,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "feedback",
+      "kv_numeric_words": 1040,
+      "position": 130,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "feedback",
+      "kv_numeric_words": 1048,
+      "position": 131,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "feedback",
+      "kv_numeric_words": 1056,
+      "position": 132,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "feedback",
+      "kv_numeric_words": 1064,
+      "position": 133,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    },
+    {
+      "kind": "feedback",
+      "kv_numeric_words": 1072,
+      "position": 134,
+      "scope": "KV numeric entries only; program/PRNG/control excluded"
+    }
+  ],
+  "compiled": [
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 7992,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 2,
+      "position": 1,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 7992,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 2,
+      "position": 2,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 11988,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 3,
+      "position": 3,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 11988,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 3,
+      "position": 4,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 11988,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 3,
+      "position": 5,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 11988,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 3,
+      "position": 6,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 7,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 8,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 9,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 10,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 11,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 12,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 13,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 15984,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 4,
+      "position": 14,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 15,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 16,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 17,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 18,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 19,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 20,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 21,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 22,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 23,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 24,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 25,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 26,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 27,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 28,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 29,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 19980,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 5,
+      "position": 30,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 31,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 32,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 33,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 34,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 35,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 36,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 37,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 38,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 39,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 40,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 41,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 42,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 43,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 44,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 45,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 46,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 47,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 48,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 49,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 50,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 51,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 52,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 53,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 54,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 55,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 56,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 57,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 58,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 59,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 60,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 61,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 23976,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 6,
+      "position": 62,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 63,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 64,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 65,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 66,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 67,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 68,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 69,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 70,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 71,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 72,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 73,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 74,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 75,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 76,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 77,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 78,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 79,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 80,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 81,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 82,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 83,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 84,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 85,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 86,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 87,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 88,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 89,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 90,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 91,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 92,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 93,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 94,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 95,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 96,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 97,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 98,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 99,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 100,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 101,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 102,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 103,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 104,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 105,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 106,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 107,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 108,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 109,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 110,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 111,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 112,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 113,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 114,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 115,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 116,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 117,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 118,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 119,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 120,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 121,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 122,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 19980,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 123,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 124,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 23976,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 125,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 27972,
+      "live_numeric_words": 27972,
+      "parameter_forests": 3996,
+      "max_level_span": 7,
+      "position": 126,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 3996,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 127,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "prompt",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 128,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "feedback",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 129,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "feedback",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 130,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "feedback",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 7992,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 131,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "feedback",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 132,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "feedback",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 11988,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 133,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    },
+    {
+      "kind": "feedback",
+      "allocated_word_slots": 31968,
+      "live_numeric_words": 15984,
+      "parameter_forests": 3996,
+      "max_level_span": 8,
+      "position": 134,
+      "scope": "numeric forest slots only, not RSS; fixed PRNG and log counters separate"
+    }
+  ]
+}

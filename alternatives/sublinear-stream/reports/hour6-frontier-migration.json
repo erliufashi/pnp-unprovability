@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "before_nodes": 22,
+  "after_nodes": 26,
+  "old_node_parameters_preserved": true,
+  "old_descriptors_preserved": true,
+  "old_history_preserved": true,
+  "event": {
+    "seq": 48,
+    "at": "2026-11-04T21:05:35+00:00",
+    "round": 48,
+    "reason": "new-frontier:compact-retrieval-state-lower-bound",
+    "previous": null,
+    "selected": null,
+    "ranking": [],
+    "details": {
+      "added": [
+        "M17",
+        "E35",
+        "E36",
+        "E37"
+      ],
+      "planned_next": "E35",
+      "scheduled_for_hour": 6,
+      "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour5-to-hour6",
+      "freshness_age_initialized_at_admission": true
+    }
+  },
+  "planned_next": "E35",
+  "hour": 6
+}

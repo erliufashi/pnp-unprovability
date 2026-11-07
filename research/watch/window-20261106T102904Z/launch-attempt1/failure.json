@@ -1,0 +1,31 @@
+{
+  "workflow": "681a9cbf-fb72-4610-ad35-a68066490673",
+  "child_runs": [
+    "3d2763a6-0973-41dd-b376-f13c8bb7530f",
+    "0f973635-0d35-4ac0-97d4-157efeafb3b6",
+    "536919d7-0c8d-453e-9e77-0b97edc3ea80",
+    "562588b7-9fa5-4c7e-ba31-349c7629113c"
+  ],
+  "state": "all four failed before child session/model work",
+  "failure": "host npm package lacks @earendil-works/chord and @earendil-works/chord/context",
+  "workspaces": {
+    "pnp-sol-a": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-a",
+      "files": []
+    },
+    "pnp-sol-b": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-b",
+      "files": []
+    },
+    "pnp-sol-c": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-sol-c",
+      "files": []
+    },
+    "pnp-argon": {
+      "cwd": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-argon",
+      "files": []
+    }
+  },
+  "repo_branch_ref": "isolated non-git directories; no worktree allocated",
+  "execution_mode_fallback": false
+}

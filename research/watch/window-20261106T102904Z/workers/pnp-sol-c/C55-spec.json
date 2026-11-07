@@ -1,0 +1,1 @@
+{"nodes":[{"id":"C55","layer":3,"title":"付费工具统一编译与固定资源包络的严格收缩","role":"E50后继：证明工具闭包和层级定理兼容条件","acceptance":"给完整计费编译引理、固定指数与多项式并集区别、现实覆盖缺失输入；不冒称新覆盖","artifact":"evidence/C55/immutable-artifact","seed":{"current":0.88,"remaining":0.9,"novelty":1,"confidence":0.85,"cost":0.9}}],"edges":[["C55","M22"],["C55","M23"]]}

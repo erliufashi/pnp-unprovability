@@ -1,0 +1,112 @@
+{
+  "revision": 5,
+  "hour": 5,
+  "backup_name": "hour4-to-hour5",
+  "reason": "new-frontier:quality-resource-adequacy",
+  "planned_next": "E32",
+  "report": "reports/hour5-frontier-migration.json",
+  "nodes": [
+    {
+      "id": "D7",
+      "layer": 1,
+      "title": "代理充分性与资源可用性",
+      "role": "区别质量/资源/人类接近，不把渐近覆盖当可用",
+      "acceptance": "给任务相对分层口径与可核验传递条件，经验假设保留",
+      "artifact": "proof/ADEQUACY-TIERS-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.75,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "M16",
+      "layer": 2,
+      "title": "质量-资源分层契约",
+      "role": "以输出风险与预算分别评价模型，反馈D6构造",
+      "acceptance": "预算单位、近似风险传递与特定构造成本不混同，不改旧证书",
+      "artifact": "proof/ADEQUACY-TIERS-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.95,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E32",
+      "layer": 3,
+      "title": "任务相对充分性定义",
+      "role": "reference/输入/损失/预算口径设计",
+      "acceptance": "分层δ/κ为待指定参数，权重/程序/工作/输出资源分开，旧T3不改标",
+      "artifact": "proof/ADEQUACY-TIERS-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.75
+      }
+    },
+    {
+      "id": "E33",
+      "layer": 3,
+      "title": "近似策略的风险转移引理",
+      "role": "数学耦合与margin界",
+      "acceptance": "EOS吸收/逐步TV→序列风险证明，无marginargmax反例，不猜测实证准确率",
+      "artifact": "proof/APPROX-TRANSFER-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E34",
+      "layer": 3,
+      "title": "资源账本与有限负控制",
+      "role": "实际toy计数和可重现示例",
+      "acceptance": "求allocated/live区别及交叉点，质量反例/预算observer明确，不宣称真实RSS或所有编译器下界",
+      "artifact": "reports/adequacy-probe-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.9
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M16",
+      "D7"
+    ],
+    [
+      "M16",
+      "D6"
+    ],
+    [
+      "E32",
+      "M16"
+    ],
+    [
+      "E33",
+      "M16"
+    ],
+    [
+      "E34",
+      "M16"
+    ]
+  ]
+}

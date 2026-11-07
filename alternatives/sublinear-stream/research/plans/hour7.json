@@ -1,0 +1,96 @@
+{
+  "revision": 7,
+  "hour": 7,
+  "backup_name": "hour6-to-hour7",
+  "reason": "new-frontier:certified-profile-pruning",
+  "planned_next": "E38",
+  "report": "reports/hour7-frontier-migration.json",
+  "nodes": [
+    {
+      "id": "M18",
+      "layer": 2,
+      "title": "带证书的profile参数特化",
+      "role": "建设性特殊结构，不否定最坏族下界",
+      "acceptance": "静态query/key域、精确签名及selected参数证书成立时保持word输出，模型成本/metadata单列",
+      "artifact": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+      "seed": {
+        "status": "open",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.8,
+        "cost": 1.3
+      }
+    },
+    {
+      "id": "E38",
+      "layer": 3,
+      "title": "selected参数投影正确性",
+      "role": "条件性证书与不变量证明",
+      "acceptance": "区分实际选择m时的z范围与counterfactual全范围；empty/read/domain明确",
+      "artifact": "proof/SELECTED-PARAMETER-PRUNING-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.95,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.9,
+        "cost": 0.75
+      }
+    },
+    {
+      "id": "E39",
+      "layer": 3,
+      "title": "特化kernel/完整策略对照",
+      "role": "冻结fixture上的实现sanity",
+      "acceptance": "完整KV/完整表/特化每步对照及常数计数，静态域来自code非样例",
+      "artifact": "reports/pruning-tests-v1.json",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E40",
+      "layer": 3,
+      "title": "特化成本及不安全剪枝审计",
+      "role": "模型系数/metadata与负控制",
+      "acceptance": "actual K及readonly成本、不安全观察/同号合并反例，仍不声称200B部署",
+      "artifact": "proof/PRUNING-COST-v1.md",
+      "seed": {
+        "status": "blocked",
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M18",
+      "D6"
+    ],
+    [
+      "M18",
+      "D7"
+    ],
+    [
+      "E38",
+      "M18"
+    ],
+    [
+      "E39",
+      "M18"
+    ],
+    [
+      "E40",
+      "M18"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour8",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 13,
+  "checks": [
+    {
+      "criterion": "proof/NONVACUITY-v1.md区分固定H、∀H∃B_H/单一统一常数、截断覆盖与全域精确编译；不把外域分离见证解释为人类域内难题，不自动更改旧T3。",
+      "verdict": "pass",
+      "evidence": "根目录 /home/desk/projects/pnp-unprovability/alternatives/sublinear-stream。已用 grep -n '^' proof/NONVACUITY-v1.md | cut -c1-300 | head -20 及 sed -n '21,41p' proof/NONVACUITY-v1.md | cut -c1-600 读取：3行不修改T3；7–19行固定π/H、∀H∃B_H与同一数值预算的区别，禁止按输入选择H；21–27行覆盖范围及overflow截断与全域精确κ分开；29–41行外域INDEX不推出人类域内难题、新门槛未自动采用。另实际执行保全清单SHA核对，research/termination.json、reviews/pnp-t3-submit-2.receipt.json及原主线图/状态/历史全部匹配，命令见第三项。"
+    },
+    {
+      "criterion": "proof/HORIZON-HYBRID-v1.md给只用内部KV重建κ的精化论证，保持逻辑位置/隐藏/随机状态，不重读原输入/重播采样；固定π/H的小空间与时间量词成立，懒初始化、同时持有新旧cache的峰值/readonly/scratch边界明确。",
+      "verdict": "pass",
+      "evidence": "读取 proof/HORIZON-HYBRID-v1.md:1–20（grep -n '^'并限宽限行）、21–49（sed -n '21,49p'并限宽）：3行声明M15纯word与有效精确polytime κ前提；7–21行稳定边界Init/Push内部KV、保持position/last hidden/控制/RNG，Read及输出逐步归纳，H=0与恰H边界明确；23–35行单遍外输入、固定π/H前段及迁移常数、尾部Oπ(log(n+D(n)+2))与poly_(π,H)时间，拒绝H随n增长；37–49行cache组件界排除scratch/readonly等。读取 proof/HYBRID-RESOURCE-AUDIT-v1.md:1–29，尤其21–29行明确code/权重/证书、scratch、容器/RNG/诊断不属于cache子界，未测RSS/200B。实际读取 tools/horizon_hybrid_probe.py:20–80：构造时caches/compiled_profile为None；rebuild仅遍历self.histories按序append，保留控制，诊断RNG一致断言，峰值记录native+compressed，self.histories=None释放旧KV；80–128行观察器仅比较，不修补状态。"
+    },
+    {
+      "criterion": "reports/hybrid-tests-v1.json及实际退出记录核对多个H/两toy profile逐步word及RNG，含未到H的EOS/恰H/跨prompt或反馈的切换；reports/preservation-hour8.json证原35/T3/前7小时认证产物不变，DAG与剩余问题刷新。有限sanity不替代一般证明，不声称RSS/实际200B/全设备预算优势。只读验收核对既有数据，不重跑写入实验。",
+      "verdict": "pass",
+      "evidence": "读取 reports/hybrid-execution-v1.json:1–22：passed=true、returncode=0、实际argv/时间/日志路径及源码依赖SHA；执行 sha256sum tools/{horizon_hybrid_probe.py,causal_model_probe.py,prefix_query_forest.py,tiny_query_summary.py,pruned_query_probe.py}，五项与执行记录15–20行全部一致。wc -c reports/hybrid-v1.*.log 得stderr=0/stdout=130字节，读取stdout:1实为passed=true、480cases/4448feed/2915RNG/355rebuilds，与 reports/hybrid-tests-v1.json:1–14一致。读取 tools/horizon_hybrid_probe.py:89–177：逐feed audit trace、输出、随机状态/采样数断言，H=0/1/3/6/16、遍历两个CONFIGS、恰H/超过H、EOS及释放检查。读取 tools/causal_model_probe.py:25–29的toy-A/toy-B定义命中；报告实际读取15–75（H0及反馈）、194–225（恰H原生无森林）、849–889（H3早EOS在position1，无transition/森林）；grep报告toy-B命中445等行，两个profile边界记录实际存在。保全核对命令：sed -n '4,62p' reports/preservation-hour8.json | tr -d '\",:' | awk '{print $2 "  /home/desk/projects/pnp-unprovability/" $1}' | sha256sum -c - | head -65；59项全部成功，涵盖原主线/T3及第1至7小时证明、测试、源码、回执和第7小时历史更正。读取该报告931行passed=true及readback字段；读取 reports/hour8-frontier-migration.json:1–20，30到34节点且旧参数/描述/历史保留。实际读取 research/graph.json:478–545、655–690的M19/E41/E42/E43及新增依赖；research/state.json:777–865更新状态/证据与局部结论。读取 notes/FINITE-BUDGET-CANDIDATE-v0.md:1–29明确h9未认证、有限预算/域内阈值为后续问题；grep /home/desk/projects/pnp-unprovability/README.md:3及research/state.json:1805，主数学目标仍UNRESOLVED。读取 proof/HYBRID-RESOURCE-AUDIT-v1.md:3–29及reports/hour8-summary.json:20–28明确有限sanity、普通profile更大cache与非RSS/实际200B/整设备界。整个验收只读取既有结果、计算文件哈希，没有重跑实验。"
+    }
+  ],
+  "findings": [],
+  "note": "checks_run按成功完成的只读bash命令批次计，共13批；每批含多个受限读取/检索/哈希动作。不计一次被闸拒绝的Python批次、两次被闸拒绝的检索批次及一次jq缺失的未完成批次；这些未完成检查已由后续受限读取与sha256sum替代。工作区文本仅分段/限宽读取，未整读大文件；未运行实验或修改项目及旧回执。本pass仅对应v0三项局部标准，精化与复杂度结论依赖文中M15/有效精确κ/固定π和H等显式前提，不认证human adequacy、全设备资源优势、后续finite-budget候选或标准P/NP结论。"
+}

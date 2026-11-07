@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/probe_rand_bram_v1.py", line 48, in <module>
+    out=run(); out['source_sha256']=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(); out['seconds']=0
+  File "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/probe_rand_bram_v1.py", line 21, in run
+    assert all(row['below_one_third'] for row in rows[3:])
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

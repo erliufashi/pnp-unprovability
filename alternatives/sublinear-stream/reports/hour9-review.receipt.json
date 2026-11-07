@@ -1,0 +1,25 @@
+{
+  "goal_id": "pnp-hour9",
+  "spec_revision": 0,
+  "verdict": "pass",
+  "checks_run": 12,
+  "checks": [
+    {
+      "criterion": "1. FINITE-BUDGET-SEPARATION-v1.md自含定义U_m、D_s/ND_s、边界、确定性下界、ND协议及≤8b+64保留状态计费。",
+      "verdict": "pass",
+      "evidence": "proof/FINITE-BUDGET-SEPARATION-v1.md:7-15,19-27,35-44,48,54-56；含U_m/EOF、D_s/ND_s、collision、scratch/PC/cursor/ROM/RNG及Python/RAM边界"
+    },
+    {
+      "criterion": "2. FINITE-BUDGET-RANDOM-v1.md自含均匀X/I平均error≤1/3的entropy下界、3^48<2^77、c>1/16及m=16s+1，并区分浮点诊断、pointwise、分布和上下文。",
+      "verdict": "pass",
+      "evidence": "proof/FINITE-BUDGET-RANDOM-v1.md:3-27,29-47；含entropy链、不等式、精确整数证、16s+1、ND/context及实际分布边界"
+    },
+    {
+      "criterion": "3. tests报告与实际退出记录保存小m协议/分支、collision sanity、ND预算及m≤C账本；preservation-hour9证明原35/T3/前8小时认证产物不变且不作外域/ND未fit/人类难题或P/NP结论。",
+      "verdict": "pass",
+      "evidence": "reports/finite-budget-tests-v1.json:1-114,117-1084；reports/finite-budget-execution-v1.json:2-15与stdout.log；preservation-hour9.json:1-71,939-1009；关键哈希读回一致"
+    }
+  ],
+  "findings": [],
+  "note": "两份JSON均经 /run/current-system/sw/bin/json_pp 只读解析成功；finite-budget执行记录returncode=0，stdout含948 tasks/7368 branches/131344 prefix_maps。"
+}

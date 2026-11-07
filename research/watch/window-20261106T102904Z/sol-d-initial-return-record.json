@@ -1,0 +1,10 @@
+{
+  "run": "942bbf13-c432-4f2e-8e3a-75b64dabd0c9",
+  "output": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/workers/pnp-sol-d/INITIAL-EXTENSION-RETURN.md",
+  "output_sha256": "4df4635530b0d5f30b3fd46e5bfa8b88c285928f85292ae5905200103321073c",
+  "node": "D-GVC-BATCH-1",
+  "board_snapshot": "38 nodes / 52 edges / round59",
+  "classification": "proved-candidate local theorem, independent review pending",
+  "window": "parent 7h still active; extension not started",
+  "T1_T2_T3v2": "UNRESOLVED"
+}

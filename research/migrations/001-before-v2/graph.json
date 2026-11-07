@@ -1,0 +1,511 @@
+{
+  "schema": 1,
+  "title": "标准P/NP命题的相对不可证性研究",
+  "theory": "ZFC",
+  "probe_theory": "PA",
+  "target": "T does not prove E, or T does not prove not-E; E means standard P=NP",
+  "dependency_orientation": "3→2→1；评分信号可双向传播但不是依赖边",
+  "nodes": [
+    {
+      "id": "D1",
+      "layer": 1,
+      "title": "自指与可证性工具",
+      "role": "只研究形式反思、固定点和证明变换；不承担算法下界",
+      "acceptance": "给出固定点或反思的准确公式，标明其是否连接标准命题",
+      "artifact": "notes/02-reflection-v1.md",
+      "seed": {
+        "current": 0.65,
+        "remaining": 0.75,
+        "novelty": 0.8,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "D2",
+      "layer": 1,
+      "title": "算术见证与增长率",
+      "role": "只研究量词、反例搜索总性及不可证性到算法的传递",
+      "acceptance": "给出精确算术范式及增长率路线的缺失引理",
+      "artifact": "notes/03-arithmetic-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "D3",
+      "layer": 1,
+      "title": "资源自指与精确相消",
+      "role": "只研究运行成本、次数与相消模型，不把形式真值当运行加速",
+      "acceptance": "核验统一资源界与相消合法性",
+      "artifact": "notes/04-resources-v1.md",
+      "seed": {
+        "current": 0.65,
+        "remaining": 0.75,
+        "novelty": 0.8,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "D4",
+      "layer": 1,
+      "title": "模型与反例审计",
+      "role": "只研究独立性转移的有效性，主动寻找方案反例",
+      "acceptance": "区分标准算术、oracle、forcing与公理不可证性",
+      "artifact": "notes/05-models-v1.md",
+      "seed": {
+        "current": 0.65,
+        "remaining": 0.75,
+        "novelty": 0.8,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M1",
+      "layer": 2,
+      "title": "证明门控NP编译器",
+      "role": "把逻辑句子编译成标准NP语言",
+      "acceptance": "证明NP成员与空/有限尾SAT二分",
+      "artifact": "notes/01-gate-v1.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.75,
+        "novelty": 0.9,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M2",
+      "layer": 2,
+      "title": "反思与固定点判别器",
+      "role": "判别新自指是哥德尔、洛布还是条件逃逸",
+      "acceptance": "完整证明两种门控的可证性等价",
+      "artifact": "notes/02-reflection-v1.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M3",
+      "layer": 2,
+      "title": "反例搜索总性正规形",
+      "role": "把复杂性命题改写为时钟机器的反例函数总性",
+      "acceptance": "量词不偷换，区分存在算法与可证正确算法",
+      "artifact": "notes/03-arithmetic-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M4",
+      "layer": 2,
+      "title": "资源预算/相消审计器",
+      "role": "给定具体编码计算次数及成本，拒绝无模型的相消",
+      "acceptance": "得到范围受限的预算否定结论而非万能不可能定理",
+      "artifact": "notes/04-resources-v1.md",
+      "seed": {
+        "current": 0.65,
+        "remaining": 0.75,
+        "novelty": 0.8,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M5",
+      "layer": 2,
+      "title": "模型转移检查器",
+      "role": "判断两个模型是否真的改变同一个标准算术命题",
+      "acceptance": "证明同自然数算术不变，排除oracle冒充模型",
+      "artifact": "notes/05-models-v1.md",
+      "seed": {
+        "current": 0.65,
+        "remaining": 0.75,
+        "novelty": 0.8,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M6",
+      "layer": 2,
+      "title": "主目标桥接义务清单",
+      "role": "审查局部定理到ZFC不可证性的连接及循环前提",
+      "acceptance": "每个候选论证有前提/结论/缺口状态，不用屏障代替目标",
+      "artifact": "proof/obligations.json",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.95,
+        "novelty": 0.9,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "M7",
+      "layer": 2,
+      "title": "不可证性→近多项式算法路线",
+      "role": "核查Ben-David/Halevi结果的准确假设及适用理论",
+      "acceptance": "源文献前提、infinitely-often量词及转移义务明确",
+      "artifact": "notes/06-growth-v1.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.95,
+        "novelty": 0.95,
+        "confidence": 0.8,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E1",
+      "layer": 3,
+      "title": "核验证明门控语言",
+      "role": "独立写出验证器、证书界与固定填充归约",
+      "acceptance": "没有指数枚举或把NP完全误作不在P",
+      "artifact": "notes/01-gate-v1.md",
+      "seed": {
+        "current": 1,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.95,
+        "cost": 0.7
+      }
+    },
+    {
+      "id": "E2",
+      "layer": 3,
+      "title": "严格化自身P成员固定点",
+      "role": "用句法对角引理而非假定资源保持的递归定理",
+      "acceptance": "导出S↔(E∨¬Prov(S))及两向可证性证明",
+      "artifact": "notes/02-reflection-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.8,
+        "novelty": 0.9,
+        "confidence": 0.95,
+        "cost": 0.8
+      }
+    },
+    {
+      "id": "E3",
+      "layer": 3,
+      "title": "直接把E放入证明触发器",
+      "role": "不使用自指辅助句，单独检查局部反思",
+      "acceptance": "证明Poly(L_E)↔(Prov(E)→E)，正确使用洛布定理",
+      "artifact": "notes/02-reflection-v1.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.8,
+        "novelty": 0.85,
+        "confidence": 0.9,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E4",
+      "layer": 3,
+      "title": "检查所有纯门控变体的共同缺口",
+      "role": "审计只改变触发句或证明长度阈值的变体",
+      "acceptance": "明确证明门控模板二分与不能排除的分支",
+      "artifact": "notes/01-gate-v1.md",
+      "seed": {
+        "current": 0.7,
+        "remaining": 0.6,
+        "novelty": 0.65,
+        "confidence": 0.85,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E5",
+      "layer": 3,
+      "title": "标准P/NP算术范式",
+      "role": "独立定义带时钟机枚举与正确性关系",
+      "acceptance": "E为Σ2、¬E为Π2；不声称其最小层级",
+      "artifact": "notes/03-arithmetic-v1.md",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.95,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E6",
+      "layer": 3,
+      "title": "反例搜索与总性桥",
+      "role": "检查寻找一个错误输入的半算法",
+      "acceptance": "证明∀e∃x错误与反例搜索总性的等价，禁止统一多项式次数",
+      "artifact": "notes/03-arithmetic-v1.md",
+      "seed": {
+        "current": 0.85,
+        "remaining": 0.95,
+        "novelty": 0.95,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E7",
+      "layer": 3,
+      "title": "Cook编码资源闭环",
+      "role": "明确公式编码长度与模拟时钟成本",
+      "acceptance": "只否定预算不等式无解的具体方案，不由上界推出下界",
+      "artifact": "notes/04-resources-v1.md",
+      "seed": {
+        "current": 0.7,
+        "remaining": 0.7,
+        "novelty": 0.8,
+        "confidence": 0.8,
+        "cost": 1.2
+      }
+    },
+    {
+      "id": "E8",
+      "layer": 3,
+      "title": "高阶项精确相消的可计算条件",
+      "role": "区分算术表达式相消与物理/图灵计算路径成本",
+      "acceptance": "给出非负显式成本模型下的限定结论与可突破条件",
+      "artifact": "notes/04-resources-v1.md",
+      "seed": {
+        "current": 0.7,
+        "remaining": 0.9,
+        "novelty": 0.95,
+        "confidence": 0.7,
+        "cost": 1.4
+      }
+    },
+    {
+      "id": "E9",
+      "layer": 3,
+      "title": "oracle屏障反例审计",
+      "role": "检验BGS是否能推出ZFC不可证性",
+      "acceptance": "明确仅排除全相对化方法，不能量化所有ZFC证明",
+      "artifact": "notes/05-models-v1.md",
+      "seed": {
+        "current": 0.75,
+        "remaining": 0.7,
+        "novelty": 0.75,
+        "confidence": 0.95,
+        "cost": 0.9
+      }
+    },
+    {
+      "id": "E10",
+      "layer": 3,
+      "title": "forcing与同自然数模型审计",
+      "role": "独立证明算术绝对性所需的模型条件",
+      "acceptance": "同ω且同有限算术运算的模型对E一致；不否定非标准模型路线",
+      "artifact": "notes/05-models-v1.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.75,
+        "novelty": 0.8,
+        "confidence": 0.9,
+        "cost": 1
+      }
+    },
+    {
+      "id": "E11",
+      "layer": 3,
+      "title": "核对不可证性→算法文献",
+      "role": "读取已获取的专家综述并追踪原始文献",
+      "acceptance": "分清PA+真Π1、ZFC、无限多长度及所有长度",
+      "artifact": "notes/06-growth-v1.md",
+      "seed": {
+        "current": 0.95,
+        "remaining": 0.98,
+        "novelty": 1,
+        "confidence": 0.85,
+        "cost": 1.1
+      }
+    },
+    {
+      "id": "E12",
+      "layer": 3,
+      "title": "构造非循环主目标桥",
+      "role": "为每个候选建立可独立反驳的精确引理",
+      "acceptance": "不使用E或¬E真值作未声明前提；失败也须指明公式",
+      "artifact": "notes/07-frontier-v1.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 1,
+        "novelty": 1,
+        "confidence": 0.55,
+        "cost": 1.8
+      }
+    },
+    {
+      "id": "E13",
+      "layer": 3,
+      "title": "有界证明自指的逃逸",
+      "role": "研究Prov≤b(n)的有限对角攻击",
+      "acceptance": "区分有限长度避让与无界不可证性，记录缺失统一性",
+      "artifact": "notes/07-frontier-v1.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.95,
+        "novelty": 0.95,
+        "confidence": 0.7,
+        "cost": 1.5
+      }
+    },
+    {
+      "id": "E14",
+      "layer": 3,
+      "title": "不可证性与扩张理论一致性",
+      "role": "只研究演绎定理和证明变换",
+      "acceptance": "证明T⊬E↔Con(T+¬E)及另一侧，明确元理论位置",
+      "artifact": "notes/03-arithmetic-v1.md",
+      "seed": {
+        "current": 0.8,
+        "remaining": 0.9,
+        "novelty": 0.9,
+        "confidence": 0.95,
+        "cost": 0.9
+      }
+    }
+  ],
+  "edges": [
+    [
+      "M1",
+      "D1"
+    ],
+    [
+      "M1",
+      "D3"
+    ],
+    [
+      "M2",
+      "D1"
+    ],
+    [
+      "M3",
+      "D2"
+    ],
+    [
+      "M4",
+      "D3"
+    ],
+    [
+      "M5",
+      "D4"
+    ],
+    [
+      "M6",
+      "D1"
+    ],
+    [
+      "M6",
+      "D4"
+    ],
+    [
+      "M7",
+      "D2"
+    ],
+    [
+      "E1",
+      "M1"
+    ],
+    [
+      "E2",
+      "M1"
+    ],
+    [
+      "E2",
+      "M2"
+    ],
+    [
+      "E3",
+      "M2"
+    ],
+    [
+      "E3",
+      "M6"
+    ],
+    [
+      "E4",
+      "M1"
+    ],
+    [
+      "E4",
+      "M6"
+    ],
+    [
+      "E5",
+      "M3"
+    ],
+    [
+      "E6",
+      "M3"
+    ],
+    [
+      "E6",
+      "M7"
+    ],
+    [
+      "E7",
+      "M4"
+    ],
+    [
+      "E8",
+      "M4"
+    ],
+    [
+      "E8",
+      "M6"
+    ],
+    [
+      "E9",
+      "M5"
+    ],
+    [
+      "E9",
+      "M6"
+    ],
+    [
+      "E10",
+      "M5"
+    ],
+    [
+      "E11",
+      "M7"
+    ],
+    [
+      "E12",
+      "M6"
+    ],
+    [
+      "E13",
+      "M2"
+    ],
+    [
+      "E13",
+      "M4"
+    ],
+    [
+      "E14",
+      "M3"
+    ],
+    [
+      "E14",
+      "M5"
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "hour": 1,
+  "at": 1793811484.8578358,
+  "research_root": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "review": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour1-review.receipt.json",
+  "native_experiment_exit": 0,
+  "actual_bitwise_cases": 36,
+  "old_35_nodes_unchanged": true,
+  "new_candidate": "M13/E25/E26 finite-query summary, unproved",
+  "deadline_unchanged": "2026-11-05T09:17:58+08:00",
+  "next_wake_sources": [
+    "pnp-hourly-10h",
+    "pnp-deadline-10h"
+  ]
+}

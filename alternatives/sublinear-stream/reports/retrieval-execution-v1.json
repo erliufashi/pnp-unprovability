@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "argv": [
+    "/run/current-system/sw/bin/python3",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/tools/neural_retrieval_probe.py",
+    "--report",
+    "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/retrieval-tests-v1.json"
+  ],
+  "cwd": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream",
+  "started": "2026-11-04T21:31:30.809993+00:00",
+  "ended": "2026-11-04T21:31:31.934118+00:00",
+  "returncode": 0,
+  "stdout_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/retrieval-v1.stdout.log",
+  "stderr_path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/retrieval-v1.stderr.log",
+  "source_sha256": "2ae5e51e27ba9f43207156b78ead366b5422c0e004d9c17e0c77a8a56a228c07"
+}

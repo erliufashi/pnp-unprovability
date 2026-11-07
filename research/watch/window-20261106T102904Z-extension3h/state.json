@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "window_id": "window-20261106T102904Z-extension3h",
+  "task_id": "pnp-3h-extension-20261107",
+  "timezone": "Asia/Shanghai",
+  "start_epoch": 1793986144.3940156,
+  "deadline_epoch": 1793996944.3940156,
+  "start_local": "2026-11-07T01:29:04+08:00",
+  "deadline_local": "2026-11-07T04:29:04+08:00",
+  "duration_seconds": 10800,
+  "interval_seconds": 3600,
+  "max_checkpoint": 2,
+  "last_ack_hour": -1,
+  "phase": "running",
+  "pause_count": 0,
+  "state_path": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z-extension3h/state.json",
+  "monitor_ids": [
+    "pnp-hourly-3h-extension-20261107",
+    "pnp-deadline-3h-extension-20261107"
+  ],
+  "log": [],
+  "parent_window": "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z",
+  "authorization": "current user instruction: 多加三个小时",
+  "team_target": 5
+}

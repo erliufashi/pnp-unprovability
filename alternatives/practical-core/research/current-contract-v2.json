@@ -1,0 +1,22 @@
+{
+  "schema": 2,
+  "goal_id": "pnp-research",
+  "goal_spec_revision": 2,
+  "amendment": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/amendments/pnp-research/9f97eb8b-c13b-4f7a-b1a8-54f04db55b41",
+  "authorizing_user": "42ce7dcd",
+  "T1": "UNRESOLVED",
+  "T2": "UNRESOLVED",
+  "T3_v1": "historical qualified proxy only",
+  "T3_v2": "UNRESOLVED: model, same-budget separation, uniform capability preservation, real-distribution coverage and resources all required",
+  "current_success": false,
+  "old_controller_status_is_legacy": true,
+  "no_200B_capability_inference": true,
+  "missing": [
+    "concrete accepted algorithm model/closure",
+    "reference implementation and routing",
+    "real population/strata/weights and qualification thresholds",
+    "numerical resource/time/description envelope",
+    "representation/shift/execution evidence",
+    "same-new-model strict separation"
+  ]
+}

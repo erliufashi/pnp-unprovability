@@ -1,0 +1,46 @@
+{
+  "hour": 9,
+  "at": 1793839080.224436,
+  "status": "local_review_pass",
+  "actual_probe_exit": 0,
+  "proofs": [
+    "proof/FINITE-BUDGET-SEPARATION-v2.md",
+    "proof/FINITE-BUDGET-RANDOM-v2.md",
+    "proof/FINITE-BUDGET-SCOPE-v1.md"
+  ],
+  "v1_preserved": true,
+  "v2_changes": "payload C_x vs complete data C_wire units only, no new theorem",
+  "totals": {
+    "ND_tasks": 948,
+    "ND_branches": 7368,
+    "state_encoding_transitions": 105328,
+    "all_small_prefix_maps": 131344
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "not_claimed": [
+    "minimal ND budget",
+    "exact finite witnesses at actual 200B context",
+    "real RAM capacity",
+    "human adequacy",
+    "standard P/NP",
+    "changed T3"
+  ],
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour9-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour9.v0.submit-2.b0241ef1-9092-4dd6-8648-6e481553f3e8.receipt.json",
+    "sha256": "daca10e4fb8e66fce32e94eb0684a56fdc0e35bee0f777f4f8ec7837e43db3b3"
+  },
+  "review_attempts": [
+    {
+      "attempt": 1,
+      "status": "incomplete_invalid_JSON_not_pass",
+      "raw": "reports/hour9-review-attempt1.raw.txt",
+      "error": "missing check-object closing brace: line21 col3 char2299"
+    },
+    {
+      "attempt": 2,
+      "status": "pass",
+      "receipt": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour9-review.receipt.json"
+    }
+  ]
+}

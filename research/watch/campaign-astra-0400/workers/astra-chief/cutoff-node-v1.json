@@ -1,0 +1,29 @@
+{
+  "nodes": [
+    {
+      "id": "ASTRA-CHIEF-CUTOFF-AUDIT-1",
+      "layer": 3,
+      "title": "透明raw碰撞的直接寻址阈值精算",
+      "role": "chief在04:00前核验B58强reference逃逸的精确值域/word/燃料条件；不抢B58 owner，不冒全类分离",
+      "acceptance": "给透明raw word输入、值域U、word宽w、可写M和fuel F的直接寻址collision算法精确账本；列出何时它击穿D/ND候选，何时memory/fuel不fit；区分静态一次任务与动态更新，不当现实覆盖",
+      "artifact": "evidence/ASTRA-CHIEF-CUTOFF-AUDIT-1/immutable-artifact",
+      "seed": {
+        "current": 0.9,
+        "remaining": 0.85,
+        "novelty": 0.9,
+        "confidence": 0.9,
+        "cost": 0.7
+      }
+    }
+  ],
+  "edges": [
+    [
+      "ASTRA-CHIEF-CUTOFF-AUDIT-1",
+      "M22"
+    ],
+    [
+      "ASTRA-CHIEF-CUTOFF-AUDIT-1",
+      "M23"
+    ]
+  ]
+}

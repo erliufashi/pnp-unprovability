@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "window_id": "campaign-astra-0400",
+  "task_id": "pnp-astra-0400",
+  "timezone": "Asia/Shanghai",
+  "start_epoch": 1793980567.5341825,
+  "deadline_epoch": 1793995200.0,
+  "start_local": "2026-11-06T23:56:07+08:00",
+  "deadline_local": "2026-11-07T04:00:00+08:00",
+  "duration_seconds": 14632.465817451477,
+  "interval_seconds": 3600,
+  "max_checkpoint": 3,
+  "last_ack_hour": 3,
+  "phase": "paused",
+  "pause_count": 1,
+  "state_path": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/state.json",
+  "monitor_ids": [
+    "pnp-astra-hourly-0400",
+    "pnp-astra-deadline-0400"
+  ],
+  "log": [
+    {
+      "action": "checkpoint",
+      "hour": 2,
+      "at": 1793988160.2880166,
+      "note": "campaign hour2：chief完成ASTRA-CHIEF-CONTRACT-MATRIX-1并经第三次独立验收通过；Astra E/F/D/C/Argon等H1真实回报已记录；board继续由B58与ASTRA-F-OPAQUE-ALPHABET-1 owner推进。矩阵严格标INVALID_COMPARISON，未升级T3v2。七位Astra直连仍运行，04:00终止。"
+    },
+    {
+      "action": "checkpoint",
+      "hour": 3,
+      "at": 1793992896.652141,
+      "note": "campaign hour3：board/ mail/room读取完成；chief完成ASTRA-CHIEF-CUTOFF-AUDIT-1，精算透明raw direct-address的U/w/M/F逃逸阈值，clean evidence SHA闭合后第7次独立验收通过。Astra F opaque response alphabet、Astra E parity-index、Astra D GVC retry等局部回报已入campaign状态；T1/T2/T3v2仍未解。最终04:00停止所有七位Astra。"
+    },
+    {
+      "action": "paused_once",
+      "at": 1793995288.4269128,
+      "note": "用户指定Astra campaign最终截止已到；04:00:44核时，七个campaign run均已terminal/无active fleet。保存已交回产物与失败历史，执行一次暂停，不自动续期。"
+    }
+  ],
+  "user_authorization_entry": "294191e3",
+  "authorization_quote": "全部换Astra max，注意用gateway_response，别用中转。再开两个研究员。所有研究员明天早上4点（四个半小时后）终止任务",
+  "researchers": [
+    "astra-a",
+    "astra-b",
+    "astra-c",
+    "astra-d",
+    "astra-e",
+    "astra-f",
+    "astra-argon"
+  ],
+  "model": "gateway_responses/gpt-6-astra:max",
+  "thinking": "max",
+  "old_windows_preserved": [
+    "window-20261104T151758Z",
+    "window-20261106T102904Z",
+    "window-20261106T102904Z-extension3h"
+  ],
+  "note": "This campaign supersedes old researcher deadlines only for new campaign; old files/run failures remain historical.",
+  "runs": {
+    "astra-a": "99ca0055-93ec-4386-9e1c-dd298f6c66ea",
+    "astra-b": "7e89b827-ad14-44c3-a9eb-ce319c0fcfb7",
+    "astra-c": "486b3378-b372-475b-a736-8b8665805215",
+    "astra-argon": "1f7308de-d122-4ecf-aa97-e92869765d40",
+    "astra-d": "2cce61ae-92c4-4e2d-bffc-6e39b222d277",
+    "astra-e": "62109706-c782-410c-a5ec-2f2466fde602",
+    "astra-f": "c5b6e441-ca33-4657-965e-10aa6480efe5"
+  },
+  "run_model": "gateway_responses/gpt-6-astra:max",
+  "run_thinking": "max",
+  "writer_cwds": {
+    "astra-a": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-a",
+    "astra-b": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-b",
+    "astra-c": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-c",
+    "astra-d": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-d",
+    "astra-e": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-e",
+    "astra-f": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-f",
+    "astra-argon": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/workers/astra-argon"
+  },
+  "paused_at_epoch": 1793995288.4269128,
+  "run_mapping_correction": "Astra A corrected from old erroneous e4c8 id to native run 99ca0055; all seven status records resolved gpt-6-astra max and process terminal observed.",
+  "run_attestation": "/home/desk/projects/pnp-unprovability/research/watch/campaign-astra-0400/campaign-run-attestation-v1.json"
+}

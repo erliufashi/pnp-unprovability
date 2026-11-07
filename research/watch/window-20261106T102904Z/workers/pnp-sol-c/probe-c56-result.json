@@ -1,0 +1,10 @@
+{
+  "all_arrays_checked": 65812,
+  "k_range": [
+    1,
+    4
+  ],
+  "nd_address_acceptance_matches_OR": true,
+  "zero_transcript_unqueried_singleton_checks": 30,
+  "scope": "finite witness sanity check; all-dimension bounds are analytic"
+}

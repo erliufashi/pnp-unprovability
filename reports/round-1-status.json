@@ -1,0 +1,19 @@
+{
+  "mathematical_target": "UNRESOLVED",
+  "round": 27,
+  "layers": 3,
+  "nodes": 25,
+  "edges": 32,
+  "leaf_statuses": {
+    "done": 11,
+    "exhausted": 2,
+    "blocked": 1
+  },
+  "frontier": "D2/M7/E12",
+  "next_runnable": null,
+  "no_background_proof_job": true,
+  "proof_assistant_formalization": false,
+  "system_review": "PASS",
+  "bounded_round_review": "PASS",
+  "main_math_review": "NOT_SUBMITTED"
+}

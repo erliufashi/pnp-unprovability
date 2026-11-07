@@ -1,0 +1,24 @@
+# Python bytecode & caches
+__pycache__/
+*.pyc
+
+# Runtime locks & atomic temp files
+*.lock
+**/.*.lock
+research/.pnp-*
+research/.history-*
+**/.state-*
+**/.config-*
+**/.pnp-*
+**/.history-*
+
+# Local agent runtime directories & raw stream event dumps
+**/.pi/
+**/events.jsonl
+research/watch/*/board-test-*/
+
+# External downloaded third-party papers & partial downloads (cited by URL/SHA256 in evidence)
+**/*.pdf
+**/*.ps
+**/*.invalid
+**/failed-downloads/

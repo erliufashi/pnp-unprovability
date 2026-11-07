@@ -1,0 +1,10 @@
+{
+  "three_row_proofs_checked": 4680,
+  "row_widths": [
+    1,
+    4
+  ],
+  "shared_monotone_checker_correct": true,
+  "independent_streams_can_disagree_on_middle_row": true,
+  "scope": "toy consistency sanity check, not an empirical NP characterization proof"
+}

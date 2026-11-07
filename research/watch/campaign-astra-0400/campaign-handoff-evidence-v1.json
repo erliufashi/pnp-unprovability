@@ -1,0 +1,382 @@
+{
+  "schema": 1,
+  "campaign": "campaign-astra-0400",
+  "authorization_entry": "294191e3",
+  "model": "gateway_responses/gpt-6-astra:max",
+  "thinking": "max",
+  "final_deadline": "2026-11-07T04:00:00+08:00",
+  "runs": [
+    {
+      "actor": "astra-a",
+      "run_id": "99ca0055-93ec-4386-9e1c-dd298f6c66ea",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/0fef6fe6-61d2-4e3b-ad2e-f462a3baa484/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "99ca0055-93ec-4386-9e1c-dd298f6c66ea",
+        "runnerProcessInstanceId": "12af2c0d-9e12-4acd-b1ec-789dcc3dc496",
+        "observedAt": 1793980912672,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "12af2c0d-9e12-4acd-b1ec-789dcc3dc496",
+            "closeObservedAt": 1793980912672,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "1f3eb8560c43d2f69a7712040dda7f39b3bb600fba26452fa41b127b3c156aa6",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "352fbda1f1f9ae1d5a46f7a67c82cc29d5f45100689cafb6d126aca920fe926f",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:41.902Z",
+        "id": "call_0PZJYoWajYT2EN9Sv9u9nvqs|fc_01a9c7ab3b58927e016aedf93180c887d08a4b2c0604bdb5af"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "bash",
+        "read",
+        "read",
+        "read",
+        "read",
+        "bash",
+        "bash",
+        "bash",
+        "bash"
+      ],
+      "mail_tool_seen": false
+    },
+    {
+      "actor": "astra-b",
+      "run_id": "7e89b827-ad14-44c3-a9eb-ce319c0fcfb7",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/5922fac2-0601-419c-8c7f-7f9c1dabd0fd/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "7e89b827-ad14-44c3-a9eb-ce319c0fcfb7",
+        "runnerProcessInstanceId": "ed83e22e-ee00-45e3-b0ec-df7dbfdd964f",
+        "observedAt": 1793980958039,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "ed83e22e-ee00-45e3-b0ec-df7dbfdd964f",
+            "closeObservedAt": 1793980958039,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "1ba5ab8956c5bd0426afdaf889432754a8c5d56768608e32097a88bf89a08ddc",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "17160132c56e821954f275980e655bd803c717c33caa283341cc52f7c779603c",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:39.067Z",
+        "id": "call_udkur72RbEGPgkNPNWxpoZWF|fc_0271316418cdffbc016aedf92d728487d09e898cb1e79659a5"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "bash",
+        "read",
+        "bash",
+        "mail_identity",
+        "mail_identity",
+        "read",
+        "bash",
+        "write",
+        "bash"
+      ],
+      "mail_tool_seen": true
+    },
+    {
+      "actor": "astra-c",
+      "run_id": "486b3378-b372-475b-a736-8b8665805215",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/3a15ea5e-1096-469c-9aa3-2e052cdc8daf/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "486b3378-b372-475b-a736-8b8665805215",
+        "runnerProcessInstanceId": "80d6d2f1-cbe8-4f64-9de2-e945a913947a",
+        "observedAt": 1793981200925,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "80d6d2f1-cbe8-4f64-9de2-e945a913947a",
+            "closeObservedAt": 1793981200925,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "b3b8e04e59f754209fa5237c53495b97d0971cc749ef2b5894d31c967f6849cc",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "d45040b4599c48c6bd17b46a9009bb5db0fa3f625e8f687ca632e36f94ba6e5c",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:41.701Z",
+        "id": "call_xfKNzv5ez0RNT2aDejkmHHs5|fc_02d36ed4b3679fdf016aedf92fca5087d0a0283d30c032a6c4"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "mail_identity",
+        "ls",
+        "find",
+        "grep",
+        "find",
+        "read",
+        "find",
+        "bash",
+        "read"
+      ],
+      "mail_tool_seen": true
+    },
+    {
+      "actor": "astra-argon",
+      "run_id": "1f7308de-d122-4ecf-aa97-e92869765d40",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/c12c4706-efff-41f3-8d5c-f610aad2a76a/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "1f7308de-d122-4ecf-aa97-e92869765d40",
+        "runnerProcessInstanceId": "a977a16d-5d11-4735-a73e-3e260676ac96",
+        "observedAt": 1793980942946,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "a977a16d-5d11-4735-a73e-3e260676ac96",
+            "closeObservedAt": 1793980942946,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "7811566c36afa3f13735b16d2470edaf1e288f0d74a4987cae605ede08f4685d",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "e2fef4605870643a56a8d8e83bfcea5720df9da716f5bb27a04761af28f88421",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:36.052Z",
+        "id": "call_cbRvBYOXTBEj94h7nF9Nde5P|fc_0203dc29cee63e2d016aedf92a6ad887d0b8ea0c2ba133eab8"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "bash",
+        "mail_identity",
+        "bash",
+        "bash",
+        "bash",
+        "read",
+        "bash",
+        "bash",
+        "mail_identity"
+      ],
+      "mail_tool_seen": true
+    },
+    {
+      "actor": "astra-d",
+      "run_id": "2cce61ae-92c4-4e2d-bffc-6e39b222d277",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/8eeba196-420d-4865-9847-58cbade3ef65/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "2cce61ae-92c4-4e2d-bffc-6e39b222d277",
+        "runnerProcessInstanceId": "aad94698-5154-4d0a-9a49-bb95e760de59",
+        "observedAt": 1793981064583,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "aad94698-5154-4d0a-9a49-bb95e760de59",
+            "closeObservedAt": 1793981064583,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "422a3640e3fbbce784b9987039f007ad93a46f5e67f977948702678a95ad549a",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "cd99136b099758f317ebdee3257bbea38a65881371260a7382fe900479683327",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:41.223Z",
+        "id": "call_XPfx3GtJW9yozNCxfBQMjUXJ|fc_0a1f3fc8a780678e016aedf930537c87d096a064fa599d6b1c"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "mail_identity",
+        "mail_identity",
+        "ls",
+        "mail_inbox",
+        "mail_room",
+        "find",
+        "grep",
+        "read",
+        "read"
+      ],
+      "mail_tool_seen": true
+    },
+    {
+      "actor": "astra-e",
+      "run_id": "62109706-c782-410c-a5ec-2f2466fde602",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/f303d53e-fc62-405e-9770-dc14e030d68c/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "62109706-c782-410c-a5ec-2f2466fde602",
+        "runnerProcessInstanceId": "b7f7afe1-9bc6-443c-bec2-18fb649ce8a3",
+        "observedAt": 1793981018406,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "b7f7afe1-9bc6-443c-bec2-18fb649ce8a3",
+            "closeObservedAt": 1793981018406,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "abc0d3330fa042c0078d4df3921ec05e7c3bc8e1f8059e0320043d4d59ac856d",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "6a5373b37c04764949477547c5f965eba52b2bb46bc8d814aebd2c99379b5f7a",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:37.417Z",
+        "id": "call_P80gtruQ5Mav8AdOWl4LQjrL|fc_09e7dca3b2f4c634016aedf92b48d887d0bcb5b8b49400be07"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "bash",
+        "read",
+        "bash",
+        "mail_identity",
+        "mail_identity",
+        "bash",
+        "bash",
+        "bash",
+        "bash"
+      ],
+      "mail_tool_seen": true
+    },
+    {
+      "actor": "astra-f",
+      "run_id": "c5b6e441-ca33-4657-965e-10aa6480efe5",
+      "session_file": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/2dd1dd64-19b3-4089-88cb-921382bbdbb2/run-0/session.jsonl",
+      "state": "complete",
+      "process_terminal": {
+        "version": 1,
+        "state": "observed",
+        "runId": "c5b6e441-ca33-4657-965e-10aa6480efe5",
+        "runnerProcessInstanceId": "548f927e-59ae-422d-b962-53f89c3c9e9d",
+        "observedAt": 1793981101201,
+        "instances": [
+          {
+            "kind": "runner",
+            "processInstanceId": "548f927e-59ae-422d-b962-53f89c3c9e9d",
+            "closeObservedAt": 1793981101201,
+            "exitCode": 0,
+            "signal": null
+          }
+        ],
+        "resumeDisposition": "resumable"
+      },
+      "resolved_model": "gateway_responses/gpt-6-astra:max",
+      "thinking": "max",
+      "requested_timeout_ms": 14600000,
+      "absolute_stop": "2026-11-07T04:00:00+08:00",
+      "effective_system_preamble_sha256": "55fc26a33c912cdaa3ba33ada208e1469efb3862e6e94493731322700d5d57f6",
+      "effective_system_flags": {
+        "mentions_campaign_0400": true,
+        "mentions_gateway_astra": true,
+        "mentions_zhongzhuan_exclusion": true,
+        "agent_prompt_present": true
+      },
+      "first_user_sha256": "6ac7f72451034837be1fb59db5cfe85e27aa436b444950e88f4fadbd8fe57a22",
+      "first_assistant_tool": {
+        "name": "contact_supervisor",
+        "timestamp": "2026-11-06T15:58:41.046Z",
+        "id": "call_sRGG4xyKGS44exCeKdYUVNzH|fc_03f9f2d4e0996b51016aedf92f2bb487d0b1c974f439548147"
+      },
+      "first_tool_names": [
+        "contact_supervisor",
+        "ls",
+        "find",
+        "read",
+        "read",
+        "bash",
+        "read",
+        "read",
+        "bash",
+        "bash"
+      ],
+      "mail_tool_seen": true
+    }
+  ],
+  "interpretation": "This is direct session evidence of resolved model, effective system-prompt flags, first user/assistant tool boundary and terminal proof. It does not claim cryptographic developer-prompt attestation or mathematical correctness. Old duplicate/legacy run evidence remains separate."
+}

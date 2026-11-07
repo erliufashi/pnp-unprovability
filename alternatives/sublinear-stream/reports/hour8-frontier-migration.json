@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "before_nodes": 30,
+  "after_nodes": 34,
+  "old_node_parameters_preserved": true,
+  "old_descriptors_preserved": true,
+  "old_history_preserved": true,
+  "event": {
+    "seq": 75,
+    "at": "2026-11-04T23:13:25+00:00",
+    "round": 75,
+    "reason": "new-frontier:fixed-horizon-rebuild-and-nonvacuity",
+    "previous": null,
+    "selected": null,
+    "ranking": [],
+    "details": {
+      "added": [
+        "M19",
+        "E41",
+        "E42",
+        "E43"
+      ],
+      "planned_next": "E43",
+      "scheduled_for_hour": 8,
+      "backup": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/research/migrations/hour7-to-hour8",
+      "freshness_age_initialized_at_admission": true
+    }
+  },
+  "planned_next": "E43",
+  "hour": 8
+}

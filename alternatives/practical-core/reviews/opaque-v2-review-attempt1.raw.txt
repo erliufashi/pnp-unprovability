@@ -1,0 +1,5 @@
+已完成只读核验，回执已写入指定路径：
+
+`/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-chief-opaque-v2.v0.submit-1.8503bbe2-f4b7-430c-a39c-43338e2d5c95.receipt.json`
+
+判定：`pass`。

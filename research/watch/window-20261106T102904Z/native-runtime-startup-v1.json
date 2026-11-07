@@ -1,0 +1,73 @@
+{
+  "actual_native_startups": 4,
+  "mail_handshakes": 4,
+  "records": {
+    "pnp-sol-a": {
+      "initial_run": "886e7c0d-e452-46c5-9484-66efb0571b84",
+      "requested": "gateway_responses/gpt-6.1-sol:max",
+      "runtime_model": "gateway_responses/gpt-6.1-sol:max",
+      "thinking": "max",
+      "observed_assistant_identifiers": [
+        {
+          "provider": "gateway_responses",
+          "model": "gpt-6.1-sol",
+          "api": "openai-responses"
+        }
+      ],
+      "initial_state": "complete",
+      "session": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/428a7a49-3241-42e0-82af-6a0dcebe1036/run-0/session.jsonl",
+      "latest_resume_run": "1ab2e08b-4847-4a20-98d2-7af2df8b7c62"
+    },
+    "pnp-sol-b": {
+      "initial_run": "d4e8b644-bd27-40df-b584-be52d6bcd7c1",
+      "requested": "gateway_responses/gpt-6.1-sol:max",
+      "runtime_model": "gateway_responses/gpt-6.1-sol:max",
+      "thinking": "max",
+      "observed_assistant_identifiers": [
+        {
+          "provider": "gateway_responses",
+          "model": "gpt-6.1-sol",
+          "api": "openai-responses"
+        }
+      ],
+      "initial_state": "complete",
+      "session": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/2e6c2357-6a03-49e3-b4a5-6701cfcec183/run-0/session.jsonl",
+      "latest_resume_run": "630d26ed-f002-4721-b431-78a7e6e06e65"
+    },
+    "pnp-sol-c": {
+      "initial_run": "6ad870ab-0a7d-40c6-ab66-47fd26e41038",
+      "requested": "gateway_responses/gpt-6.1-sol:max",
+      "runtime_model": "gateway_responses/gpt-6.1-sol:max",
+      "thinking": "max",
+      "observed_assistant_identifiers": [
+        {
+          "provider": "gateway_responses",
+          "model": "gpt-6.1-sol",
+          "api": "openai-responses"
+        }
+      ],
+      "initial_state": "complete",
+      "session": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/a828dae2-3ef6-4c8d-9094-6bd9902c1412/run-0/session.jsonl",
+      "latest_resume_run": "dd6e5e09-019a-4fd4-919c-9a4a25042407"
+    },
+    "pnp-argon": {
+      "initial_run": "2a3c8ffd-9eda-4262-8599-f0dc630e7b56",
+      "requested": "iksvip/gemini-4-argon:high",
+      "runtime_model": "iksvip/gemini-4-argon:high",
+      "thinking": "high",
+      "observed_assistant_identifiers": [
+        {
+          "provider": "iksvip",
+          "model": "gemini-4-argon",
+          "api": "google-generative-ai"
+        }
+      ],
+      "initial_state": "partial",
+      "session": "/home/desk/.pi/agent/sessions/--home-desk--/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/3e8a6add-fa1e-492c-b7db-fc61b9b62cac/run-0/session.jsonl",
+      "latest_resume_run": "05fadeb8-0753-4ec0-9aa0-325e953d7748"
+    }
+  },
+  "first_workflow_all_failed_record": "launch-attempt1/failure.json",
+  "peer_repair": "native-peer-repair.json",
+  "note": "Argon actual startup verified, but first final output failed; first audit not runtime-complete. Same-model/session retry separately recorded. Model identifiers are proxy/runtime observations, not weight attestation."
+}

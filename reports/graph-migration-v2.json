@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "kind": "graph-schema-preserving-evolution-not-path-migration",
+  "reason": "E12新增长桥实际支持M7；显式加入相邻依赖而非反向逻辑环",
+  "before_nodes": 25,
+  "after_nodes": 25,
+  "before_edges": 31,
+  "after_edges": 32,
+  "node_parameters_preserved": true,
+  "audit_events_preserved": true,
+  "math_target_preserved": true,
+  "event": {
+    "seq": 18,
+    "at": "2026-11-04T11:04:37+00:00",
+    "round": 18,
+    "reason": "graph-migration:v2-growth-bridge",
+    "previous": "E12",
+    "selected": "E12",
+    "ranking": [
+      {
+        "id": "E12",
+        "priority": 0.26919444,
+        "reason": "价值=0.810 余值=0.990 新鲜度=0.850 可信度=0.550 成本=1.80 邻接新信号=无"
+      }
+    ],
+    "details": {
+      "added_edge": [
+        "E12",
+        "M7"
+      ],
+      "old_digest": "66bb84e555eef1412c0059c6bce4cd714d4d81c606ee9bfe5850111da2248d40",
+      "new_digest": "ecfa2fb5c7d921773722857b27e0e14002530831f9bc03e1c9e9c6676f12d69f",
+      "backup": "/home/desk/projects/pnp-unprovability/research/migrations/001-before-v2"
+    }
+  },
+  "backup": "/home/desk/projects/pnp-unprovability/research/migrations/001-before-v2",
+  "recovery": "停止writer；保留故障三文件；从backup复制graph/state/history整套恢复，再check及refresh记录恢复。旧snapshot只兼容旧graph。",
+  "isolation_test": {
+    "passed": true,
+    "path_with_spaces": true,
+    "installed_cli_check_after_migration": true,
+    "repeat_migration_refused": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "scope": "local definition foundation only, not T3-v2 success",
+  "goal_spec_revision": 2,
+  "old104_match": true,
+  "files": {
+    "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/E47-capability-contract-v1.md": "f2c15c5a142bb81cebd968a2d6fba9321578ac49881627a8ef5930b495e3258e",
+    "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/COMPOSITION-v1.md": "704461048dc87a16c3c4c8b9993271fb186cf8a5c562478870bb041e6d4127e5",
+    "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/probe_composition_v1.py": "5657ef7a2fad30ab79f6ffa5e9f4299b8f25400d47304006d7d66090468e3a26",
+    "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/composition-tests-v1.json": "ae761c26a156c65ac81113c794c6974b19ec9f3a3105291647237242cd5e096b",
+    "/home/desk/projects/pnp-unprovability/research/watch/window-20261106T102904Z/workers/pnp-chief/composition-execution-v1.json": "5b8ec46a017ea0ac9ab325f344e70513750225adfe059359a0344a99926dec64",
+    "/home/desk/projects/pnp-unprovability/alternatives/practical-core/research/current-contract-v2.json": "b4719e43ebdb55c17f40989ebb0e3cee7c33075e79bc851ff1e9cec7a21b1804",
+    "/home/desk/projects/pnp-unprovability/alternatives/practical-core/evidence/E47/f2c15c5a142bb81cebd968a2d6fba9321578ac49881627a8ef5930b495e3258e.md": "f2c15c5a142bb81cebd968a2d6fba9321578ac49881627a8ef5930b495e3258e",
+    "/home/desk/projects/pnp-unprovability/alternatives/practical-core/evidence/E-chief-compose-1/704461048dc87a16c3c4c8b9993271fb186cf8a5c562478870bb041e6d4127e5.md": "704461048dc87a16c3c4c8b9993271fb186cf8a5c562478870bb041e6d4127e5"
+  },
+  "composition_actual_exit": 0,
+  "new_T3_success": false
+}

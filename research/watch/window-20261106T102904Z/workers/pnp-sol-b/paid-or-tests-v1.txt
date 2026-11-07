@@ -1,0 +1,10 @@
+test_adversarial_deterministic_transcript (__main__.ORTests.test_adversarial_deterministic_transcript) ... ok
+test_all_singletons_and_zero (__main__.ORTests.test_all_singletons_and_zero) ... ok
+test_exhaustive_all_small_inputs_and_branches (__main__.ORTests.test_exhaustive_all_small_inputs_and_branches) ... ok
+test_frozen_profile (__main__.ORTests.test_frozen_profile) ... ok
+test_randomized_coverage_mass (__main__.ORTests.test_randomized_coverage_mass) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.004s
+
+OK

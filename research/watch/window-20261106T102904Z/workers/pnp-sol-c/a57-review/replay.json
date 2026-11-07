@@ -1,0 +1,38 @@
+{
+  "status": "pass",
+  "input_cases": 511,
+  "witness_paths_checked": 16352,
+  "generation_steps_per_path": "6w+2, including w GUESSBIT instructions and packing/loop",
+  "certificate_storage_bits": "w in register 9, within charged 16w-bit register file; direct verifier variant additionally charges data bytes",
+  "max_verifier_steps": 10,
+  "nd_code_bytes": 275,
+  "nd_total_steps_per_valid_path": "6w+12",
+  "existential_not_physical_solver": true,
+  "reality_coverage": false,
+  "source_vm_sha256": "95fffbf8e50f92e33e8c826cdad8bb24a7b2f3c7e8a8220cc35a3e51d79d73a6",
+  "certificate_code_bytes": 147,
+  "scan_code_bytes": 204,
+  "sum_code_bytes": 190,
+  "zero_scan_trace": {
+    "status": "halt",
+    "output": [
+      0
+    ],
+    "stats": {
+      "choice_bits": 0,
+      "steps": 456,
+      "description_bytes": 204,
+      "memory_words": 0,
+      "register_words": 16,
+      "init_write_bits": 112,
+      "input_reads": 65,
+      "data_reads": 0,
+      "memory_reads": 0,
+      "memory_writes": 0,
+      "output_words": 1,
+      "code_fetch_bytes": 5340,
+      "bit_charge": 68256
+    },
+    "code_sha256": "8347921f2fdfdc2ce0dc2d65a4d90167175fed9452700c58b7cb7736588a56e2"
+  }
+}

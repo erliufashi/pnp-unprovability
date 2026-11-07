@@ -1,0 +1,49 @@
+{
+  "hour": 5,
+  "at": 1793825910.9858856,
+  "status": "local_review_pass",
+  "proofs": [
+    "proof/ADEQUACY-TIERS-v1.md",
+    "proof/APPROX-TRANSFER-v1.md",
+    "proof/RESOURCE-LEDGER-v1.md"
+  ],
+  "actual_probe_exit": 0,
+  "exact_sequence_cases": 10,
+  "softmax_float_sanity_cases": 2268,
+  "resource_crossovers": {
+    "crossover_allocated": {
+      "first_fit": 6494,
+      "permanent_from": 6494,
+      "fully_fitting_level_base": 14,
+      "inductive_base_t": 8191,
+      "proof_basis": "interval arithmetic plus low_next=2*low+c, not finite scan alone"
+    },
+    "crossover_peak_live": {
+      "first_fit": 5994,
+      "permanent_from": 5994,
+      "fully_fitting_level_base": 13,
+      "inductive_base_t": 8190,
+      "proof_basis": "interval arithmetic plus low_next=2*low+c, not finite scan alone"
+    },
+    "crossover_instant_live": {
+      "first_fit": 511,
+      "permanent_from": 5119,
+      "failure_immediately_after_first_fit": true,
+      "proof_basis": "finite check below analytically certified allocated threshold; live<=allocated above it"
+    }
+  },
+  "old_35_and_prior_proofs_unchanged": true,
+  "next_unproved": "notes/MODEL-COEFFICIENT-LOWER-BOUND-CANDIDATE-v0.md",
+  "not_claimed": [
+    "human accuracy",
+    "actual 200B performance",
+    "new budget adopted",
+    "all compiler lower bound",
+    "old T3 invalidation"
+  ],
+  "review": {
+    "path": "/home/desk/projects/pnp-unprovability/alternatives/sublinear-stream/reports/hour5-review.receipt.json",
+    "official": "/home/desk/.pi/agent/extensions/goal/runtime/goals/2026-11-04T09-52-35-303Z_01a1a5f9-83e6-742f-b138-5ae7f1e1dc2c/pnp-hour5.v0.submit-1.80112035-23c3-4402-8e27-dba411546b3c.receipt.json",
+    "sha256": "78aeb8960ce1f86f4c6fc6e42228d5de06531bf61d90ff2c66d1e191ca26badf"
+  }
+}

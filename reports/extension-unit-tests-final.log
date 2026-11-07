@@ -1,0 +1,42 @@
+test_context_resume_does_not_age_old_nodes (test_extension.ExtensionTests.test_context_resume_does_not_age_old_nodes) ... ok
+test_exhaustion_reselects_only_alt (test_extension.ExtensionTests.test_exhaustion_reselects_only_alt) ... ok
+test_matching_receipt_required (test_extension.ExtensionTests.test_matching_receipt_required) ... ok
+test_neighbor_parameters_do_not_cross_branches (test_extension.ExtensionTests.test_neighbor_parameters_do_not_cross_branches) ... ok
+test_no_alias_to_old_root (test_extension.ExtensionTests.test_no_alias_to_old_root) ... ok
+test_pending_does_not_stop (test_extension.ExtensionTests.test_pending_does_not_stop) ... ok
+test_reject_stronger_new_weight (test_extension.ExtensionTests.test_reject_stronger_new_weight) ... ok
+test_root_override_abbreviations_blocked (test_extension.ExtensionTests.test_root_override_abbreviations_blocked) ... ok
+test_weights_are_weaker_and_product_exact (test_extension.ExtensionTests.test_weights_are_weaker_and_product_exact) ... ok
+test_distinguishing_prefix_suffixes (test_extension.IndexSanityTests.test_distinguishing_prefix_suffixes) ... ok
+test_exhaustive_small_inputs (test_extension.IndexSanityTests.test_exhaustive_small_inputs) ... ok
+test_invalid_encodings_rejected (test_extension.IndexSanityTests.test_invalid_encodings_rejected) ... ok
+test_age_capped (test_research.ScoringTests.test_age_capped) ... ok
+test_blocked_excluded (test_research.ScoringTests.test_blocked_excluded) ... ok
+test_context_resume_records_new_round (test_research.ScoringTests.test_context_resume_records_new_round) ... ok
+test_current_value_changes_choice (test_research.ScoringTests.test_current_value_changes_choice) ... ok
+test_done_parent_prevents_orphan_work (test_research.ScoringTests.test_done_parent_prevents_orphan_work) ... ok
+test_exhausted_not_resurrected_by_neighbor (test_research.ScoringTests.test_exhausted_not_resurrected_by_neighbor) ... ok
+test_freshness_changes_choice (test_research.ScoringTests.test_freshness_changes_choice) ... ok
+test_neighbor_parameters_propagate (test_research.ScoringTests.test_neighbor_parameters_propagate) ... ok
+test_no_gain_decays_freshness (test_research.ScoringTests.test_no_gain_decays_freshness) ... ok
+test_reject_nan (test_research.ScoringTests.test_reject_nan) ... ok
+test_reject_reverse_dependency (test_research.ScoringTests.test_reject_reverse_dependency) ... ok
+test_reject_same_layer_and_cycle (test_research.ScoringTests.test_reject_same_layer_and_cycle) ... ok
+test_remaining_value_changes_choice (test_research.ScoringTests.test_remaining_value_changes_choice) ... ok
+test_cli_context_resume (test_research.StoreTests.test_cli_context_resume) ... ok
+test_done_requires_evidence (test_research.StoreTests.test_done_requires_evidence) ... ok
+test_evidence_cannot_escape_root (test_research.StoreTests.test_evidence_cannot_escape_root) ... ok
+test_exhaustion_update_immediately_reselects (test_research.StoreTests.test_exhaustion_update_immediately_reselects) ... ok
+test_graph_change_rejected (test_research.StoreTests.test_graph_change_rejected) ... ok
+test_history_projection_matches_authority (test_research.StoreTests.test_history_projection_matches_authority) ... ok
+test_json_failure_exit_nonzero (test_research.StoreTests.test_json_failure_exit_nonzero) ... ok
+test_missing_history_repaired_by_explicit_refresh (test_research.StoreTests.test_missing_history_repaired_by_explicit_refresh) ... ok
+test_no_silent_reinitialization (test_research.StoreTests.test_no_silent_reinitialization) ... ok
+test_reject_tampered_evidence (test_research.StoreTests.test_reject_tampered_evidence) ... ok
+test_restore_preserves_audit_history (test_research.StoreTests.test_restore_preserves_audit_history) ... ok
+test_snapshot_path_traversal_rejected (test_research.StoreTests.test_snapshot_path_traversal_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 0.906s
+
+OK

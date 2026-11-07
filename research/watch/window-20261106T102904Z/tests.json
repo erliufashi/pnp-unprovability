@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "no premature checkpoint",
+      "passed": true
+    },
+    {
+      "name": "no early deadline",
+      "passed": true
+    },
+    {
+      "name": "hour1 valid",
+      "passed": true
+    },
+    {
+      "name": "hour2 valid",
+      "passed": true
+    },
+    {
+      "name": "hour3 valid",
+      "passed": true
+    },
+    {
+      "name": "hour4 valid",
+      "passed": true
+    },
+    {
+      "name": "hour5 valid",
+      "passed": true
+    },
+    {
+      "name": "hour6 valid",
+      "passed": true
+    },
+    {
+      "name": "initial checkpoint0 once",
+      "passed": true
+    },
+    {
+      "name": "initial checkpoint0 duplicate noop",
+      "passed": true
+    },
+    {
+      "name": "early ack rejected",
+      "passed": true
+    },
+    {
+      "name": "hour1 real threshold ack",
+      "passed": true
+    },
+    {
+      "name": "acked checkpoint quiet",
+      "passed": true
+    },
+    {
+      "name": "hourly never deadline owner",
+      "passed": true
+    },
+    {
+      "name": "exact deadline event",
+      "passed": true
+    },
+    {
+      "name": "early pause rejected",
+      "passed": true
+    },
+    {
+      "name": "pause once at deadline",
+      "passed": true
+    },
+    {
+      "name": "pause duplicate noop",
+      "passed": true
+    },
+    {
+      "name": "count one and paused",
+      "passed": true
+    },
+    {
+      "name": "postpause both quiet",
+      "passed": true
+    },
+    {
+      "name": "late work rejected",
+      "passed": true
+    }
+  ],
+  "kind": "isolated in-memory clock tests, not actual 7h deadline delivery",
+  "watch_sha256": "ce3e4c0a74d6b2890cb051fc2785d87dcaf67341521ab2a050a4df350e5a7f2c"
+}
