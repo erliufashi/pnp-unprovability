@@ -1,6 +1,9 @@
 # 操作与交付边界
 
-> 下文保留0.1.0原内核操作说明。当前入口hub为0.3.0（兼容0.1.0/0.2.0全部旧命令）；`pnp-research mission status --json` 现明确区分早期 `T3-v1` 历史有限单遍代理与 `T1/T2/T3-v2` 当前 `UNRESOLVED`（阶段性收官）状态，并新增只读 `pnp-research practical status|check [--json]` 入口（`practical` 写入仅走 `alternatives/practical-core/tools/board_v1.py`）。`0.3.0 → 0.2.0 → 0.3.0` 原子回退及清洁普通 shell 验收见 `reports/wrapup-cli-acceptance.json`；早期 T3-v1 扩展说明见 [EXTENSION-T3.md](EXTENSION-T3.md)。旧研究状态与证据不因升级而变化。
+> 下文保留0.1.0原内核操作说明。当前入口hub为0.3.0（源码 `src/hub.py`，冻结发布 `~/.local/share/pnp-research/releases/0.3.0/`，原内核 `src/research.py` / `releases/0.1.0/` 逐字节不变，兼容0.1.0/0.2.0全部旧命令）：
+> - **状态与分支权重发现入口**：`pnp-research mission status --json` 与 `pnp-research mission priorities --json` 读取 `research/termination.json`（历史 T3-v1）及 `research/termination-v2.json`（当前收官状态），显式区分早期 `T3-v1` 历史有限单遍代理与 `T1/T2/T3-v2` 当前 `UNRESOLVED` 状态，并输出四分支图谱路径与权重（主线 `T1=T2=1.0`，`closed-llm`、`sublinear-stream`、`practical-core` 及 `T3-v1/T3-v2` 权重均为 `0.25 < 1`，跨分支只读不污染旧节点）。
+> - **T3-v2 新定义与四分支图谱位置**：规范见 `alternatives/practical-core/{CONTRACT-v2.md,TASK-SPACE-v2.md,coverage-spec.json}`；四套三层 `3→2→1` 图谱分别位于 `research/graph.json`（25节点）、`alternatives/closed-llm/research/graph.json`（10节点）、`alternatives/sublinear-stream/research/graph.json`（38节点）及 `alternatives/practical-core/research/{shared-board.json,graph.json}`（54节点，只读检查入口 `pnp-research practical status|check [--json]`，写入仅走 `alternatives/practical-core/tools/board_v1.py`）。
+> - **升级与版本回退验收**：原子回退至旧版只需执行 `ln -sfn /home/desk/.local/share/pnp-research/releases/0.2.0 /home/desk/.local/share/pnp-research/current`；`0.3.0 → 0.2.0 → 0.3.0` 实测与清洁普通 shell 验收见 `reports/wrapup-cli-acceptance.json`，早期 T3-v1 扩展说明见 [EXTENSION-T3.md](EXTENSION-T3.md)。
 
 ## 消费者与稳定入口
 

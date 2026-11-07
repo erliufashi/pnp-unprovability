@@ -124,6 +124,15 @@ def mission_status(root):
         current_met = [k for k in ("T1", "T2") if verified.get(k)]
         if t3_v2.get("status") == "proved":
             current_met.append("T3_v2")
+        branches_v2 = {}
+        for bname, bdef in v2.get("branches", {}).items():
+            broot = branch_root(root, bname, v2)
+            entry = dict(bdef)
+            if (broot/"research/graph.json").is_file() and (broot/"research/state.json").is_file():
+                bstore = core.Store(broot)
+                bstate = bstore.load()
+                entry.update({"nodes": len(bstore.graph["nodes"]), "edges": len(bstore.graph["edges"]), "round": bstate["round"]})
+            branches_v2[bname] = entry
         out.update({
             "current_contract_version": 2,
             "phase": v2.get("phase", "active"),
@@ -131,6 +140,8 @@ def mission_status(root):
             "current_goal_met": current_met,
             "t3_v1_historical_only": True,
             "t3_v2": t3_v2,
+            "branches_v2": branches_v2,
+            "weights_v2": {k: val["weight"] for k, val in v2["terminals"].items()},
             "status_summary_zh": "T1/T2与T3-v2当前均未解决（UNRESOLVED）；早期T3-v1仅保留封闭单遍有限代理历史效力，不构成现实能力覆盖。"
         })
     return out

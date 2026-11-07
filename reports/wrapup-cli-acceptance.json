@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "checked_at": "2026-11-07T23:07:08+08:00",
+  "checked_at": "2026-11-08T00:32:56+08:00",
   "clean_shell_env": {
     "HOME": "/home/desk",
     "PATH": "/run/current-system/sw/bin:/home/desk/.local/bin:/usr/bin:/bin",
@@ -11,7 +11,7 @@
   "release_0_3_0": {
     "version": "0.3.0",
     "files_sha256": {
-      "hub.py": "026d701567f502a65fd77625952ec650fd42fc3e28dd59b980682f6c4af75490",
+      "hub.py": "59619cd845d002a2089b0e0955405668e9fb0992e313940c93c9cb70d2b10f87",
       "research.py": "13298120fb40ef2101e3c7a90d98ac6d4f33df194a16daa0889b6ae9c35c0cb8"
     },
     "legacy_engine": "0.1.0 unchanged",
@@ -32,8 +32,66 @@
     "current_goal_stop": false,
     "t3_v1_historical_only": true,
     "t3_v2_status": "unresolved",
+    "weights_v2": {
+      "T1": 1.0,
+      "T2": 1.0,
+      "T3_v1": 0.25,
+      "T3_v2": 0.25
+    },
+    "branches_v2": {
+      "main": {
+        "path": ".",
+        "weight": 1.0,
+        "targets": [
+          "T1",
+          "T2"
+        ],
+        "nodes": 25,
+        "edges": 32,
+        "round": 27
+      },
+      "closed-llm": {
+        "path": "alternatives/closed-llm",
+        "weight": 0.25,
+        "targets": [
+          "T3_v1"
+        ],
+        "historical_only": true,
+        "nodes": 10,
+        "edges": 11,
+        "round": 12
+      },
+      "sublinear-stream": {
+        "path": "alternatives/sublinear-stream",
+        "weight": 0.25,
+        "targets": [
+          "T3_v1_sublinear_exploration"
+        ],
+        "historical_only": true,
+        "nodes": 38,
+        "edges": 41,
+        "round": 99
+      },
+      "practical-core": {
+        "path": "alternatives/practical-core",
+        "weight": 0.25,
+        "targets": [
+          "T3_v2"
+        ],
+        "historical_only": false,
+        "nodes": 54,
+        "edges": 88,
+        "round": 95
+      }
+    },
     "standard_targets_unresolved": true,
     "status_summary_zh": "T1/T2与T3-v2当前均未解决（UNRESOLVED）；早期T3-v1仅保留封闭单遍有限代理历史效力，不构成现实能力覆盖。"
+  },
+  "mission_priorities_weights": {
+    "T1": 1.0,
+    "T2": 1.0,
+    "T3": 0.25,
+    "T3_v2": 0.25
   },
   "practical_check_readback": {
     "ok": true,

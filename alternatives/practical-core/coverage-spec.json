@@ -13,6 +13,85 @@
     "certified_empirical_coverage_lower_bound": 0.0,
     "coverage_bound_meaning": "uninformative zero lower bound due to absent external population sample and frozen strong reference trace, not a measured zero capability"
   },
+  "membership_rule": {
+    "defined_solely_by_machine_and_resource_envelope_Gamma": true,
+    "reality_solvability_or_coverage_excluded_from_membership": true,
+    "parameter_count_200B_proxy_rejected": true,
+    "ordinary_capabilities_retained": [
+      "multi_pass_input_reread",
+      "bounded_word_arithmetic_and_loops",
+      "charged_external_memory_and_reusable_indexes",
+      "charged_deterministic_tool_and_verifier_calls"
+    ]
+  },
+  "task_source": {
+    "allowed_origins": [
+      "pre_registered_real_workflow_episode_sampling_frame",
+      "pre_registered_human_solvable_conditional_task_population"
+    ],
+    "deduplication_unit": "problem_family_cluster_independent_of_candidate_model",
+    "post_hoc_filtering_forbidden": true,
+    "empirical_sampling_frame_status": "UNRESOLVED"
+  },
+  "domains_and_weights": {
+    "required_core_domains": [
+      "numerical_and_symbolic_computation",
+      "structured_retrieval_and_dynamic_updates",
+      "code_synthesis_and_verify_loops",
+      "multi_step_tool_and_planning_workflows"
+    ],
+    "weight_model": "box_constrained_interval_weights_a_h_le_w_h_le_b_h_plus_unmodeled_mass_u",
+    "worst_case_weight_solver": "greedy_ascending_by_stratum_lower_bound_L_h (E48)",
+    "concrete_domain_weights_and_u": "UNRESOLVED"
+  },
+  "loss_spec": {
+    "episode_loss_range": [0.0, 1.0],
+    "budget_exhaustion_timeout_or_illegal_tool_loss": 1.0,
+    "metrics_distinguished": {
+      "episode_success_rate": "E_mu[1 - loss(x)] over sampled episodes",
+      "problem_family_qualification_rate": "Pr_{F~mu_fam}[Pr_{x~F}[success] >= theta] via two-level inner/outer certification (theta < 1 for finite samples)"
+    },
+    "concrete_family_threshold_theta": "UNRESOLVED"
+  },
+  "coverage_targets": {
+    "two_axis_criterion": "global_weighted_lower_bound >= 1 - tau_global AND forall core h: stratum_lower_bound_h >= 1 - tau_h",
+    "selected_numeric_tau_global_and_tau_h": "UNRESOLVED"
+  },
+  "confidence_budget": {
+    "single_frozen_policy_bound": "Hoeffding sqrt(ln(1/alpha)/(2N)) plus shift Delta, coupling epsilon, execution failure beta, evaluator bias xi",
+    "adaptive_policy_selection_penalty": "prefix-free code length l_j bits penalty sqrt((l_j*ln(2) + ln(1/alpha))/(2N)) (B54)",
+    "allocated_alpha_in_and_alpha_out": "UNRESOLVED"
+  },
+  "resource_envelope_Gamma": {
+    "components": [
+      "word_width_w",
+      "static_code_and_init_bytes_B",
+      "cumulative_fuel_steps_F",
+      "peak_simultaneously_live_workspace_M",
+      "data_dependent_persistent_state_bits_s",
+      "input_access_and_mutability_mode_Q_io",
+      "response_alphabet_and_batch_cap_Sigma_resp",
+      "declared_query_horizon_H"
+    ],
+    "calibrated_practical_Gamma_numbers": "UNRESOLVED"
+  },
+  "evidence_layers": {
+    "formal_simulation": {
+      "meaning": "Uniform answer-independent compilation C(B_*) in A_Gamma preserving trajectory law within epsilon under charged Gamma",
+      "implies_statistical_coverage_or_human_equivalence": false,
+      "status": "UNRESOLVED"
+    },
+    "statistical_coverage": {
+      "meaning": "Two-axis confidence lower bound on pre-registered task distribution mu accounting for shift Delta, unmodeled mass u, and selection penalty",
+      "implies_unmodeled_open_world_or_human_equivalence": false,
+      "status": "UNRESOLVED"
+    },
+    "human_interpretation": {
+      "meaning": "Empirical calibration showing mu represents human-solvable real tasks with measured human baseline and resource parity",
+      "derivable_from_parameter_count_or_benchmarks_alone": false,
+      "status": "UNRESOLVED"
+    }
+  },
   "required_contract_axes": [
     "input_visibility_and_mutability",
     "response_alphabet_and_batch_cap",

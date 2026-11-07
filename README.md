@@ -12,12 +12,12 @@
 ## 快速阅读入口
 
 - **[阶段性收官总报告（推荐首读）](docs/FINAL-WRAPUP-REPORT.md)**：完整汇总四个分支的正负面数学结论、伪路线剪枝、文献漏洞修补、紧致信息界与剩余开放问题
-- **[结构化收官摘要 JSON](reports/final-wrapup-summary.json)**：机器可读的四分支状态、代表性定理/反例索引与验证记录
-- **分阶段目录导航**：
-  1. **主线 ZFC 不可证性（25 节点）**：[`proof/MAIN.md`](proof/MAIN.md) · [`proof/obligations.json`](proof/obligations.json) · [`notes/ROUND-1.md`](notes/ROUND-1.md)（`notes/01`–`07`）
-  2. **封闭单遍代理 T3-v1（10 节点）**：[`alternatives/closed-llm/README.md`](alternatives/closed-llm/README.md) · [`docs/EXTENSION-T3.md`](docs/EXTENSION-T3.md)
-  3. **次线性单遍流编译与检索下界（38 节点）**：[`alternatives/sublinear-stream/README.md`](alternatives/sublinear-stream/README.md) · [`window-final-v1.md`](alternatives/sublinear-stream/reports/window-final-v1.md)
-  4. **现实能力保全核心 T3-v2（54 节点）**：[`alternatives/practical-core/README.md`](alternatives/practical-core/README.md) · [`CONTRACT-v2.md`](alternatives/practical-core/CONTRACT-v2.md) · [`TASK-SPACE-v2.md`](alternatives/practical-core/TASK-SPACE-v2.md)
+- **[结构化收官摘要 JSON](reports/final-wrapup-summary.json)**与**[收官终止与分支权重注册表](research/termination-v2.json)**：机器可读的四分支状态、权重隔离（主目标 `T1 = T2 = 1.0`；备用目标 `T3-v1` 与 `T3-v2` 及对应 `closed-llm`/`sublinear-stream`/`practical-core` 分支权重均为 `0.25 < 1`，跨分支评分只读旧状态）与代表性定理索引
+- **分阶段目录与图谱导航（共 127 节点）**：
+  1. **主线 ZFC 不可证性（25 节点，权重 `1.0`）**：图谱 `research/graph.json` · [`proof/MAIN.md`](proof/MAIN.md) · [`proof/obligations.json`](proof/obligations.json) · [`notes/ROUND-1.md`](notes/ROUND-1.md)（`notes/01`–`07`）
+  2. **封闭单遍代理 T3-v1（10 节点，权重 `0.25`，历史代理）**：图谱 `alternatives/closed-llm/research/graph.json` · [`alternatives/closed-llm/README.md`](alternatives/closed-llm/README.md) · [`docs/EXTENSION-T3.md`](docs/EXTENSION-T3.md)
+  3. **次线性单遍流编译与检索下界（38 节点，权重 `0.25`，历史探索）**：图谱 `alternatives/sublinear-stream/research/graph.json` · [`alternatives/sublinear-stream/README.md`](alternatives/sublinear-stream/README.md) · [`window-final-v1.md`](alternatives/sublinear-stream/reports/window-final-v1.md)
+  4. **现实能力保全核心 T3-v2（54 节点，权重 `0.25`，当前规范）**：权威板 `alternatives/practical-core/research/shared-board.json`（兼容投影 `graph.json`）· [`alternatives/practical-core/README.md`](alternatives/practical-core/README.md) · [`CONTRACT-v2.md`](alternatives/practical-core/CONTRACT-v2.md) · [`TASK-SPACE-v2.md`](alternatives/practical-core/TASK-SPACE-v2.md) · [`coverage-spec.json`](alternatives/practical-core/coverage-spec.json)
 
 ---
 
@@ -37,9 +37,10 @@
 ## 本地校验与复现（仅依赖 Python $\ge 3.10$ 标准库）
 
 ```sh
-# 1. 稳定 CLI 入口（任意工作目录可用，区分 T3-v1 历史代理与 T1/T2/T3-v2 当前 UNRESOLVED 状态）
+# 1. 稳定 CLI 入口（任意工作目录可用，区分 T3-v1 历史代理与 T1/T2/T3-v2 当前 UNRESOLVED 状态及分支权重）
 pnp-research --help
 pnp-research mission status --json
+pnp-research mission priorities --json
 pnp-research practical check --json
 
 # 2. 仓库内标准库测试与四分支完整性核验（38 项单元测试）
